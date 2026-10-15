@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brussels, by power</title>
+<meta name="description" content="Every building in Brussels, and the institutions, member states and lobbies inside them, scored by how much say they have over EU decisions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="scene" aria-label="3D model of Brussels' buildings"></canvas>
+<div class="veil veil-top" aria-hidden="true"></div>
+<div class="veil veil-bottom" aria-hidden="true"></div>
+
+<header class="masthead">
+  <h1><span class="mark" aria-hidden="true"></span>Brussels, by power</h1>
+  <p class="dek">Every building in the city, and who inside them gets a say over EU decisions.</p>
+</header>
+
+<nav class="modes" aria-label="Colour the city by">
+  <button data-mode="0" aria-pressed="true">Power</button>
+  <button data-mode="1" aria-pressed="false">Policy areas</button>
+  <button data-mode="2" aria-pressed="false">Height</button>
+  <button class="routes-open" aria-haspopup="dialog">Routes</button>
+</nav>
+
+<div class="corner">
+  <button class="about-open" aria-haspopup="dialog">Method</button>
+</div>
+
+<div class="tally" aria-live="polite">
+  <span id="tally-big" class="tally-big">&nbsp;</span>
+  <span id="tally-small" class="tally-small">&nbsp;</span>
+</div>
+
+<aside id="panel" class="panel">
+  <button class="sheet-handle" aria-expanded="true" aria-controls="panel-body">Hide legend</button>
+  <div id="panel-body"></div>
+</aside>
+
+<div id="card" class="card" hidden></div>
+<section id="route" class="route" hidden aria-live="polite"></section>
+
+<dialog id="about" class="sheet" aria-labelledby="about-title">
+  <button class="sheet-close" aria-label="Close">×</button>
+  <article id="about-body"></article>
+</dialog>
+<dialog id="routes" class="sheet" aria-labelledby="routes-title">
+  <button class="sheet-close" aria-label="Close">×</button>
+  <article id="routes-body"></article>
+</dialog>
+
+<p class="howto">Drag to turn. Right-drag or Shift-drag to move. Scroll to zoom.</p>
+
+<footer class="timeline">
+  <button id="play" class="play" aria-label="Play the Commission's term, week by week">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path id="play-icon" d="M4 2.5v11l9-5.5z"/></svg>
+  </button>
+  <div class="hist-wrap">
+    <canvas id="hist" aria-label="Lobby meetings per week; drag to set the date"></canvas>
+    <div class="hist-axis"><span id="axis-from"></span><span>Lobby meetings with the Commission, per week</span><span id="axis-to"></span></div>
+  </div>
+</footer>
+
+<div id="loading" class="loading">Building the city <span id="progress">0</span>%</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
