@@ -10,7 +10,7 @@ function parse(buf) {
   const take = (Type, n) => { const a = new Type(buf, o, n); o += Math.ceil(n * Type.BYTES_PER_ELEMENT / 4) * 4; return a; };
   return {
     nB, origin,
-    gid: take(Uint32Array, nB), power: take(Int16Array, nB), cat: take(Uint8Array, nB), hm: take(Uint8Array, nB),
+    gid: take(Uint32Array, nB), power: take(Int16Array, nB), year: take(Int16Array, nB), cat: take(Uint8Array, nB), hm: take(Uint8Array, nB),
     bits: take(Uint32Array, nB), partStart: take(Uint32Array, nB + 1),
     height: take(Float32Array, nP), ringStart: take(Uint32Array, nP + 1),
     vertStart: take(Uint32Array, nR + 1), hole: take(Uint8Array, nR), xz: take(Int16Array, 2 * nV),
@@ -52,10 +52,10 @@ function build(t) {
       }
     }
   }
-  // Two texels per building: [power, category, height m, global id], [sector bits, sector score*, growth*, 0]
+  // Two texels per building: [power, category, height m, global id], [flag bits, sector score*, growth*, year]
   // (* written live by the app)
   const attr = new Float32Array(t.nB * 8);
-  for (let b = 0; b < t.nB; b++) attr.set([t.power[b], t.cat[b], t.hm[b], t.gid[b], t.bits[b], 0, 1, 0], b * 8);
+  for (let b = 0; b < t.nB; b++) attr.set([t.power[b], t.cat[b], t.hm[b], t.gid[b], t.bits[b], 0, 1, t.year[b]], b * 8);
   return { pos: pos.subarray(0, v * 3), bld: bld.subarray(0, v), idx: idx.subarray(0, k), attr, origin: t.origin, nB: t.nB };
 }
 

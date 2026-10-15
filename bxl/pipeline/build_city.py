@@ -86,14 +86,58 @@ def assign_places(by_solid, power):
         if j is None:
             p["gid"] = None; continue
         out[solids[j]].append(p)
-    return out
+    return out, tree, solids, feet
+
+
+BIT_CULTURE, BIT_PROTECTED, BIT_INVENTORY = 20, 21, 22
+CULTURE_IDS = set(json.loads((Path(__file__).resolve().parent / "curated.json").read_text()).get("CULTURE_IDS", []))
+
+def enrich(tree, solids, feet):
+    """Per-building facts from the heritage inventory, protected heritage and Wikidata (see build_enrich.py)."""
+    path = Path(__file__).resolve().parent / "cache" / "enrich_raw.json"
+    if not path.exists():
+        print("  no enrichment found: run build_enrich.py first"); return {}
+    raw = json.loads(path.read_text())
+    info = collections.defaultdict(dict)
+    def nearest(x, y, maxd):
+        pt = shapely.Point(x, y)
+        hit = tree.query(pt, predicate="intersects")
+        if len(hit): return solids[max(hit, key=lambda k: feet[k].area)]
+        k = tree.nearest(pt)
+        return solids[k] if k is not None and feet[k].distance(pt) <= maxd else None
+    for it in raw["inventory"]:
+        s = nearest(it["x"], it["y"], 8)
+        if not s: continue
+        cur = info[s].get("inv")
+        if cur and (cur.get("name") or not it["name"]) and cur.get("img"): continue
+        info[s]["inv"] = {k: v for k, v in it.items() if k not in ("x", "y") and v not in ("", None, False)}
+    for pr in raw["protected"]:
+        g = shapely.make_valid(shapely.geometry.shape(pr["geom"]))
+        if g.area > 400000: continue                       # whole landscapes, not buildings
+        for k in tree.query(g, predicate="intersects"):
+            fk = feet[k] if feet[k].is_valid else shapely.make_valid(feet[k])
+            if fk.intersection(g).area >= 0.5 * fk.area:
+                info[solids[k]]["prot"] = {"name": pr["name"], "as": pr["as"], "type": pr["type"], "date": pr["date"]}
+    for w in raw["wikidata"]:
+        x, y = TO_LB.transform(w["lng"], w["lat"])
+        s = nearest(x, y, 15 if w["cls"] else 6)
+        if not s: continue
+        cur = info[s].get("wd")
+        score = lambda v: (bool(v.get("cls")), bool(v.get("photo")), bool(v.get("wiki")))
+        if cur and score(cur) >= score(w): continue
+        info[s]["wd"] = {"qid": w["qid"], "name": w["name"], "desc": w["desc"], "year": w["year"], "arch": w["arch"],
+                         "wiki": w["wiki"], "cls": w["cls"], "photo": w["photo"]}
+    print(f"  enrichment: {sum(1 for v in info.values() if 'inv' in v)} inventory, {sum(1 for v in info.values() if 'prot' in v)} protected, "
+          f"{sum(1 for v in info.values() if 'wd' in v)} Wikidata, {sum(1 for v in info.values() if v.get('wd', {}).get('cls'))} cultural")
+    return info
 
 
 def main():
     gpkg, power_path = sys.argv[1], sys.argv[2]
     power = json.load(open(power_path))
     by_solid = load_buildings(gpkg)
-    placed = assign_places(by_solid, power)
+    placed, tree, tsolids, feet = assign_places(by_solid, power)
+    info = enrich(tree, tsolids, feet)
 
     solids = sorted(by_solid)
     gid_of = {s: i for i, s in enumerate(solids)}
@@ -121,7 +165,13 @@ def main():
                 bits |= 1 << sector_keys.index(k)
         h = max(h for h, _ in parts)
         c = shapely.centroid(parts[0][1])
-        rows.append(dict(gid=g, power=pw, cat=cat, hm=min(255, int(round(h))), bits=bits,
+        f = info.get(s, {})
+        year = (f.get("inv") or {}).get("year") or (f.get("wd") or {}).get("year") or 0
+        if not (1000 <= year <= 2030): year = 0
+        if (f.get("wd") or {}).get("cls") or any(p["id"] in CULTURE_IDS for p in ps): bits |= 1 << BIT_CULTURE
+        if "prot" in f or (f.get("inv") or {}).get("listed"): bits |= 1 << BIT_PROTECTED
+        if "inv" in f: bits |= 1 << BIT_INVENTORY
+        rows.append(dict(gid=g, power=pw, cat=cat, hm=min(255, int(round(h))), bits=bits, year=year, info=f,
                          parts=[(h, gg.simplify(SIMPLIFY)) for h, gg in parts], cx=c.x, cy=c.y))
 
     loc = to_local(np.array([[r["cx"], r["cy"]] for r in rows]))
@@ -135,29 +185,40 @@ def main():
     for (tx, tz), rs in tiles.items():
         origin = np.array([tx * TILE, tz * TILE])
         index.append(dict(key=f"{tx}_{tz}", data=pack_tile(origin, rs), d=math.hypot(*(origin + TILE / 2))))
+        index[-1]["info"] = {str(r["gid"]): r["info"] for r in rs if r["info"]}
     index.sort(key=lambda t: t["d"])
     packs, n_packs, tile_meta = [], 8, []
     per = -(-len(index) // n_packs)
     for k in range(n_packs):
         chunk = index[k * per:(k + 1) * per]
         if not chunk: break
-        name, blob = f"pack{k}.bin", bytearray()
+        name, blob, pinfo = f"pack{k}.bin", bytearray(), {}
         for t in chunk:
+            pinfo.update(t["info"])
             tile_meta.append(dict(file=t["key"], pack=name, offset=len(blob), length=len(t["data"])))
             blob += t["data"]
         (OUT / name).write_bytes(bytes(blob)); packs.append(name)
+        (OUT / f"info{k}.json").write_text(json.dumps(pinfo, ensure_ascii=False, separators=(",", ":")))
 
     # Places: local coordinates for the viewer
     for p in power["places"]:
         x, y = TO_LB.transform(p["lng"], p["lat"])
         (p["x"], p["z"]), = to_local(np.array([[x, y]])).tolist()
     bpos = {r["gid"]: [round(r["x"], 1), round(r["z"], 1), r["hm"]] for r in rows if r["gid"] in bldg_places}
+    culture = []
+    for r in rows:
+        w = (r["info"].get("wd") or {})
+        if w.get("cls"):
+            culture.append({"gid": r["gid"], "n": w["name"], "k": w["cls"][0], "img": bool(w.get("photo")), "x": round(r["x"], 1), "z": round(r["z"], 1), "h": r["hm"]})
+    culture.sort(key=lambda c: (not c["img"], c["n"] or ""))
+    years = [r["year"] for r in rows if r["year"]]
     hull = shapely.concave_hull(shapely.MultiPoint([(r["cx"], r["cy"]) for r in rows]), ratio=0.04).buffer(120).simplify(20)
     boundary = np.round(to_local(shapely.get_coordinates(hull.exterior)), 1).tolist()
     water, green = landcover(hull)
     city = dict(origin=ORIGIN.tolist(), tileSize=TILE, buildings=len(rows), tiles=tile_meta, packs=packs,
                 cats=CAT_INDEX, buildingPlaces={str(k): v for k, v in bldg_places.items()},
                 buildingPos={str(k): v for k, v in bpos.items()}, boundary=boundary, water=water, green=green,
+                culture=culture, dated=len(years),
                 home=dict(x=-350, z=150, azimuth=205, elevation=36, span=5200))
     (OUT / "city.json").write_text(json.dumps(city, separators=(",", ":")))
     json.dump(power, open(power_path, "w"), ensure_ascii=False, separators=(",", ":"))
@@ -165,10 +226,10 @@ def main():
 
 
 def pack_tile(origin, rows):
-    gid, power, cat, hm, bits, part_start = [], [], [], [], [], [0]
+    gid, power, year, cat, hm, bits, part_start = [], [], [], [], [], [], [0]
     heights, ring_start, vert_start, holes, verts = [], [0], [0], [], []
     for b in rows:
-        gid.append(b["gid"]); power.append(b["power"]); cat.append(b["cat"]); hm.append(b["hm"]); bits.append(b["bits"])
+        gid.append(b["gid"]); power.append(b["power"]); year.append(b["year"]); cat.append(b["cat"]); hm.append(b["hm"]); bits.append(b["bits"])
         for h, geom in b["parts"]:
             for poly in getattr(geom, "geoms", [geom]):          # every polygon is its own part
                 if poly.is_empty or poly.geom_type != "Polygon": continue
@@ -185,7 +246,7 @@ def pack_tile(origin, rows):
         part_start.append(len(heights))
     V = np.concatenate(verts) if verts else np.zeros((0, 2), np.int16)
     out = struct.pack("<5I2f", MAGIC, len(gid), len(heights), len(holes), len(V), *origin)
-    out += pad4(np.array(gid, "<u4").tobytes()) + pad4(np.array(power, "<i2").tobytes())
+    out += pad4(np.array(gid, "<u4").tobytes()) + pad4(np.array(power, "<i2").tobytes()) + pad4(np.array(year, "<i2").tobytes())
     out += pad4(np.array(cat, "u1").tobytes()) + pad4(np.array(hm, "u1").tobytes())
     out += pad4(np.array(bits, "<u4").tobytes()) + pad4(np.array(part_start, "<u4").tobytes())
     out += pad4(np.array(heights, "<f4").tobytes()) + pad4(np.array(ring_start, "<u4").tobytes())

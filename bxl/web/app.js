@@ -6,7 +6,18 @@ import { MapControls } from './vendor/MapControls.js';
 THREE.ColorManagement.enabled = false;
 
 const SKY = '#e5e8ed', LAND = '#f4f3ef', WATER = '#b7c7d4', GREEN = '#e1e7d8', MAQUETTE = '#f0efea';
-const BLUE = '#1c3f94', IRIS = '#f2c200';
+const BLUE = '#1c3f94', IRIS = '#f2c200', CULTURE = '#d6336c';
+// Construction periods for the Heritage mode
+const PERIODS = [
+  { to: 1700, label: 'Before 1700', note: 'Medieval and Spanish Netherlands', color: '#5b1f1a' },
+  { to: 1830, label: '1700–1830', note: 'Austrian, French and Dutch rule', color: '#8f3420' },
+  { to: 1880, label: '1830–1880', note: 'Capital of the new Belgium', color: '#c4602a' },
+  { to: 1914, label: '1880–1914', note: 'Belle Époque and Art Nouveau', color: '#e3a33f' },
+  { to: 1945, label: '1914–1945', note: 'Art Deco and the wars', color: '#86b0a5' },
+  { to: 1975, label: '1945–1975', note: 'Expo 58 and Brusselisation', color: '#3f7fa6' },
+  { to: 9999, label: 'Since 1975', note: 'The European capital', color: '#26357f' },
+];
+const periodOf = y => PERIODS.findIndex(p => y < p.to);
 const ATTR_W = 256;
 const WORKERS = Math.min(4, navigator.hardwareConcurrency || 2);
 const LOBBY = new Set(['corp', 'assoc', 'consult', 'union', 'ngo', 'think', 'public']);
@@ -91,7 +102,9 @@ const catColors = CAT_KEYS.map(k => col(CATS[k]?.color || MAQUETTE));
 const catOn = CAT_KEYS.map(k => (k === 'none' || CATS[k]?.off) ? 0 : 1);
 const uniforms = {
   uMode: { value: 0 }, uHover: { value: -1 }, uSelected: { value: -1 }, uNow: { value: 0 },
-  uLayerAt: { value: 0 }, uTL: { value: 0 },
+  uLayerAt: { value: 0 }, uTL: { value: 0 }, uCultureOn: { value: 1 }, uCulture: { value: new THREE.Color(CULTURE) },
+  uPeriod: { value: PERIODS.map(p => new THREE.Color(p.color)) }, uPeriodTo: { value: PERIODS.map(p => p.to) },
+  uPeriodOn: { value: PERIODS.map(() => 1) },
   uCat: { value: catColors }, uCatOn: { value: catOn },
   uMaquette: { value: col(MAQUETTE) }, uBlue: { value: col(BLUE) }, uIris: { value: col(IRIS) },
   uFogColor: { value: col(SKY) }, uFog: { value: new THREE.Vector2(9000, 24000) },
@@ -103,7 +116,11 @@ const VERT = /* glsl */`
   uniform float uMode, uHover, uSelected, uNow, uBorn, uLayerAt, uTL;
   uniform vec3 uCat[16];
   uniform float uCatOn[16];
-  uniform vec3 uMaquette, uBlue, uIris;
+  uniform vec3 uMaquette, uBlue, uIris, uCulture;
+  uniform float uCultureOn;
+  uniform vec3 uPeriod[${PERIODS.length}];
+  uniform float uPeriodTo[${PERIODS.length}];
+  uniform float uPeriodOn[${PERIODS.length}];
   out vec3 vColor;
   out vec3 vWorld;
   out float vGid;
@@ -134,14 +151,26 @@ const VERT = /* glsl */`
       p.y += (2600.0 + 2400.0 * fract(seed * 3.71)) * e;
     }
 
+    int flags = int(b.x + 0.5);
+    bool culture = ((flags >> 20) & 1) == 1;
+    bool protectedSite = ((flags >> 21) & 1) == 1;
+    float year = b.w;
     vec3 c = uMaquette;
     bool rise = false;
     if (uMode < 0.5) {
       if (power >= 0.0 && uCatOn[cat] > 0.5) { c = mix(uMaquette, uCat[cat], 0.3 + 0.7 * power / 100.0); rise = true; }
+      else if (culture && uCultureOn > 0.5) { c = mix(uMaquette, uCulture, 0.8); rise = true; }
     } else if (uMode < 1.5) {
       if (b.y > 0.0) { c = mix(vec3(0.80, 0.85, 0.93), uBlue, b.y / 100.0); rise = true; }
-    } else {
+    } else if (uMode < 2.5) {
       c = heightRamp(a.z);
+    } else if (year > 0.0) {
+      for (int k = 0; k < ${PERIODS.length}; k++) {
+        if (year < uPeriodTo[k]) {
+          if (uPeriodOn[k] > 0.5) { c = uPeriod[k]; if (protectedSite) c = mix(c, vec3(0.0), 0.18); rise = true; }
+          break;
+        }
+      }
     }
     // The timeline: each lobby's building grows with the meetings it has had so far this term.
     if (uTL > 0.5 && uMode < 1.5 && cat >= 5 && cat <= 11 && power >= 0.0) {
@@ -211,7 +240,7 @@ function addTile(m) {
   const tex = new THREE.DataTexture(data, ATTR_W * 2, rows, THREE.RGBAFormat, THREE.FloatType);
   tex.needsUpdate = true;
   const t = tileData.length;
-  tileData.push({ data, tex });
+  tileData.push({ data, tex, key: city.tiles.find(t => t.file === m.id).pack.replace('pack', 'info').replace('.bin', '.json') });
   for (let b = 0; b < m.nB; b++) { const gid = m.attr[b * 8 + 3]; gidTile[gid] = t; gidIdx[gid] = b; }
   const born = { value: reduced ? -10 : performance.now() / 1000 };
   const mesh = new THREE.Mesh(g, makeMaterial(tex, false, born));
@@ -274,7 +303,6 @@ function flyTo(x, z, distance = 520, done = null) {
   const dir = camera.position.clone().sub(controls.target).normalize();
   if (dir.y < 0.45) { dir.y = 0.6; dir.normalize(); }
   const target = new THREE.Vector3(x, 0, z);
-  if (!phone.matches && pinnedGid >= 0) target.add(new THREE.Vector3().crossVectors(dir, new THREE.Vector3(0, 1, 0)).normalize().multiplyScalar(distance * 0.16));
   flight = { t0: performance.now(), dur: reduced ? 1 : 1400, from: { t: controls.target.clone(), p: camera.position.clone() },
     to: { t: target, p: target.clone().add(dir.multiplyScalar(distance)) }, done };
 }
@@ -336,7 +364,8 @@ function renderPanel() {
       <h2>Who has power</h2>
       <p class="hint">Coloured buildings hold an EU institution, a member state's mission or one of the ${fmtNum(P.orgs.length)} most influential registered lobbies. The stronger the colour, the higher the power score.</p>
       <ul class="legend">${CAT_KEYS.map((k, i) => counts[k] ? `<li><button data-cat="${i}" aria-pressed="${!!catOn[i]}">
-        <span class="sw" style="background:${CATS[k].color}"></span><span>${esc(CATS[k].label)}</span><span class="n">${counts[k]}</span></button></li>` : '').join('')}</ul>
+        <span class="sw" style="background:${CATS[k].color}"></span><span>${esc(CATS[k].label)}</span><span class="n">${counts[k]}</span></button></li>` : '').join('')}
+        <li><button data-culture aria-pressed="${!!uniforms.uCultureOn.value}"><span class="sw" style="background:${CULTURE}"></span><span>Culture &amp; heritage <span class="n">(no power score)</span></span><span class="n">${city.culture.length}</span></button></li></ul>
       <h2 class="section">Most powerful</h2>
       ${rankHtml(ranked(), p => p.power)}`;
   } else if (mode === 1) {
@@ -347,6 +376,16 @@ function renderPanel() {
       <div class="sectors">${sectorKeys.map(k => `<button data-sector="${k}" aria-pressed="${k === sector}">${esc(P.sectors[k].label)}</button>`).join('')}</div>
       <p class="hint">Meetings since ${fmtDate(t0)} with ${esc(s.dgs.map(d => 'DG ' + d).join(', '))} and the cabinet${s.cabs.length > 1 ? 's' : ''} of ${esc(s.cabs.join(' and '))}. Darker blue, more access.</p>
       ${rankHtml(list, p => p.sec[sector], BLUE)}`;
+  } else if (mode === 3) {
+    panelBody.innerHTML = `
+      <h2>When it was built</h2>
+      <p class="hint">${fmtNum(city.dated)} buildings have a construction date in the Brussels heritage inventory or Wikidata. Darker shades are protected heritage.</p>
+      <ul class="legend">${PERIODS.map((p, i) => `<li><button data-period="${i}" aria-pressed="${!!uniforms.uPeriodOn.value[i]}">
+        <span class="sw" style="background:${p.color}"></span><span>${p.label} <span class="n">${esc(p.note)}</span></span><span class="n">${periodCounts ? fmtNum(periodCounts[i]) : ''}</span></button></li>`).join('')}</ul>
+      <h2 class="section">Culture</h2>
+      <p class="hint">Museums, theatres, churches, palaces and other cultural places from Wikidata, shown in pink in Power mode.</p>
+      <ol class="rank">${city.culture.slice(0, 60).map((c, i) => `<li><button data-gid="${c.gid}">
+        <span class="pos">${i + 1}</span><span class="nm"><b title="${esc(c.n)}">${esc(c.n)}</b><span class="n">${esc(c.k)}</span></span><span class="val"></span></button></li>`).join('')}</ol>`;
   } else {
     panelBody.innerHTML = `
       <h2>Building height</h2>
@@ -360,6 +399,11 @@ function renderPanel() {
 panelBody.addEventListener('click', e => {
   const c = e.target.closest('[data-cat]');
   if (c) { const i = +c.dataset.cat; catOn[i] = catOn[i] ? 0 : 1; uniforms.uLayerAt.value = now(); renderPanel(); return; }
+  if (e.target.closest('[data-culture]')) { uniforms.uCultureOn.value = uniforms.uCultureOn.value ? 0 : 1; uniforms.uLayerAt.value = now(); renderPanel(); return; }
+  const pr = e.target.closest('[data-period]');
+  if (pr) { const i = +pr.dataset.period; uniforms.uPeriodOn.value[i] = uniforms.uPeriodOn.value[i] ? 0 : 1; uniforms.uLayerAt.value = now(); renderPanel(); return; }
+  const gb = e.target.closest('[data-gid]');
+  if (gb) { focusGid(+gb.dataset.gid); return; }
   const s = e.target.closest('[data-sector]');
   if (s) { sector = s.dataset.sector; applySector(); uniforms.uLayerAt.value = now(); renderPanel(); return; }
   const p = e.target.closest('[data-place]');
@@ -368,6 +412,8 @@ panelBody.addEventListener('click', e => {
 panelBody.addEventListener('pointerover', e => {
   const p = e.target.closest('[data-place]');
   if (p && pinnedGid < 0) uniforms.uHover.value = byId[p.dataset.place]?.gid ?? -1;
+  const g = e.target.closest('[data-gid]');
+  if (g && pinnedGid < 0) uniforms.uHover.value = +g.dataset.gid;
 });
 panelBody.addEventListener('pointerleave', () => { if (pinnedGid < 0) uniforms.uHover.value = -1; });
 $('.sheet-handle').addEventListener('click', () => setCollapsed(!$('#panel').classList.contains('collapsed')));
@@ -391,6 +437,15 @@ function setMode(m) {
 const card = $('#card');
 let pinnedGid = -1, hoverGid = -1, cardPlace = null;
 const basisLabel = { formal: 'Formal authority', council: 'Council voting weight', influence: 'Measured influence' };
+// Per-building facts (heritage inventory, protection, Wikidata), loaded per tile on demand
+const infoFiles = {}, infoLoaded = {};
+function infoFor(gid) {
+  const t = gidTile[gid]; if (t < 0) return Promise.resolve(null);
+  const key = tileData[t].key;
+  infoFiles[key] ||= fetch(`data/${key}`).then(r => r.ok ? r.json() : {}).catch(() => ({})).then(d => (infoLoaded[key] = d));
+  return infoFiles[key].then(d => d[gid] || null);
+}
+const infoNow = gid => { const t = gidTile[gid]; return t < 0 ? null : (infoLoaded[tileData[t].key] || {})[gid] || null; };
 function fmtSpend(s) {
   if (!s) return null;
   const m = v => v >= 1e6 ? `€${(v / 1e6).toFixed(v % 1e6 ? 1 : 0)}m` : `€${Math.round(v / 1e3)}k`;
@@ -402,42 +457,75 @@ function scoreHtml(p) {
   let sub = basisLabel[p.basis];
   if (p.basis === 'influence') sub += `<br>ranked ${fmtNum(p.org.rank)} of ${fmtNum(P.registrants)} in Brussels`;
   if (p.basis === 'council') sub += `<br>${p.rep.share}% of the EU population`;
-  return `<div class="score"><b>${Math.round(p.power)}</b><span>${sub}</span></div>`;
+  return `<div class="score"><b>${Math.round(p.power)}</b><span>Power score<br>${sub}</span></div>`;
 }
+function photoOf(f) {
+  const w = f?.wd?.photo, inv = f?.inv;
+  if (w?.thumb) return { src: w.thumb, credit: `Photo: ${w.credit || 'Wikimedia Commons'}`, link: w.page };
+  if (inv?.img) return { src: inv.img, credit: 'Photo: urban.brussels, heritage inventory', link: inv.url };
+  return null;
+}
+const cap = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
 function cardHtml(gid, pinned, placeId) {
-  const ps = placesIn(gid);
-  const h = heightOf(gid);
-  if (!ps.length) return `<div class="kind">A building of the city</div><h3>About ${Math.round(h || 0)} m tall</h3>
-    <div class="addr">No mapped institution or registered organisation here</div>`;
-  const p = (placeId && ps.find(q => q.id === placeId)) || ps[0];
+  const ps = placesIn(gid), f = infoNow(gid), h = heightOf(gid);
+  const p = (placeId && ps.find(q => q.id === placeId)) || ps[0] || null;
   const others = ps.filter(q => q !== p);
-  const head = `${pinned ? '<button class="card-close" aria-label="Close">×</button>' : ''}
-    <div class="kind"><span class="sw" style="background:${CATS[p.c].color}"></span>${esc(CATS[p.c].label)}</div>
-    <h3>${esc(p.n)}</h3><div class="addr">${esc(p.a)}</div>${scoreHtml(p)}`;
-  if (!pinned) return head + (others.length ? `<p class="more">and ${others.length} more in this building. Click for details.</p>` : `<p class="more">Click for details.</p>`);
-  let body = '';
-  if (p.d) body += `<p>${esc(p.d)}</p>`;
-  if (p.why) body += `<p class="why">${esc(p.why)}</p>`;
-  if (p.org) {
-    const o = p.org, W = P.weights;
-    const row = (label, raw, part, w) => `<li><span>${label}</span><b>${raw}</b><span class="bar"><i style="width:${part ?? 0}%"></i></span></li>`;
-    body += `<h4>Influence index ${o.inf} of 100, built from</h4><ul class="metrics">
-      ${row('Meetings with Commissioners and cabinets', fmtNum(o.top), o.parts.top, W.top)}
-      ${row('Meetings with senior Commission staff', fmtNum(o.dg), o.parts.dg, W.dg)}
-      ${row('Declared lobbying costs', fmtSpend(o.spend) || (o.budget ? 'Budget ' + fmtSpend([o.budget, o.budget]) : 'Not declared'), o.parts.spend, W.spend)}
-      ${row('Lobbyists, full-time', o.fte, o.parts.fte, W.fte)}
-      ${row('Parliament badges', o.ep, o.parts.ep, W.ep)}</ul>`;
-    if (o.who?.length) body += `<h4>Most met</h4><p style="margin:0">${o.who.map(([w, n]) => `${esc(w)} (${n})`).join(', ')}</p>`;
-    const secs = Object.entries(o.secN || {}).sort((a, b) => b[1] - a[1]);
-    if (secs.length) body += `<h4>Meetings by policy area</h4><div class="chips">${secs.map(([k, n]) => `<span>${esc(P.sectors[k].label)} ${n}</span>`).join('')}</div>`;
+  const inv = f?.inv, wd = f?.wd, prot = f?.prot;
+  const year = inv?.year || wd?.year;
+  const title = p?.n || wd?.name || inv?.name || inv?.addr || `A ${Math.round(h || 0)} m building`;
+  const addr = p?.a || inv?.addr || '';
+  const photo = photoOf(f);
+  let html = pinned ? '<button class="card-close" aria-label="Close">×</button>' : '';
+  if (photo) html += `<figure class="photo"><img src="${esc(photo.src)}" alt="" loading="lazy"><figcaption>${photo.link && pinned ? `<a href="${esc(photo.link)}" target="_blank" rel="noopener">${esc(photo.credit)}</a>` : esc(photo.credit)}</figcaption></figure>`;
+  html += `<div class="body"><h3>${esc(title)}</h3>${addr ? `<div class="addr">${esc(addr)}</div>` : ''}`;
+  if (year) {
+    const pi = periodOf(year);
+    html += `<div class="year"><b>${year}</b><span><i class="sw" style="background:${PERIODS[pi].color}"></i>${esc(inv?.style || PERIODS[pi].note)}</span></div>`;
   }
-  if (others.length) body += `<div class="others">Also in this building: ${others.map(q => `<button data-other="${esc(q.id)}">${esc(q.n)}</button>`).join(', ')}</div>`;
-  body += `<div id="wiki"></div>`;
+  if (p) html += scoreHtml(p);
+  const layers = [];
+  if (p) layers.push([CATS[p.c].color, CATS[p.c].label, p.power != null ? `power ${Math.round(p.power)}` : '']);
+  for (const q of others.slice(0, 2)) layers.push([CATS[q.c].color, q.n, q.power != null ? `power ${Math.round(q.power)}` : '']);
+  if (wd?.cls?.length) layers.push([CULTURE, 'Culture', wd.cls.join(', ')]);
+  if (prot) layers.push(['#3b2a20', 'Protected heritage', [prot.as, prot.date?.slice(0, 4)].filter(Boolean).join(', ')]);
+  else if (inv?.listed) layers.push(['#3b2a20', 'Protected heritage', '']);
+  if (inv) layers.push(['#8c7a68', 'Heritage inventory', cap(inv.type || '')]);
+  if (layers.length) html += `<h4>In layers</h4><ul class="inlayers">${layers.map(([c, a, b]) => `<li><span class="sw" style="background:${c}"></span><b>${esc(a)}</b> ${esc(b)}</li>`).join('')}</ul>`;
+  const facts = [];
+  if (h) facts.push(['Height', `${Math.round(h)} m`]);
+  if (h) facts.push(['Storeys', `about ${Math.max(1, Math.round(h / 3.2))}`]);
+  const arch = inv?.arch || (wd?.arch || []).join(', ');
+  if (arch && pinned) facts.push(['Architects', arch.replace(/\s*\(\d{4}(-\d{4})?\)/g, '')]);
+  if (inv?.type && pinned) facts.push(['Type', cap(inv.type)]);
+  if (inv?.unesco) facts.push(['UNESCO', 'World Heritage']);
+  if (facts.length) html += `<dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`;
+  if (!pinned) return html + `<p class="more">${others.length ? `${others.length + 1} organisations in this building. ` : ''}Click to keep this card open</p></div>`;
+
+  if (p?.d) html += `<p>${esc(p.d)}</p>`;
+  else if (wd?.desc) html += `<p>${esc(cap(wd.desc))}.</p>`;
+  if (p?.why) html += `<p class="why">${esc(p.why)}</p>`;
+  if (p?.org) {
+    const o = p.org;
+    const row = (label, raw, part) => `<li><span>${label}</span><b>${raw}</b><span class="bar"><i style="width:${part ?? 0}%"></i></span></li>`;
+    html += `<h4>Influence index ${o.inf} of 100, built from</h4><ul class="metrics">
+      ${row('Meetings with Commissioners and cabinets', fmtNum(o.top), o.parts.top)}
+      ${row('Meetings with senior Commission staff', fmtNum(o.dg), o.parts.dg)}
+      ${row('Declared lobbying costs', fmtSpend(o.spend) || (o.budget ? 'Budget ' + fmtSpend([o.budget, o.budget]) : 'Not declared'), o.parts.spend)}
+      ${row('Lobbyists, full-time', o.fte, o.parts.fte)}
+      ${row('Parliament badges', o.ep, o.parts.ep)}</ul>`;
+    if (o.who?.length) html += `<h4>Most met</h4><p style="margin:0">${o.who.map(([w, n]) => `${esc(w)} (${n})`).join(', ')}</p>`;
+    const secs = Object.entries(o.secN || {}).sort((a, b) => b[1] - a[1]);
+    if (secs.length) html += `<h4>Meetings by policy area</h4><div class="chips">${secs.map(([k, n]) => `<span>${esc(P.sectors[k].label)} ${n}</span>`).join('')}</div>`;
+  }
+  if (others.length) html += `<div class="others">Also in this building: ${others.map(q => `<button data-other="${esc(q.id)}">${esc(q.n)}</button>`).join(', ')}</div>`;
+  html += `<div id="wiki"></div>`;
   const links = [];
-  if (p.org) links.push(`<a href="https://transparency-register.europa.eu/searchregister-or-update/organisation-detail_en?id=${encodeURIComponent(p.org.id)}" target="_blank" rel="noopener">Transparency Register</a>`);
-  if (p.org?.web) links.push(`<a href="${esc(/^https?:/.test(p.org.web) ? p.org.web : 'https://' + p.org.web)}" target="_blank" rel="noopener">Website</a>`);
-  links.push(`<a href="https://www.openstreetmap.org/?mlat=${p.lat}&mlon=${p.lng}#map=19/${p.lat}/${p.lng}" target="_blank" rel="noopener">Map</a>`);
-  return head + body + `<div class="links">${links.join('')}</div>`;
+  if (inv?.url) links.push(`<a href="${esc(inv.url)}" target="_blank" rel="noopener">Heritage record</a>`);
+  if (p?.org) links.push(`<a href="https://transparency-register.europa.eu/searchregister-or-update/organisation-detail_en?id=${encodeURIComponent(p.org.id)}" target="_blank" rel="noopener">Transparency Register</a>`);
+  if (p?.org?.web) links.push(`<a href="${esc(/^https?:/.test(p.org.web) ? p.org.web : 'https://' + p.org.web)}" target="_blank" rel="noopener">Website</a>`);
+  if (wd?.wiki) links.push(`<a href="https://en.wikipedia.org/wiki/${esc(wd.wiki)}" target="_blank" rel="noopener">Wikipedia</a>`);
+  if (wd?.qid) links.push(`<a href="https://www.wikidata.org/wiki/${esc(wd.qid)}" target="_blank" rel="noopener">Wikidata</a>`);
+  return html + `<div class="links">${links.join('')}</div></div>`;
 }
 function placeCard(x, y) {
   if (phone.matches && card.classList.contains('pinned')) return;
@@ -445,14 +533,19 @@ function placeCard(x, y) {
   card.style.left = Math.max(12, Math.min(x + 18, innerWidth - r.width - 12)) + 'px';
   card.style.top = Math.max(12, Math.min(y + 18, innerHeight - r.height - 12)) + 'px';
 }
+function renderHover(gid) {
+  card.innerHTML = cardHtml(gid, false);
+  card.querySelector('img')?.addEventListener('load', () => pointer && placeCard(...pointer));
+}
 function showCard(gid, x, y) {
   if (pinnedGid >= 0 || phone.matches) return;
   if (gid < 0) { card.hidden = true; hoverGid = -1; return; }
   if (gid !== hoverGid || card.hidden) {
     hoverGid = gid;
-    card.innerHTML = cardHtml(gid, false);
+    renderHover(gid);
     card.classList.remove('pinned');
     card.hidden = false;
+    if (!infoNow(gid)) infoFor(gid).then(() => { if (hoverGid === gid && pinnedGid < 0) { renderHover(gid); if (pointer) placeCard(...pointer); } });
   }
   placeCard(x, y);
 }
@@ -461,7 +554,7 @@ async function loadWiki(title) {
   try {
     wikiCache[title] ||= await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`).then(r => r.ok ? r.json() : null);
     const d = wikiCache[title], box = card.querySelector('#wiki');
-    if (d?.extract && box) box.innerHTML = `<h4>From Wikipedia</h4><p class="wiki">${esc(d.extract)} <a href="${esc(d.content_urls?.desktop?.page || '#')}" target="_blank" rel="noopener">Read more</a></p>`;
+    if (d?.extract && box) box.innerHTML = `<h4>From Wikipedia</h4><p class="wiki">${esc(d.extract)}</p>`;
   } catch {}
 }
 function pinCard(gid, x, y, placeId) {
@@ -469,18 +562,26 @@ function pinCard(gid, x, y, placeId) {
   uniforms.uSelected.value = gid;
   uniforms.uHover.value = -1;
   if (gid < 0) { card.hidden = true; card.classList.remove('pinned'); history.replaceState(null, '', location.pathname); return; }
-  card.innerHTML = cardHtml(gid, true, placeId);
-  card.classList.add('pinned');
-  card.hidden = false;
+  const draw = () => {
+    if (pinnedGid !== gid) return;
+    card.innerHTML = cardHtml(gid, true, placeId);
+    card.classList.add('pinned');
+    card.hidden = false;
+    const p = placesIn(gid).find(q => q.id === placeId) || placesIn(gid)[0];
+    const f = infoNow(gid);
+    cardPlace = p?.id || null;
+    history.replaceState(null, '', p ? `#place=${encodeURIComponent(p.id)}` : `#building=${gid}`);
+    const wiki = p?.w || f?.wd?.wiki;
+    if (wiki) loadWiki(decodeURIComponent(wiki));
+    card.querySelector('.card-close').onclick = () => pinCard(-1);
+    card.querySelectorAll('[data-other]').forEach(b => b.onclick = () => pinCard(gid, x, y, b.dataset.other));
+    card.querySelector('img')?.addEventListener('load', () => placeCard(x, y));
+    placeCard(x, y);
+  };
+  draw();
   card.scrollTop = 0;
-  const p = placesIn(gid).find(q => q.id === placeId) || placesIn(gid)[0];
-  cardPlace = p?.id || null;
-  if (p) history.replaceState(null, '', `#place=${encodeURIComponent(p.id)}`);
-  if (p?.w) loadWiki(p.w);
-  card.querySelector('.card-close').onclick = () => pinCard(-1);
-  card.querySelectorAll('[data-other]').forEach(b => b.onclick = () => pinCard(gid, x, y, b.dataset.other));
+  if (!infoNow(gid)) infoFor(gid).then(draw);
   if (phone.matches) setCollapsed(true);
-  placeCard(x, y);
 }
 addEventListener('keydown', e => { if (e.key === 'Escape') { pinCard(-1); } });
 function focusPlace(id) {
@@ -489,6 +590,12 @@ function focusPlace(id) {
   pinnedGid = p.gid;
   flyTo(b[0], b[1], 950 + (b[2] || 20) * 6, () => pinCard(p.gid, innerWidth - 400, 110, id));
   pinCard(p.gid, innerWidth - 400, 110, id);
+}
+function focusGid(gid) {
+  const c = city.culture.find(q => q.gid === gid); if (!c) return;
+  pinnedGid = gid;
+  flyTo(c.x, c.z, 800 + (c.h || 15) * 6, () => pinCard(gid, innerWidth - 400, 110));
+  pinCard(gid, innerWidth - 400, 110);
 }
 
 // Hover and click on the model
@@ -544,7 +651,7 @@ $('#play').addEventListener('click', () => playing ? stopPlay() : startPlay());
 function startPlay() {
   playing = true; playFrom = week >= N_WEEKS - 1 ? 0 : week; playT0 = performance.now();
   $('#play-icon').setAttribute('d', 'M4 2.5h3v11H4zM9 2.5h3v11H9z');
-  if (mode === 2) setMode(0);
+  if (mode >= 2) setMode(0);
 }
 function stopPlay() { playing = false; $('#play-icon').setAttribute('d', 'M4 2.5v11l9-5.5z'); applyWeek(); }
 function stepPlay(t) {
@@ -605,6 +712,8 @@ function renderAbout() {
     <table><tbody>${reps.slice(0, 4).map(r => `<tr><td>${esc(r.n.replace('Permanent Representation of ', ''))}</td><td>${r.share}%</td><td>${r.power}</td></tr>`).join('')}</tbody></table>
     <h3>Outside interests: measured influence</h3>
     <p>All ${fmtNum(P.registrants)} organisations in the EU Transparency Register with a Brussels office get an influence index from: meetings with Commissioners and cabinets since ${fmtDate(t0)} (${Math.round(W.top * 100)}%), meetings with senior Commission staff (${Math.round(W.dg * 100)}%), declared lobbying costs (${Math.round(W.spend * 100)}%), full-time lobbyists (${Math.round(W.fte * 100)}%) and Parliament badges (${Math.round(W.ep * 100)}%). Each is compared with the most active organisation on a square-root scale. NGOs report a budget rather than lobbying costs and are scored on the other four. The index is scaled so the strongest outside interest reaches ${P.lobbyCeiling}: a lobby cannot adopt a law. The ${fmtNum(P.orgs.length)} highest are mapped.</p>
+    <h3>Heritage and culture</h3>
+    <p>Construction dates come from the heritage inventory where it records one, otherwise from Wikidata. The inventory focuses on buildings of heritage interest, so recent and ordinary buildings are mostly undated. Cultural places (museums, theatres, churches, palaces and the like) are shown for context and carry no power score.</p>
     <h3>The timeline</h3>
     <p>Bars show published lobby meetings with the Commission each week of the current term. Play it, and each lobby's building grows with the meetings it has had so far.</p>
     <h3>What this does not capture</h3>
@@ -612,6 +721,8 @@ function renderAbout() {
     <h3>Data</h3>
     <ul>
       <li>Buildings and heights: UrbIS 3D Constructions, paradigm.brussels.</li>
+      <li>Construction years, architects, styles and building photos: the Brussels heritage inventory (Inventaire du patrimoine architectural / Irismonument) and protected heritage register, urban.brussels. Photos are shown from urban.brussels' own server and link to their records.</li>
+      <li>Cultural places, names and photos: Wikidata and Wikimedia Commons; each photo credits its author and licence.</li>
       <li>Water, parks and woods: OpenStreetMap contributors, ODbL.</li>
       <li>Lobbying: EU Transparency Register, export of ${fmtDate(new Date(P.registerDate + 'T00:00:00'))}; European Commission meetings with interest representatives, to ${fmtDate(new Date(P.meetingsTo + 'T00:00:00'))}.</li>
       <li>Population: Eurostat. Addresses: UrbIS geocoder. Summaries: Wikipedia.</li>
@@ -623,8 +734,12 @@ function renderAbout() {
 
 // ---------- Boot ----------
 const now = () => performance.now() / 1000;
+let periodCounts = null;
 function cityReady() {
   $('#loading').hidden = true;
+  periodCounts = PERIODS.map(() => 0);
+  for (const t of tileData) for (let i = 7; i < t.data.length; i += 8) if (t.data[i] > 0) periodCounts[periodOf(t.data[i])]++;
+  if (mode === 3) renderPanel();
   uniforms.uLayerAt.value = now() + 0.4;
   const v = homeView();
   flight = { t0: performance.now(), dur: reduced ? 1 : 2600, from: { t: controls.target.clone(), p: camera.position.clone() }, to: { t: v.target, p: v.pos } };
@@ -632,6 +747,7 @@ function cityReady() {
   const [k, val] = decodeURIComponent(location.hash.slice(1)).split('=');
   if (k === 'place' && byId[val]) setTimeout(() => focusPlace(val), 2700);
   if (k === 'route') setTimeout(() => startRoute(val), 2700);
+  if (k === 'building' && city.culture.some(c => c.gid === +val)) setTimeout(() => focusGid(+val), 2700);
 }
 function resize() {
   const w = innerWidth, h = innerHeight;

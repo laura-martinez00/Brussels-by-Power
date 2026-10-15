@@ -80,10 +80,12 @@ h1 { margin: 0; font-size: clamp(24px, 2.9vw, 46px); font-weight: 800; letter-sp
 .ramp-labels { display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; }
 
 /* Card: follows the pointer on hover, pins on click */
-.card { position: fixed; z-index: 5; width: 300px; max-height: calc(100vh - 40px); overflow-y: auto; background: var(--paper);
-  border-radius: 10px; padding: 12px 14px; box-shadow: 0 10px 30px rgba(14, 26, 43, .16); pointer-events: none; }
-.card.pinned { pointer-events: auto; width: 340px; padding: 16px 18px; max-height: calc(100vh - 250px); }
-.card-close { position: absolute; top: 8px; right: 8px; border: 0; background: none; font-size: 20px; line-height: 1; cursor: pointer; color: var(--muted); padding: 4px 8px; border-radius: 6px; }
+.card { position: fixed; z-index: 5; width: 310px; max-height: calc(100vh - 40px); overflow-y: auto; background: var(--paper);
+  border-radius: 10px; padding: 0; box-shadow: 0 10px 30px rgba(14, 26, 43, .16); pointer-events: none; }
+.card .body { padding: 12px 16px 14px; }
+.card.pinned { pointer-events: auto; width: 350px; max-height: calc(100vh - 250px); }
+.card.pinned .body { padding: 14px 18px 18px; }
+.card-close { position: absolute; z-index: 1; background: rgba(255,255,255,.85) !important; top: 8px; right: 8px; border: 0; background: none; font-size: 20px; line-height: 1; cursor: pointer; color: var(--muted); padding: 4px 8px; border-radius: 6px; }
 .card-close:hover { background: var(--sky); color: var(--ink); }
 .card .kind { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12.5px; }
 .card h3 { margin: 4px 0 2px; font-size: 18px; line-height: 1.15; letter-spacing: -0.01em; padding-right: 22px; }
@@ -167,3 +169,21 @@ h1 { margin: 0; font-size: clamp(24px, 2.9vw, 46px); font-weight: 800; letter-sp
   .route { top: auto; bottom: calc(env(safe-area-inset-bottom, 0px) + 146px); left: 12px; right: 12px; width: auto; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Card: photo, year, layers, facts */
+.photo { margin: 0; }
+.photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--sky); }
+.photo figcaption { padding: 6px 16px 0; color: var(--muted); font-size: 11.5px; }
+.photo figcaption a { text-decoration: none; }
+.card .year { display: flex; align-items: baseline; gap: 10px; margin: 6px 0 2px; }
+.card .year b { font-size: 40px; font-weight: 800; letter-spacing: -0.04em; line-height: .9; font-variant-numeric: tabular-nums; }
+.card .year span { color: var(--muted); display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.card .year .sw { display: inline-block; flex: none; }
+.inlayers { list-style: none; margin: 4px 0 0; padding: 0; }
+.inlayers li { display: flex; align-items: baseline; gap: 8px; padding: 2px 0; font-size: 13px; color: var(--muted); }
+.inlayers li b { color: var(--ink); font-weight: 650; }
+.inlayers .sw { flex: none; transform: translateY(1px); }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 10px 0 0; padding-top: 8px; border-top: 1px solid var(--rule); font-size: 13px; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; text-align: right; }
+.card .more { border-top: 1px solid var(--rule); padding-top: 8px; }

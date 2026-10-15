@@ -13,13 +13,14 @@ To try it locally: `python3 -m http.server 8642 --directory web`, then open http
 cd pipeline
 pip install lxml pandas openpyxl requests shapely pyproj numpy
 python build_power_data.py --refresh          # lobby register, Commission meetings, scores -> web/data/power.json
-python build_city.py UrbISBuildings3D_04000.gpkg ../web/data/power.json   # buildings -> web/data tiles
+python build_enrich.py --refresh              # heritage inventory, protected heritage, Wikidata + photo credits
+python build_city.py UrbISBuildings3D_04000.gpkg ../web/data/power.json   # buildings + enrichment -> web/data
 ```
 The lobby data changes daily; rerun the first step weekly or monthly. The buildings change slowly: rerun the
 second step a few times a year. Download the 3D buildings (GeoPackage, whole region, "04000", ~490 MB zipped) from
-https://datastore.brussels/web/urbis-download (UrbIS - 3D Constructions). Always run step 2 after step 1.
+https://datastore.brussels/web/urbis-download (UrbIS - 3D Constructions). Always run the steps in this order.
 
 ## Adjust
 - Score weights, lobby cap (60), number of organisations (150) and policy areas: top of `pipeline/build_power_data.py`.
-- Institution scores, landmark texts and routes: `pipeline/curated.json`.
+- Institution scores, landmark texts, routes and which curated places count as culture (`CULTURE_IDS`): `pipeline/curated.json`.
 - Colours and type: `web/styles.css`; map colours: top of `web/app.js`.
