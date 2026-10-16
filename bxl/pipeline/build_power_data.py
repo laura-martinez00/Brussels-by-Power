@@ -30,7 +30,7 @@ CACHE = os.path.join(HERE, "cache"); os.makedirs(CACHE, exist_ok=True)
 UA = {"User-Agent": "BrusselsPowerMap/1.0 (open-data build script)"}
 
 TERM_START = "2024-12-01"   # von der Leyen II Commission took office
-TOP_N = 150                 # how many registrants to place on the map
+TOP_N = None                # None maps every Brussels registrant with any activity; or a number for the top N
 LOBBY_CEILING = 60          # editorial: max overall power an outside interest can reach
 
 # Influence index weights (sum to 1)
@@ -128,14 +128,17 @@ def brussels_postcode(pc):
     m = re.match(r"\s*(?:B-?)?(\d{4})", str(pc or ""))
     return m and 1000 <= int(m.group(1)) <= 1210 and m.group(1)
 
+ALL_CATS = {}
+
 def text(el, path):
     v = el.findtext(path); return v.strip() if v else ""
 
 def parse_register(path):
-    orgs = {}; export_date = None
+    orgs = {}; export_date = None; ALL_CATS.clear()
     for ev, el in etree.iterparse(path, events=("end",), recover=True, huge_tree=True):
         if el.tag == "exportDate": export_date = (el.text or "")[:10]
         if el.tag != "interestRepresentative": continue
+        ALL_CATS[text(el, "identificationCode")] = (text(el, "name/originalName"), TYPE_MAP.get(text(el, "registrationCategory"), "public"))
         office = el.find("EUOffice")
         if office is None or text(office, "country").upper() != "BELGIUM": office = el.find("headOffice")
         if office is None or text(office, "country").upper() != "BELGIUM" or not brussels_postcode(text(office, "postCode")):
@@ -179,6 +182,11 @@ def parse_meetings(cab_path, dg_path):
     stats = collections.defaultdict(lambda: {"top": 0, "dg": 0, "sec": collections.Counter(),
                                              "who": collections.Counter(), "last": "", "wk": collections.Counter()})
     latest = ""; weekly = collections.Counter(); t0 = pd.Timestamp(TERM_START)
+    details = collections.defaultdict(list)       # org id -> [(date, office, subject)]
+    office_orgs = collections.defaultdict(collections.Counter)
+    wk_type = collections.defaultdict(collections.Counter); wk_sec = collections.defaultdict(collections.Counter)
+    wk_org = collections.defaultdict(collections.Counter); wk_off = collections.defaultdict(collections.Counter)
+    wk_subj = collections.defaultdict(list)
     def rows(path):
         x = pd.read_excel(path, header=1); x.columns = [str(c).strip() for c in x.columns]
         x["Date of meeting"] = pd.to_datetime(x["Date of meeting"], errors="coerce")
@@ -194,11 +202,30 @@ def parse_meetings(cab_path, dg_path):
                 who = f"DG {r['Name of DG/EA - acronym']}"
                 sec = sector_of(dg=str(r["Name of DG/EA - acronym"]))
             ids = {i.strip() for i in str(r["Transparency register ID"]).split(",") if i.strip() and i.strip() != "nan"}
+            subj = str(r.get("Subject of the meeting") or "").strip()
+            if subj == "nan": subj = ""
+            wk_off[wk][who] += 1
+            if sec: wk_sec[wk][sec] += 1
+            names = str(r["Name of interest representative"]).split(",")
+            for k, oid in enumerate(ids):
+                wk_type[wk][ALL_CATS.get(oid, (None, "public"))[1]] += 1
+                wk_org[wk][oid] += 1
+                details[oid].append((d, who, subj[:220]))
+                office_orgs[who][oid] += 1
+            if subj and len(wk_subj[wk]) < 40:
+                wk_subj[wk].append((d, ALL_CATS.get(next(iter(ids), ""), (names[0].strip(), ""))[0] if ids else names[0].strip(), who, subj[:220]))
             for oid in ids:
                 s = stats[oid]; s[kind] += 1; s["who"][who] += 1; s["last"] = max(s["last"], d); s["wk"][wk] += 1
                 if sec: s["sec"][sec] += 1
     n = max(weekly) + 1 if weekly else 0
+    weeks = []
+    for i in range(n):
+        weeks.append({"t": dict(wk_type[i]), "s": dict(wk_sec[i]), "o": wk_org[i].most_common(10),
+                      "c": wk_off[i].most_common(8), "x": sorted(wk_subj[i], key=lambda z: z[0], reverse=True)[:8]})
+    MEET_EXTRA.update(details=details, office_orgs=office_orgs, weeks=weeks)
     return stats, latest, [weekly.get(i, 0) for i in range(n)]
+
+MEET_EXTRA = {}
 
 def norm(v, top):
     """Square-root scaling against the most active organisation: keeps the leaders apart
@@ -229,7 +256,7 @@ def address_candidates(street):
 
 def geocode(street, pc, cache):
     key = f"{street}|{pc}"
-    if cache.get(key): return cache[key]
+    if key in cache: return cache[key]
     res = None
     for q in address_candidates(street):
         for lang in ("fr", "nl"):
@@ -240,8 +267,8 @@ def geocode(street, pc, cache):
                 hits = r.json().get("result") or []
                 if hits and hits[0].get("score", 0) >= 70 and hits[0]["qualificationCode"].get("policeNumber") == "1":
                     p = hits[0]["point"]; res = [round(p["y"], 6), round(p["x"], 6)]
-            except Exception as e:
-                print("   geocode error", q, e)
+            except Exception:
+                return None                                   # transient error: leave uncached, retry next run
             time.sleep(0.1)
             if res: break
         if res: break
@@ -288,7 +315,8 @@ def main():
 
     ranked = sorted(orgs.values(), key=lambda o: -o["influence"])
     for i, o in enumerate(ranked, 1): o["rank"] = i
-    chosen = {o["id"]: o for o in ranked[:TOP_N]}
+    pool_ = ranked[:TOP_N] if TOP_N else [o for o in ranked if o["influence"] > 0]
+    chosen = {o["id"]: o for o in pool_}
     pins = dict(PINNED)
     for key, pat in PINNED_NAMES:
         hit = next((o for o in ranked if re.search(pat, o["name"], re.I)), None)
@@ -301,12 +329,19 @@ def main():
     cache_path = os.path.join(HERE, "geocache.json")
     cache = json.load(open(cache_path)) if os.path.exists(cache_path) else {}
     out_orgs, misses = [], []
+    from concurrent.futures import ThreadPoolExecutor
+    retry = "--retry-geocode" in sys.argv
+    todo = [o for o in chosen.values() if f'{o["street"]}|{o["pc"]}' not in cache or (retry and cache[f'{o["street"]}|{o["pc"]}'] is None)]
+    for o in todo: cache.pop(f'{o["street"]}|{o["pc"]}', None)
+    with ThreadPoolExecutor(8) as ex:
+        for k, _ in enumerate(ex.map(lambda o: geocode(o["street"], o["pc"], cache), todo)):
+            if k % 250 == 0: print(f"    geocoded {k}/{len(todo)}", flush=True); json.dump(dict(cache), open(cache_path, "w"), ensure_ascii=False)
     for o in chosen.values():
-        ll = geocode(o["street"], o["pc"], cache)
+        ll = cache.get(f'{o["street"]}|{o["pc"]}')
         if not ll: misses.append(o["name"]); continue
         out_orgs.append({
             "id": o["id"], "n": o["name"], "acr": o["acr"], "t": TYPE_MAP.get(o["cat"], "public"), "cat": o["cat"],
-            "a": f'{o["street"]}, {o["pc"]}', "lat": ll[0], "lng": ll[1], "web": o["web"],
+            "a": f'{re.sub(r"(\d)" + o["pc"] + r"$", r"\1", o["street"].strip())}, {o["pc"]}', "lat": ll[0], "lng": ll[1], "web": o["web"],
             "inf": o["influence"], "rank": o["rank"], "parts": o["parts"],
             "top": o["top"], "dg": o["dg"], "fte": round(o["fte"], 2), "ep": o["ep"], "spend": o["spend"],
             "budget": o["budget"],
@@ -331,12 +366,25 @@ def main():
                          "a": f"{street}, {pc}", "lat": ll[0], "lng": ll[1],
                          "share": round(100 * share, 2), "power": round(55 + 30 * pops[cc] / mx, 1)})
     json.dump(cache, open(cache_path, "w"), ensure_ascii=False, indent=0)
-    if misses: print("    not geocoded:", ", ".join(misses))
+    if misses: print(f"    not geocoded: {len(misses)} (e.g. {', '.join(misses[:5])})")
 
+    place_of = {o["id"]: (o.get("curated") or "tr-" + o["id"]) for o in out_orgs}
+    weeks = MEET_EXTRA["weeks"]
+    for w in weeks:
+        w["o"] = [[ALL_CATS.get(i, (i, ""))[0], n, place_of.get(i)] for i, n in w["o"]]
+    recent = {place_of[i]: sorted(v, reverse=True)[:8] for i, v in MEET_EXTRA["details"].items() if i in place_of}
+    offices = {off: [[place_of[i], n] for i, n in c.most_common() if i in place_of]
+               for off, c in MEET_EXTRA["office_orgs"].items()}
+    offices = {k: v for k, v in offices.items() if v}
+    out_dir = os.path.join(HERE, "..", "web", "data"); os.makedirs(out_dir, exist_ok=True)
+    LAZY = ("who", "web", "cat", "budget", "parts")       # card-only details, loaded when a card opens
+    detail = {place_of[o["id"]]: {k: o[k] for k in LAZY if o.get(k) not in (None, "", [], {})} for o in out_orgs}
+    json.dump({"recent": recent, "offices": offices, "detail": detail}, open(os.path.join(out_dir, "meetings.json"), "w"),
+              ensure_ascii=False, separators=(",", ":"))
     data = {
         "built": dt.date.today().isoformat(), "registerDate": export_date, "meetingsTo": latest,
         "termStart": TERM_START, "registrants": len(orgs), "lobbyCeiling": LOBBY_CEILING, "weights": WEIGHTS,
-        "popYear": year, "maxes": maxes, "weekly": weekly,
+        "popYear": year, "maxes": maxes, "weekly": weekly, "weeks": weeks,
         "sectors": {k: {"label": v[0], "dgs": v[1], "cabs": v[2]} for k, v in SECTORS.items()},
         "orgs": out_orgs, "reps": out_reps,
     }
@@ -363,6 +411,11 @@ def merge_places(data):
                            power=r["power"], basis="council",
                            d="The member state's embassy to the EU. Its ambassadors sit in COREPER and its attachés follow every Council working party."))
     data["places"] = places
+    data["orgCount"] = len(data["orgs"])
+    for p in places:
+        if "org" in p:
+            p["org"] = {k: v for k, v in p["org"].items() if k not in ("who", "web", "cat", "budget", "parts", "n", "lat", "lng", "a", "t", "sec")}
+    del data["orgs"]
     data["cats"] = cur["CATS"]; data["stories"] = cur["STORIES"]
     out = os.path.join(HERE, "..", "web", "data", "power.json")
     os.makedirs(os.path.dirname(out), exist_ok=True)

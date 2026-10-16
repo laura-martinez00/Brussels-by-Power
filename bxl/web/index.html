@@ -44,6 +44,7 @@
 
 <div id="card" class="card" hidden></div>
 <section id="route" class="route" hidden aria-live="polite"></section>
+<section id="week" class="week" hidden aria-live="polite"></section>
 
 <dialog id="about" class="sheet" aria-labelledby="about-title">
   <button class="sheet-close" aria-label="Close">×</button>
@@ -62,7 +63,8 @@
   </button>
   <div class="hist-wrap">
     <canvas id="hist" aria-label="Lobby meetings per week; drag to set the date"></canvas>
-    <div class="hist-axis"><span id="axis-from"></span><span>Lobby meetings with the Commission, per week</span><span id="axis-to"></span></div>
+    <div class="hist-axis"><span id="axis-from"></span><label class="tl-label">Lobby meetings with the Commission per week:
+      <select id="tl-filter" aria-label="Filter meetings"></select></label><span id="axis-to"></span></div>
   </div>
 </footer>
 

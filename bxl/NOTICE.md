@@ -20,6 +20,7 @@ That project was itself inspired by Sasha Bogachev's *Paris, building by buildin
 - Construction years, architects, styles, building photos and protected status: urban.brussels heritage inventory
   (Irismonument) and protected heritage register. Photos are linked from urban.brussels, not copied.
 - Cultural places and photos: Wikidata (CC0) and Wikimedia Commons (each photo under its own licence, credited in the app).
+- Aerial photos: UrbIS orthophotos, paradigm.brussels (loaded live from the Region's map service).
 - Water, parks, woods: © OpenStreetMap contributors, ODbL.
 - Lobbying: EU Transparency Register and European Commission meetings with interest representatives (open data).
 - Population: Eurostat. Addresses: UrbIS geocoder. Summaries loaded live from Wikipedia (CC BY-SA).

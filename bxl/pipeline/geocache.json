@@ -111,7 +111,6 @@
 50.841101,
 4.366715
 ],
-"Vertretung der Deutschen Industrie- und Handelskammerbei der Europäischen Union|1000": null,
 "Rue Belliard 60-62|1040": [
 50.841779,
 4.372819
@@ -320,7 +319,6 @@
 50.838494,
 4.389958
 ],
-"Cours Saint-Michel 30 B 1040 Brusselsc/o Hive5|1040": null,
 "Avenue des Nerviens, 9-31|1040": [
 50.839204,
 4.386525
@@ -337,7 +335,6 @@
 50.839204,
 4.386525
 ],
-"Avenue des Arts 47c/o mci group|1000": null,
 "Cisco SystemsSquare de Meeus 37|1000": [
 50.840718,
 4.368821
@@ -502,12 +499,10 @@
 50.849748,
 4.378251
 ],
-"Rond-Point Schuman 67th. Floor|1040": null,
 "Rue d'Arlon, 55|1040": [
 50.842372,
 4.374012
 ],
-"Rue de Trèves 616th floor|1040": null,
 "Avenue Cortenbergh, 52|1000": [
 50.843764,
 4.386643
@@ -668,8 +663,6 @@
 50.841101,
 4.366715
 ],
-"E3G asblNORRSKEN HOUSE|1040": null,
-"Rue de la Charite 22|1210": null,
 "Avenue de la Joyeuse Entrée 1-56. Stock|1040": [
 50.840578,
 4.385143
@@ -705,5 +698,8648 @@
 "100 Avenue de Cortenbergh|1000": [
 50.844707,
 4.388728
-]
+],
+"Rue d'Idalie 9-13|1050": [
+50.836681,
+4.371262
+],
+"Avenue des Arts 7 - 8|1210": [
+50.848297,
+4.369786
+],
+"Av des Arts 7/8c/o MUNDO MADOU building|1210": [
+50.848297,
+4.369786
+],
+"Montoyer 25|1000": [
+50.841125,
+4.369709
+],
+"Kortenberglaan 120|1000": [
+50.845039,
+4.389477
+],
+"Boulevard Brand Whitlocklaan 165|1200": [
+50.844484,
+4.404465
+],
+"Avenue Louise 149|1050": [
+50.828524,
+4.361886
+],
+"Avenue des Arts 44|1040": [
+50.842927,
+4.367681
+],
+"Hume Brophy Communications srl t/a PentaRue de la Science 41|1040": [
+50.844113,
+4.372451
+],
+"Rue aux Laines 70|1000": [
+50.836088,
+4.352985
+],
+"42 Rue Breydel|1040": [
+50.841284,
+4.383924
+],
+"Rue d'Edimbourg, 26|1050": [
+50.837895,
+4.364323
+],
+"rue J. de Lalaing 4|1040": [
+50.843981,
+4.372929
+],
+"Rue Guimard 9|1040": [
+50.843664,
+4.369518
+],
+"Uber Belgium BVBABoulevard Louis Schmidt 29|1040": [
+50.827018,
+4.399407
+],
+"Rue Montoyer 25|1000": [
+50.841125,
+4.369709
+],
+"Square de Meeûs 37|1000": [
+50.840718,
+4.368821
+],
+"9-31, Avenue des Nerviens, 1040 Bruxelles|1040": [
+50.839175,
+4.386666
+],
+"Rue Belliard 406th floor|1040": [
+50.842105,
+4.371728
+],
+"Place Marcel Broodthaers 8|1060": [
+50.834895,
+4.33776
+],
+"Rue de l'Industrie, 26-385ème étage|1040": [
+50.842839,
+4.369875
+],
+"4 rue de l'Industrie|1000": [
+50.840875,
+4.368907
+],
+"100, rue du Trône|1050": [
+50.836806,
+4.370716
+],
+"Rue de la Science 14A|1040": [
+50.842561,
+4.371211
+],
+"Rond-Point Robert Schuman 11|1040": [
+50.842822,
+4.384308
+],
+"Montoyer 397th floor|1000": [
+50.841012,
+4.370272
+],
+"Square de Meeus 235th floor|1000": [
+50.839932,
+4.370258
+],
+"Rue Charles Martel, 63|1000": [
+50.846003,
+4.381569
+],
+"Rue du Trône 108|1050": [
+50.836541,
+4.370898
+],
+"Dreve du Pressoir 38|1190": [
+50.807461,
+4.322902
+],
+"Boulevard de l'Impératrice, 66|1000": [
+50.848158,
+4.357474
+],
+"Rue Archimede 17|1000": [
+50.843546,
+4.384122
+],
+"Rue Froissart95|1040": [
+50.840352,
+4.382888
+],
+"Avenue de Cortenbergh 116|1000": [
+50.844868,
+4.389093
+],
+"Avenue de la Joyeuse Entrée, 1-5|1040": [
+50.840578,
+4.385143
+],
+"Avenue Louise, 231|1050": [
+50.825576,
+4.365061
+],
+"Pernod Ricard Affaires Européennesrond-point Schuman 9|1040": [
+50.842035,
+4.384558
+],
+"Rue du Commerce, 31|1000": [
+50.84088,
+4.368066
+],
+"Rue d'Arlon 80/6|1040": [
+50.841922,
+4.373303
+],
+"Rond-Point Robert Schuman 2-4|1040": [
+50.841967,
+4.383489
+],
+"Rue Marie Thérèse 11|1000": [
+50.846541,
+4.372024
+],
+"Square de Meeus 23|1000": [
+50.839932,
+4.370258
+],
+"Rue du Trone 100Brussels|1050": [
+50.836806,
+4.370716
+],
+"Boulevard du Regent 37-40|1000": [
+50.846192,
+4.3682
+],
+"Avenue Marnix 17|1000": [
+50.839116,
+4.363979
+],
+"Rue Montoyer 40|1000": [
+50.841043,
+4.371565
+],
+"Avenue de Cortenbergh 714th floor|1000": [
+50.844456,
+4.388994
+],
+"Rue du Commerce 72|1040": [
+50.842946,
+4.368754
+],
+"Rue du Commerce 124|1000": [
+50.845836,
+4.370269
+],
+"Rue des Colonies 56|1000": [
+50.847287,
+4.360961
+],
+"Archimedesstraat 5|1040": [
+50.843209,
+4.384142
+],
+"Residence PalaceRue de la Loi 155|1040": [
+50.84228,
+4.379747
+],
+"Avenue Louise, 221|1050": [
+50.825996,
+4.364618
+],
+"Rue de la Science 37|1040": [
+50.843775,
+4.372278
+],
+"Rue de l'Arbre Bénit 46|1050": [
+50.833501,
+4.364002
+],
+"Rue de Trèves 61|1040": [
+50.84352,
+4.375742
+],
+"Rue du Luxembourg 47-51|1050": [
+50.839247,
+4.371637
+],
+"Rue du Luxembourg, 47-51, bp2|1050": [
+50.839247,
+4.371637
+],
+"Rue de la Science 41|1040": [
+50.844113,
+4.372451
+],
+"Rond-Point Schuman 2-4|1040": [
+50.841967,
+4.383489
+],
+"rue Belliard 60-62|1040": [
+50.841779,
+4.372819
+],
+"Rue Joseph II 36-38|1000": [
+50.845968,
+4.372078
+],
+"Rue des Deux Eglises 25|1000": [
+50.846461,
+4.372982
+],
+"Square de Meeus35|1000": [
+50.840736,
+4.369369
+],
+"Rue Belliard 15/17|1040": [
+50.842242,
+4.369068
+],
+"Rue de la Loi 82|1000": [
+50.84445,
+4.374727
+],
+"Square de Meeûs 5-6|1000": [
+50.839384,
+4.368141
+],
+"Rue des Deux Eglises, 26 bte 5|1000": [
+50.846549,
+4.372594
+],
+"Avenue de Cortenbergh 120|1000": [
+50.845039,
+4.389477
+],
+"3 Rue du Luxembourg|1000": [
+50.840245,
+4.366902
+],
+"Rue de la Loi 227|1040": [
+50.841897,
+4.385209
+],
+"Square de Meeus 5-6|1000": [
+50.839384,
+4.368141
+],
+"Avenue des Gaulois, 9|1040": [
+50.83815,
+4.394338
+],
+"Rue Montoyer 39|1000": [
+50.841012,
+4.370272
+],
+"Rue des Deux Eglises, 26|1000": [
+50.846549,
+4.372594
+],
+"Rue d'Arlon 25Brussels|1050": [
+50.840137,
+4.372754
+],
+"23 Rue de la Science|1040": [
+50.842628,
+4.371677
+],
+"Rue Belliard, 12|1040": [
+50.84258,
+4.369003
+],
+"Rue du Trône 100|1050": [
+50.836806,
+4.370716
+],
+"Avenue de Tervueren 27|1040": [
+50.838591,
+4.39922
+],
+"Avenue des Arts 50|1000": [
+50.841966,
+4.367173
+],
+"Rue du Trône, 100|1050": [
+50.836806,
+4.370716
+],
+"Rue de L'Industrie 10|1000": [
+50.841755,
+4.369373
+],
+"rue Belliard 40|1040": [
+50.842105,
+4.371728
+],
+"rue de la Science, 23|1040": [
+50.842628,
+4.371677
+],
+"Archimedesstraat 5|1000": [
+50.843209,
+4.384142
+],
+"RUE DE LA LOI 67 (4th floor)|1000": [
+50.844169,
+4.374538
+],
+"Rue de la Charité 18-28Mundo Madou|1210": [
+50.84844,
+4.37049
+],
+"Avenue d'Auderghem 22-28Box 9|1040": [
+50.841302,
+4.384743
+],
+"Rue Montoyer, 51 - 1000 Brussels|1000": [
+50.840787,
+4.371341
+],
+"61 rue de TrèvesIFA 7ème étage|1040": [
+50.84352,
+4.375742
+],
+"ISDA5-6 Square de Meeus, 2nd floor|1000": [
+50.839361,
+4.368129
+],
+"Rue Dante 75|1070": [
+50.832881,
+4.319624
+],
+"Rue de Spa, 8|1000": [
+50.845678,
+4.374042
+],
+"Rue de la Charité 43|1210": [
+50.847544,
+4.370462
+],
+"Square de Meeûs 358th Floor|1000": [
+50.840736,
+4.369369
+],
+"Rue de la Fusée 98|1130": [
+50.881041,
+4.433098
+],
+"Rue Guimard 7|1000": [
+50.843731,
+4.369196
+],
+"avenue de la joyeuse entrée, 1|1000": [
+50.840578,
+4.385143
+],
+"Boulevard Charlemagne 1|1041": [
+50.844678,
+4.382553
+],
+"Rdpt Robert Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"Boulevard Louis Schmidt, 87|1040": [
+50.829225,
+4.40309
+],
+"rue du Trône 60Brussels|1050": [
+50.83811,
+4.369029
+],
+"Rue d'Arlon 80|1000": [
+50.841922,
+4.373303
+],
+"Rue Jacques de Lalaing 4|1040": [
+50.843981,
+4.372929
+],
+"The Library AmbiorixSquare Ambiorix 10|1000": [
+50.847857,
+4.383849
+],
+"Avenue des Arts 46|1000": [
+50.842471,
+4.367433
+],
+"Rue Froissart 133|1040": [
+50.841391,
+4.383296
+],
+"Handelsstraat 31|1000": [
+50.84088,
+4.368066
+],
+"Rue de la Science 4|1000": [
+50.840907,
+4.370348
+],
+"Avenue des Arts, 44|1000": [
+50.842927,
+4.367681
+],
+"avenue d'Auderghem, 22 - 28|1040": [
+50.841302,
+4.384743
+],
+"Rue Guimard, 10|1040": [
+50.843983,
+4.369688
+],
+"rue Marie de Bourgogne 58|1000": [
+50.84152,
+4.371857
+],
+"Avenue de Tervueren 168boite 2|1150": [
+50.837277,
+4.410431
+],
+"Avenue du Boulevard 21|1210": [
+50.856098,
+4.356772
+],
+"Rue Montoyer, 512nd floor|1000": [
+50.840787,
+4.371341
+],
+"avenue des arts, 1-2|1210": [
+50.848778,
+4.369662
+],
+"Rue Belliard 40Spaces|1000": [
+50.842105,
+4.371728
+],
+"Av de Broqueville 12|1150": [
+50.838171,
+4.409935
+],
+"Rue du Trône, 14-16|1000": [
+50.839738,
+4.366781
+],
+"Rue Belliard 12|1040": [
+50.84258,
+4.369003
+],
+"56 Avenue des Arts|1000": [
+50.841101,
+4.366715
+],
+"Rue de l'industrie, 10|1000": [
+50.841755,
+4.369373
+],
+"Rue de l'Industrie 26-38|1040": [
+50.842839,
+4.369875
+],
+"51, rue Montoyer|1000": [
+50.840787,
+4.371341
+],
+"Square de Meeus, 28|1000": [
+50.840452,
+4.370542
+],
+"RUE DE LA LOI 227|1040": [
+50.841897,
+4.385209
+],
+"Rue du Trône 60|1050": [
+50.83811,
+4.369029
+],
+"Avenue de Tervueren, 168bte 10|1150": [
+50.837277,
+4.410431
+],
+"Rue du Trône 98|1050": [
+50.83702,
+4.370495
+],
+"rue Belliard, 12|1040": [
+50.84258,
+4.369003
+],
+"Boulevard Charlemagne 1|1040": [
+50.844678,
+4.382553
+],
+"Rue d'Arenberg 444th floor|1000": [
+50.848002,
+4.357024
+],
+"Avenue des arts 56|1000": [
+50.841101,
+4.366715
+],
+"Boulevard Saint-Lazare 4-10Botanic Tower - 6th floor|1210": [
+50.85645,
+4.361891
+],
+"Rue de la Loi 62|1040": [
+50.844961,
+4.372283
+],
+"Rue Guimard, 15|1040": [
+50.843568,
+4.36998
+],
+"Treurenberg, 6|1000": [
+50.847713,
+4.361481
+],
+"Rue Ducale 29|1000": [
+50.844881,
+4.366475
+],
+"Avenue de l'Yser, 24|1040": [
+50.841798,
+4.3963
+],
+"Rue Joseph II, 36-38|1000": [
+50.845968,
+4.372078
+],
+"Boulevard Louis Schmidt 29|1040": [
+50.827018,
+4.399407
+],
+"Avenue de Cortenbergh, 66|1000": [
+50.844137,
+4.387459
+],
+"Rue de la Loi, 2232nd floor|1000": [
+50.841969,
+4.384855
+],
+"Avenue des Arts, 20  (7th floor)|1000": [
+50.846213,
+4.369397
+],
+"Rue Montoyer 23|1000": [
+50.841177,
+4.369477
+],
+"rue de Trèves, 67|1040": [
+50.843827,
+4.375908
+],
+"Rue du Belvédère, 28|1050": [
+50.826492,
+4.37344
+],
+"Avenue de Cortenbergh, 4-10|1040": [
+50.843009,
+4.384936
+],
+"Tribes, Avenue Marnix 13-17|1000": [
+50.838911,
+4.363564
+],
+"Avenue des Arts, 44|1040": [
+50.842927,
+4.367681
+],
+"Rue du Marquis 1/4B Markiesstraat|1000": [
+50.847376,
+4.358563
+],
+"Boulevard St Michel 47|1040": [
+50.834776,
+4.405647
+],
+"Square de Meeûs 38-40Floor 4|1000": [
+50.840541,
+4.368728
+],
+"3 rue du Luxembourg|1000": [
+50.840245,
+4.366902
+],
+"Rue du Luxembourg 23|1000": [
+50.839978,
+4.368197
+],
+"35 square de Meeûs|1000": [
+50.840736,
+4.369369
+],
+"Rond Point Schuman 9|1040": [
+50.842035,
+4.384558
+],
+"Avenue de la Joyeuse Entrèe 1-5|1040": [
+50.840578,
+4.385143
+],
+"Avenue des Arts, 435th floor|1040": [
+50.843069,
+4.367755
+],
+"Rue de la Loi 155Residence Palace, bloc C|1040": [
+50.84228,
+4.379747
+],
+"Liaison Office BrusselsSquare de Meeûs 23|1000": [
+50.839932,
+4.370258
+],
+"EnedisRue Belliard,40|1040": [
+50.842105,
+4.371728
+],
+"Rue du Vieux Marché aux Grains 63|1000": [
+50.848897,
+4.345408
+],
+"Avenue Louise, 250|1050": [
+50.825204,
+4.366583
+],
+"23 Square de Meeus10th Floor|1000": [
+50.839905,
+4.3684
+],
+"Rue de la Loi 34|1000": [
+50.845524,
+4.369943
+],
+"Avenue des Arts 53 boite 88th floor|1000": [
+50.841487,
+4.366926
+],
+"Unilever EU OfficeAvenue des Arts 56|1000": [
+50.841101,
+4.366715
+],
+"Birminghamstraat 221|1070": [
+50.844384,
+4.32011
+],
+"Rue de la Loi 223|1040": [
+50.841969,
+4.384855
+],
+"Av. des Arts 7/8|1210": [
+50.848297,
+4.369786
+],
+"Rue de la Loi 62|1000": [
+50.844961,
+4.372283
+],
+"Cantersteen 47|1000": [
+50.845596,
+4.358227
+],
+"Avenue Louise 65|1050": [
+50.832948,
+4.357446
+],
+"Rue de la Science 14|1040": [
+50.842561,
+4.371211
+],
+"Rue du Trône,100|1050": [
+50.836806,
+4.370716
+],
+"10 Square Ambiorix|1000": [
+50.847857,
+4.383849
+],
+"Square de Meeûs 38/40|1000": [
+50.840541,
+4.368728
+],
+"Montoyerstraat 23|1000": [
+50.841177,
+4.369477
+],
+"Chaussee de Louvain 479|1030": [
+50.854636,
+4.396183
+],
+"Avenue des Arts 3/4/5|1210": [
+50.848617,
+4.369703
+],
+"Rue d'Arlon 25|1050": [
+50.840137,
+4.372754
+],
+"Rue de la Science 21-23|1040": [
+50.842511,
+4.371616
+],
+"Rue Marie de Bourgogne 52|1000": [
+50.84129,
+4.371741
+],
+"Rue Montoyer 61|1000": [
+50.840596,
+4.372254
+],
+"Clockwise BrusselsAv. des Arts 44|1040": [
+50.842927,
+4.367681
+],
+"25 rue Montoyer|1000": [
+50.841125,
+4.369709
+],
+"Square de Meeus, 23|1000": [
+50.839932,
+4.370258
+],
+"Mundo-J buildingRue de l'Industrie 10|1000": [
+50.841755,
+4.369373
+],
+"Regus Brussels EU SchumanRond-point Robert Schuman 6, 7th floor|1040": [
+50.841866,
+4.383826
+],
+"Rue de la Duchesse 11-13|1150": [
+50.838325,
+4.406303
+],
+"29-33 Rue Des Deux Eglises|1000": [
+50.846614,
+4.373063
+],
+"2-4 Rond Point Schuman|1040": [
+50.841927,
+4.383592
+],
+"Square de Meeûs, 35|1000": [
+50.840736,
+4.369369
+],
+"Rue de la Science, 14A2nd Floor|1040": [
+50.842561,
+4.371211
+],
+"Rue d'Arlon 50|1000": [
+50.840081,
+4.372334
+],
+"Rue de la loi 38 boite 5|1000": [
+50.845349,
+4.370425
+],
+"Avenue Louise, 475/10|1050": [
+50.817191,
+4.371099
+],
+"Henkel EU OfficeRue Marie de Bourgogne 58|1000": [
+50.84152,
+4.371857
+],
+"9-31 av. des Nerviens|1040": [
+50.839175,
+4.386666
+],
+"Avenue de Tervueren, 168|1150": [
+50.837277,
+4.410431
+],
+"Rue de la loi 824th  Floor|1040": [
+50.84445,
+4.374727
+],
+"Rue Froissart 95|1040": [
+50.840352,
+4.382888
+],
+"Boulevard de la Woluwe, 42 (b5)|1200": [
+50.83884,
+4.434789
+],
+"Rue Montoyer, 31|1000": [
+50.841085,
+4.369924
+],
+"Avenue des Arts, 7-8|1210": [
+50.848297,
+4.369786
+],
+"Rue Archimède 5 boîte 3|1000": [
+50.843209,
+4.384142
+],
+"Rue du Trone 108|1050": [
+50.836541,
+4.370898
+],
+"Rue Marie-Therese 212nd Floor|1000": [
+50.846732,
+4.372118
+],
+"Avenue des Arts 44 / Kunstlaan 44|1000": [
+50.842927,
+4.367681
+],
+"Rue Joseph II, 166|1000": [
+50.844114,
+4.380719
+],
+"Avenue de Nerviens 85|1040": [
+50.838494,
+4.389958
+],
+"Rue Montoyer, 23|1000": [
+50.841177,
+4.369477
+],
+"168 avenue de Cortenbergh|1000": [
+50.845831,
+4.391256
+],
+"Avenue de Tervueren 168|1150": [
+50.837277,
+4.410431
+],
+"Rue Joseph II, 40|1000": [
+50.845828,
+4.372736
+],
+"Rue du Luxembourg, 47-51|1050": [
+50.839247,
+4.371637
+],
+"Rue Archimède 5|1000": [
+50.843209,
+4.384142
+],
+"ZEISSRue Marie de Bourgogne 58|1000": [
+50.84152,
+4.371857
+],
+"Rue de la Science 147th floor|1040": [
+50.842561,
+4.371211
+],
+"Rue Picard 11|1000": [
+50.864284,
+4.344082
+],
+"Avenue des Arts10-11|1210": [
+50.848012,
+4.369863
+],
+"square de meeus 35|1000": [
+50.840736,
+4.369369
+],
+"Rue Royale 94|1000": [
+50.847952,
+4.362728
+],
+"Avenue des Nerviens 85, Etage 2|1040": [
+50.838494,
+4.389958
+],
+"Egmontstraat 11, rue d'Egmont|1000": [
+50.838985,
+4.365536
+],
+"17 Avenue Marnix|1000": [
+50.839116,
+4.363979
+],
+"Boulevard du Régent, 35|1000": [
+50.84554,
+4.367834
+],
+"Chemours Belgium BV rue Montoyer 25|1000": [
+50.841125,
+4.369709
+],
+"Avenue Marnix, 17|1000": [
+50.839116,
+4.363979
+],
+"rue des 2 Eglises 14|1000": [
+50.844928,
+4.373644
+],
+"Rue Marie-Thérèse 21|1000": [
+50.846732,
+4.372118
+],
+"Avenue Louise 250|1050": [
+50.825204,
+4.366583
+],
+"Avenue de Cortenbergh, 100|1000": [
+50.844707,
+4.388728
+],
+"Rue d'Arlon 15|1050": [
+50.839853,
+4.372606
+],
+"Marie de Bourgogne 58|1000": [
+50.84152,
+4.371857
+],
+"Rue Sainte Marie, 6|1080": [
+50.854543,
+4.341556
+],
+"Rdpt Robert Schuman 11|1040": [
+50.842822,
+4.384308
+],
+"Rue d'Edimbourg 26|1050": [
+50.837895,
+4.364323
+],
+"Avenue des Arts 3-4-5|1210": [
+50.848617,
+4.369703
+],
+"Rue Marie de Bourgogne, 52|1000": [
+50.84129,
+4.371741
+],
+"Avenue Franklin Roosevelt 123.|1050": [
+50.798989,
+4.390034
+],
+"Résidence Palace155 rue de la Loi|1040": [
+50.84228,
+4.379747
+],
+"Avenue Ariane, 5|1200": [
+50.857195,
+4.430176
+],
+"Avenue Des Arts 50, bte 5|1000": [
+50.841966,
+4.367173
+],
+"Vulcan AdvisorySquare de Meeûs, 37|1000": [
+50.840718,
+4.368821
+],
+"123-133 rue Froissart|1040": [
+50.841391,
+4.383296
+],
+"Rue des Deux Églises 14|1000": [
+50.846031,
+4.372331
+],
+"Square de Meeus 237th Floor|1050": [
+50.839932,
+4.370258
+],
+"Rond-Point Schuman 2-46th floor|1040": [
+50.841967,
+4.383489
+],
+"Avenue Louise 130a|1050": [
+50.830389,
+4.361244
+],
+"Rue du Luxembourg, 66|1000": [
+50.839477,
+4.371981
+],
+"Bd Brand Whitlock 87|1200": [
+50.841762,
+4.40607
+],
+"Rue du Luxembourg 14A|1000": [
+50.840484,
+4.36709
+],
+"Rue Royale 71|1000": [
+50.849664,
+4.364122
+],
+"Place Luxembourg 2|1050": [
+50.838791,
+4.372407
+],
+"Rue Caroly, 23-25|1050": [
+50.838483,
+4.370034
+],
+"Square de Meeus 18|1050": [
+50.839011,
+4.369794
+],
+"4 rue Jacques de Lalaing|1040": [
+50.843981,
+4.372929
+],
+"Silversquare EuropeSquare de Meeus 35|1000": [
+50.840736,
+4.369369
+],
+"Rue de la Loi, 82|1040": [
+50.84445,
+4.374727
+],
+"Boulevard de la Plaine 17|1050": [
+50.818943,
+4.393995
+],
+"87 Avenue Louise|1050": [
+50.831828,
+4.358604
+],
+"Chau. de Vleurgat 89|1050": [
+50.824997,
+4.368733
+],
+"Chaussée de Mons 1424|1070": [
+50.812527,
+4.290251
+],
+"168, avenue Cortenbergh|1000": [
+50.845831,
+4.391256
+],
+"Rue Froissart95-99|1040": [
+50.840352,
+4.382888
+],
+"Rue de la Loi, 221|1040": [
+50.841988,
+4.384762
+],
+"Boulevard du roi Albert II, 1|1210": [
+50.856412,
+4.356057
+],
+"Résidence PalaceRue de la Loi 155|1040": [
+50.84228,
+4.379747
+],
+"Rue Defacqz, 52|1050": [
+50.827727,
+4.359456
+],
+"Avenue Adolphe Lacomblé, 59/8|1030": [
+50.848628,
+4.399079
+],
+"58, Rue Marie de Bourgogne|1000": [
+50.84152,
+4.371857
+],
+"Rue d'Arlon 80|1050": [
+50.841922,
+4.373303
+],
+"Rue Archimède 44|1000": [
+50.845313,
+4.383534
+],
+"Rue Marie Thérèse, 11|1000": [
+50.846541,
+4.372024
+],
+"1 Boulevard Anspach|1000": [
+50.850836,
+4.351776
+],
+"Boulevard Brand Whitlock 165|1200": [
+50.844484,
+4.404465
+],
+"Rue Abbé Cuypers 3|1040": [
+50.838151,
+4.399589
+],
+"Rue du Commerce, 77|1040": [
+50.84304,
+4.369192
+],
+"Rond-Point Schuman 2-4|1000": [
+50.841967,
+4.383489
+],
+"Rue Philippe Le Bon, 15|1000": [
+50.84601,
+4.376471
+],
+"Avenue des Arts 504th floor|1000": [
+50.841966,
+4.367173
+],
+"Rue du Trone 100|1050": [
+50.836806,
+4.370716
+],
+"Avenue de Tervueren 15|1040": [
+50.838851,
+4.398854
+],
+"Avenue Des Arts, 3-4-5|1210": [
+50.848617,
+4.369703
+],
+"Rue Montoyer 40, 7th floor|1000": [
+50.841043,
+4.371565
+],
+"Rue de la Loi, 155|1040": [
+50.84228,
+4.379747
+],
+"Avenue d'Auderghem, 22-28|1040": [
+50.841302,
+4.384743
+],
+"Rue Stévin 16|1000": [
+50.846033,
+4.375537
+],
+"RUE DE LA PACIFICATION 67|1000": [
+50.847894,
+4.376313
+],
+"Boulevard du Souverain 165|1160": [
+50.816714,
+4.426745
+],
+"Rue Paul Emile Janson, 29|1050": [
+50.827307,
+4.360042
+],
+"Square de Meeûs,35|1000": [
+50.840736,
+4.369369
+],
+"Avenue des Arts 6-9|1210": [
+50.848401,
+4.369759
+],
+"15 Boulevard Bischoffsheim|1000": [
+50.850178,
+4.368307
+],
+"Chaussée de Louvain 479(Floor 3)|1030": [
+50.854636,
+4.396183
+],
+"Boulevard Saint-Michel 65box 6|1040": [
+50.834205,
+4.40536
+],
+"Rue de Treves, 49-51|1040": [
+50.842856,
+4.375405
+],
+"Rue de la Science 23|1040": [
+50.842628,
+4.371677
+],
+"Avenue des Arts 505th Floor|1000": [
+50.841966,
+4.367173
+],
+"European Forestry HouseRue du Luxembourg, 66|1000": [
+50.839477,
+4.371981
+],
+"11 Avenue des Arts|1210": [
+50.847945,
+4.369884
+],
+"rue des Alexiens 16B|1000": [
+50.843715,
+4.349536
+],
+"Avenue Louise89|1050": [
+50.831603,
+4.358836
+],
+"38/40 Square de Meeus|1050": [
+50.840273,
+4.368589
+],
+"avenue Palmerston 2|1000": [
+50.847202,
+4.380396
+],
+"Rue du Congrès 35|1000": [
+50.849248,
+4.36673
+],
+"1 Square de Meeûs|1000": [
+50.839905,
+4.3684
+],
+"Boulevard du Regent 43-44|1000": [
+50.846891,
+4.36854
+],
+"Rue de la Science 21-23-25|1040": [
+50.842511,
+4.371616
+],
+"Avenue de Cortenbergh 172|1000": [
+50.845922,
+4.391462
+],
+"Avenue Louise 489|1050": [
+50.816683,
+4.371281
+],
+"227 Rue De La Loi4eme étage|1040": [
+50.841897,
+4.385209
+],
+"Avenue de Tervueren, 268|1150": [
+50.835366,
+4.419581
+],
+"AK EUROPA30, Avenue de Cortenbergh|1040": [
+50.843417,
+4.385845
+],
+"rue Montoyer, 31|1000": [
+50.841085,
+4.369924
+],
+"Rue de Ransbeek, 310|1120": [
+50.901127,
+4.400379
+],
+"Rue d'Arlon80|1040": [
+50.841922,
+4.373303
+],
+"Rue de Treves 61 / Copa-Cogeca|1040": [
+50.84352,
+4.375742
+],
+"Square de Meeûs 1|1000": [
+50.839905,
+4.3684
+],
+"Rue de la Loi, 223/3|1040": [
+50.841969,
+4.384855
+],
+"Rue de Spa 8|1000": [
+50.845678,
+4.374042
+],
+"Rue Guimard 7|1040": [
+50.843731,
+4.369196
+],
+"Salesforce Boudewijnlaan 29Boulevard Baudouin 29, Floor 5|1000": [
+50.856947,
+4.353775
+],
+"Boulevard de Waterloo 36|1000": [
+50.83738,
+4.357803
+],
+"Rond-Point Robert Schuman 9|1000": [
+50.842035,
+4.384558
+],
+"Boulevard Charlemagne 1, B15|1041": [
+50.844678,
+4.382553
+],
+"Rue de Namur 73Ac/o ENPA|1000": [
+50.839265,
+4.360261
+],
+"Rue du Prince Royal, 87|1050": [
+50.833849,
+4.359521
+],
+"28, Rue Jacques de Lalaing|1040": [
+50.843217,
+4.376337
+],
+"Avenue des Arts 50/boite 5|1000": [
+50.841966,
+4.367173
+],
+"Rue Montoyer 47(5th floor)|1000": [
+50.840859,
+4.370933
+],
+"38/40 Square de Meeûs|1000": [
+50.840541,
+4.368728
+],
+"Rue des Deux Eglises 29|1000": [
+50.846614,
+4.373063
+],
+"Stiftung Familienunternehmen und PolitikRue Marie de Bourgogne 58|1000": [
+50.84152,
+4.371857
+],
+"Rue du Champ de Mars 23|1000": [
+50.838481,
+4.366494
+],
+"Av. de la Joyeuse Entrée 1|1040": [
+50.840578,
+4.385143
+],
+"Avenue des Arts, 6|1210": [
+50.848401,
+4.369759
+],
+"Rue de la Loi, 223|1040": [
+50.841969,
+4.384855
+],
+"Place Victor Horta 40|1060": [
+50.836343,
+4.33364
+],
+"22 rue du cornetChaussée de Wavre 164|1040": [
+50.835747,
+4.369452
+],
+"BOULEVARD DU TRIOMPHE 172|1160": [
+50.817956,
+4.403003
+],
+"Rue d'Edimbourg 26Office \"Mundo Matonge\"|1050": [
+50.837895,
+4.364323
+],
+"Boulevard Brand Whitlock, 114|1200": [
+50.842932,
+4.406561
+],
+"Square de Meeûs 35Silversquare|1000": [
+50.840736,
+4.369369
+],
+"Rue des Colonies 11|1000": [
+50.846401,
+4.359617
+],
+"Article 19 at Residence Palace Rue de la Loi 155|1040": [
+50.84228,
+4.379747
+],
+"Rue Wiertz 25|1050": [
+50.836863,
+4.374744
+],
+"56 Avenue des ArtsBrussels|1000": [
+50.841101,
+4.366715
+],
+"rue du Luxembourg, 19|1000": [
+50.840041,
+4.367886
+],
+"Rue de Pascale 4-6|1040": [
+50.841262,
+4.375838
+],
+"Avenue Louise 54C/O SilverSquare|1050": [
+50.833404,
+4.358147
+],
+"Environmental Defense Fund EuropeAvenue des Arts 47|1000": [
+50.842251,
+4.367323
+],
+"Square de Meeus 37|1000": [
+50.840718,
+4.368821
+],
+"Rue Henri-Joseph Genesse 1|1070": [
+50.823112,
+4.30917
+],
+"The NestworkAv. de Broqueville 12|1150": [
+50.838171,
+4.409935
+],
+"Rue des Trèves 61, RdCh|1040": [
+50.84352,
+4.375742
+],
+"rue d'arlon 25|1050": [
+50.840137,
+4.372754
+],
+"RUE BELLIARD 15-17|1000": [
+50.842242,
+4.369068
+],
+"Rue Philippe Le Bon 15|1000": [
+50.84601,
+4.376471
+],
+"Rue Froissart 123-133|1040": [
+50.841249,
+4.38324
+],
+"Rue d'Arlon 80|1040": [
+50.841922,
+4.373303
+],
+"BOULEVARD ANSPACHLAAN, 111|1000": [
+50.847068,
+4.347968
+],
+"Rue Froissart, 123-133|1040": [
+50.841249,
+4.38324
+],
+"Rue de l'industrie, 26-28|1040": [
+50.842839,
+4.369875
+],
+"Avenue des arts46|1000": [
+50.842471,
+4.367433
+],
+"Avenue des Arts 3-4-58 Floor|1210": [
+50.848617,
+4.369703
+],
+"Avenue des Arts 7/8|1210": [
+50.848297,
+4.369786
+],
+"FVERue Victor Oudart 7|1030": [
+50.849257,
+4.392456
+],
+"avenue des Arts 50|1000": [
+50.841966,
+4.367173
+],
+"Rue Marie-Therese 11|1000": [
+50.846541,
+4.372024
+],
+"Avenue Palmerston 3|1000": [
+50.846544,
+4.380584
+],
+"boulevard Saint-Michel 47|1040": [
+50.834776,
+4.405647
+],
+"Montoyerstraat47, Floor 5|1000": [
+50.840859,
+4.370933
+],
+"44 Avenue des ArtsClockwise Offices|1040": [
+50.842927,
+4.367681
+],
+"Rue du Trône 4|1000": [
+50.839993,
+4.366477
+],
+"Rue Marie-Thérèse 11|1000": [
+50.846541,
+4.372024
+],
+"Rue Washington, 40|1050": [
+50.824842,
+4.363543
+],
+"The Library EuropeAvenue de Broqueville 40|1200": [
+50.838474,
+4.410937
+],
+"Avenue des Arts 7-8|1210": [
+50.848297,
+4.369786
+],
+"rue Grisar 38|1070": [
+50.838115,
+4.33336
+],
+"Square de Meeus 35|1000": [
+50.840736,
+4.369369
+],
+"Rue Montoyer, 51|1000": [
+50.840787,
+4.371341
+],
+"Rue Dautzenberg, 36|1050": [
+50.826898,
+4.367969
+],
+"rue de l'Industrie, 10|1000": [
+50.841755,
+4.369373
+],
+"Rue du Luxembourg, 3, Boîte postale 6.3|1000": [
+50.840245,
+4.366902
+],
+"ECIU Brussels Office Rue du Luxembourg 3|1000": [
+50.840245,
+4.366902
+],
+"Avenue du Bourgmestre Etienne Demunter 5|1090": [
+50.892289,
+4.313634
+],
+"Square de Meeus, 38-40|1000": [
+50.840541,
+4.368728
+],
+"14-16 Rue des Deux-Eglises|1000": [
+50.846237,
+4.372428
+],
+"Rue d'Arlon, 25Topos - Illumina Inc.|1050": [
+50.840137,
+4.372754
+],
+"Avenue de la Renaissance 1|1000": [
+50.84408,
+4.388312
+],
+"rue Philippe Le Bon 46|1000": [
+50.846922,
+4.376525
+],
+"Rue du Trône 62|1050": [
+50.838036,
+4.369122
+],
+"avenue de broqueville 12, box 7|1150": [
+50.838171,
+4.409935
+],
+"Kunstlaan 6/9|1210": [
+50.848401,
+4.369759
+],
+"47 Rue Montoyer|1000": [
+50.840859,
+4.370933
+],
+"13 Avenue des Gaulois|1040": [
+50.838272,
+4.394791
+],
+"Mundo JRue de l'Industrie 10|1000": [
+50.841755,
+4.369373
+],
+"168, avenue de Tervueren - Bte 11|1150": [
+50.838963,
+4.398259
+],
+"Av. Louise 235, 1050 Bruxelles|1050": [
+50.825445,
+4.365203
+],
+"Avenue de Tervueren 58|1040": [
+50.838979,
+4.402265
+],
+"Village Partenaire – Bureau 2Rue Fernand Bernierstraat 15|1060": [
+50.82991,
+4.336692
+],
+"Rue des Deux Eglises 26|1000": [
+50.846549,
+4.372594
+],
+"Square Ambiorix 32|1000": [
+50.846097,
+4.383397
+],
+"205 Rue Belliard|1040": [
+50.839511,
+4.385175
+],
+"Treurenberg 2|1000": [
+50.847719,
+4.361116
+],
+"Rue d'Arlon 63|1040": [
+50.842535,
+4.374103
+],
+"RUE BELLIARD 199|1040": [
+50.839599,
+4.38434
+],
+"Avenue des Gaulois 34|1040": [
+50.838918,
+4.397176
+],
+"Square du Meeus 37|1000": [
+50.840718,
+4.368821
+],
+"Rue Stevin 16|1000": [
+50.846033,
+4.375537
+],
+"Avenue Louise, 523|1050": [
+50.815274,
+4.371811
+],
+"De Meeussquare 35|1000": [
+50.840736,
+4.369369
+],
+"Square de Meuus 38, 3º|1000": [
+50.840541,
+4.368728
+],
+"Place de la Liberte 12|1000": [
+50.849586,
+4.3669
+],
+"Rue de la Loi 26|1040": [
+50.845641,
+4.369377
+],
+"Rond-Point Schuman 6|1050": [
+50.841866,
+4.383826
+],
+"Route de Lennik, 451|1050": [
+50.816661,
+4.271498
+],
+"Square Meeûs, 19|1050": [
+50.839084,
+4.369831
+],
+"Rond-point Robert Schuman 6/1040|1040": [
+50.841866,
+4.383826
+],
+"Rue Froissart, 95|1040": [
+50.840352,
+4.382888
+],
+"Rue d'Arlon 63|1000": [
+50.842535,
+4.374103
+],
+"Square de Meuus 37|1000": [
+50.840718,
+4.368821
+],
+"Rue Froissart 123-133; 5th floor|1040": [
+50.841249,
+4.38324
+],
+"Rue de la Loi 384th floor|1000": [
+50.845349,
+4.370425
+],
+"35 Square de Meeus|1040": [
+50.840736,
+4.369369
+],
+"Avenue des Gaulois 9|1040": [
+50.83815,
+4.394338
+],
+"23 square de Meeus|1000": [
+50.839932,
+4.370258
+],
+"Square de Meeûs, 38/40|1000": [
+50.840541,
+4.368728
+],
+"Avenue Louise 54|1050": [
+50.833404,
+4.358147
+],
+"Avenue des Arts 31|1040": [
+50.844404,
+4.368448
+],
+"Avenue des arts 3|1210": [
+50.848617,
+4.369703
+],
+"RenfeAv. des Arts 53|1000": [
+50.841487,
+4.366926
+],
+"Rue de la Loi, 26|1040": [
+50.845641,
+4.369377
+],
+"Avenue des Arts 10 - 11|1210": [
+50.848012,
+4.369863
+],
+"Avenue de Broqueville 12The Nestwork - Duke 1st Floor|1150": [
+50.838171,
+4.409935
+],
+"EBCDAvenue des Arts 19|1210": [
+50.84727,
+4.369874
+],
+"Avenue de la Joyeuse Entrée 1|1040": [
+50.840578,
+4.385143
+],
+"Square de Meeûs, 19|1050": [
+50.839084,
+4.369831
+],
+"Rue Montoyer 1 (20)|1000": [
+50.841597,
+4.367473
+],
+"Rue du Trône, 100|1000": [
+50.836806,
+4.370716
+],
+"Avenue des Celtes, 20|1040": [
+50.838491,
+4.398142
+],
+"Rue de la Science 14Nordic Energy Office|1040": [
+50.842561,
+4.371211
+],
+"Rue de Trèves, 49-51Box 8|1040": [
+50.842856,
+4.375405
+],
+"avenue de Corthenberg 168|1000": [
+50.845831,
+4.391256
+],
+"Rue d’Idalie 9-13|1050": [
+50.836681,
+4.371262
+],
+"Avenue de Cortenbergh, 71|1000": [
+50.844456,
+4.388994
+],
+"Avenue Antoine Depage 3|1000": [
+50.81091,
+4.382642
+],
+"Rue Ducale 41|1000": [
+50.845294,
+4.366689
+],
+"Rue du Commerce 20-22|1000": [
+50.840095,
+4.367279
+],
+"Avenue des Arts 19 A‑D|1000": [
+50.84727,
+4.369874
+],
+"Rue du Trône, 98|1050": [
+50.83702,
+4.370495
+],
+"Square de Meeus37|1000": [
+50.840718,
+4.368821
+],
+"British Agriculture BureauRue de Treves 61|1040": [
+50.84352,
+4.375742
+],
+"rue du Commerce 31|1000": [
+50.84088,
+4.368066
+],
+"Avenue des Arts 3|1210": [
+50.848617,
+4.369703
+],
+"Chaussée de Wavre, 205|1050": [
+50.835798,
+4.373651
+],
+"rue marché aux herbes 105Box 48|1000": [
+50.846361,
+4.354372
+],
+"Trierstraat 59-61|1040": [
+50.843408,
+4.375707
+],
+"Boulevard Louis Schmidt, 64|1040": [
+50.829727,
+4.402307
+],
+"Avenue des Arts, 43|1040": [
+50.843069,
+4.367755
+],
+"Rue des Deux Eglises 14-16|1000": [
+50.846031,
+4.372331
+],
+"Alliance2015Rue de la Loi 155|1040": [
+50.84228,
+4.379747
+],
+"Avenue du Bourg. E.Demunter 5 Box 10|1090": [
+50.892289,
+4.313634
+],
+"Drukpersstraat 19|1000": [
+50.84885,
+4.366532
+],
+"Square Ambiorix 43|1000": [
+50.846133,
+4.382247
+],
+"SPACES Brussels Court of JusticeRue aux Laines 70|1000": [
+50.836088,
+4.352985
+],
+"Rue de la Loi 34European Endowment for Democracy|1040": [
+50.845524,
+4.369943
+],
+"Rue d'Idalie 9-13, box 5|1050": [
+50.836681,
+4.371262
+],
+"Avenue de Cortenbergh71|1000": [
+50.844456,
+4.388994
+],
+"26 Rue des Deux Eglises|1000": [
+50.846549,
+4.372594
+],
+"Avenue de Cortenbergh 1002nd floor|1000": [
+50.844707,
+4.388728
+],
+"Avenue Louise 523|1050": [
+50.815274,
+4.371811
+],
+"Avenue de Cortenbergh 71|1000": [
+50.844456,
+4.388994
+],
+"Rue Victor Oudart, 7|1030": [
+50.849257,
+4.392456
+],
+"Koning Albert II-laan 19|1210": [
+50.859138,
+4.357392
+],
+"Rue d'Idalie, 11-13|1050": [
+50.836727,
+4.371333
+],
+"RUE DU CONGRES 37|1000": [
+50.84922,
+4.366853
+],
+"Rue des deux Églises 37-39|1000": [
+50.846772,
+4.373148
+],
+"Rue d’Arlon, 63 – 67|1040": [
+50.842535,
+4.374103
+],
+"Avenue des Nerviens 85Third floor|1040": [
+50.838494,
+4.389958
+],
+"Avenue de Tervueren, 36|1040": [
+50.83926,
+4.400945
+],
+"rue Washington 34boîte 2|1050": [
+50.825106,
+4.363562
+],
+"Mundo MatongéRue d'Edinbourg 26|1050": [
+50.837895,
+4.364323
+],
+"Rue du Luxembourg 47-51, bte 2Bruxelles|1050": [
+50.839247,
+4.371637
+],
+"Medienverband der freien Presse e.V.Square de Meeûs 35|1000": [
+50.840736,
+4.369369
+],
+"Square de Meeus, 35|1000": [
+50.840736,
+4.369369
+],
+"Bastion Tower, Place du Champ de Mars 5|1050": [
+50.83822,
+4.363022
+],
+"7 rue Guimard|1000": [
+50.843731,
+4.369196
+],
+"Rond-Point Robert Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"Rondpoint Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"Hauptverband der Deutschen Bauindustrie e.V.Rue Marie de Bourgogne 58|1000": [
+50.84152,
+4.371857
+],
+"Avenue de Cortenbergh, 894th floor|1000": [
+50.845075,
+4.390405
+],
+"Av. De la Joyeuse Entreè 1|1040": [
+50.840578,
+4.385143
+],
+"Boulevard de l’Empereur, 20|1000": [
+50.842866,
+4.353753
+],
+"Rue de Hollande, 13|1060": [
+50.834866,
+4.338241
+],
+"Rue de la presse 4|1000": [
+50.849134,
+4.366836
+],
+"Rue Royale, 45 (1st floor)|1000": [
+50.84882,
+4.363683
+],
+"23 Rue du Champ de Mars|1050": [
+50.838481,
+4.366494
+],
+"Rue du Congrès 13|1000": [
+50.849634,
+4.364965
+],
+"Rue Belliard40|1040": [
+50.842105,
+4.371728
+],
+"Avenue de la Joyeuse Entrée 1-5|1040": [
+50.840578,
+4.385143
+],
+"Tervurenlaan 91|1040": [
+50.837898,
+4.403347
+],
+"21, Rue Montoyer|1000": [
+50.841258,
+4.369075
+],
+"Rue de Trèves, 59-61|1040": [
+50.843408,
+4.375707
+],
+"Avenue Cortenbergh 100, 1st floor|1000": [
+50.844707,
+4.388728
+],
+"Rue Belliard 205|1040": [
+50.839511,
+4.385175
+],
+"Boulevard de l'Impératrice 17/19|1000": [
+50.846777,
+4.357107
+],
+"Residence Palace155 Rue de la Loi|1040": [
+50.84228,
+4.379747
+],
+"Rue de L`industrie 10|1000": [
+50.841755,
+4.369373
+],
+"Chaussée De La Hulpe 187|1170": [
+50.795199,
+4.40634
+],
+"Place Champ de Mars 5|1050": [
+50.83822,
+4.363022
+],
+"19 rue des Chartreux|1000": [
+50.848942,
+4.346535
+],
+"EFPIA ASBLRue Montoyer 51|1000": [
+50.840787,
+4.371341
+],
+"Avenue Albert-Elisabeth 40|1200": [
+50.840888,
+4.404602
+],
+"Pleinlaan 2|1050": [
+50.823005,
+4.392617
+],
+"VERBUND AG EU-RepresentationRue Belliard 40|1040": [
+50.842105,
+4.371728
+],
+"Avenue Marnix 13-17|1000": [
+50.838911,
+4.363564
+],
+"Avenue Adolphe Lacomblé, 59|1030": [
+50.848628,
+4.399079
+],
+"3 rue du LuxemburgBrüssel|1000": [
+50.840245,
+4.366902
+],
+"Aarlenstraat 25|1050": [
+50.840137,
+4.372754
+],
+"Allée de la Recherche, 4|1070": [
+50.817228,
+4.265359
+],
+"Clos du Parnasse, 11A|1050": [
+50.837561,
+4.370799
+],
+"Avenue de la Joyeuse Entrée, 1|1040": [
+50.840578,
+4.385143
+],
+"Rue Guimard 15|1040": [
+50.843568,
+4.36998
+],
+"Rue Général Leman 24|1040": [
+50.836811,
+4.382863
+],
+"Rond point Schuman, 6|1040": [
+50.841866,
+4.383826
+],
+"Boulevard Louis Schmidt 64|1040": [
+50.829727,
+4.402307
+],
+"Avenue de Tervueren, 13, Bte 3|1040": [
+50.838902,
+4.39865
+],
+"Square Sainctelette 19|1000": [
+50.858792,
+4.347596
+],
+"Simon Bolivarlaan 17Box 265|1000": [
+50.86149,
+4.356965
+],
+"Rond-Point Schuman 2-4, 5th floor|1040": [
+50.841967,
+4.383489
+],
+"Kantersteen 10-12|1000": [
+50.845478,
+4.357361
+],
+"Rue Jacques de Lalaingstraat, 4|1040": [
+50.843981,
+4.372929
+],
+"Rue Du Luxembourg 3|1000": [
+50.840245,
+4.366902
+],
+"Avenue de Tervueren 168, box 11|1150": [
+50.837277,
+4.410431
+],
+"Square de Meeus 35Silversquare Business Center|1000": [
+50.840736,
+4.369369
+],
+"Rue des Fabriques 51, d11|1000": [
+50.849049,
+4.340185
+],
+"rue de Treves 616th floor|1040": [
+50.84352,
+4.375742
+],
+"Rue Abbé Cuypers, 3|1040": [
+50.838151,
+4.399589
+],
+"Avenue de Tervueren 168Boite 6|1150": [
+50.837277,
+4.410431
+],
+"Avenue de Cortenbergh 60|1000": [
+50.844015,
+4.387185
+],
+"54 Avenue Louise|1050": [
+50.833404,
+4.358147
+],
+"WWF European Policy OfficeHandelsstraat 123|1000": [
+50.845723,
+4.370597
+],
+"Rue du Luxembourg19|1000": [
+50.840041,
+4.367886
+],
+"23 rue de la Loi|1000": [
+50.845149,
+4.369831
+],
+"avenue des Arts 56 / Kunstlaan 56|1000": [
+50.841101,
+4.366715
+],
+"Square de Meeus, 404th floor|1050": [
+50.840273,
+4.368589
+],
+"72 rue du Commerce|1000": [
+50.842946,
+4.368754
+],
+"Rond Point Schuman, 14Av. de la Joyeuse Entrée, 1|1040": [
+50.842854,
+4.384195
+],
+"Av. de Cortenbergh 168|1000": [
+50.845831,
+4.391256
+],
+"126 Avenue de la Floride|1180": [
+50.805162,
+4.365394
+],
+"Avenue Louis Gribaumont 87|1200": [
+50.838986,
+4.416885
+],
+"Rue de la Presse 4|1000": [
+50.849134,
+4.366836
+],
+"Boulevard Baudouin 18 (Bte 4)|1000": [
+50.857391,
+4.352215
+],
+"Boulevard du Jardin Botanique 20|1000": [
+50.854763,
+4.359161
+],
+"Bl de l'Impératrice 13|1000": [
+50.846206,
+4.356954
+],
+"Rue d'Idalie 11-13|1050": [
+50.836727,
+4.371333
+],
+"Quai des Charbonnages 62|1080": [
+50.856412,
+4.343557
+],
+"Rue Marie-Thérèse 213rd floor|1000": [
+50.846732,
+4.372118
+],
+"Place des Barricades 1|1000": [
+50.851644,
+4.367857
+],
+"Av de Cortenbergh 71|1000": [
+50.844456,
+4.388994
+],
+"Rue de la Loi 227, 1040|1040": [
+50.841897,
+4.385209
+],
+"Jenner, 13|1000": [
+50.836534,
+4.378413
+],
+"Av. de Tervueren 188A|1150": [
+50.837112,
+4.411226
+],
+"rue de la Loi 82|1040": [
+50.84445,
+4.374727
+],
+"Square de Meeus 35|1050": [
+50.840736,
+4.369369
+],
+"Huidevettersstraat 165|1000": [
+50.837883,
+4.344033
+],
+"Rue des Deux Eglises 14|1000": [
+50.846031,
+4.372331
+],
+"326, Av. LouiseBlue Tower Bte 48|1050": [
+50.823053,
+4.368893
+],
+"Rue des Colonies, 18-24|1000": [
+50.846703,
+4.359478
+],
+"EURALIARue Montoyer 25|1000": [
+50.841125,
+4.369709
+],
+"13 Avenue de Tervueren|1040": [
+50.838902,
+4.39865
+],
+"Avenue Palmerston 4|1000": [
+50.847211,
+4.380517
+],
+"FinUnionsBoulevard du Jardin Botanique 20|1000": [
+50.854763,
+4.359161
+],
+"Av. des Arts 6Haleon|1040": [
+50.848401,
+4.369759
+],
+"European Environmental Bureau EEBRue des Deux Églises 14, 1000 Bruxelles|1000": [
+50.846031,
+4.372331
+],
+"7 rue Joseph Stevens|1000": [
+50.841323,
+4.352475
+],
+"Rue de Trèves, 49-51 (office 5a)|1040": [
+50.842856,
+4.375405
+],
+"Rue de Luxembourg 66|1000": [
+50.839477,
+4.371981
+],
+"Avenue Marnix, 30|1000": [
+50.840345,
+4.366334
+],
+"Boulevard Charlemagne 27A|1000": [
+50.845194,
+4.382767
+],
+"Malta Business BureauRond-Point-Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"House of SportAvenue des Arts, 43|1040": [
+50.843069,
+4.367755
+],
+"54 Avenue Louise Box P03|1050": [
+50.833404,
+4.358147
+],
+"Rond Point Schuman 11|1040": [
+50.842822,
+4.384308
+],
+"Avenue Cortenbergh, 66|1000": [
+50.844137,
+4.387459
+],
+"Avenue Tervueren 188a|1150": [
+50.83709,
+4.411332
+],
+"Rue de l'Industrie 11|1000": [
+50.841674,
+4.369747
+],
+"Clos de la Ballade 11|1140": [
+50.858728,
+4.407389
+],
+"Rue Belliard 40Bus 24|1040": [
+50.842105,
+4.371728
+],
+"Square Sainctelette, 19|1000": [
+50.858792,
+4.347596
+],
+"85-87 Rue du Prince Royal|1050": [
+50.833849,
+4.359521
+],
+"Place du Congres 1|1000": [
+50.849632,
+4.363409
+],
+"Rue des Quatre Vents 60|1080": [
+50.854121,
+4.333388
+],
+"Rue Royale, 94|1000": [
+50.847952,
+4.362728
+],
+"rue du Commerce, 72|1040": [
+50.842946,
+4.368754
+],
+"Rond-point Robert Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"WWF European Policy ProgrammeRue du Commerce 123|1000": [
+50.845723,
+4.370597
+],
+"6, Rondpoint Schuman|1040": [
+50.841866,
+4.383826
+],
+"35 square de Meeus8th Floor, Silversquare Europe,|1000": [
+50.840736,
+4.369369
+],
+"Rue Defacqz 78|1060": [
+50.82715,
+4.358283
+],
+"Silver Building, Boulevard Reyers, 70|1030": [
+50.851757,
+4.401445
+],
+"8 rue Marie de Bourgogne|1050": [
+50.839041,
+4.370564
+],
+"27 rue du Collège|1050": [
+50.832296,
+4.369298
+],
+"3 rond-point Schuman|1040": [
+50.841949,
+4.38354
+],
+"Avenue des Olympiades 2|1140": [
+50.870465,
+4.406142
+],
+"34 rue Breydel|1040": [
+50.841008,
+4.383819
+],
+"TransnetBW GmbHRue Belliard 40|1040": [
+50.842105,
+4.371728
+],
+"35 Square de Meeûs|1000": [
+50.840736,
+4.369369
+],
+"Keizerslaan 20|1000": [
+50.842866,
+4.353753
+],
+"Avenue Arnaud Fraiteur, 15-23|1050": [
+50.817404,
+4.396018
+],
+"Square De Meeus 18|1000": [
+50.839011,
+4.369794
+],
+"BASTION TOWER, PLACE DU CHAMP DE MARS, 5|1050": [
+50.83822,
+4.363022
+],
+"155 Rue de la Loi|1040": [
+50.84228,
+4.379747
+],
+"Boulevard de la Woluwe 42|1200": [
+50.83884,
+4.434789
+],
+"Avenue de Tervueren, 37|1040": [
+50.838267,
+4.399515
+],
+"Avenue des arts 44Clockwise|1040": [
+50.842927,
+4.367681
+],
+"Avenue Louise, 250box 106|1050": [
+50.825204,
+4.366583
+],
+"Rue du Congrès 37|1000": [
+50.84922,
+4.366853
+],
+"Rue Belliard 9, 5th floor Belnine|1040": [
+50.842303,
+4.368771
+],
+"Premier LeagueBd du Régent 35|1000": [
+50.84554,
+4.367834
+],
+"Rue de Treves 61|1040": [
+50.84352,
+4.375742
+],
+"Av de la Joyeuse Entrée 1|1040": [
+50.840578,
+4.385143
+],
+"avenue des Arts, 50|1000": [
+50.841966,
+4.367173
+],
+"Avenue des Nerviens, 9|1040": [
+50.839204,
+4.386525
+],
+"Rue Vilain XIIII, 17|1050": [
+50.823559,
+4.371554
+],
+"Square Ambriorix 10|1000": [
+50.847857,
+4.383849
+],
+"Avenue Herrmann Debroux 40-42|1160": [
+50.813113,
+4.430776
+],
+"Rue du Luxembourg 47-51boite 1|1050": [
+50.839247,
+4.371637
+],
+"Chevron EU AffairsRue Beillard 40|1040": [
+50.842105,
+4.371728
+],
+"1 rue du Congrès|1000": [
+50.849795,
+4.36422
+],
+"Rue de la loi 38|1000": [
+50.845349,
+4.370425
+],
+"28 Boulevard charlemagne|1000": [
+50.844059,
+4.381288
+],
+"Rue d'Arlon 40|1000": [
+50.839776,
+4.37218
+],
+"Koning Albert II laan 19|1210": [
+50.859138,
+4.357392
+],
+"Rue d'Arlon 55|1040": [
+50.842372,
+4.374012
+],
+"Koningsstraat 154|1000": [
+50.850676,
+4.364147
+],
+"Koloniënstraat 11|1000": [
+50.846401,
+4.359617
+],
+"Treurenberg 2-4|1000": [
+50.847719,
+4.361116
+],
+"Mundo MadouAvenue des Arts 7-8|1210": [
+50.848297,
+4.369786
+],
+"11 rue d'Egmont|1000": [
+50.838985,
+4.365536
+],
+"Rue d'Alost 7|1000": [
+50.852439,
+4.342169
+],
+"Rue du Luxembourg 22-24|1000": [
+50.840257,
+4.368185
+],
+"rue joseph II 36/38|1000": [
+50.845968,
+4.372078
+],
+"Rue de la Loi 155|1040": [
+50.84228,
+4.379747
+],
+"rue du commerce 31|1000": [
+50.84088,
+4.368066
+],
+"5 Place du Champ de Mars|1050": [
+50.83822,
+4.363022
+],
+"Treurenberg 2-4,|1000": [
+50.847719,
+4.361116
+],
+"InterOffices BV Kunstlaan 56|1000": [
+50.841101,
+4.366715
+],
+"Avenue du Port, 86cBox 302|1000": [
+50.864205,
+4.348798
+],
+"Ave Milcamps, 105|1030": [
+50.850004,
+4.394352
+],
+"Rue du Prince Royal 85|1050": [
+50.833915,
+4.359719
+],
+"Rue Joseph II, 174|1000": [
+50.844034,
+4.381088
+],
+"Square de Meeûs, 35Silversquare Europe|1000": [
+50.840736,
+4.369369
+],
+"Raketstraat 40|1130": [
+50.87768,
+4.416618
+],
+"Av. des Arts, 3-4-5|1210": [
+50.848617,
+4.369703
+],
+"Rond-point Robert Schuman 9|1040": [
+50.842035,
+4.384558
+],
+"Rue d'Egmont 11|1000": [
+50.838985,
+4.365536
+],
+"Rue de la Régence 52|1000": [
+50.838329,
+4.354298
+],
+"Koloniënstraat 11/Rue des Colonies 11|1000": [
+50.846401,
+4.359617
+],
+"89 Avenue de Cortenbergh|1000": [
+50.845075,
+4.390405
+],
+"Rond-point Robert Schuman 9|1000": [
+50.842035,
+4.384558
+],
+"Avenue de la Renaissance, 1|1000": [
+50.84408,
+4.388312
+],
+"Rue d'Arlon, 63-65Renewable Energy House|1040": [
+50.842535,
+4.374103
+],
+"Rue Joseph II, 120|1000": [
+50.844577,
+4.378552
+],
+"Rue Capitaine Crespel, 2 4th floorIxelles|1050": [
+50.836206,
+4.358044
+],
+"Boulevard de Waterloo 64|1000": [
+50.836289,
+4.355192
+],
+"Rond Point Schuman, 2-4|1040": [
+50.841967,
+4.383489
+],
+"Square de Meeûs 19|1050": [
+50.839084,
+4.369831
+],
+"rue de la Loi, 155IPC-Residence Palace|1040": [
+50.84228,
+4.379747
+],
+"RUE DE TRÈVES 49box 7|1040": [
+50.842856,
+4.375405
+],
+"Belliardstraat 12|1040": [
+50.84258,
+4.369003
+],
+"Avenue Palmerston, 3|1000": [
+50.846544,
+4.380584
+],
+"Avenue Louise 209/7|1050": [
+50.826487,
+4.364098
+],
+"Avenue de Cortenbergh 66|1000": [
+50.844137,
+4.387459
+],
+"Koning Albert II-laan 4|1000": [
+50.85709,
+4.355071
+],
+"Rue du Luxembourg 47 - 51|1050": [
+50.839247,
+4.371637
+],
+"39 rue des Deux Eglises|1000": [
+50.846834,
+4.373181
+],
+"Boulevard Léopold II, 53|1080": [
+50.859957,
+4.342958
+],
+"rue d'Arlon, 50|1000": [
+50.840081,
+4.372334
+],
+"RUE DU COMMERCE 123|1000": [
+50.845723,
+4.370597
+],
+"Rue de la Loi 67, box 3|1040": [
+50.844169,
+4.374538
+],
+"Rue Abbe Cuypers 3|1040": [
+50.838151,
+4.399589
+],
+"rue Montoyer 40|1000": [
+50.841043,
+4.371565
+],
+"Résidence PalaceRue de la Loi, 155C|1040": [
+50.84228,
+4.379747
+],
+"Rue Belliard, 20 - 6th floor|1040": [
+50.842453,
+4.369596
+],
+"Avenue Louise 367|1050": [
+50.820825,
+4.3694
+],
+"Horizonlaan 12|1150": [
+50.833707,
+4.418801
+],
+"58 Rue Marie de Bourgogne5th Floor|1000": [
+50.84152,
+4.371857
+],
+"Rue Wiertz, 11|1050": [
+50.836474,
+4.374546
+],
+"Boulevard Brand Whitlock, 114/4|1200": [
+50.842932,
+4.406561
+],
+"67 Square Marie-Louise|1000": [
+50.845809,
+4.379415
+],
+"Rue Abbé Cuypers 3Etterbeek|1040": [
+50.838151,
+4.399589
+],
+"ELNETRue de l'Industrie 4|1000": [
+50.840875,
+4.368907
+],
+"Rue de la Loi 23|1000": [
+50.845149,
+4.369831
+],
+"66, avenue de Cortenbergh|1000": [
+50.844137,
+4.387459
+],
+"Avenue Louise, 140 - 7th Floor|1050": [
+50.82984,
+4.361825
+],
+"Avenue de la Joyeuse Entrée 1Boîte 11|1040": [
+50.840578,
+4.385143
+],
+"Aarlenstraat 22|1050": [
+50.839016,
+4.371785
+],
+"Avenue des Nerviens, 9-315th floor|1040": [
+50.839204,
+4.386525
+],
+"rue montoyer 39|1000": [
+50.841012,
+4.370272
+],
+"European Forum for Manufacturing SecretariatBd Louis Schmidt 87|1040": [
+50.829225,
+4.40309
+],
+"Avenue de Tervueren, 273|1150": [
+50.835204,
+4.415185
+],
+"Avenue des Arts 19 ADImmeuble Viewpoint|1000": [
+50.84727,
+4.369874
+],
+"Rue du Luxembourg 47-51, bte2|1050": [
+50.839247,
+4.371637
+],
+"72 rue du Commerce|1040": [
+50.842946,
+4.368754
+],
+"Chaussée de Mons 1424Anderlecht|1070": [
+50.812527,
+4.290251
+],
+"Avenue de Cortenbergh, 168|1000": [
+50.845831,
+4.391256
+],
+"Make.org Impact HouseRue Joseph II 20|1000": [
+50.846267,
+4.370685
+],
+"Belliardstraat 35|1000": [
+50.841869,
+4.370808
+],
+"Square de Meeûs 40|1000": [
+50.840273,
+4.368589
+],
+"Rue de la Loi 155Residence Palace|1040": [
+50.84228,
+4.379747
+],
+"rue Breydel 34|1040": [
+50.841008,
+4.383819
+],
+"Jules Bordetlaan 164|1140": [
+50.870628,
+4.418138
+],
+"Rue de L'Industrie 24|1040": [
+50.842561,
+4.369826
+],
+"Chaussee de Wavre 243|1050": [
+50.835578,
+4.376209
+],
+"46 Avenue des Arts|1000": [
+50.842471,
+4.367433
+],
+"Rue de Trèves, 67|1040": [
+50.843827,
+4.375908
+],
+"Square Ambiorix, 18|1000": [
+50.84752,
+4.384875
+],
+"Mundo MatongéRue d’Edimbourg 26|1050": [
+50.837895,
+4.364323
+],
+"Rue Deux Eglises 14|1000": [
+50.846031,
+4.372331
+],
+"avenue Louise, 89/9|1050": [
+50.831603,
+4.358836
+],
+"Square de Meeûs 35Silversquare Europe|1000": [
+50.840736,
+4.369369
+],
+"Chaussée de Louvain 775European Food Banks Federation asbl (FEBA)|1140": [
+50.858872,
+4.412861
+],
+"44 rue de l'Arbre Bénit|1050": [
+50.83352,
+4.364002
+],
+"avenue Louise, 251|1050": [
+50.824747,
+4.365901
+],
+"Av. de Cortenbergh 71|1000": [
+50.844456,
+4.388994
+],
+"Rue des Deux Églises 12|1000": [
+50.845968,
+4.372299
+],
+"Place Stéphanie 6|1050": [
+50.833801,
+4.357828
+],
+"Rue Belliard 401st floor|1000": [
+50.842105,
+4.371728
+],
+"Trierstraat 59-616e verdieping|1040": [
+50.843408,
+4.375707
+],
+"Rue Abeé Cuypers 3|1040": [
+50.838151,
+4.399589
+],
+"Rue du Luxembourg, 22|1000": [
+50.840257,
+4.368185
+],
+"SQUARE DE MEEUS 37|1000": [
+50.840718,
+4.368821
+],
+"Rue Jaques de Lalaing 4|1040": [
+50.843981,
+4.372929
+],
+"Avenue de Broqueville 12|1150": [
+50.838171,
+4.409935
+],
+"Bureau BrusselsRond-Point Robert Schuman 9|1000": [
+50.842035,
+4.384558
+],
+"Avenue de Tervueren 188a, postbox 4|1150": [
+50.83709,
+4.411332
+],
+"Rue Froissart 95-99|1040": [
+50.840352,
+4.382888
+],
+"Auguste Reyerslaan 52|1043": [
+50.852064,
+4.40317
+],
+"Handelsstraat 72|1040": [
+50.842946,
+4.368754
+],
+"Avenue Palmerston 26|1000": [
+50.84725,
+4.38174
+],
+"26 rue d'Edimbourg|1050": [
+50.837895,
+4.364323
+],
+"Avenue des Arts 3, 4, 5|1210": [
+50.848617,
+4.369703
+],
+"Rue de la Loi 81A|1040": [
+50.853252,
+4.333072
+],
+"Spaces European DistrictRue Belliard 40|1040": [
+50.842105,
+4.371728
+],
+"Rue Gretry, 11- 5º|1000": [
+50.849741,
+4.350541
+],
+"rue Hydraulique, 18|1210": [
+50.848124,
+4.371816
+],
+"Boulevard Charlemagne 96|1000": [
+50.846063,
+4.382278
+],
+"Place du Nouveau Marché aux Grains 21FESASS|1000": [
+50.850523,
+4.34382
+],
+"Clos Lucien Outers,11-21/1|1160": [
+50.82402,
+4.404051
+],
+"Pl. Sainte-Gudule 14|1000": [
+50.847226,
+4.359658
+],
+"Rue Belliard 40Floor 5 BSP Office|1040": [
+50.842105,
+4.371728
+],
+"Chaussée d'Ixelles, 29Box 4|1050": [
+50.837116,
+4.362084
+],
+"avenue du Congo 11|1000": [
+50.815984,
+4.377004
+],
+"Milchindustrie-Verband e.V.Rue du Luxembourg 47-51|1050": [
+50.839247,
+4.371637
+],
+"Rue du Nord, 76|1000": [
+50.850637,
+4.367487
+],
+"Tweekerkenstraat 47|1000": [
+50.847107,
+4.373327
+],
+"Rue d'Arlon 63/67|1040": [
+50.842535,
+4.374103
+],
+"22 Rue du Cornet|1040": [
+50.837774,
+4.382712
+],
+"Place du Luxembourg 2|1050": [
+50.838791,
+4.372407
+],
+"Rue de la Linière 11|1060": [
+50.832224,
+4.347121
+],
+"38 Rue de la Loi|1000": [
+50.845349,
+4.370425
+],
+"Rue Arlon 63-67|1040": [
+50.842535,
+4.374103
+],
+"Av. Adolphe Lacomblé 59/8|1030": [
+50.848628,
+4.399079
+],
+"ClockwiseAvenue des Arts 44|1040": [
+50.842927,
+4.367681
+],
+"95 rue Froissart|1040": [
+50.840352,
+4.382888
+],
+"75, rue botanique|1210": [
+50.855208,
+4.365247
+],
+"Avenue Marnix 23|1000": [
+50.839531,
+4.364806
+],
+"The Gradient BuildingAvenue de Tervueren 270|1150": [
+50.835394,
+4.420398
+],
+"Avenue Marnix 13/17|1000": [
+50.838911,
+4.363564
+],
+"NIO Brussels OfficeSquare de Meeus, 37 – 4th Floor|1000": [
+50.840718,
+4.368821
+],
+"Rue Aux Laines, 70|1000": [
+50.836088,
+4.352985
+],
+"Boulevard Anspach 111boite 13|1000": [
+50.847068,
+4.347968
+],
+"Rond Point Schuman, 11|1040": [
+50.842822,
+4.384308
+],
+"Kunstlaan 6-9 Avenue des Arts|1210": [
+50.848401,
+4.369759
+],
+"Rue Philippe Le Bon 46|1000": [
+50.846922,
+4.376525
+],
+"avenue des Arts, 1-2|1210": [
+50.848778,
+4.369662
+],
+"Avenue Louise 489Steptoe LLP|1050": [
+50.816683,
+4.371281
+],
+"Square Ambiorix 10|1000": [
+50.847857,
+4.383849
+],
+"5 Place du Champ de MarsBastion Tower, étage 12|1050": [
+50.83822,
+4.363022
+],
+"avenue Mounier, 83|1200": [
+50.85094,
+4.455995
+],
+"Boulevard du Souverain 68/3|1170": [
+50.80412,
+4.425391
+],
+"Rue Archimedesstraat 17|1000": [
+50.843546,
+4.384122
+],
+"146 rue Royale|1000": [
+50.849486,
+4.36353
+],
+"Rue du Congrès 15II floor|1000": [
+50.84961,
+4.365073
+],
+"Place du Champ de Mars 5|1050": [
+50.83822,
+4.363022
+],
+"Belliard 40|1040": [
+50.842105,
+4.371728
+],
+"Rue Ducale 39|1000": [
+50.84524,
+4.366662
+],
+"Rue de Trevès 67|1000": [
+50.843827,
+4.375908
+],
+"PCS Association23 avenue Marnix|1000": [
+50.839531,
+4.364806
+],
+"6-9 Avenue des Arts,  Industrious at Brussels EU District|1210": [
+50.848104,
+4.369838
+],
+"Rond-Point Schuman 6Brussels|1040": [
+50.841866,
+4.383826
+],
+"47-51 rue du Luxembourg, bte 6|1050": [
+50.839203,
+4.371841
+],
+"rue Archimede, 5 b12|1000": [
+50.843209,
+4.384142
+],
+"Rue du Commerce 31WeWork|1000": [
+50.84088,
+4.368066
+],
+"Boulevard de la Woluwe, 42|1200": [
+50.83884,
+4.434789
+],
+"Rue d'Edimbourg 26, 1050 Ixelles, Bruxelles - Belgium|1050": [
+50.837895,
+4.364323
+],
+"100 rue du Trône|1050": [
+50.836806,
+4.370716
+],
+"Boulevard St-Michel 80|1040": [
+50.831759,
+4.405233
+],
+"Rue Montoyer 31|1000": [
+50.841085,
+4.369924
+],
+"66 avenue louise|1050": [
+50.832817,
+4.358753
+],
+"Avenue de Tervueren 188Apostbox 4|1150": [
+50.837112,
+4.411226
+],
+"38-40 square de Meeus4th Floor|1000": [
+50.840273,
+4.368589
+],
+"Chaussée de Haecht, 67|1210": [
+50.856665,
+4.369023
+],
+"Rue Victor Oudart 7|1030": [
+50.849257,
+4.392456
+],
+"avenue Milcamps 105|1030": [
+50.850004,
+4.394352
+],
+"avenue Montoyer 47|1000": [
+50.840859,
+4.370933
+],
+"166 Chaussée de la Hulpe|1170": [
+50.796288,
+4.404433
+],
+"Place StéphanieAvenue Louise 54|1050": [
+50.833404,
+4.358147
+],
+"Rue d'Arlon, 556th Floor|1040": [
+50.842372,
+4.374012
+],
+"AVENUE MILCAMPS 105|1030": [
+50.850004,
+4.394352
+],
+"Rue de la Loi 38/5|1000": [
+50.845349,
+4.370425
+],
+"Allée de la Recherche 60|1070": [
+50.81777,
+4.275041
+],
+"Rue Joseph II 40, Boite 7B|1000": [
+50.845828,
+4.372736
+],
+"Science|BusinessRue du Luxembourg 19|1000": [
+50.840041,
+4.367886
+],
+"De Crayer straat 7|1000": [
+50.820934,
+4.368874
+],
+"Rue de Spa 28|1000": [
+50.846451,
+4.374449
+],
+"Boulevard Baudouin 18 Bte 4|1000": [
+50.857391,
+4.352215
+],
+"Bd Charlemagne 1|1000": [
+50.844678,
+4.382553
+],
+"Danish Trade Union Confederationrue du Luxembourg 47-51|1040": [
+50.839247,
+4.371637
+],
+"Rue d'Arlon 63-67|1040": [
+50.842535,
+4.374103
+],
+"Avenue de Tervueren 188A|1150": [
+50.837112,
+4.411226
+],
+"BundesrechtsanwaltskammerAvenue des Nerviens 85 bte. 9|1040": [
+50.838494,
+4.389958
+],
+"Quai au Foin 55|1000": [
+50.855825,
+4.348851
+],
+"Avenue Louise 143/4|1050": [
+50.829139,
+4.361381
+],
+"Rue de Treves 61ICOS ltd|1040": [
+50.84352,
+4.375742
+],
+"Montoyer 476th floor|1000": [
+50.840859,
+4.370933
+],
+"Rue Joseph II 20|1000": [
+50.846267,
+4.370685
+],
+"Rue Joseph II, 36-38 b.7|1000": [
+50.845968,
+4.372078
+],
+"Rond Point Schuman 6, Box 5|1040": [
+50.841866,
+4.383826
+],
+"Rue de Namur 725th Floor|1000": [
+50.839563,
+4.361053
+],
+"2 Rue de Praetere|1000": [
+50.817166,
+4.370422
+],
+"Rue de la Loi, 34/36|1000": [
+50.845524,
+4.369943
+],
+"Rue des Deux Églises, 27|1000": [
+50.84652,
+4.373013
+],
+"Avenue Jean Colin 31|1160": [
+50.815965,
+4.410762
+],
+"Local KnowledgeChaussee de Vleurgat 89|1050": [
+50.824997,
+4.368733
+],
+"Rue des Deux Eglises 26 box 2|1000": [
+50.846549,
+4.372594
+],
+"McKinsey  Company Inc., BelgiumRue Brederode 2|1000": [
+50.840775,
+4.359999
+],
+"17 Rue du BergerWork17|1050": [
+50.836137,
+4.361822
+],
+"Rue Guimard 9|1000": [
+50.843664,
+4.369518
+],
+"Rue de la Science, 14|1040": [
+50.842561,
+4.371211
+],
+"Avenue Des Arts 56|1000": [
+50.841101,
+4.366715
+],
+"SQUARE DE MEEUS 1|1000": [
+50.839905,
+4.3684
+],
+"rue du Commerce 72|1040": [
+50.842946,
+4.368754
+],
+"Rue d’Arlon 80|1040": [
+50.841922,
+4.373303
+],
+"Jacques Delors Friends of Europe Foundation5-6 Square de Meeûs|1000": [
+50.839361,
+4.368129
+],
+"Miruna HerovanuRue Fernand Bernier 63|1060": [
+50.828463,
+4.335492
+],
+"Avenue Cortenbergh 89/6|1000": [
+50.845075,
+4.390405
+],
+"Boulevard Charlemane 1|1041": [
+50.844678,
+4.382553
+],
+"Ernest Allard, 11-13|1000": [
+50.840276,
+4.354622
+],
+"Ave du Boulevard 21|1210": [
+50.856098,
+4.356772
+],
+"Avenue des Arts, 19AD|1000": [
+50.84727,
+4.369874
+],
+"Avenue Marnix 30|1000": [
+50.840345,
+4.366334
+],
+"Rue des colonies 56|1000": [
+50.847287,
+4.360961
+],
+"Rue du Commerce 20|1000": [
+50.840095,
+4.367279
+],
+"Rue d'Egmont 5|1000": [
+50.839157,
+4.365313
+],
+"Avenue des Arts 53|1000": [
+50.841487,
+4.366926
+],
+"Rue Ravenstein 4|1000": [
+50.844167,
+4.358862
+],
+"avenue des Arts, 47 3rd floor|1000": [
+50.842251,
+4.367323
+],
+"rue aux Laines, 4|1000": [
+50.838814,
+4.356742
+],
+"boulevard du Roi Albert II, 27|1030": [
+50.860154,
+4.358046
+],
+"Rue d'Egmont 13|1000": [
+50.8389,
+4.365648
+],
+"Belliardstraat 199|1040": [
+50.839599,
+4.38434
+],
+"Chaussée de Haecht 579|1031": [
+50.87015,
+4.387966
+],
+"Avenue des Arts 56, 6th floor|1000": [
+50.841101,
+4.366715
+],
+"Square Ambiorix 18|1000": [
+50.84752,
+4.384875
+],
+"Rue de la Loi 235/27|1040": [
+50.84181,
+4.385635
+],
+"Rue du Commerce 10|1000": [
+50.839837,
+4.367121
+],
+"Square de Meeus1|1000": [
+50.839905,
+4.3684
+],
+"Sainctelettesquare 17|1000": [
+50.798278,
+4.396905
+],
+"St-Laurensstraat 36-38|1000": [
+50.850668,
+4.360028
+],
+"residence Palace Rue de la Loi 155|1040": [
+50.84228,
+4.379747
+],
+"European Energy ForumSquare Plasky 92-94|1030": [
+50.851258,
+4.39588
+],
+"Rue de Commerce 124Bte 6|1000": [
+50.845836,
+4.370269
+],
+"Av. de Broqueville 12|1150": [
+50.838171,
+4.409935
+],
+"24 Avenue Franklin Roosevelt|1050": [
+50.814682,
+4.377623
+],
+"Avenue du Bourget 42|1130": [
+50.87813,
+4.431895
+],
+"Square Ambiorix 50|1000": [
+50.847423,
+4.381885
+],
+"Albert de Latour 59|1030": [
+50.855648,
+4.381806
+],
+"Square de Meus 35|1000": [
+50.840736,
+4.369369
+],
+"Chaussee de Saint Job 359|1180": [
+50.792559,
+4.347616
+],
+"Rue du Trone 98|1050": [
+50.83702,
+4.370495
+],
+"Rue Joseph II 120|1000": [
+50.844577,
+4.378552
+],
+"11 Telecom GmbHRue de Trèves 49|1040": [
+50.842856,
+4.375405
+],
+"Square de Meeûs 38-40|1000": [
+50.840541,
+4.368728
+],
+"Avenue H. Jaspar, 113|1060": [
+50.832588,
+4.347998
+],
+"Rue de l'Industrie 24|1000": [
+50.842561,
+4.369826
+],
+"3 Avenue des Arts1er étage|1210": [
+50.848617,
+4.369703
+],
+"Industrious Brussels EU DistrictAvenue des Arts 6-9|1210": [
+50.848401,
+4.369759
+],
+"CONCILIUS Europe SRLAvenue de Cortenbergh 52|1000": [
+50.843764,
+4.386643
+],
+"Av Louise 287 box9|1050": [
+50.823465,
+4.367233
+],
+"Avenue Franklin D. Roosevelt 50CP 161|1050": [
+50.811721,
+4.381084
+],
+"Rue Saint-Ghislain 62|1000": [
+50.838687,
+4.348895
+],
+"Boulevard Brand Whitlock 87, Box 11 (4th floor)|1200": [
+50.841762,
+4.40607
+],
+"Insurance EuropeRue du Champ de Mars 23 B-1050 Brussels Belgium|1050": [
+50.838481,
+4.366494
+],
+"Avenue Louise, 143/4|1050": [
+50.829139,
+4.361381
+],
+"Chaussee Saint Pierre 260|1040": [
+50.837507,
+4.393872
+],
+"Square Ambiorix 18Boite 28|1000": [
+50.84752,
+4.384875
+],
+"Koning Albert-II laan 37|1030": [
+50.863897,
+4.359001
+],
+"avenue des Arts 56|1000": [
+50.841101,
+4.366715
+],
+"Havenlaan, 2|1080": [
+50.86,
+4.345893
+],
+"Rue franklin 91|1000": [
+50.845567,
+4.387785
+],
+"Rue de la Loi 81a|1000": [
+50.843883,
+4.375928
+],
+"Avenue de la Couronne 382|1050": [
+50.822958,
+4.387749
+],
+"Rue Auguste Lambiotte 144/8|1030": [
+50.853763,
+4.390745
+],
+"Rue Ducale 1|1000": [
+50.842174,
+4.365447
+],
+"Square Marie Louise 69|1000": [
+50.845702,
+4.379019
+],
+"37Sq de Meeus|1000": [
+50.840718,
+4.368821
+],
+"Luxemburgstraat 47-51, bp6|1050": [
+50.839247,
+4.371637
+],
+"Avenue Jacques Brel 38/0|1200": [
+50.850203,
+4.434309
+],
+"avenue Marnix, 30|1000": [
+50.840345,
+4.366334
+],
+"Avenue Kersbeek, 308|1180": [
+50.801049,
+4.32277
+],
+"15, Rue d'Egmontstraat|1000": [
+50.835747,
+4.349363
+],
+"Square de Meeus 38/40|1000": [
+50.840541,
+4.368728
+],
+"Avenue du Port, 86 CBox 302|1000": [
+50.790624,
+4.379616
+],
+"Rue Vautier, 29|1000": [
+50.836508,
+4.376494
+],
+"Spectrum Boulevard Bischoffsheim 12-21|1000": [
+50.849947,
+4.368354
+],
+"Avenue des Arts, 1-2, 9º, boite 11|1210": [
+50.848778,
+4.369662
+],
+"Square de Meeus 35,|1000": [
+50.840736,
+4.369369
+],
+"Rue des 2 Églises, 29|1000": [
+50.844928,
+4.373644
+],
+"Rondpoint Schuman 9|1040": [
+50.842035,
+4.384558
+],
+"Rue du Prince Royal 85-87|1050": [
+50.833915,
+4.359719
+],
+"Rue de Trèves 59-61|1040": [
+50.843408,
+4.375707
+],
+"Rue Joseph Stevens 7UL Solutions - ChemAdvisor Europe|1000": [
+50.841323,
+4.352475
+],
+"BursonSquare de Meuus, 37|1000": [
+50.840718,
+4.368821
+],
+"Avenue Victor Jacobs 12|1040": [
+50.829666,
+4.385248
+],
+"Avenue des Arts 1-2|1210": [
+50.848778,
+4.369662
+],
+"Rue du Luxembourg 66European Forestry House|1000": [
+50.839477,
+4.371981
+],
+"10, Rue du commerce|1000": [
+50.839837,
+4.367121
+],
+"rue de l'industrie 24|1040": [
+50.842561,
+4.369826
+],
+"rue de la Loi 223|1040": [
+50.841969,
+4.384855
+],
+"Rue Sainte Gertrude, 15|1040": [
+50.837444,
+4.389696
+],
+"Rue Montoyer 21|1000": [
+50.841258,
+4.369075
+],
+"De Lignestraat 13|1000": [
+50.848548,
+4.361727
+],
+"15 Rue D'Egmont|1000": [
+50.838807,
+4.365754
+],
+"Rue Felix Bovie 25|1050": [
+50.826639,
+4.376372
+],
+"Avenue Nouvelle No:14|1040": [
+50.829812,
+4.381215
+],
+"Rue de la Loi 227Mezzanine Floor|1040": [
+50.841897,
+4.385209
+],
+"Rue Paul Emile Janson 6|1000": [
+50.827794,
+4.361971
+],
+"avenue Adolphe Lacomblé 59/8|1030": [
+50.848628,
+4.399079
+],
+"Avenue gustave demey 131|1160": [
+50.812463,
+4.420852
+],
+"Rue de la Loi 23|1040": [
+50.845149,
+4.369831
+],
+"31 rue Montoyer|1000": [
+50.841085,
+4.369924
+],
+"Rue du Trône 194|1050": [
+50.834184,
+4.373736
+],
+"Rue d'Alost 7-11|1000": [
+50.852439,
+4.342169
+],
+"Square De Meeûs 35|1000": [
+50.840736,
+4.369369
+],
+"46 Rue de l’Arbre Bénit|1050": [
+50.833501,
+4.364002
+],
+"Rue de la Loi  38|1000": [
+50.845349,
+4.370425
+],
+"Square de Meeûs nº37|1000": [
+50.840718,
+4.368821
+],
+"Rue Amédée Lynen 8|1210": [
+50.850247,
+4.373303
+],
+"Regentlaan 43-44 Boulevard du Régent|1000": [
+50.846891,
+4.36854
+],
+"Rue Borrens 51|1050": [
+50.826354,
+4.378226
+],
+"Avenue General de Gaulle 47|1050": [
+50.822655,
+4.372862
+],
+"Square Sainteclette, 19|1000": [
+50.858792,
+4.347596
+],
+"Boulevard Saint-Lazare 4|1210": [
+50.85645,
+4.361891
+],
+"Avenue Louise, 54|1050": [
+50.833404,
+4.358147
+],
+"Av. de Cortenbergh 66|1000": [
+50.844137,
+4.387459
+],
+"Rue de l'Industrie 10|1000": [
+50.841755,
+4.369373
+],
+"4 rue J. de Lalaing|1040": [
+50.843981,
+4.372929
+],
+"CrowdStrike Belgium BVKunstlaan 56|1000": [
+50.841101,
+4.366715
+],
+"Rue Ravenstein 36|1000": [
+50.844879,
+4.359341
+],
+"EUREGHA SecretariatAvenue du Tervuren 67|1040": [
+50.838138,
+4.40219
+],
+"Rue de la Linière, 11|1060": [
+50.832224,
+4.347121
+],
+"Avenue Maurice, 1|1050": [
+50.816333,
+4.379201
+],
+"Wetenschapsstraat 37 rue de la Science|1000": [
+50.843775,
+4.372278
+],
+"Avenue de Tervueren 155|1150": [
+50.837273,
+4.406188
+],
+"Cabinet ARCTURUS GROUPBoulevard du Régent, 35|1040": [
+50.84554,
+4.367834
+],
+"31, Rue Montoyer|1000": [
+50.841085,
+4.369924
+],
+"Montoyer 21|1000": [
+50.841258,
+4.369075
+],
+"Rue Joseph II n°40|1000": [
+50.845828,
+4.372736
+],
+"Avenue Molière, 507|1050": [
+50.816581,
+4.36567
+],
+"Av. Louise 54|1050": [
+50.833404,
+4.358147
+],
+"Rue d'Arlon 46|1000": [
+50.839949,
+4.372271
+],
+"Chaussée de Charleroi, 146-148|1060": [
+50.826761,
+4.355213
+],
+"Avenue des Art 11|1210": [
+50.847945,
+4.369884
+],
+"Rond-point Schuman 9/16|1040": [
+50.842035,
+4.384558
+],
+"ICMP / EU OfficeRue du Trone 100|1050": [
+50.836806,
+4.370716
+],
+"Rue Washington 40|1050": [
+50.824842,
+4.363543
+],
+"23 Avenue Marnix|1000": [
+50.839531,
+4.364806
+],
+"Square de Meeûs 25|1000": [
+50.840209,
+4.370413
+],
+"Avenue des Arts19 AD|1000": [
+50.84727,
+4.369874
+],
+"​Rue Belliard 205, 1st floor|1040": [
+50.839511,
+4.385175
+],
+"Boulevard Charlemagne 23|1000": [
+50.845073,
+4.382728
+],
+"Boulevard des Arts 24|1000": [
+50.856123,
+4.346536
+],
+"Rue de la Loi 26|1000": [
+50.845641,
+4.369377
+],
+"Rue du Taciturne 34|1000": [
+50.844514,
+4.379042
+],
+"Avenue de la Joyeuse Entree1|1040": [
+50.840578,
+4.385143
+],
+"Rue de la Loi 28|1040": [
+50.845606,
+4.369538
+],
+"Rue Belliard 40  Bte 12|1040": [
+50.842105,
+4.371728
+],
+"Avenue des Arts 6C/O Industrious|1210": [
+50.848401,
+4.369759
+],
+"Avenue Louise, 130A|1050": [
+50.830469,
+4.361169
+],
+"Rond Point Robert Schuman 2-4|1040": [
+50.841967,
+4.383489
+],
+"Rue Americaine 76|1050": [
+50.823646,
+4.358195
+],
+"Rue du Trône, 194|1050": [
+50.834184,
+4.373736
+],
+"Rue du Marche aux Herbes 61|1000": [
+50.847182,
+4.353035
+],
+"avenue de la Chasse 133-135|1040": [
+50.833925,
+4.393202
+],
+"Rue des Deux Eglises, 26, boîte 5|1000": [
+50.846549,
+4.372594
+],
+"Clos Lucien Outers Gaarde 11-21|1160": [
+50.82402,
+4.404051
+],
+"Boulevard Emile Jacqmain 90|1000": [
+50.854341,
+4.354055
+],
+"Centre for Information Policy Leadership at Hunton Andrews KurthAvenue des Arts 47-49|1000": [
+50.842251,
+4.367323
+],
+"WeWork Rue du Commerce 31|1000": [
+50.84088,
+4.368066
+],
+"Avenue de Cortenbergh, 120Bte 12|1000": [
+50.845039,
+4.389477
+],
+"Av. de Tervueren188|1150": [
+50.837112,
+4.411226
+],
+"Rue de la Loi 223|1000": [
+50.841969,
+4.384855
+],
+"Avenue de Tervueren 197|1150": [
+50.836742,
+4.408897
+],
+"Mundo Matonge, Rue d'Edimbourg 26|1050": [
+50.837895,
+4.364323
+],
+"Square de Meuus 37 - Regus EU5th floor -Suite 505|1000": [
+50.840718,
+4.368821
+],
+"Avenue de Broqueville 40Woluwe-Saint-Lambert|1200": [
+50.838474,
+4.410937
+],
+"Avenue de Cortenbergh 100|1000": [
+50.844707,
+4.388728
+],
+"Rue du champ de Mars 23|1050": [
+50.838481,
+4.366494
+],
+"Sq. de Meeûs 37,|1000": [
+50.840718,
+4.368821
+],
+"231 Avenue Louise|1050": [
+50.825576,
+4.365061
+],
+"Rue Froissart 109|1040": [
+50.840764,
+4.383051
+],
+"Marnixiaan 235th Floor|1000": [
+50.839531,
+4.364806
+],
+"Avenue de Tervueren188A|1150": [
+50.837112,
+4.411226
+],
+"Vlasfabriekstraat, 11|1060": [
+50.832224,
+4.347121
+],
+"Rond-point Schuman 6/5|1040": [
+50.841866,
+4.383826
+],
+"Rue de Toulouse, 49|1040": [
+50.84258,
+4.377121
+],
+"Boulevard Saint-Michel 47|1040": [
+50.834776,
+4.405647
+],
+"Ravensteinstraat 4|1000": [
+50.844167,
+4.358862
+],
+"Avenue Louise, 89|1050": [
+50.831603,
+4.358836
+],
+"rue Marie Thérèse 11|1000": [
+50.846541,
+4.372024
+],
+"Bayerische Forschungsallianz (BayFOR) AISBLRue du Trône 98/7|1050": [
+50.83702,
+4.370495
+],
+"Avenue Louise 65Box 11|1050": [
+50.832948,
+4.357446
+],
+"WWF European Policy Programme,Rue du Commerce 123|1000": [
+50.845723,
+4.370597
+],
+"Avenue Louise 279-287box TB/7|1050": [
+50.823787,
+4.3669
+],
+"ch de Charleroi 140/160 B2|1060": [
+50.826894,
+4.355254
+],
+"Avenue des Arts 11 - bte 10|1210": [
+50.847945,
+4.369884
+],
+"Rue du Luxembourg, 19, bte.6|1000": [
+50.840041,
+4.367886
+],
+"15, Rue de la ScienceFloor 3|1000": [
+50.842187,
+4.371446
+],
+"avenue des Nerviens 9-31|1000": [
+50.839204,
+4.386525
+],
+"rue du Kent, 27|1140": [
+50.864512,
+4.406499
+],
+"Avenue de la Joyeuse Entrèe 1|1040": [
+50.840578,
+4.385143
+],
+"Place Antoine Delporte 17|1060": [
+50.822637,
+4.345899
+],
+"SQUARE DE MEEUS, 35|1050": [
+50.840736,
+4.369369
+],
+"Avenue de la joyeuse entrée, 1|1040": [
+50.840578,
+4.385143
+],
+"41, Square des Latins|1050": [
+50.815634,
+4.385691
+],
+"Rue du Commerce 201st Floor|1000": [
+50.840095,
+4.367279
+],
+"Bolwerklaan 21 Box 8|1210": [
+50.856098,
+4.356772
+],
+"Rue Vautier 29|1000": [
+50.836508,
+4.376494
+],
+"Avenue Louise 250Box 1|1050": [
+50.825204,
+4.366583
+],
+"rue des Deux Eglises, 26/box 2|1000": [
+50.846549,
+4.372594
+],
+"8, rue de Spa, 1000|1000": [
+50.845678,
+4.374042
+],
+"40, rue Belliard|1040": [
+50.842105,
+4.371728
+],
+"rue d'Arlon 55|1040": [
+50.842372,
+4.374012
+],
+"Avenue de Marnix, 17TRIBES|1000": [
+50.839116,
+4.363979
+],
+"Rd Point Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"Chaussée de Wavre 205|1050": [
+50.835798,
+4.373651
+],
+"Avenue des Tilleuls 2a|1180": [
+50.775351,
+4.340259
+],
+"TribesRue des Colonies 56|1000": [
+50.847287,
+4.360961
+],
+"Rue de la Loi 67|1040": [
+50.844169,
+4.374538
+],
+"10 rue du Monastère|1000": [
+50.819787,
+4.373389
+],
+"Chaussee de Boondael 6|1050": [
+50.82736,
+4.374314
+],
+"Avenue d'Italie 36A|1050": [
+50.803277,
+4.392208
+],
+"Fipra International, Rue de la Loi 227|1040": [
+50.841897,
+4.385209
+],
+"European Owens Corning Fiberglas S.p.r.lChaussée de la Hulpe 166|1170": [
+50.796288,
+4.404433
+],
+"Rue Montoyer, 25|1000": [
+50.841125,
+4.369709
+],
+"Avenue Marnix, 28|1000": [
+50.84023,
+4.366199
+],
+"Rue Saint-Jean, 32-38|1000": [
+50.844337,
+4.354342
+],
+"Rue de Trèves 49-51|1040": [
+50.842856,
+4.375405
+],
+"Rue Belliard 40Box 17|1040": [
+50.842105,
+4.371728
+],
+"Rue Theodore De Cuyper, 100|1200": [
+50.85071,
+4.434545
+],
+"Avenue Louise 65/11|1050": [
+50.832948,
+4.357446
+],
+"Rue Archimede 61|1000": [
+50.844885,
+4.38402
+],
+"REGUS - Avenue Louise 65/11|1050": [
+50.832948,
+4.357446
+],
+"Rue champ de Mars 23|1050": [
+50.838481,
+4.366494
+],
+"Flora Food Belgium NV/SAAv. Charles-Quint 586|1082": [
+50.871481,
+4.288185
+],
+"Rue Archimède 69|1000": [
+50.845144,
+4.384005
+],
+"avenue Louise 65|1050": [
+50.832948,
+4.357446
+],
+"Avenue des Arts, 20|1000": [
+50.846213,
+4.369397
+],
+"Rond-Point Schuman 2-4étage 6|1040": [
+50.841967,
+4.383489
+],
+"4 Rue Jacques de Lalaing|1040": [
+50.843981,
+4.372929
+],
+"Avenue Louise 54, Brussels|1050": [
+50.833404,
+4.358147
+],
+"BOULEVARD BISCHOFFSHEIM 39Boite 4|1000": [
+50.852551,
+4.36651
+],
+"54 avenue Louise|1050": [
+50.833404,
+4.358147
+],
+"Rue Marie de Bourgogne 58BDI/BDA The German Business Representation|1000": [
+50.84152,
+4.371857
+],
+"Boulevard Baudouin 18|1000": [
+50.857391,
+4.352215
+],
+"Avenue Henri Jaspar, 113|1060": [
+50.832588,
+4.347998
+],
+"WeWork Rue du Commerce 31 1000 Brussels BELGIUM|1000": [
+50.84088,
+4.368066
+],
+"Rue du Congrès 1|1000": [
+50.849795,
+4.36422
+],
+"Boulevard Charlemagne 74|1000": [
+50.845462,
+4.382234
+],
+"Europe for Family ASBLChaussée de la Hulpe n°177|1170": [
+50.795346,
+4.403306
+],
+"Sq. de Meeus 1|1000": [
+50.839905,
+4.3684
+],
+"Rue Montoyer 47,|1000": [
+50.840859,
+4.370933
+],
+"tervurenlaan 168 Box4|1150": [
+50.837277,
+4.410431
+],
+"Rue de la Loi 227Fipra International|1040": [
+50.841897,
+4.385209
+],
+"Rue d’Idalie 11-13|1050": [
+50.836727,
+4.371333
+],
+"116, rue Berckmans|1060": [
+50.832123,
+4.351077
+],
+"Avenue Louise 231|1050": [
+50.825576,
+4.365061
+],
+"Avenue de l'Yser, 5|1040": [
+50.84037,
+4.397629
+],
+"Koning Albert II-laan 19second floor|1210": [
+50.859138,
+4.357392
+],
+"Rond Point Robert Schuman 6Box 5|1040": [
+50.841866,
+4.383826
+],
+"58 Rue Marie de Bourgogne|1000": [
+50.84152,
+4.371857
+],
+"Rue Belliard, 19|1040": [
+50.842197,
+4.369286
+],
+"Louis Schmidtlaan 64|1040": [
+50.829727,
+4.402307
+],
+"1040 Rue Froissart 109|1000": [
+50.840764,
+4.383051
+],
+"Square de Meeus, 37|1000": [
+50.840718,
+4.368821
+],
+"Avenue des Olympiades 2 , 1140 Brussels (Evere), BELGIUM|1140": [
+50.870465,
+4.406142
+],
+"Mundo-MadouAvenue des Arts 7-8|1210": [
+50.848297,
+4.369786
+],
+"Rue d' Arlon 55|1040": [
+50.842372,
+4.374012
+],
+"Rue de l'Allée Verte 72|1082": [
+50.859074,
+4.294371
+],
+"Rue d'Idalie 11, 6eme étageboite 2|1050": [
+50.836727,
+4.371333
+],
+"Avenue Kersbeek 308Uccle|1180": [
+50.801049,
+4.32277
+],
+"Rue de Trèves 49|1000": [
+50.842856,
+4.375405
+],
+"Ave du Chant d'Oiseau 106|1150": [
+50.823025,
+4.41272
+],
+"Rue de la Loi 82 / Bte 3|1040": [
+50.84445,
+4.374727
+],
+"Boulevard du régent 35|1000": [
+50.84554,
+4.367834
+],
+"Bureau des notaires de Francerue Breydel 36|1040": [
+50.84106,
+4.38384
+],
+"Bolwerklaan 21 box5|1210": [
+50.856098,
+4.356772
+],
+"Prekelinden 64/5|1200": [
+50.841519,
+4.409721
+],
+"Rue de l'industrie 24|1040": [
+50.842561,
+4.369826
+],
+"Rue Saint Georges 32|1050": [
+50.818236,
+4.369018
+],
+"RUE DE LA SCIENCE 14|1040": [
+50.842561,
+4.371211
+],
+"Rue Wiertz 33|1050": [
+50.837124,
+4.374878
+],
+"rue de Trèves, 51box 16|1040": [
+50.842928,
+4.375439
+],
+"rue Stévin, 115|1000": [
+50.844519,
+4.381412
+],
+"Avenue des Arts 8|1210": [
+50.848197,
+4.369813
+],
+"Rue Montoyer 35|1000": [
+50.841047,
+4.370099
+],
+"Rue de la Loi, 81a|1040": [
+50.843883,
+4.375928
+],
+"BLV. Saint Michel 47|1050": [
+50.851747,
+4.355945
+],
+"Round Point Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"Avenue des Arts 19 A-D|1000": [
+50.84727,
+4.369874
+],
+"Avenue de la Toison d'Or, 79|1060": [
+50.833999,
+4.352031
+],
+"1&1 Telecom GmbHRue de Trève 49|1040": [
+50.842856,
+4.375405
+],
+"Rolstraat 29|1000": [
+50.852924,
+4.348222
+],
+"EDF - FramatomeRue du Luxembourg 14A|1000": [
+50.840484,
+4.36709
+],
+"Rue Grisar, 38Anderlecht|1070": [
+50.838115,
+4.33336
+],
+"Rue Du Duc 143|1200": [
+50.838851,
+4.40876
+],
+"Grasmarkt 61|1000": [
+50.847182,
+4.353035
+],
+"Av. des Arts 1-2Camara de Comercio España en BENELUX|1120": [
+50.848778,
+4.369662
+],
+"Rue du Spa 28|1000": [
+50.846451,
+4.374449
+],
+"Rue d`Arlon 46|1000": [
+50.839949,
+4.372271
+],
+"Data, AI and Robotics (DAIRO) AISBLAvenue des Arts 56|1000": [
+50.841101,
+4.366715
+],
+"Kortenberglaan 116|1000": [
+50.844868,
+4.389093
+],
+"42 Rue Gérard|1040": [
+50.842651,
+4.397419
+],
+"Avenue des Nerviens 85 (bte 9)|1040": [
+50.838494,
+4.389958
+],
+"Chaussée de Boondael, 6|1050": [
+50.82736,
+4.374314
+],
+"Jean-Baptiste Meunierstraat 10/5|1050": [
+50.815088,
+4.349757
+],
+"RSPCA EuropeRue Abbe Cuypers 3|1040": [
+50.838151,
+4.399589
+],
+"Rue Joseph Stevens 7Tour Sablon, 15th floor|1000": [
+50.841323,
+4.352475
+],
+"Olympiadenlaan 2|1140": [
+50.870465,
+4.406142
+],
+"SilversquareSquare de Meeûs 35|1000": [
+50.840736,
+4.369369
+],
+"8 rue charles martel|1000": [
+50.845584,
+4.380008
+],
+"Avenue de la Renaisance 1|1000": [
+50.84408,
+4.388312
+],
+"52 rue Defacqz|1050": [
+50.827727,
+4.359456
+],
+"Rond Point Schuman 3SolarPower Europe|1040": [
+50.841949,
+4.38354
+],
+"Avenue de la Joyeuse, Entrée 1|1040": [
+50.840578,
+4.385143
+],
+"Rue D'Anderlecht 107|1000": [
+50.845973,
+4.342064
+],
+"87 rue du Prince Royal|1050": [
+50.833849,
+4.359521
+],
+"Boulevard Saint-Michel 65/6|1040": [
+50.834205,
+4.40536
+],
+"Rue de l'allée verte 72|1082": [
+50.859074,
+4.294371
+],
+"Brigade Pironlaan 132|1080": [
+50.857228,
+4.317586
+],
+"Rue de la Régence 4|1000": [
+50.840575,
+4.357434
+],
+"Rue du Pontonnier 44Woluwe St. Lambert|1200": [
+50.837984,
+4.439691
+],
+"rue d'Egmont, 11|1000": [
+50.838985,
+4.365536
+],
+"Sq. de Meeûs 18|1050": [
+50.839011,
+4.369794
+],
+"Avenue de l'Yser 5-6|1040": [
+50.84037,
+4.397629
+],
+"Square Ambiorix 50Quaker House|1000": [
+50.847423,
+4.381885
+],
+"Positive Money EuropeAvenue de Broqueville 40|1200": [
+50.838474,
+4.410937
+],
+"Rue du Commerce, 20-22|1000": [
+50.840095,
+4.367279
+],
+"37, rue des Deux Eglises|1000": [
+50.846772,
+4.373148
+],
+"Rue de la Loi 42|1040": [
+50.845281,
+4.37074
+],
+"Rue de Trèves 49/51Box 18|1040": [
+50.842856,
+4.375405
+],
+"Hof ter Vleestdreef 5|1070": [
+50.809983,
+4.287192
+],
+"Avenue Albert 93|1190": [
+50.820238,
+4.344788
+],
+"Rue de l’Industrie 10|1000": [
+50.841755,
+4.369373
+],
+"IAAPA ESASint-Lazaruslaan 4|1210": [
+50.85645,
+4.361891
+],
+"Av. de Tervueren 188a|1150": [
+50.83709,
+4.411332
+],
+"Boulevard Belgica 14|1080": [
+50.866059,
+4.338188
+],
+"Avenue Gilbert Mullie 55|1200": [
+50.849966,
+4.429085
+],
+"Chaussée de Charleroi 143, box 3|1060": [
+50.827997,
+4.355158
+],
+"Jacques de Lalaingstraat 4|1040": [
+50.843981,
+4.372929
+],
+"Rue Jacques Lalaing 4|1040": [
+50.843981,
+4.372929
+],
+"Rue Brederode 13|1000": [
+50.840451,
+4.360899
+],
+"Avenue de Tervueren 2|1040": [
+50.840131,
+4.397862
+],
+"29, RUE DES DEUX EGLISES|1000": [
+50.846614,
+4.373063
+],
+"Boulevard Saint Michel 47|1040": [
+50.834776,
+4.405647
+],
+"Avenue Louise 209|1050": [
+50.826487,
+4.364098
+],
+"Rue des Foulons, 47|1000": [
+50.843529,
+4.341159
+],
+"Rue de la loi 227|1000": [
+50.841897,
+4.385209
+],
+"Rue de l'Industrie, 10|1000": [
+50.841755,
+4.369373
+],
+"Avenue Montjoie 132nd floor|1180": [
+50.810711,
+4.368186
+],
+"Rue de Trèves 616th Floor|1040": [
+50.84352,
+4.375742
+],
+"auprès de la Ruche Citoyennerue de Moscou, 24|1060": [
+50.830509,
+4.346145
+],
+"rue Montoyer 31|1000": [
+50.841085,
+4.369924
+],
+"Renewable Energy HouseRue d’Arlon 63/67|1040": [
+50.842535,
+4.374103
+],
+"RUE MONTOYER, 31|1000": [
+50.841085,
+4.369924
+],
+"Aarlenstraat 80|1000": [
+50.841922,
+4.373303
+],
+"Avenue des Celtes 19|1040": [
+50.838503,
+4.397502
+],
+"Rue Joseph II 166|1000": [
+50.844114,
+4.380719
+],
+"Avenue Louise250|1050": [
+50.825204,
+4.366583
+],
+"Place du Samedi 8bte 8|1000": [
+50.851696,
+4.350021
+],
+"Boulevard du Jardin Botanique 206th Floor ITUH|1000": [
+50.854763,
+4.359161
+],
+"Avenue Henri Jaspar 93|1060": [
+50.833129,
+4.34995
+],
+"Rue de la Loi 82|1040": [
+50.84445,
+4.374727
+],
+"Square Ambiorix 7|1000": [
+50.847834,
+4.383303
+],
+"Avenue Louise 146|1050": [
+50.829416,
+4.362263
+],
+"Stephanie Square Centre,Avenue Louise 65,|1050": [
+50.832948,
+4.357446
+],
+"Rue Hector Denis 33/4|1050": [
+50.81936,
+4.363803
+],
+"Rue de la Loi 34-36|1000": [
+50.845524,
+4.369943
+],
+"Rue Joseph II, 20|1000": [
+50.846267,
+4.370685
+],
+"Belliard 20|1040": [
+50.842453,
+4.369596
+],
+"NATS, 4th FloorAvenue Cortenbergh 100|1000": [
+50.844707,
+4.388728
+],
+"Rue Guimard 1|1040": [
+50.843806,
+4.368832
+],
+"Avenue des Arts 7-8Bruxelles|1210": [
+50.848297,
+4.369786
+],
+"rue van Campenhout 22|1000": [
+50.847838,
+4.385797
+],
+"Renaissancelaan 11, avenue de la Renaissance|1000": [
+50.843943,
+4.388975
+],
+"SCHILDKNAAPSSTRAAT 47|1000": [
+50.848779,
+4.354622
+],
+"Rue du Canada 12|1190": [
+50.826643,
+4.335948
+],
+"Rue du Commerce 123CITA|1000": [
+50.845723,
+4.370597
+],
+"90 rue des Mélèzes|1050": [
+50.819485,
+4.362163
+],
+"Koningsstraat 217|1210": [
+50.856196,
+4.367527
+],
+"Rue Emmanuel van Driessche 75|1050": [
+50.819071,
+4.357332
+],
+"Rue de la Loi 38|1000": [
+50.845349,
+4.370425
+],
+"Rue Franklin 111|1000": [
+50.845895,
+4.388625
+],
+"Rond-Point Schuman 67th floor c/o Confartigianato Imprese|1040": [
+50.841866,
+4.383826
+],
+"Place du Nouveau Marché aux Grains 21|1000": [
+50.850523,
+4.34382
+],
+"Avenue Emile Duray 28|1050": [
+50.819179,
+4.376597
+],
+"Rond Point Schuman 2-4Level 6|1040": [
+50.841967,
+4.383489
+],
+"Rue Guimard 10|1040": [
+50.843983,
+4.369688
+],
+"Boulevard du Souverain 84, B1170 Bruxelles,BELGIUM|1170": [
+50.805698,
+4.425312
+],
+"Boulevard Bischoffsheim 39boite 4|1000": [
+50.852551,
+4.36651
+],
+"Avenue de Cortenbergh 89|1000": [
+50.845075,
+4.390405
+],
+"Avenue Circulaire, 3|1180": [
+50.798746,
+4.358778
+],
+"Boulevard de l'empereur 10|1000": [
+50.843182,
+4.354443
+],
+"avenue du roi 107|1190": [
+50.827494,
+4.333889
+],
+"82 Rue de la Loi|1040": [
+50.84445,
+4.374727
+],
+"6, Rue Wiertz|1050": [
+50.836825,
+4.374294
+],
+"Rue le Tintoret 17|1000": [
+50.845758,
+4.389947
+],
+"Rue de Stassart 107|1050": [
+50.834632,
+4.358845
+],
+"56, Avenue des ArtsEBU / UER|1000": [
+50.841101,
+4.366715
+],
+"Ave d'Auderghem 22-28|1040": [
+50.841302,
+4.384743
+],
+"Square de Meuûs 40|1000": [
+50.840273,
+4.368589
+],
+"Chaussée d'Alsemberg 1084Boîte 5|1180": [
+50.789277,
+4.33138
+],
+"Boulevard Saint Michel 80|1040": [
+50.831759,
+4.405233
+],
+"Coppieters FoundationBoomkwekerijstraat, 1|1000": [
+50.839361,
+4.3617
+],
+"Boulevard Edmond Machtens 104/19|1080": [
+50.851138,
+4.311819
+],
+"Rue de l'Arbre Bénit 44|1050": [
+50.83352,
+4.364002
+],
+"22 Rue de la Régence|1000": [
+50.840254,
+4.35697
+],
+"Havenlaan 88C|1000": [
+50.866037,
+4.350008
+],
+"Place du Luxembourg 2/3|1050": [
+50.838791,
+4.372407
+],
+"Chaussée de la Hulpe 166|1170": [
+50.796288,
+4.404433
+],
+"Rue de la Gare, 36|1040": [
+50.836357,
+4.398816
+],
+"Avenue Paul Stroobant 56|1180": [
+50.798505,
+4.34864
+],
+"rue Joseph II, 174|1000": [
+50.844034,
+4.381088
+],
+"Av. des Arts 11, 1210 Saint-Josse-ten-Noode|1210": [
+50.847945,
+4.369884
+],
+"Clos. Lucien Outers Gaarde 11-21|1160": [
+50.82402,
+4.404051
+],
+"Rue Le Tintoret 42|1000": [
+50.84617,
+4.390233
+],
+"Rue des Riches Claires 26|1000": [
+50.846883,
+4.346268
+],
+"9 rond point robert schumanABS Farm Europe 3 ème|1040": [
+50.842035,
+4.384558
+],
+"Azalealaan 25|1030": [
+50.86156,
+4.38337
+],
+"Chaussée de Vleurgat 268|1050": [
+50.819408,
+4.366499
+],
+"Rue de la Presse, 19|1000": [
+50.84885,
+4.366532
+],
+"Boulevard de Waterloo, 72|1000": [
+50.835792,
+4.353899
+],
+"25, rue d'Arlon|1050": [
+50.840137,
+4.372754
+],
+"115 Rue Froissart|1040": [
+50.840941,
+4.38312
+],
+"62 Rue de la Loi|1040": [
+50.844961,
+4.372283
+],
+"Rue Véronèse 73|1000": [
+50.845183,
+4.388397
+],
+"Place Raymond Blyckaerts 7|1050": [
+50.832847,
+4.374243
+],
+"Pl. Poelaert 6|1000": [
+50.837484,
+4.353975
+],
+"Handelsstraat 20|1000": [
+50.840095,
+4.367279
+],
+"Avenue de Tervuren, 168(bte 12)|1150": [
+50.837277,
+4.410431
+],
+"House of German Business Industries and EmployersRue Marie de Bourgogne 58|1000": [
+50.84152,
+4.371857
+],
+"87 avenue Louise|1050": [
+50.831828,
+4.358604
+],
+"59 rue du Mail|1050": [
+50.822192,
+4.359438
+],
+"Boulevard du Regent 54|1000": [
+50.848379,
+4.368773
+],
+"Kunstlaan 6|1210": [
+50.848401,
+4.369759
+],
+"Rue de Livourne 137 / 4|1050": [
+50.826257,
+4.362575
+],
+"rue du Bourgmestre 24A|1050": [
+50.821375,
+4.378825
+],
+"23 rue Léopold|1000": [
+50.84951,
+4.355037
+],
+"Rue de la Loi, 23|1040": [
+50.845149,
+4.369831
+],
+"Quai du Commerce 9|1000": [
+50.856181,
+4.348218
+],
+"Boulevard Saint-Michel 65, bte. 6|1040": [
+50.834205,
+4.40536
+],
+"Avenue Cortenbergh, 172|1000": [
+50.845922,
+4.391462
+],
+"Rue du Commerce, 10|1000": [
+50.839837,
+4.367121
+],
+"Avenue de Tervueren 188A2nd Floor|1150": [
+50.837112,
+4.411226
+],
+"Avenue du Capricorne 61|1200": [
+50.852669,
+4.420482
+],
+"Rue du Commerce 10, Brussels - Teresa Alonso de la Florida|1000": [
+50.839837,
+4.367121
+],
+"108 rue souveraine|1050": [
+50.830782,
+4.362158
+],
+"Clos du Parnasse 1bote 4|1050": [
+50.837773,
+4.369545
+],
+"Avenue Winston Churchill 247 A1180 Brussels|1180": [
+50.811486,
+4.366051
+],
+"Rond Point Robert Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"Rue de la Loyauté 21|1090": [
+50.877125,
+4.33825
+],
+"Avenue des Arts, 47|1000": [
+50.842251,
+4.367323
+],
+"rue de la montagne, 30-34|1000": [
+50.847086,
+4.355392
+],
+"Avenue Louise231|1050": [
+50.825576,
+4.365061
+],
+"Avenue des Arts 56Office 0.1|1000": [
+50.841101,
+4.366715
+],
+"Avenue Emmanuel Mounier 83/11|1200": [
+50.85094,
+4.455995
+],
+"Avenue des Arts 7/85th Floor|1210": [
+50.848297,
+4.369786
+],
+"Rue Bara 152|1070": [
+50.834302,
+4.329857
+],
+"Rond-Point Schuman 6Box 5|1040": [
+50.841866,
+4.383826
+],
+"Boulevard Louis Schmidt 6|1040": [
+50.827805,
+4.399261
+],
+"rue de la Loi, 227|1040": [
+50.841897,
+4.385209
+],
+"Avenue Livingstone, 13-15|1000": [
+50.844987,
+4.377993
+],
+"Sustainable Eel Group VZWRond Point Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"31 rue Erasme|1070": [
+50.837971,
+4.306254
+],
+"Rond-point Robert Schuman 2-4|1040": [
+50.841967,
+4.383489
+],
+"Boulevard de l'Empereur 10|1000": [
+50.843182,
+4.354443
+],
+"66 avenue de Cortenbergh|1000": [
+50.844137,
+4.387459
+],
+"Boulevard Brand Whitlock, 144|1200": [
+50.844205,
+4.405807
+],
+"Avenue Franklin Roosevelt 103|1050": [
+50.802117,
+4.388297
+],
+"avenue Louise 65/11|1050": [
+50.832948,
+4.357446
+],
+"26, rue d'Edimburg|1050": [
+50.837895,
+4.364323
+],
+"Chaussee 'Ixelles 144|1050": [
+50.836164,
+4.368551
+],
+"Rue Belliard20|1040": [
+50.842453,
+4.369596
+],
+"Rue de Trèves 3|1050": [
+50.83902,
+4.373397
+],
+"Montoyerstraat 39 bus 20|1000": [
+50.841012,
+4.370272
+],
+"26-38 rue de l'industrieView Building|1040": [
+50.842994,
+4.369956
+],
+"Avenue des Arts 19 A/D|1000": [
+50.84727,
+4.369874
+],
+"Avenue Du Frioul, 51|1140": [
+50.863845,
+4.407423
+],
+"Rue d'Oultremont, 34|1040": [
+50.841995,
+4.398565
+],
+"Avenue de la Reine 141|1030": [
+50.868828,
+4.363069
+],
+"Rue jacques de lalaing 4|1040": [
+50.843981,
+4.372929
+],
+"532 Avenue Louise|1050": [
+50.815212,
+4.372823
+],
+"Boulevard du Triomphe 172|1160": [
+50.817956,
+4.403003
+],
+"Av. Herrmann-Debroux 40-42|1160": [
+50.813113,
+4.430776
+],
+"Rue du Luxembourg 22|1000": [
+50.840257,
+4.368185
+],
+"Rue Mignot Delstanche, 60|1050": [
+50.816508,
+4.357564
+],
+"Rue Vanderlinden 15A|1030": [
+50.867143,
+4.366555
+],
+"Square Marguerite, 13|1000": [
+50.847428,
+4.386634
+],
+"BuroDesign CenterEsplanade 1|1020": [
+50.899784,
+4.342771
+],
+"100, rue Th. De Cuyper|1200": [
+50.85071,
+4.434545
+],
+"Rue de la Régence 58|1000": [
+50.837888,
+4.353696
+],
+"Galerie Ravenstein 4|1000": [
+50.845283,
+4.357864
+],
+"6 Rond-Point Schuman|1040": [
+50.841866,
+4.383826
+],
+"rue de la liniere 15|1050": [
+50.832133,
+4.347172
+],
+"Rue d'Egmont 11University Foundation|1000": [
+50.838985,
+4.365536
+],
+"Livingstone Avenue 13-15|1000": [
+50.844987,
+4.377993
+],
+"Rue de la Science 14a|1040": [
+50.842691,
+4.371279
+],
+"Avenue Albert 271|1190": [
+50.81466,
+4.347024
+],
+"4, Rue De La Presse|1000": [
+50.849134,
+4.366836
+],
+"Avenue Odon Warland 110|1090": [
+50.870867,
+4.333638
+],
+"Markiesstraat 1|1000": [
+50.847376,
+4.358563
+],
+"Rue Saint-Georges 32|1050": [
+50.818236,
+4.369018
+],
+"Avenue de Tervuren 13 Bte3|1040": [
+50.838902,
+4.39865
+],
+"Bolwerklaan 21, 1210 Brussels|1210": [
+50.856098,
+4.356772
+],
+"11, Rue de la LinièreSaint-Gilles|1060": [
+50.832224,
+4.347121
+],
+"Rue des Sols 8|1000": [
+50.844294,
+4.358423
+],
+"Kunstlaan 17Avenue des Arts 17|1210": [
+50.84744,
+4.370007
+],
+"Rue Haute 42|1000": [
+50.840999,
+4.35181
+],
+"Rond-point Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"Rue van Eyck 21Busnummer 1|1050": [
+50.819999,
+4.367914
+],
+"47 avenue des Arts|1000": [
+50.842251,
+4.367323
+],
+"Square de Meeūs 38/40|1000": [
+50.840541,
+4.368728
+],
+"Rue Erasme 31|1070": [
+50.837971,
+4.306254
+],
+"Rue de la Loi 67|1000": [
+50.844169,
+4.374538
+],
+"Boulevard de l'Empereur 4|1000": [
+50.843658,
+4.355344
+],
+"EUTOPIA Central OfficeBoulevard Général Jacques 210|1050": [
+50.821734,
+4.387297
+],
+"Représentation de la région Nouvelle-Aquitaine21 rue Montoyer|1000": [
+50.841258,
+4.369075
+],
+"av. du Suffrage Universel 59|1030": [
+50.866092,
+4.381674
+],
+"Chaussée d'Alsemberg, 995/18|1180": [
+50.795993,
+4.335135
+],
+"Leuvenseweg 86|1000": [
+50.848105,
+4.367744
+],
+"Sony Music Entertainment Belgium nv/SAEAvenue du Port 86c boite 121|1000": [
+50.864205,
+4.348798
+],
+"Quai des Peniches 69-21G,|1000": [
+50.864,
+4.352433
+],
+"Av. de la Joyeuse Entréen. 1|1210": [
+50.840578,
+4.385143
+],
+"Avenue du Front 1/5|1040": [
+50.832702,
+4.40079
+],
+"Rue de Deux Eglises 26|1000": [
+50.846549,
+4.372594
+],
+"Avenue des Arts 56.|1000": [
+50.841101,
+4.366715
+],
+"Square Charles Maurice Wiser 19|1040": [
+50.838651,
+4.385617
+],
+"Wetstraat, 223|1040": [
+50.841969,
+4.384855
+],
+"Avenue Marnix 30bte 14|1000": [
+50.840345,
+4.366334
+],
+"Rue Stévin, 115|1000": [
+50.844519,
+4.381412
+],
+"Rue Royale 153º Floor|1000": [
+50.853858,
+4.366352
+],
+"Philippe Le Bon 9|1000": [
+50.845624,
+4.376256
+],
+"Chaussee de Wavre|1160": [
+50.822198,
+4.404712
+],
+"Boulevard Adolphe Max 30|1000": [
+50.852703,
+4.354273
+],
+"Avenue des Arts , 56|1000": [
+50.841101,
+4.366715
+],
+"Rue Belliard, 40 box 21|1040": [
+50.842105,
+4.371728
+],
+"Avenue Gustave Demey 14/16|1160": [
+50.812,
+4.426826
+],
+"Rue des Chevaliers 6 boite 7|1050": [
+50.836591,
+4.359389
+],
+"Rue d'Arlon 46CO SME Connect|1000": [
+50.839949,
+4.372271
+],
+"Rue des Anciens Etangs, 40|1190": [
+50.817914,
+4.318137
+],
+"Rue d’Edimbourg 26|1050": [
+50.837895,
+4.364323
+],
+"Rond-point Schuman 6Box 5|1040": [
+50.841866,
+4.383826
+],
+"Willebroekkaai 37|1000": [
+50.863848,
+4.352833
+],
+"Avenue de la Clairiere11 B|1000": [
+50.805159,
+4.372917
+],
+"Rue du Trône 98/7|1050": [
+50.83702,
+4.370495
+],
+"Auguste Reyerslaan 70|1030": [
+50.851757,
+4.401445
+],
+"Chaussée Saint-Pierre70|1040": [
+50.836038,
+4.384589
+],
+"Square Marie - Louise 72|1000": [
+50.845691,
+4.378771
+],
+"Avenue des Arts56|1000": [
+50.841101,
+4.366715
+],
+"Avenue des Arts, 24|1000": [
+50.845812,
+4.369215
+],
+"Mundo MatongéRue D’Edimbourg 26|1050": [
+50.837895,
+4.364323
+],
+"Avenue Michel Ange 18|1000": [
+50.84588,
+4.385228
+],
+"Boulevard de Carlomagne, 23 c/o Grimaldi studio legale|1000": [
+50.845073,
+4.382728
+],
+"rue van Eyck, 44|1000": [
+50.819854,
+4.368829
+],
+"9 Rue Louis Hap|1040": [
+50.834967,
+4.383619
+],
+"Rue Capouillet 31|1060": [
+50.832318,
+4.354836
+],
+"Rue Belliard 20|1140": [
+50.842453,
+4.369596
+],
+"Avenue Louise 89boîte 2|1050": [
+50.818166,
+4.355705
+],
+"Square de Meeûs 37, 4th Floor|1000": [
+50.840718,
+4.368821
+],
+"Rue de Livourne 13|1060": [
+50.830739,
+4.357956
+],
+"Rue du Trône 188|1050": [
+50.834334,
+4.373548
+],
+"Rond Point Schuman 6Box 5|1040": [
+50.841866,
+4.383826
+],
+"Rue de la Tulipe 25Ixelles|1050": [
+50.83418,
+4.367258
+],
+"Rue de Treves 49-51|1000": [
+50.842856,
+4.375405
+],
+"Regentlaan 35|1000": [
+50.84554,
+4.367834
+],
+"6 Rond-Point Robert SchumanRegus EU Commission|1040": [
+50.841866,
+4.383826
+],
+"Rue du Noyer 55|1000": [
+50.849826,
+4.388237
+],
+"avenue LOUISE 459BOITE 3|1050": [
+50.817634,
+4.370947
+],
+"Avenue Du Chateau 24 box 4|1081": [
+50.863235,
+4.313855
+],
+"59 rue Charles Quint|1000": [
+50.849683,
+4.384265
+],
+"Avenue de Tervueren 188Abox 4|1150": [
+50.837112,
+4.411226
+],
+"Rue du trone 4|1000": [
+50.839993,
+4.366477
+],
+"Pleinlaan 5|1050": [
+50.82138,
+4.391669
+],
+"chausseen louvain 47|1210": [
+50.849782,
+4.37219
+],
+"Rue de la Loi 155CBoite 93|1050": [
+50.84228,
+4.379747
+],
+"rue Victor Oudart 7|1030": [
+50.849257,
+4.392456
+],
+"39 rue des deux Eglises|1000": [
+50.846834,
+4.373181
+],
+"56 avenue des Arts - 4th floor|1000": [
+50.841101,
+4.366715
+],
+"Boulevard Louis Schmidt 2B boite 24|1040": [
+50.826604,
+4.396869
+],
+"2 Place Luxembourg|1050": [
+50.838791,
+4.372407
+],
+"Avenue Louise 131|1050": [
+50.82966,
+4.360844
+],
+"rue du Commerce 77|1040": [
+50.84304,
+4.369192
+],
+"Wiggin LLPrue de Namur, 72|1000": [
+50.839563,
+4.361053
+],
+"500 avenue Louise|1050": [
+50.816533,
+4.372349
+],
+"Rue Archimède 17|1000": [
+50.843546,
+4.384122
+],
+"37 Sq de Meeus|1000": [
+50.840718,
+4.368821
+],
+"Avenue de Tervueren 188A box 4|1150": [
+50.837112,
+4.411226
+],
+"Avenue du Maelbeek 61 r/ch|1040": [
+50.835329,
+4.379346
+],
+"Rue du Trone, 62|1050": [
+50.838036,
+4.369122
+],
+"Boulevard Leopold III6|1030": [
+50.858544,
+4.397756
+],
+"Rue du Meridien 10|1210": [
+50.853297,
+4.369153
+],
+"Rue des pères blancs 4|1040": [
+50.826742,
+4.4002
+],
+"Avenue Louise 87|1050": [
+50.831828,
+4.358604
+],
+"Rue Tenbosch 88Ixelles|1050": [
+50.821309,
+4.36207
+],
+"Oude Graanmarkt 63|1000": [
+50.848897,
+4.345408
+],
+"Avenue Louise 240|1050": [
+50.825904,
+4.365884
+],
+"Rue Dautzenberg 36|1050": [
+50.826898,
+4.367969
+],
+"Joseph II, 174|1000": [
+50.844034,
+4.381088
+],
+"dreve aurelie solvay 6|1150": [
+50.823426,
+4.439131
+],
+"Quai aux pierres de taille 29|1000": [
+50.855274,
+4.348726
+],
+"Avenue Louise 65, 1|1000": [
+50.832948,
+4.357446
+],
+"Boulevard de Waterloo 103|1000": [
+50.833979,
+4.349654
+],
+"Avenue Arnaud Fraiteur 15-23|1050": [
+50.817404,
+4.396018
+],
+"Avenue Des Arts 50|1000": [
+50.841966,
+4.367173
+],
+"Avenue de la Constitution 56bte 16|1090": [
+50.867266,
+4.324174
+],
+"Rue de la Loi 155 bte 97|1040": [
+50.84228,
+4.379747
+],
+"Luxemburgstraat 3 Rue de Luxembourg|1000": [
+50.840245,
+4.366902
+],
+"Rue Pere Eudore Devroye 11Etterbeek|1040": [
+50.833621,
+4.406887
+],
+"Rue du Luxembourg 32nd floor|1000": [
+50.840245,
+4.366902
+],
+"Square de Meeûs, 38-40|1000": [
+50.840541,
+4.368728
+],
+"Avenue Edmond Van Nieuwenhuyse, 8|1160": [
+50.813865,
+4.41895
+],
+"Rue de l'Industrie 4|1000": [
+50.840875,
+4.368907
+],
+"Boulevard du Souverain 100Boite 9|1170": [
+50.807281,
+4.426253
+],
+"Square de Meeûs, 35|1040": [
+50.840736,
+4.369369
+],
+"rue de l'hospice communal 184|1170": [
+50.803117,
+4.422429
+],
+"LIVORNOSTRAAT 13|1060": [
+50.830739,
+4.357956
+],
+"Av. d'Auderghem 22-28|1040": [
+50.841302,
+4.384743
+],
+"Rond Point Schuman 9|1000": [
+50.842035,
+4.384558
+],
+"Norrsken HouseRue du Commerce 72|1040": [
+50.842946,
+4.368754
+],
+"Avenue d’Auderghem 22-28|1040": [
+50.841302,
+4.384743
+],
+"Avenue des Nerviens, 858th Floor|1040": [
+50.838494,
+4.389958
+],
+"Koningsstraat 154-158|1000": [
+50.850676,
+4.364147
+],
+"Rue Th de Cuyper 100|1200": [
+50.85071,
+4.434545
+],
+"Clos Chapelle aux Champs 30C/o BLSI|1200": [
+50.849524,
+4.449826
+],
+"Place du Champ de Mars 1/3|1050": [
+50.838473,
+4.363715
+],
+"Rue Ernest Allard 32|1000": [
+50.839254,
+4.353802
+],
+"Rond Point Schuman 14, B - 1040 Bruxelles|1040": [
+50.842854,
+4.384195
+],
+"Clos du Parnasse 3i|1050": [
+50.83745,
+4.370244
+],
+"Rue du Luxembourg, 16b|1000": [
+50.840348,
+4.367749
+],
+"Rue de l'étoile, 22|1180": [
+50.795393,
+4.321604
+],
+"Rue de l’Aurore 2/8|1000": [
+50.820039,
+4.373176
+],
+"Avenue Roger Vandendriessche 18, bte 3|1150": [
+50.834449,
+4.41447
+],
+"Antwerpselaan 40|1000": [
+50.85735,
+4.350039
+],
+"AV. LOUISE 367|1050": [
+50.820825,
+4.3694
+],
+"Boulevard du Jardin Botanique 43|1000": [
+50.853945,
+4.36197
+],
+"Legal Address Rue Van Eyck, 22|1060": [
+50.820295,
+4.367998
+],
+"Avenue des Arts20|1000": [
+50.846213,
+4.369397
+],
+"Priester Cuypersstraat 3|1040": [
+50.838151,
+4.399589
+],
+"71, Ave de Cortenbergh|1000": [
+50.844456,
+4.388994
+],
+"4, Rue de la Presse|1000": [
+50.849134,
+4.366836
+],
+"Rue Baron Lambert 48|1040": [
+50.834255,
+4.389793
+],
+"Chaussée de Boondael 6|1050": [
+50.82736,
+4.374314
+],
+"4, rue du Trône|1000": [
+50.839993,
+4.366477
+],
+"Avenue Jeanne 33|1050": [
+50.814403,
+4.378757
+],
+"Rond Point Schumann 6|1040": [
+50.841866,
+4.383826
+],
+"Rue des Deux Eglises 39|1000": [
+50.846834,
+4.373181
+],
+"Boulevard Anspach 110|1000": [
+50.847255,
+4.348876
+],
+"Rond point Schuman 2-4|1040": [
+50.841967,
+4.383489
+],
+"Rue des Pères Blancs 4|1040": [
+50.826742,
+4.4002
+],
+"Avenue de la Paix 19 Koekelberg|1081": [
+50.864687,
+4.317119
+],
+"Square de Meuus 35Silversquare Europe|1000": [
+50.840736,
+4.369369
+],
+"Rue de l'Eglise 175|1150": [
+50.840135,
+4.466232
+],
+"Avenue de l'Astronomie 14|1210": [
+50.851323,
+4.369449
+],
+"Scepterstraat 41|1050": [
+50.833782,
+4.377374
+],
+"Rue de la Loi 26, 10th floor|1040": [
+50.845641,
+4.369377
+],
+"Avenue de la Toison d'Or 19|1050": [
+50.837281,
+4.359881
+],
+"Avenue de Tervueren, 13, Bte 7|1040": [
+50.838902,
+4.39865
+],
+"Jozef II-straat 20|1000": [
+50.846267,
+4.370685
+],
+"Rue de la Montagne, 30-34|1000": [
+50.847086,
+4.355392
+],
+"Boulevard du Régent 54, n.196|1000": [
+50.848379,
+4.368773
+],
+"Rue Brogniez 46|1070": [
+50.841805,
+4.337528
+],
+"Jacques De Lalaingstraat 4|1040": [
+50.843981,
+4.372929
+],
+"Rue d'Arlon,22|1050": [
+50.839016,
+4.371785
+],
+"Chaussee d'Ixelles 139Boite 8|1050": [
+50.833901,
+4.365376
+],
+"Place du Congrès, 1|1000": [
+50.849632,
+4.363409
+],
+"40 rue Washington|1050": [
+50.824842,
+4.363543
+],
+"ECTN62 rue du Trône|1050": [
+50.838036,
+4.369122
+],
+"Rue Belliard 9|1040": [
+50.842303,
+4.368771
+],
+"Monica Monaco50 avenue des Arts|1000": [
+50.841966,
+4.367173
+],
+"Rue Washington, 402nd floor|1050": [
+50.824842,
+4.363543
+],
+"Chaussee de Haacht, 1470|1130": [
+50.882177,
+4.418301
+],
+"Gasthuisstraat, 29|1000": [
+50.84402,
+4.353377
+],
+"Avenue de Tervueren13|1040": [
+50.838902,
+4.39865
+],
+"De Meeûssquare 35|1000": [
+50.840736,
+4.369369
+],
+"9 rue Charles Quint|1000": [
+50.850135,
+4.381803
+],
+"Arduinkaai 16|1000": [
+50.855241,
+4.350555
+],
+"Rue Gray 4A|1040": [
+50.836163,
+4.381148
+],
+"Avenue Louise 500  bte 109|1070": [
+50.816533,
+4.372349
+],
+"Avenue Michel-Ange 69|1000": [
+50.844314,
+4.386242
+],
+"Avenue de Tervueren n. 27|1040": [
+50.838591,
+4.39922
+],
+"Rue du Sceptre 57A|1050": [
+50.834032,
+4.377858
+],
+"Rue d'Arlon 25, Ixelles|1050": [
+50.840137,
+4.372754
+],
+"Würth Büro BrüsselRue Belliard 60-62|1040": [
+50.841779,
+4.372819
+],
+"18 Avenue Paule|1150": [
+50.830326,
+4.449958
+],
+"Avenue Louise 213Boite 7|1050": [
+50.826171,
+4.364438
+],
+"Square de Meeûs 18|1000": [
+50.839011,
+4.369794
+],
+"Avenue du Prince de Ligne 111|1180": [
+50.795203,
+4.368429
+],
+"Redersplein 6|1000": [
+50.836058,
+4.305452
+],
+"127 Rue de l'etang 127|1040": [
+50.834673,
+4.38287
+],
+"Rue d'Arlon 82|1040": [
+50.842321,
+4.373514
+],
+"RUE JOSEPH STEVENS, 7|1000": [
+50.841323,
+4.352475
+],
+"Rue de Trèves 49/51 Brussels, B-1040|1040": [
+50.842856,
+4.375405
+],
+"Avenue des Nerviens 85 bte 10|1040": [
+50.838494,
+4.389958
+],
+"Boulevard Anspach 1 / bus 1|1000": [
+50.850836,
+4.351776
+],
+"Avenue de la Couronne, 20|1050": [
+50.832262,
+4.376128
+],
+"Rue des Deux Eglises 41-43|1000": [
+50.846897,
+4.373233
+],
+"Avenue de Broquevillelaan 40|1200": [
+50.838474,
+4.410937
+],
+"Avenue de Tervueren 270|1150": [
+50.835394,
+4.420398
+],
+"AVENUE DES ARTS 1, 9º|1210": [
+50.848778,
+4.369662
+],
+"EFNA11 Rue d'Egmont|1000": [
+50.838985,
+4.365536
+],
+"Rue Augustin Delporte 92|1050": [
+50.823346,
+4.382108
+],
+"Boulevard Industriel 9Anderlecht|1070": [
+50.829441,
+4.317329
+],
+"rue du Commerce, 31|1000": [
+50.84088,
+4.368066
+],
+"15 Rue Sainte Gertrude|1040": [
+50.837444,
+4.389696
+],
+"Av. des Arts 47/49, 1000 Bruxelles|1000": [
+50.842251,
+4.367323
+],
+"Trierstraat 49|1000": [
+50.842856,
+4.375405
+],
+"63 rue d'Arlon|1040": [
+50.842535,
+4.374103
+],
+"Rue de la Regence 52R52, 4th Floor|1000": [
+50.838329,
+4.354298
+],
+"Rue Belliard 58|1040": [
+50.841829,
+4.372578
+],
+"Grand Cerf, 20|1000": [
+50.836764,
+4.35563
+],
+"Arts 56Avenue des Arts 56|1000": [
+50.841101,
+4.366715
+],
+"38-40 Square de Meeus|1000": [
+50.840273,
+4.368589
+],
+"Avenue des Celtes 20|1040": [
+50.838491,
+4.398142
+],
+"Rue Émile Bouilliot50|1050": [
+50.818096,
+4.3547
+],
+"Avenue des Arts 7-9|1210": [
+50.848297,
+4.369786
+],
+"Avenue Tervueren 268|1150": [
+50.835366,
+4.419581
+],
+"Rue des Alexiens 16B|1000": [
+50.843715,
+4.349536
+],
+"Avenue de la Joyeuse Entrée 1, 1040 Bruxelles|1040": [
+50.840578,
+4.385143
+],
+"Rue du Congrès,35|1000": [
+50.849248,
+4.36673
+],
+"Boulevard Saint-Michel 65Etterbeek|1040": [
+50.834205,
+4.40536
+],
+"Rue Capitaine Crespel 47|1050": [
+50.83459,
+4.358183
+],
+"Rue Royale 76|1000": [
+50.847129,
+4.362304
+],
+"Av. de la Couronne 313|1050": [
+50.819394,
+4.391165
+],
+"17, Rue de la Jonchaie|1040": [
+50.837464,
+4.397116
+],
+"Rue Jourdan 157|1060": [
+50.831861,
+4.348398
+],
+"Avenue Cortenbergh 100|1000": [
+50.844707,
+4.388728
+],
+"Stapelhuisstraat, 5A|1020": [
+50.869715,
+4.352369
+],
+"Rue du Trone, 113-115|1050": [
+50.83684,
+4.369921
+],
+"Avenue Louise 500|1050": [
+50.816533,
+4.372349
+],
+"Square Ambiorix 32(bp-47)|1000": [
+50.846097,
+4.383397
+],
+"Avenue de Tervueren 188A, box 4|1150": [
+50.837112,
+4.411226
+],
+"24 rue des Comédiens|1000": [
+50.850213,
+4.358733
+],
+"rue Van Elewyck 35|1050": [
+50.828186,
+4.369215
+],
+"Drève du Pressoir 38,|1190": [
+50.807461,
+4.322902
+],
+"Rue de Trêves, 61|1040": [
+50.84352,
+4.375742
+],
+"Rue de Treves, 67|1040": [
+50.843827,
+4.375908
+],
+"Rue D'Egmont 11|1000": [
+50.838985,
+4.365536
+],
+"Avenue de Cortenbergh 71 B-1000 Brussels Belgium|1000": [
+50.844456,
+4.388994
+],
+"Manchesterstraat 36|1080": [
+50.848412,
+4.329308
+],
+"Chemin des Deux Maisons 73 bte 3|1200": [
+50.852066,
+4.425832
+],
+"Avenue Michel-Ange 10|1000": [
+50.846088,
+4.385017
+],
+"Avenue d'Auderghem, 61|1040": [
+50.838472,
+4.385731
+],
+"Usquare CP 273 Fritz Toussaintstraat 8|1050": [
+50.822717,
+4.384868
+],
+"Residence Palace Rue de la Loi 155 bte 97|1040": [
+50.84228,
+4.379747
+],
+"66, Rue du Tabellionix|1050": [
+50.823248,
+4.356797
+],
+"Montoyerstraat 47|1000": [
+50.840859,
+4.370933
+],
+"rue de la Pèpinière 1|1000": [
+50.839361,
+4.3617
+],
+"Avenue de Cortenbergh 87-89, 2nd Floor|1000": [
+50.845048,
+4.390364
+],
+"Avenue des Klauwaerts, 6|1050": [
+50.822176,
+4.374963
+],
+"Stevin 49-51|1000": [
+50.845206,
+4.378182
+],
+"Chaussee  de Wavre 120|1050": [
+50.836499,
+4.367403
+],
+"Rue du Houblon 5-19Glyn Ford|1000": [
+50.851076,
+4.343867
+],
+"89, rue Royale|1000": [
+50.850513,
+4.364561
+],
+"Rue Tabellion 39|1050": [
+50.822815,
+4.355841
+],
+"Coteau D'anjou 10|1150": [
+50.828788,
+4.45267
+],
+"17 rue du Bois Sauvage|1000": [
+50.847925,
+4.361127
+],
+"Avenue Albert II n°15|1210": [
+50.846612,
+4.453601
+],
+"Rue de Trèves, 49|1040": [
+50.842856,
+4.375405
+],
+"24 rue de l'Industrie|1000": [
+50.842561,
+4.369826
+],
+"Mundo Madou Avenue des Arts 7-8|1000": [
+50.848297,
+4.369786
+],
+"Avenue Thiriar 13|1020": [
+50.892913,
+4.327882
+],
+"Woluwedal 46|1200": [
+50.839266,
+4.435009
+],
+"Rue Belliard 12C/O Grayling|1040": [
+50.84258,
+4.369003
+],
+"Bisschofheimlaan 15 bus 100/025|1000": [
+50.850178,
+4.368307
+],
+"Rue de la Colonne 1A,|1080": [
+50.853193,
+4.336487
+],
+"Avenue Louise 251/4|1050": [
+50.824747,
+4.365901
+],
+"Avenue du Houx 18|1170": [
+50.804672,
+4.424664
+],
+"Rond-Point Robert Schuman, 9|1040": [
+50.842035,
+4.384558
+],
+"Rue Defacqz 52|1050": [
+50.827727,
+4.359456
+],
+"Rue de Loi 227|1000": [
+50.841897,
+4.385209
+],
+"Clos Chapelle-aux-Champs 30|1200": [
+50.849524,
+4.449826
+],
+"TourTaxis Gare MaritimePicardstraat 7 - Bus 100|1000": [
+50.863912,
+4.345237
+],
+"Grand Place, 10|1000": [
+50.846217,
+4.352499
+],
+"Rue Stevin 115|1000": [
+50.844519,
+4.381412
+],
+"Rue des Deux Églises, 26 Box 2|1000": [
+50.846549,
+4.372594
+],
+"Avenue Tervueren 143|1050": [
+50.837421,
+4.405637
+],
+"Chaussée de Charleroi 112|1060": [
+50.827697,
+4.35551
+],
+"115 Rue Stévin|1000": [
+50.844519,
+4.381412
+],
+"Rue de l'Amazone 2|1050": [
+50.824425,
+4.359241
+],
+"Troonstraat, 194|1050": [
+50.834184,
+4.373736
+],
+"Nĳverheidsstraat 10Mundo-j|1000": [
+50.841755,
+4.369373
+],
+"Auguste Reyerslaan 80|1030": [
+50.85108,
+4.40189
+],
+"Avenue d'Auderghem 169|1040": [
+50.835164,
+4.387473
+],
+"Belliardstraat 40Office 207B|1040": [
+50.842105,
+4.371728
+],
+"72 Rue Coenraets|1060": [
+50.831738,
+4.338318
+],
+"Grétrystraat 26|1000": [
+50.849219,
+4.352289
+],
+"Rue Royale 180|1000": [
+50.85145,
+4.364547
+],
+"Avenue des Arts 3-5|1210": [
+50.848617,
+4.369703
+],
+"Rue Camille Lemonnier 20|1050": [
+50.819129,
+4.359276
+],
+"Av. Louise 489/Floor 7, 1050 Bruxelles, Belgium|1050": [
+50.816683,
+4.371281
+],
+"229 Rue Royale|1210": [
+50.856643,
+4.367751
+],
+"Rue de l'Industrie 42|1040": [
+50.843484,
+4.370267
+],
+"9-13 rue d'Idalie, box 5|1050": [
+50.83678,
+4.371415
+],
+"Rue Paul Emile Janson 37|1050": [
+50.827164,
+4.359696
+],
+"Avenue de Tervueren, 188A - Postbox 4|1150": [
+50.837112,
+4.411226
+],
+"Square de Meeus 40|1000": [
+50.840273,
+4.368589
+],
+"Maison des AuteursRue du Prince royal 87|1050": [
+50.833849,
+4.359521
+],
+"Avenue Brugmann 287 B.5|1180": [
+50.812116,
+4.346673
+],
+"Avenue Louise 66|1000": [
+50.832817,
+4.358753
+],
+"Avenue Adolphe Buyl 154  Embassy of the Czech Republic in Brussels|1050": [
+50.813174,
+4.38491
+],
+"rue du Grand Cerf 2|1000": [
+50.837433,
+4.354722
+],
+"Bischoffsheimlaan 1|1000": [
+50.849248,
+4.368533
+],
+"Boulevard Bischoffsheim 39 Boite 4|1000": [
+50.852551,
+4.36651
+],
+"Rue haute 26-28|1000": [
+50.841272,
+4.351961
+],
+"Avenue de la Toison d'Or 77|1060": [
+50.834134,
+4.352349
+],
+"Avenue Jean Accent 30|1160": [
+50.805789,
+4.430935
+],
+"Avenue Louise 209/A|1050": [
+50.826487,
+4.364098
+],
+"Rue de Rome 31|1060": [
+50.829483,
+4.346156
+],
+"19 rue des Chartreux, bte 12|1000": [
+50.848942,
+4.346535
+],
+"Square de Meeûs 1, 1000 Bruxelles|1000": [
+50.839905,
+4.3684
+],
+"Croplife InternationalAv. Louise 326|1050": [
+50.823053,
+4.368893
+],
+"Square de Meeûs 38/40C/O EUBIA|1000": [
+50.840541,
+4.368728
+],
+"Avenue de Tervueren 200/4|1150": [
+50.836658,
+4.413434
+],
+"Mundo BRue d'Edimbourg 26|1050": [
+50.837895,
+4.364323
+],
+"20/3 Rue Michel Zwaab|1080": [
+50.862931,
+4.338933
+],
+"Rue de Canal 87|1000": [
+50.854794,
+4.347727
+],
+"Avenue Jean et Pierre Carsoel 44|1180": [
+50.794528,
+4.359413
+],
+"Avenue Adolphe Lacomblé 33|1030": [
+50.848942,
+4.399488
+],
+"av. des Arts 56|1000": [
+50.841101,
+4.366715
+],
+"Silver BuildingBd. Auguste Reyerslaan 70|1030": [
+50.851757,
+4.401445
+],
+"79 Rue Guillaume Stocq|1050": [
+50.823411,
+4.378054
+],
+"Avenue de la Couronne 185Boite 5|1050": [
+50.824773,
+4.384875
+],
+"Boulevard du Jardin Botanique50/150|1000": [
+50.852788,
+4.364139
+],
+"Rue du Compas 5, 1070 Anderlecht|1070": [
+50.843148,
+4.332099
+],
+"Rue Gachard 88|1050": [
+50.825173,
+4.367319
+],
+"Rue Victor Oudart 7Schaerbeek|1030": [
+50.849257,
+4.392456
+],
+"rue d'Arlon, 82|1040": [
+50.842321,
+4.373514
+],
+"Chaussée de La Hulpe 189|1170": [
+50.794869,
+4.406879
+],
+"Mundo MadouAvenue des Arts 7/8|1210": [
+50.848297,
+4.369786
+],
+"Avenue de Tervueren 13 –  Bte3|1040": [
+50.838902,
+4.39865
+],
+"4 rue de la Presse|1000": [
+50.849134,
+4.366836
+],
+"CEGROBBBoulevard Edmond Machtens 83/1|1080": [
+50.85182,
+4.312684
+],
+"Rue du Gouvernement Provisoire 16|1000": [
+50.850758,
+4.365438
+],
+"rue Bélliard 40|1040": [
+50.842105,
+4.371728
+],
+"Avenue des Arts 56,|1000": [
+50.841101,
+4.366715
+],
+"IDHAvenue du Boulevard 21|1210": [
+50.856098,
+4.356772
+],
+"Avenue de Tervueren, 27|1040": [
+50.838591,
+4.39922
+],
+"Rue du Tilleul 156boite 14|1030": [
+50.873782,
+4.393443
+],
+"Boulevard Saint Michel 45|1040": [
+50.834861,
+4.405691
+],
+"Av Louise 209ABTE 7|1050": [
+50.826487,
+4.364098
+],
+"Quai aux pierres de taille 37/1|1000": [
+50.855288,
+4.347904
+],
+"rue Maurice Lietart 6|1150": [
+50.834913,
+4.410871
+],
+"9-31 Avenue des Nerviens|1040": [
+50.839175,
+4.386666
+],
+"Boulevard Baudouin, 12|1000": [
+50.857623,
+4.351171
+],
+"OPES OCEANI FOUNDATION EUROPEBoulevard Louis Schmidt 24|1040": [
+50.828401,
+4.400399
+],
+"4 RUE J.DELALAING|1040": [
+50.843981,
+4.372929
+],
+"Avenue des Arts 56-4c|1000": [
+50.841101,
+4.366715
+],
+"Rue Montoyer 10|1000": [
+50.841631,
+4.368716
+],
+"Rue Montoyerstraat 24B12|1000": [
+50.841365,
+4.369992
+],
+"Avenue Broqueville, 40Woluwe - Saint - Lambert|1200": [
+50.838474,
+4.410937
+],
+"40 Rue Washington|1050": [
+50.824842,
+4.363543
+],
+"Rue de la Pépinière, 13rd floor|1000": [
+50.839361,
+4.3617
+],
+"EOC EU-Büro/DOSBAvenue de Cortenbergh 71|1000": [
+50.844456,
+4.388994
+],
+"Square de Meeüs, 38-40|1000": [
+50.840541,
+4.368728
+],
+"Rue de l'Hotel des Monnies 19|1060": [
+50.832782,
+4.349831
+],
+"Square Charles-Maurice Wiser13|1040": [
+50.838563,
+4.385236
+],
+"Rue Brederode 21|1000": [
+50.840358,
+4.36226
+],
+"Dreve du Pressoir 38Forest|1190": [
+50.807461,
+4.322902
+],
+"Rue de Namur72|1000": [
+50.839563,
+4.361053
+],
+"Rue Marianne 43|1180": [
+50.812847,
+4.352556
+],
+"5 Rue Philippe le Bon|1000": [
+50.845416,
+4.376145
+],
+"Rue Royale, 100|1000": [
+50.848076,
+4.362825
+],
+"Square de Meeûs38-40|1000": [
+50.840541,
+4.368728
+],
+"35 Square de Meeus|1000": [
+50.840736,
+4.369369
+],
+"Rue de Flandre 31|1000": [
+50.85128,
+4.346806
+],
+"1405 Chaussée de Haecht|1130": [
+50.883872,
+4.41945
+],
+"Rond-point Robert Schuman 11|1040": [
+50.842822,
+4.384308
+],
+"STEVIN 51|1000": [
+50.845194,
+4.378238
+],
+"Regus EU Commission Rond-Point Schuman6|1040": [
+50.841866,
+4.383826
+],
+"Rue d’Egmont 15|1000": [
+50.838807,
+4.365754
+],
+"rue de l'Association, 50|1000": [
+50.850241,
+4.366435
+],
+"Avenue Louise 65/11, 1050 / Ixelles|1050": [
+50.832948,
+4.357446
+],
+"5 Place du Champ de mars|1050": [
+50.83822,
+4.363022
+],
+"Rue de Namur 73A|1000": [
+50.839265,
+4.360261
+],
+"Rue Marie Thérèse 21|1000": [
+50.846732,
+4.372118
+],
+"Kartuizersstraat, 19|1000": [
+50.848942,
+4.346535
+],
+"Chaussée de Rodebeek, 206|1200": [
+50.848558,
+4.428528
+],
+"Rue de la Loi 38 - bte. 2|1000": [
+50.845349,
+4.370425
+],
+"Avenue Louise, 547th floor|1050": [
+50.833404,
+4.358147
+],
+"Avenue Molière 144|1050": [
+50.815952,
+4.351579
+],
+"21/8 RUE MARIE DEPAGE|1180": [
+50.812565,
+4.355996
+],
+"16 rue de Lausanne|1060": [
+50.830419,
+4.353041
+],
+"Rue de la loi 23|1040": [
+50.845149,
+4.369831
+],
+"39, Rue Charles Martel|1000": [
+50.845695,
+4.380943
+],
+"Rue Léon Lepage, 4|1000": [
+50.851584,
+4.34474
+],
+"Rue de l'Industrie 4 box 3|1000": [
+50.840875,
+4.368907
+],
+"RUE MONTOYER 47|1000": [
+50.840859,
+4.370933
+],
+"Rue d Arlon 25|1050": [
+50.840137,
+4.372754
+],
+"Place du champ de Mars5|1050": [
+50.83822,
+4.363022
+],
+"RUE D'EGMONT 11|1000": [
+50.838985,
+4.365536
+],
+"1-2 Avenue Des Arts|1210": [
+50.848693,
+4.369683
+],
+"Avenue de Fré 180|1180": [
+50.804487,
+4.365621
+],
+"Metrologielaan8|1130": [
+50.894007,
+4.428385
+],
+"Quai aux Briques 76|1000": [
+50.853013,
+4.346757
+],
+"Rue de la Linère11-15|1060": [
+50.832224,
+4.347121
+],
+"Rue Ravenstein 3|1000": [
+50.843656,
+4.358949
+],
+"Chaussée de Waterloo 1251B|1180": [
+50.793783,
+4.373623
+],
+"Simon Bolivarlaan 17|1000": [
+50.86149,
+4.356965
+],
+"2 Place du Luxembourg|1050": [
+50.838791,
+4.372407
+],
+"Priemstraat 53|1000": [
+50.841951,
+4.347893
+],
+"Keienveldstraat 66-11|1050": [
+50.833444,
+4.363117
+],
+"Rue Charles De Buck 21|1040": [
+50.832649,
+4.407983
+],
+"34-36, Rue Breydel|1040": [
+50.84106,
+4.38384
+],
+"Avenue du Panthéon, 74|1081": [
+50.865361,
+4.318151
+],
+"58, rue Dethy|1060": [
+50.829505,
+4.340469
+],
+"Square de Meeûs 18|1050": [
+50.839011,
+4.369794
+],
+"rue de la Vignette 96boîte 9|1160": [
+50.815315,
+4.422482
+],
+"Avenue Louise 209A|1050": [
+50.826487,
+4.364098
+],
+"Avenue de Tervueren, 188A, 4th Floor, Postbox 4|1150": [
+50.837112,
+4.411226
+],
+"International Polar FoundationRue des vétérinaires 42 B1 veeartsenstraat|1070": [
+50.835669,
+4.324262
+],
+"Av. des Nerviens 85|1040": [
+50.838494,
+4.389958
+],
+"Rue Cans 10|1050": [
+50.833117,
+4.368587
+],
+"Boulevard Louis Schmidt 88|1040": [
+50.831377,
+4.40381
+],
+"Avenue de Tervueren 246Box 10|1150": [
+50.836007,
+4.416523
+],
+"Staatsbladsstraat 8|1000": [
+50.849171,
+4.364356
+],
+"28 Rue Van Meyel|1080": [
+50.86154,
+4.34622
+],
+"Rue du Progress 323 BruxellesPlace Albert Leemans 3 BXL|1030": [
+50.86629,
+4.363012
+],
+"Quai aux briques 22|1000": [
+50.851294,
+4.347563
+],
+"avenue Louise 207/13|1050": [
+50.826528,
+4.364057
+],
+"Boulevard Anspach 111boîte 13|1000": [
+50.847068,
+4.347968
+],
+"Quai Fernand Demets 23COOP 3rd floor|1070": [
+50.839676,
+4.318902
+],
+"Rue de Washington 40|1050": [
+50.824842,
+4.363543
+],
+"Rue Brogniez, 44|1070": [
+50.841849,
+4.337597
+],
+"Rue de l'Arbre Benit 44|1050": [
+50.83352,
+4.364002
+],
+"Troonstraat 194|1050": [
+50.834184,
+4.373736
+],
+"rue Jules Lejeune, 24|1050": [
+50.81737,
+4.362421
+],
+"RUE DE L'ARBRE BENIT 44-46|1050": [
+50.83352,
+4.364002
+],
+"Avenue Victor Jacobs 80|1040": [
+50.829964,
+4.381978
+],
+"Avenue Louise 367.|1050": [
+50.820825,
+4.3694
+],
+"Coenraetsstraat 72|1060": [
+50.831738,
+4.338318
+],
+"Boulevard Bischoffsheim 11|1000": [
+50.849843,
+4.368395
+],
+"Avenue Milcamps 105|1030": [
+50.850004,
+4.394352
+],
+"Dreve Pittoresque 143|1180": [
+50.772991,
+4.36524
+],
+"Rue du Luxembourg 22/24, 1000 Bruxelles, Belgium|1000": [
+50.840257,
+4.368185
+],
+"Rue de la Loi 28BP 19|1000": [
+50.845606,
+4.369538
+],
+"Avenue Louise 89/7|1050": [
+50.831603,
+4.358836
+],
+"1, Square de Meeus|1000": [
+50.839905,
+4.3684
+],
+"Vanderlinden, 15 A|1030": [
+50.867143,
+4.366555
+],
+"Cours Saint Michel 30a|1040": [
+50.836792,
+4.400747
+],
+"Rond-Pont Robert Schuman 2, Level 6|1040": [
+50.841967,
+4.383489
+],
+"88 rue laneauLaeken|1020": [
+50.874757,
+4.339882
+],
+"Av Gribaumont 89|1200": [
+50.839076,
+4.416932
+],
+"Rue d'Egmont 15|1000": [
+50.838807,
+4.365754
+],
+"Qatar CharityPlace Sainte Gudule 14|1000": [
+50.847226,
+4.359658
+],
+"Avenue Louise 32   Boîte 4|1050": [
+50.834514,
+4.356695
+],
+"Montoyerstraat 31|1000": [
+50.841085,
+4.369924
+],
+"Rond-point Robert Schuman 2-4 / Q5-6|1040": [
+50.841967,
+4.383489
+],
+"Rue D'Egmont, 11|1000": [
+50.838985,
+4.365536
+],
+"Rue du Prince Royal 87|1050": [
+50.833849,
+4.359521
+],
+"Rue de Monastère 10|1000": [
+50.819787,
+4.373389
+],
+"Charles Martel 8|1000": [
+50.845584,
+4.380008
+],
+"48, Rue des Aduatiques|1040": [
+50.837079,
+4.403166
+],
+"Rue des Deux Eglises 26 box 2C/o IMA-Europe aisbl|1000": [
+50.846549,
+4.372594
+],
+"EAA SecretariatRond Point Schuman 6|1040": [
+50.841866,
+4.383826
+],
+"Av. de l'Yser 19|1040": [
+50.84141,
+4.396669
+],
+"The MUG - Humanitarian Accountability ForumRue Charles Martel 8|1000": [
+50.845584,
+4.380008
+],
+"Boulevard Charlemangne 27A|1000": [
+50.845194,
+4.382767
+],
+"Boulevard Brand Whitlock 30Woluwe-Saint-Lambert|1200": [
+50.839744,
+4.408403
+],
+"Rue du trône 100|1050": [
+50.836806,
+4.370716
+],
+"Kunstlaan 27 (bus 14)|1040": [
+50.84499,
+4.368741
+],
+"Sint-Pieterssteenweg 258|1040": [
+50.837524,
+4.393595
+],
+"Avenue De Cortenbergh 71|1000": [
+50.844456,
+4.388994
+],
+"Silversquare EuropeSquare De Meeus 35|1000": [
+50.840736,
+4.369369
+],
+"9 rond-point Robert Schuman|1040": [
+50.842035,
+4.384558
+],
+"rue du commerce 72|1040": [
+50.842946,
+4.368754
+],
+"Comptafid Benelux NVBoulevard Edmond Machtens, 180|1080": [
+50.850578,
+4.302949
+],
+"6 rond-point Schuman|1040": [
+50.841866,
+4.383826
+],
+"Rue de Fiennes 86|1070": [
+50.838914,
+4.330326
+],
+"Rue Gerard41|1040": [
+50.841959,
+4.397883
+],
+"Rue de Grand-Bigard 14,|1082": [
+50.8582,
+4.30338
+],
+"Rue de Trèves 67 B|1040": [
+50.843827,
+4.375908
+],
+"Rue de Laeken 159, Apt A4.1|1000": [
+50.855453,
+4.35262
+],
+"Sylvamo Europe SRLChaussée de La Hulpe 166|1170": [
+50.796288,
+4.404433
+],
+"Rue Du Sceptre 66|1050": [
+50.834548,
+4.378287
+],
+"Arduinkaai 37/1|1000": [
+50.855288,
+4.347904
+],
+"Square de Meeus 19|1050": [
+50.839084,
+4.369831
+],
+"Rond-point Schuman 2-4, niveau 6|1040": [
+50.841967,
+4.383489
+],
+"62 rue de la Loi|1040": [
+50.844961,
+4.372283
+],
+"Rue d'Arlon 20,|1050": [
+50.838957,
+4.371754
+],
+"Rue de la Colonne 1A|1080": [
+50.853193,
+4.336487
+],
+"Place Eugène Flagey 18/10|1050": [
+50.827101,
+4.3728
+],
+"Vorstlaan 398|1160": [
+50.824823,
+4.431168
+],
+"Ave Roosevelt 256/1|1000": [
+50.797274,
+4.396902
+],
+"Rue du Houblon 43|1000": [
+50.851206,
+4.342174
+],
+"Latham & Watkins LLPBoulevard du Régent, 43-44|1000": [
+50.846891,
+4.36854
+],
+"SilversquareLouizalaan 54|1050": [
+50.833404,
+4.358147
+],
+"Avenue de Tervueren 32-34|1040": [
+50.839316,
+4.400675
+],
+"Sinter-Goedeleplein 14|1000": [
+50.847226,
+4.359658
+],
+"Simon Bolivarlaan 17 B411|1000": [
+50.86149,
+4.356965
+],
+"Ashurst Perkins Coie UK LLPAvenue Louise, 489|1050": [
+50.816683,
+4.371281
+],
+"52 Rue Defacqz|1050": [
+50.827727,
+4.359456
+],
+"Rue Fetis 19AcumenIST|1040": [
+50.833509,
+4.386984
+],
+"Rue du Commerce 77|1000": [
+50.84304,
+4.369192
+],
+"Avenue des Arts 7-8Mundo Madou|1210": [
+50.848297,
+4.369786
+],
+"Av F Roosevelt 12|1050": [
+50.815299,
+4.377332
+],
+"Rue Capouillet 15|1060": [
+50.832755,
+4.354861
+],
+"Avenue de Biolley 98|1150": [
+50.826042,
+4.460566
+],
+"40, Rue De Washington|1050": [
+50.824842,
+4.363543
+],
+"Square Ambiorix, 18.Box 28|1000": [
+50.84752,
+4.384875
+],
+"Rond Point Schuman 6, 7th Floor|1040": [
+50.841866,
+4.383826
+],
+"EU-Büro der Wirtschaftskammer Österreich Ständige VertretungAvenue de Cortenbergh 30|1040": [
+50.843417,
+4.385845
+],
+"23 rue de la Loi|1040": [
+50.845149,
+4.369831
+],
+"SQUARE DE MEEUS 38|1000": [
+50.840541,
+4.368728
+],
+"69, Boulevard Louis MettewieBte18|1080": [
+50.855324,
+4.305539
+],
+"Av. de Tervuren 168, bte 6, 1150 Woluwe-Saint-Pierre|1150": [
+50.837277,
+4.410431
+],
+"Belliardstraat 15/17|1000": [
+50.842242,
+4.369068
+],
+"Avenue Louise 130A|1050": [
+50.830469,
+4.361169
+],
+"Brand Whitlocklaan 114|1200": [
+50.842932,
+4.406561
+],
+"De Meeûssquare 40, 4th floor (Multiburo Offices)Brussels|1000": [
+50.840273,
+4.368589
+],
+"Botanic Tower - 6th floorBoulevard Saint-Lazare, 4-10,|1210": [
+50.85645,
+4.361891
+],
+"rue Vautier, 29|1000": [
+50.836508,
+4.376494
+],
+"14 Rue de Grand-Bigard|1082": [
+50.8582,
+4.30338
+],
+"Rue du Chantier 2|1000": [
+50.856378,
+4.349615
+],
+"rue Belliardstraat, 25-33|1040": [
+50.841994,
+4.370217
+],
+"Boulevard Auguste Reyers 33|1030": [
+50.853086,
+4.399392
+],
+"Rue Du Heysel 136|1020": [
+50.891279,
+4.337954
+],
+"2-4 Treurenberg|1000": [
+50.847719,
+4.361116
+],
+"Renaissancelaan 1B. 13|1000": [
+50.84408,
+4.388312
+],
+"Silversquare StephanieAvenue Louise 54|1050": [
+50.833404,
+4.358147
+],
+"Rue Belliard 202|1040": [
+50.840117,
+4.381433
+],
+"Rue de Trèves, 49-51|1040": [
+50.842856,
+4.375405
+],
+"Rond Point Schuman, Schumanplein 6|1040": [
+50.841866,
+4.383826
+],
+"Avenue des Arts 52|1000": [
+50.841658,
+4.367014
+],
+"Boulevard St. Michel 47|1040": [
+50.834776,
+4.405647
+],
+"Rue de Stassart 48|1050": [
+50.83632,
+4.360773
+],
+"DatajoyRue Sainte gertrude 7|1040": [
+50.83726,
+4.389513
+],
+"Rue des Echevins 42|1050": [
+50.822438,
+4.376979
+],
+"avenue de Fré, 231|1180": [
+50.803503,
+4.360956
+],
+"Rond-Point Schuman 6 box 5|1040": [
+50.841866,
+4.383826
+],
+"Rue de la Luzerne, 54bt3|1030": null,
+"897 Chaussée d'Alsenberg|1180": [
+50.799028,
+4.336232
+],
+"Chemin prive 't Cortenbosch 63|1180": [
+50.790117,
+4.348621
+],
+"Avenue des arts, 50|1000": [
+50.841966,
+4.367173
+],
+"Avenue Nouvelle 149box 4466|1040": [
+50.825471,
+4.386324
+],
+"Boulevard Saint Michel, 45|1040": [
+50.834861,
+4.405691
+],
+"CARE International367 Avenue Louise|1050": [
+50.820825,
+4.3694
+],
+"Bischoffsheimlaan 38|1000": [
+50.852403,
+4.367027
+],
+"57 Avenue Gustave Demey|1160": [
+50.812968,
+4.424253
+],
+"Rue de Laeken 75|1000": [
+50.853049,
+4.351616
+],
+"Rue Sainte-Marie 6|1080": [
+50.854543,
+4.341556
+],
+"Avenue Ten Horen 1|1180": [
+50.801448,
+4.349056
+],
+"Research Institute Nature and Forest - Havenlaan 88, Bus 73Avenue du Port 88|1000": [
+50.866037,
+4.350008
+],
+"Quaker HouseSquare Ambiorix 50|1000": [
+50.847423,
+4.381885
+],
+"42, Rue du Marché au Charbon|1000": [
+50.846382,
+4.349442
+],
+"26, rue du boulet|1000": [
+50.849155,
+4.343668
+],
+"Leopoldstraat 25|1000": [
+50.849635,
+4.355173
+],
+"Koning Albert II-laan 15 bus 476|1210": [
+50.858513,
+4.357
+],
+"Drève du Pressoir 38|1190": [
+50.807461,
+4.322902
+],
+"Rue Dethy 76|1060": [
+50.829653,
+4.339826
+],
+"66 avenue de cortenbergh|1000": [
+50.844137,
+4.387459
+],
+"Rue du gouvernement provisoire 32|1000": [
+50.850547,
+4.366442
+],
+"4, Rue de la Presse 3|1000": [
+50.849306,
+4.366368
+],
+"Avenue de Tervueren 188aPostbox 4|1150": [
+50.83709,
+4.411332
+],
+"Rue Joseph II 174|1000": [
+50.844034,
+4.381088
+],
+"Avenue des arts 47|1000": [
+50.842251,
+4.367323
+],
+"Ch. de Roodebeek 206|1200": [
+50.848558,
+4.428528
+],
+"4 Place Marcel Broodthaers|1060": [
+50.835344,
+4.338338
+],
+"Avenue Henry Jaspar, 113|1060": [
+50.832588,
+4.347998
+],
+"Avenue des Communautés 110|1200": [
+50.855199,
+4.42705
+],
+"rue des chartreux 19C|1000": [
+50.848942,
+4.346535
+],
+"22 Avenue des Coccinelles|1170": [
+50.800848,
+4.399385
+],
+"Avenue de Broqueville 90|1200": [
+50.839733,
+4.41351
+],
+"8 rue Charles Martel|1000": [
+50.845584,
+4.380008
+],
+"Avenue Den Doorn 25|1180": [
+50.79361,
+4.356062
+],
+"Rue Gabrielle 29|1180": [
+50.814617,
+4.359156
+],
+"Avenue Louise 54Silversquare|1050": [
+50.833404,
+4.358147
+],
+"PlaceGeorges Brugmann,33|1050": [
+50.817356,
+4.355692
+],
+"227 rue de la Loi|1040": [
+50.841897,
+4.385209
+],
+"rue de la Loi 155|1040": [
+50.84228,
+4.379747
+],
+"Rue des Colonies 11, 1|1000": [
+50.846401,
+4.359617
+],
+"Galerie de Waterloo 2|1050": [
+50.819411,
+4.360181
+],
+"GROLLEAU351 avenue A.J. Slegers|1200": [
+50.84026,
+4.416831
+],
+"47 Kantersteen|1000": [
+50.845596,
+4.358227
+],
+"Avenue des Nerviens 85, 3rd floorc/o BGA|1040": [
+50.838494,
+4.389958
+],
+"Rue de la Pacification 67|1000": [
+50.847894,
+4.376313
+],
+"Avenue de Tervueren 273|1150": [
+50.835204,
+4.415185
+],
+"Rond Point Schuman, 6Boite 5|1040": [
+50.841866,
+4.383826
+],
+"Boulevard de l'Imperatrice 17-19|1000": [
+50.846777,
+4.357107
+],
+"BOULEVARD GENERAL WAHIS 15|1030": [
+50.8584,
+4.395728
+],
+"ARCTURUS GROUPRUE DE TREVES, 55-57|1040": [
+50.843095,
+4.375529
+],
+"10, Rue Guimard|1040": [
+50.843983,
+4.369688
+],
+"Avenue Henri Jaspar, 94|1060": [
+50.833089,
+4.349851
+],
+"146 Av. Louise|1050": [
+50.829416,
+4.362263
+],
+"rue de la Presse 4|1000": [
+50.849134,
+4.366836
+],
+"Avenue Nippone 1, boîte 1|1160": [
+50.815692,
+4.408499
+],
+"Accolaystraat, 40|1000": [
+50.842445,
+4.350704
+],
+"Rue des Anciens Etangs 40|1190": [
+50.817914,
+4.318137
+],
+"Place van Meenen 22PO Box 5N|1060": [
+50.824443,
+4.344659
+],
+"Chaussee d'Alsemberg 897|1180": [
+50.799028,
+4.336232
+],
+"rue d'Egmont 11|1000": [
+50.838985,
+4.365536
+],
+"Avenue du Col Vert 5|1170": [
+50.811452,
+4.403105
+],
+"Rue des Cottages 130|1180": [
+50.811654,
+4.344506
+],
+"Rue du Monastère 12|1000": [
+50.819832,
+4.373361
+],
+"Kruisstraat 29|1050": [
+50.83148,
+4.365805
+],
+"Avenue Henri Jaspar 128|1060": [
+50.832517,
+4.346354
+],
+"Institut des juristes d'entrepriseRue des sols 8|1000": [
+50.844294,
+4.358423
+],
+"25 RUE D'ARLON|1050": [
+50.840137,
+4.372754
+],
+"Rue de Genève 558|1030": [
+50.857666,
+4.407275
+],
+"Square Baron Alfred Bouvier 6/4|1060": [
+50.828384,
+4.352632
+],
+"haussée d’Alsemberg 897|1180": [
+50.799028,
+4.336232
+],
+"Friends of the Earth Europe, Mundo Matonge, 26 rue d'Edimbourg|1050": [
+50.837895,
+4.364323
+],
+"Rue du Trône 98 (c/o Leibniz Association EU Office)|1050": [
+50.83702,
+4.370495
+],
+"Avenue de Broqueville66|1200": [
+50.838947,
+4.412087
+],
+"Rue de stassart 97|1050": [
+50.834894,
+4.359001
+],
+"Koning Albert II laan 16|1000": [
+50.858417,
+4.355774
+],
+"Square Valère Gille13 - 5|1050": [
+50.811622,
+4.388302
+],
+"Rue du Tocsin 2|1000": [
+50.84773,
+4.38759
+],
+"Avenue Moscicki 13|1180": [
+50.808113,
+4.363013
+],
+"rue Baron Lambert 26|1040": [
+50.835496,
+4.388747
+],
+"Rue des Sols8|1000": [
+50.844294,
+4.358423
+],
+"Boulevard de l'Empereur, 24|1000": [
+50.842657,
+4.353316
+],
+"Bondgenotenstraat 336 bus 01,|1190": [
+50.824421,
+4.327388
+],
+"Rue de l'Industrie, 4|1000": [
+50.840875,
+4.368907
+],
+"Rue Belliard 20|1040": [
+50.842453,
+4.369596
+],
+"52 rue Marie de Bourgogne|1000": [
+50.84129,
+4.371741
+],
+"Britierslaan 18 Av. Britiers|1030": [
+50.868887,
+4.38627
+],
+"Havenlaan 88|1000": [
+50.866037,
+4.350008
+],
+"Koning Albert II-laan 15bus 548|1210": [
+50.858513,
+4.357
+],
+"19, Square de Meeûs|1050": [
+50.839084,
+4.369831
+],
+"Paul Emile Jansonstraat 37, 4|1050": [
+50.900096,
+4.362664
+],
+"62, avenue de Visé|1170": [
+50.811096,
+4.394872
+],
+"Rue Jacques de Lalaing 4Same as the head office|1040": [
+50.843981,
+4.372929
+],
+"Leopoldstraat 6|1000": [
+50.849792,
+4.354845
+],
+"Vooruitgangstraat 323bus 10|1030": [
+50.86629,
+4.363012
+],
+"Boulevard du regent 52|1000": [
+50.84782,
+4.368779
+],
+"Rue du Trone 62, 6ª Planta|1050": [
+50.838036,
+4.369122
+],
+"Rue de Londres 15|1050": [
+50.838,
+4.36754
+],
+"Rue Darwin, 18|1190": [
+50.818405,
+4.351906
+],
+"Avenue de Tervueren 13|1040": [
+50.838902,
+4.39865
+],
+"Rue de la Croix de Fer, 67|1000": [
+50.848122,
+4.365605
+],
+"Waverse Steenweg 212|1050": [
+50.836012,
+4.372094
+],
+"de Meeûssquare 35|1000": [
+50.840736,
+4.369369
+],
+"Leuvensesteenweg 479t.a.v. Brecht Gunst|1030": [
+50.854636,
+4.396183
+],
+"JRS EuropeChaussée de Wavre 205,|1050": [
+50.835798,
+4.373651
+],
+"Avenue Stalingrad 52|1000": [
+50.841239,
+4.344294
+],
+"17 rue de la paix|1050": [
+50.835418,
+4.36494
+],
+"Maison des Associations Internationales40, rue de Washington|1050": [
+50.824842,
+4.363543
+],
+"75 rue Botanique|1210": [
+50.855208,
+4.365247
+],
+"Glaverbel BuildingChaussée de La Hulpe 166|1170": [
+50.796288,
+4.404433
+],
+"Jozef II street 40 bus 6|1000": [
+50.845828,
+4.372736
+],
+"avenue des Gerfauts 10bte 34|1170": [
+50.812141,
+4.417395
+],
+"Kunstlaan 20|1000": [
+50.846213,
+4.369397
+],
+"BAGOAvenue Louise 143/4|1050": [
+50.829139,
+4.361381
+],
+"Avenue Livingstone 13-15|1000": [
+50.844987,
+4.377993
+],
+"Place Saint-Lambert 22, boîte 3|1200": [
+50.841547,
+4.436105
+],
+"Rue Le Correge 29|1000": [
+50.845812,
+4.386444
+],
+"Van Meyelstraat 30|1080": [
+50.861655,
+4.346041
+],
+"chausssée de la Hulpe 178|1170": [
+50.795822,
+4.407567
+],
+"250 Avenue Louise|1050": [
+50.825204,
+4.366583
+],
+"SQUARE DE MEEUS 38/40|1000": [
+50.840541,
+4.368728
+],
+"57 Avenue Eugène Demolder|1030": [
+50.872076,
+4.37903
+],
+"Rue Gustave Norga 34 BD01|1140": [
+50.878351,
+4.401558
+],
+"Avenue des Arts 24|1000": [
+50.845812,
+4.369215
+],
+"Venelle aux jeux 51|1150": [
+50.833484,
+4.442348
+],
+"Maison des Associations InternationalesRue Washington 40|1050": [
+50.824842,
+4.363543
+],
+"Place Georges Brugmann 6|1050": [
+50.817839,
+4.354373
+],
+"20 avenue des Lucioles|1170": [
+50.801996,
+4.399402
+],
+"Maria Malibranstraat 102Bus 1|1050": [
+50.832021,
+4.374071
+],
+"Avenue de Fre 180|1180": [
+50.804487,
+4.365621
+],
+"Avenue de Broquevilles 40|1200": [
+50.838474,
+4.410937
+],
+"Square Raymond Volckerick, 25|1170": [
+50.801153,
+4.405868
+],
+"Chaussée de la Hulpe 268|1170": [
+50.792047,
+4.420962
+],
+"14 rue du Ruanda|1040": [
+50.833225,
+4.395131
+],
+"Regentlaan, 54|1000": [
+50.848379,
+4.368773
+],
+"Bd. de la Woluwe 46 b2|1200": [
+50.839266,
+4.435009
+],
+"Britsierslaan18|1030": [
+50.868887,
+4.38627
+],
+"Rue de l'Hôtel des Monnaies 52|1060": [
+50.831422,
+4.349035
+],
+"SNETP AISBLc/O EDF, 58 avenue des Arts|1000": [
+50.840734,
+4.366535
+],
+"Av. Herrmann-Debroux 54, Auderghem|1160": [
+50.813724,
+4.433961
+],
+"Avenue Milcamps 47Schaerbeek|1030": [
+50.848434,
+4.393629
+],
+"Rue John Waterloo Wilson32|1000": [
+50.849232,
+4.380432
+],
+"Rue Coenraets 66|1060": [
+50.831858,
+4.33816
+],
+"Avenue Emmanuel Mounier 83|1200": [
+50.85094,
+4.455995
+],
+"avenue Molière, 25|1190": [
+50.815079,
+4.34053
+],
+"Vooruitgangstraat 323 b6|1030": [
+50.86629,
+4.363012
+],
+"Rue de Pascale, 4|1040": [
+50.841262,
+4.375838
+],
+"ZATERDAGPLEIN13|1000": [
+50.851532,
+4.350451
+],
+"Helsinki EU OfficeRue Guimard 7|1040": [
+50.843731,
+4.369196
+],
+"AVENUE PAUL HYMANS124|1200": [
+50.846496,
+4.434523
+],
+"Avenue Georges Pètre 38/1|1210": [
+50.851147,
+4.378838
+],
+"Avenue Paul Hymans124|1200": [
+50.846496,
+4.434523
+],
+"Rue du Commerce 68A|1040": [
+50.842681,
+4.368619
+],
+"Rue Ravenstein 23|1000": [
+50.844221,
+4.359506
+],
+"Rue d'Arlon 32|1000": [
+50.83953,
+4.372053
+],
+"Rue des Ateliers 21|1080": [
+50.857798,
+4.343863
+],
+"BluePoint Brussels, Boulevard A. Reyers 80,|1030": [
+50.85108,
+4.40189
+],
+"Chaussée d'Alsemberg 733|1180": [
+50.804385,
+4.33646
+],
+"Avenue de la Toison d'Or 22|1050": [
+50.837051,
+4.359331
+],
+"Rue de la Colonne 1AMolenbeek-Saint-Jean|1080": [
+50.853193,
+4.336487
+],
+"Scepterstraat 40|1050": [
+50.83407,
+4.377264
+],
+"Avenue Adolphe Lacomblé 59/8|1030": [
+50.848628,
+4.399079
+],
+"rue Abbé Cuypers 3|1040": [
+50.838151,
+4.399589
+],
+"Avenue de Mars 61|1030": [
+50.849439,
+4.410371
+],
+"Sustainable Public AffairsRue du commerce 72|1040": [
+50.842946,
+4.368754
+],
+"37, Place Jamblinne de Meux|1030": [
+50.847463,
+4.393936
+],
+"Rue du Champs de Mars 23Zurich Insurance / Insurance Europe|1050": [
+50.838481,
+4.366494
+],
+"Avenue Ernest Cambier 161|1030": [
+50.855582,
+4.397177
+],
+"Tervurenlaan 268A|1150": [
+50.835366,
+4.419581
+],
+"Hertogsstraat 1|1000": [
+50.842174,
+4.365447
+],
+"Triomflaan 151, bus 7|1050": [
+50.819951,
+4.402193
+],
+"Rue Belliard, 199|1040": [
+50.839599,
+4.38434
+],
+"RWE EU Representative Office|1000": null,
+"Rue de la Charité 22|1210": null,
+"Rue de la Charite 22|1210": null,
+"E3G asblNORRSKEN HOUSE|1040": null,
+"DRC Brussels|1210": null,
+"Vertretung der Deutschen Industrie- und Handelskammerbei der Europäischen Union|1000": null,
+"Rue Belliard 15-177th floor|1040": [
+50.842242,
+4.369068
+],
+"Rond-Point Schuman 67th. Floor|1040": [
+50.841866,
+4.383826
+],
+"Rue Marie-Thérèse, 11|1000": [
+50.846541,
+4.372024
+],
+"Boulevard Roi Albert II 4|1000": [
+50.85709,
+4.355071
+],
+"Rue de la Loi 677ème étage|1040": null,
+"Cours Saint-Michel 30 B 1040 Brusselsc/o Hive5|1040": null,
+"Square du Bastion 4|1050": null,
+"Avenue de Tervuren 168|1150": null,
+"The LEGO GroupSilversquare Europe|1000": null,
+"Place du Champ de Mars 2|1050": null,
+"Square de Meeus|1050": null,
+"Square de Meeus 2314th floor|1000": null,
+"Avenue des Nerviens 852. Etage|1040": null,
+"ZVEI e.V.European Office|1000": null,
+"Rond-Point Schuman, 9|1040": [
+50.842035,
+4.384558
+],
+"Rue Archimède 25c/o Volkswagen Group EU Representation|1000": null,
+"Avenue de Tervuren, 168(box 12)|1150": null,
+"c/o BirdLife Europe, c/o Hive5Cours Saint-Michel 30B|1040": null,
+"Rue de la Charité 22Mundo Madou|1210": null,
+"Saab International AB - Belgium Branch OfficeSaab EU and NATO Affairs|1040": null,
+"Liefdadigheidsstraat 22|1210": null,
+"Rue du Taciturne 38|1000": [
+50.844669,
+4.379031
+],
+"Rond-Point Robert Schuman 9|1040": [
+50.842035,
+4.384558
+],
+"Herrmann-Debrouxlaan 2|1160": null,
+"Louise CenterStephanie Square|1050": null,
+"81A rue de la Loi, 1040 BRUXELLES, BELGIQUE|1040": null,
+"place du champ de mars, 2|1050": null,
+"Rue d'Aron 63/67|1040": null,
+"Edimbourg, 26|1050": [
+50.837895,
+4.364323
+],
+"Schuman 11|1000": null,
+"NESTIN4th Floor|1000": null,
+"Avenue de Tervuren 113|1040": null,
+"Avenue des Arts / Kunstlaan 447th floor|1040": null,
+"Quai des Usines 160|1000": null,
+"avenue des Nerviens 9-31|1040": [
+50.839204,
+4.386525
+],
+"Bureau BrusselsRond Point Schuman nr 9|1040": null,
+"Avenue des Nerviens 852nd Floor|1040": [
+50.838494,
+4.389958
+],
+"Avenue de Tervuren, 7|1040": null,
+"Sq. Ambiorix 32 Bte 35|1000": null,
+"Bastion Tower – Floor 145 Place du Champ de Mars / 5 Marsveldplein|1050": null,
+"eFuel Alliance e.V.c/o von Beust  Collegen Beratungsgesellschaft mbH  Co KG|1000": null,
+"31 Rue Commerce / Handelsstraat 31WeWork|1000": null,
+"PO Box 72, Rue Wéry 1|1050": null,
+"rue Ravenstein 78/4Galerie Ravenstein|1000": null,
+"rue de la Science 1584|1000": null,
+"Cours Saint-Michel / Sint-Michielswarande 30B|1040": null,
+"Roundabout Schuman  6 – 6th Floor – Office 611|1040": null,
+"Deutsche Sozialversicherung Europavertretungrue d'Arlon 50|1000": null,
+"rue des Deux Eglises26|1000": [
+50.846549,
+4.372594
+],
+"c/o CCA - FWBBoulevard Léopold II, 44|1080": null,
+"Trierstraat / Rue de Trèves, 59-61|1040": null,
+"Avenue Cortenbergh 120|1000": [
+50.845039,
+4.389477
+],
+"Rue d'Arlon 551er étage|1040": null,
+"Rue d'Arlon 25c/o Topos Parliament|1040": null,
+"rue de Trèves 617ème étage|1040": null,
+"Leibniz-GemeinschaftEuropa-Büro|1050": null,
+"Avenue des Nerviens - 85|1040": [
+50.838494,
+4.389958
+],
+"Silver Square EuropeSq. de Meeûs 35|1000": null,
+"C/o wework, 31 Rue Du Commerce|1000": null,
+"Milltown PartnersClockwise|1040": null,
+"City Office in BrusselsBastion Tower, level 12|1050": null,
+"Avenue des Arts/Kunstlaan 44|1000": null,
+"Africa-Europe Foundation - Brussels Office5-6 Square de Meeûs|1000": [
+50.839361,
+4.368129
+],
+"Rue des TrevesBruxelles|1040": null,
+"Galerie Ravenstein 43rd floor|1000": [
+50.845283,
+4.357864
+],
+"Robert Schuman Roundabout 6|1040": null,
+"Regus EU CommissionSchuman Roundabout 6, box 5|1040": null,
+"Rue de la charité 22|1210": null,
+"CNRS - Bureau de BruxellesMaison Irene et Frederic Joliot-Curie|1050": null,
+"Mitsubishi Electric EuropeThe Blue Tower|1050": null,
+"Rond-Point Schuman,141040, Bruxelles (Belgio)|1000": null,
+"Plan International EU Liaison Office, C/O Plan International Belgium|1000": null,
+"Avenue de la Joyeuse entrée N.1|1040": null,
+"Rue de la source 66|1060": [
+50.831106,
+4.353547
+],
+"Avenue de Cortenbergh, 1207e étage|1000": null,
+"Avenue de la Renaissance 1c/o Grupp Partner|1000": null,
+"SROCc/o Forward Global|1000": null,
+"Silver building (3ème étage)Boulevard Auguste Reyers 70|1030": null,
+"Future MattersNorrsken House Brussels|1040": null,
+"cours Saint-Michel, 30A, box F|1040": null,
+"Avenue des Arts   Kunstlaan 44|1000": null,
+"Rue de la Charite 22Mundo Madou|1210": null,
+"Rue de la Loi, 287ème étage|1040": null,
+"Avenue des Arts ‑ Kunstlaan 44|1000": null,
+"Clos Chapelle-aux-Champs 30c/O BLSI|1200": null,
+"Chemin Prive t'en Cortenbosch 18a18a|1180": null,
+"Rue de la Loi - Wetstraat 26/15  1040 Brussels|1040": null,
+"Residence Palace, International Press CentreRoom 3253, Block C|1040": null,
+"Rue Belliard 2|1040": null,
+"Rue de la science 23|1040": [
+50.842628,
+4.371677
+],
+"European District, S/N|1040": null,
+"EFFRA OfficeB40|1040": null,
+"Bureau 6.18The Nestwork|1150": null,
+"96 Rue de la Fusée / Raketstraat|1130": null,
+"Avenue Marnix|1000": null,
+"Rue Royale 55|1000": [
+50.849337,
+4.363953
+],
+"Silversquare Square de Meeûs 35|1000": null,
+"Avenue des Nerviens 85c/o HDE, 2ème|1040": null,
+"The European Port HouseTreurenberg, 6|1000": null,
+"C/O Prospero and PartnersRue des Colonies 56|1000": null,
+"European Remanufacturing Council srlSquare de Meeus 37|1000": [
+50.840718,
+4.368821
+],
+"rue du Champ de Mars 23|1050": [
+50.838481,
+4.366494
+],
+"Avenue du Boulevard - Bolwerklaan 2123rd and 24th floor|1210": null,
+"Future of Life InstituteAvenue des Arts / Kunstlaan 44|1040": null,
+"Rue de la charité, 22Mundo-Madou|1210": null,
+"Vantage Towers c/o MitwitSquare de Meeûs 38/40|1000": null,
+"Square de Meeûs|1000": null,
+"Square de Meeus 233rd Floor|1000": [
+50.839932,
+4.370258
+],
+"Round abount Schuman 6|1190": null,
+"European University Hospital AllianceWARMOESBERG 26|1000": null,
+"Chaussée de Mons/Bergensesteenweg 1424|1070": null,
+"Rue Montoyer 256e étage|1000": null,
+"Avenue Louise 235235 box 1|1050": null,
+"BeCentral, 12 Cantersteen|1000": null,
+"Bureau IfremerMaison Irène et Frédéric Joliot-Curie de la science et de l'innovation|1050": null,
+"Rue du Commerce / Handelstraat 123|1000": null,
+"Kazernestraat 82/4|1000": [
+50.843457,
+4.344184
+],
+"Place du champ de Mars 2|1050": null,
+"Flow Batteries EuropeAvenue Adolphe Lacomblé|1030": null,
+"Avenue louise 2226ème étage|1050": null,
+"Boulevard du Souverain 165c/o Detergents Europe|1160": null,
+"Rue de la Loi 2216. Stock|1040": null,
+"Edelman Public Relations WorldwideRue du Throne 1000|1050": null,
+"Rue Luxembourg 3|1000": [
+50.840245,
+4.366902
+],
+"DON BOSCO INTERNATIONALClos Rappe 8|1200": null,
+"Hutchison EuropeSilversquare|1000": null,
+"Boulevard de l'Empereur 24|1000": [
+50.842657,
+4.353316
+],
+"Dr. Ralf Fischer zu CramburgMunich Re|1050": null,
+"56 Avenues des Arts Brussels|1000": null,
+"Astronomielaan 30|1210": null,
+"Working from_ The HoxtonWEEE Forum a.i.s.b.l.|1210": null,
+"Rue des Deux Eglises 141ere etage|1000": null,
+"Boulevard du Jardin Botanigue 20|1210": [
+50.854763,
+4.359161
+],
+"Avenue du Bourget 44|1130": null,
+"c/o IUCN Europe Regional OfficeBlvd Schmidt 64|1040": null,
+"Avenue Nouvelle|1040": null,
+"rue de l'Aéronef, 2|1140": null,
+"Rue de l'Arbre Benit, 44bt1|1050": null,
+"C/O RPP Group10 Rue Guimard|1040": null,
+"European AI Forum AISBLc/o BeCentral SA|1000": null,
+"c/o Red Cross EU OfficeRue de Trèves 59-61|1040": null,
+"Silversquare EuropeSq de Meeus 35, Bruxelles|1000": null,
+"Rue de Londres/Londenstraat 18|1050": null,
+"Av. de Tervuren 168|1150": null,
+"Central GateKantersteen 47|1000": null,
+"Square Ambriorix 34|1000": null,
+"Rue de la Loi1555|1040": null,
+"VolonteuropeMundo Trone|1000": null,
+"Rue Joseph II 168-170|1000": [
+50.844087,
+4.380843
+],
+"Avenue Louise 131c/o Jonna Byskata|1050": null,
+"Rue Montoyer 212. Stockwerk|1000": null,
+"12A avenue Brugmann|1060": [
+50.822025,
+4.353511
+],
+"De Meeûs Square, 38-40Espace Meeûs|1000": null,
+"c/o Penta41 rue de la Science|1040": null,
+"Cantersteen 47SQ Central|1000": null,
+"Rue de la linière 111060 Bruxelles|1060": null,
+"UNICA a.i.s.b.l.  c/o University FoundationRue d’Egmont 11|1000": null,
+"Verband der Landwirtschaftskammern e. V.Geschäftsstelle Brüssel|1050": null,
+"c/o REGUS EU CommissionRond Point Schuman 6|1040": null,
+"c/o UITPRue St. Marie 6|1080": null,
+"Hive5 Cours Saint MichelCours Saint Michel 30B|1040": null,
+"Avenue des Arts 44cc Clockwise|1040": null,
+"Berlin Global AdvisorsRegus Center|1000": null,
+"Arts 56 Building 6th floor Avenue des Arts, 56 , 1000 Brussels, BELGIUM|1000": null,
+"Rue de la Longue Haie 63|1000": [
+50.82998,
+4.363407
+],
+"C/O FIGIEFABoulevard de la Woluwe 42 bte 5|1200": null,
+"rue de l'Industrie 46th floor|1000": [
+50.840875,
+4.368907
+],
+"Boulevard Baudouin 8|1000": null,
+"Rdpt Schuman|1040": null,
+"Cantersteen 10|1000": [
+50.845478,
+4.357361
+],
+"Avenue de Tervuren, 13|1040": null,
+"155, rue de la Loi - Residence Palace - Bat. C|1040": null,
+"Residence Palace155|1040": null,
+"Rue Guimard|1040": null,
+"c/o Casa Lombardia – Place du Champ de Mars, 2|1050": null,
+"20, Avenue des Artsc/o Build Europe|1000": null,
+"Avenue Louise 48018th Floor|1050": null,
+"2-4 Schuman Roundabout|1040": null,
+"Square de Meeûs 13ʳᵈ floor|1000": null,
+"NordenergiC/o Green Power Denmark|1040": null,
+"Rue van Maerlant, 22-24|1040": null,
+"Avenue de l'Armee/ Legerlaan 10,|1040": null,
+"c/o Wallonie-Bruxelles Design Mode (WBDM) -AWEXPlace Sainctelette 2|1080": null,
+"Cours Saint-Michel 30|1040": null,
+"Rue du Trone 98c/o DLR Brussels office|1050": null,
+"Cellebroersstraat 1616 rue des Alexiens|1000": null,
+"Vleurgatsesteenweg 74|1050": null,
+"Rue de la Pépinière 1|1000": [
+50.839361,
+4.3617
+],
+"c/o Representation of the State of Hessen to the EU, Rue Montoyer 21Rue Montoyer, 21|1000": null,
+"ATCEUC C/O MERITIUS431 Avenue Georges Henri|1200": null,
+"rue du progres|1030": null,
+"Japan Center for International FinanceBrussels' Representative Office|1050": null,
+"rue Guimard 9c/o Norwegian House|1000": null,
+"Havenlaan 86Cbus 202B|1000": null,
+"Rue de la Loiat ADS Insight|1040": null,
+"c/o BurotelRue de la Presse 4|1000": null,
+"Boulevard Reyers 52|1044": null,
+"Boulevard Industriel 13b|1070": [
+50.828937,
+4.316257
+],
+"168/4 Avenue de Tervuren|1150": null,
+"RUE MARIE DEPAGE, 73|1180": [
+50.813844,
+4.35872
+],
+"EIFIEuropean Industrial Fasteners Institute|1040": null,
+"c/o ERIGRue Belliard 40|1000": null,
+"KU Leuven Campus BrusselsWarmoesberg 26|1000": null,
+"c/o LOGOSAvenue des Arts, 47|1000": null,
+"Rue Baron Lambert, 26|1040": [
+50.835496,
+4.388747
+],
+"c/o Mayer Brown Europe-Brussels LLP149 Avenue Louise|1050": null,
+"Climate Alliance, Brussels officeMundo-Madou|1210": null,
+"C/O EdenredBoulevard du Souverain 165|1160": null,
+"C/O RPP Group 10 Rue Guimard,1040 Brussels, BELGIUM|1040": null,
+"Mundo MadouRue de la Charité 22|1210": null,
+"Schuman Roundabout 2-4, Level 6,|1040": null,
+"Rue Léon Lepage 4|1000": [
+50.851584,
+4.34474
+],
+"4evergreen c/o CepiAvenue Louise, 250|1050": null,
+"Place du Champ De Mars, 2|1050": null,
+"30 B Cours Saint Michel|1040": null,
+"EBBNordic Spaces|1000": null,
+"Rue Alphonse Hottat|1050": null,
+"30B Cours Saint MichelC/O Hive5|1040": null,
+"Nerviërslaan/Avenue des Nerviens 85|1040": null,
+"Sq. de Meeûs 35Brussels|1000": null,
+"Rue de la Loi 227c/o FIPRA|1040": null,
+"Rue de la Loi 227bte 4|1040": [
+50.841897,
+4.385209
+],
+"BLSI- bte 1.30.30 Clos Chapelle aux Champs 301200  Brussels|1200": null,
+"Village Partenaire15 Rue Fernand Bernier|1060": [
+50.82991,
+4.336692
+],
+"Chaussée Saint-Pierre 260|1040": [
+50.837507,
+4.393872
+],
+"Rue de Londres/Londonstraat 18|1050": null,
+"Boulevard de l'Industrie 9|1070": [
+50.829441,
+4.317329
+],
+"Vlerick Business Schoolc/o Prof. Walter Van Dyck & Prof. Jörg Ruof|1210": null,
+"BT4EuropeRud d'Arlon 40|1000": null,
+"Rue Belliard 40c/o SPACES European District|1040": null,
+"Rond Point Schuman Schumanplein 11|1040": null,
+"Vlasfabriekstraat Rue de la Linière 11, 1060 Brussels, Belgium|1060": null,
+"Avenue Arnaud Fraiteur, Accès 2ULB - Campus de la Plaine|1050": null,
+"Place Schuman 6|1040": null,
+"c/o European Federation for Hunting and Conservation (FACE)Avenue de la Joyeuse Entrée, no 1-5|1040": null,
+"Silversquare CentralCantersteen 47|1000": null,
+"Rue Archimède|1000": null,
+"Place du Champ de Mars 2 - Marsveldplein 2|1050": null,
+"Institute for international assistance and solidarity(IFIAS)|1030": null,
+"Avenue de Cortenbergh/Kortenberglaan 30|1040": null,
+"Rue de Meiboom 18|1000": [
+50.851591,
+4.360847
+],
+"Avenue Louise 489reception Steptoe|1050": null,
+"Av. de Tervueren 40|1040": [
+50.839201,
+4.401197
+],
+"RUE WILLEMS23|1210": [
+50.849606,
+4.376081
+],
+"20a rue des Bigarreaux|1180": null,
+"Union of European Forestersc/o European Forestry House|1000": null,
+"Clos du Bergoje 34.|1160": null,
+"81A rue de la Loi|1040": null,
+"Avenue des Arts 9bis|1210": null,
+"Botanic Tower, 6th floor at Boulevard Saint-Lazare, 4-10|1210": null,
+"Gustave Norga 34. BD01|1140": null,
+"Wolstraat / Rue aux Laines 68-72|1000": null,
+"Rue Saint-Henri 19|1200": null,
+"Rue d'Arlon 25c/o Topos Parlement|1050": null,
+"London European OfficeSilversquare|1000": null,
+"Avenue Louise|1050": null,
+"Silversquare Centralcoworking community|1000": null,
+"Level 11, Bastion TowerPlace du Champ de Mars 5|1050": null,
+"avenue de Tervuren, 13Boîte 3|1040": [
+50.838902,
+4.39865
+],
+"Avenue Louise, 250 Box 80|1050": [
+50.825204,
+4.366583
+],
+"Av. Louise 523|1050": [
+50.815274,
+4.371811
+],
+"Avenue Du Bois da la Cambre|1050": null,
+"House of Communication / Serviceplan Public Affairs GmbH  Co. KGBovenberg 124|1150": null,
+"ADS InsightRésidence Palace|1040": null,
+"Avenue de Tervuren 56|1000": null,
+"C/O International DepartmentAv. de Cortenbergh, 168|1000": null,
+"Tilmann Kupferc/o ANGA|1040": null,
+"c/o All for Climate asblCantersteen 10|1000": null,
+"c/o Hive5Cours Saint-Michel 30B|1040": null,
+"Av. de l'Eglise Saint-Julien 25|1160": [
+50.819857,
+4.40814
+],
+"Almaplein 3 bus 7|1200": null,
+"Kunstlaan/Avenue des Arts 20|1000": null,
+"c/o Entraide et FraternitéRue du Gouvernement Provisoire 32|1000": null,
+"c/o IUCN European OfficeBoulevard Louis Schmidt 64|1040": null,
+"Rue du Meridien 10vzw AMAZONE asbl|1210": null,
+"c/o ClockwiseAv. des Arts 44|1040": null,
+"Avenue de Tervuren 13 boite 3|1040": null,
+"Rue des Anciens Étangs|1190": null,
+"Ecole de Santé PubliqueClos Chapelle aux Champs 30|1200": null,
+"European Quarter2-4 Schuman Roundabout|1040": null,
+"Square de Meeus 40Loewenstrasse 19|1000": [
+50.840273,
+4.368589
+],
+"Interpeace Brussels OfficeSilversquare|1000": null,
+"Havenlaan 86C|1000": null,
+"ESRG - European Solvent Recycler Group - (AISBL)ESRG / c.o. DENUO-BluePoint Brussels, Reyerslaan 80, 1030 Brussels|1030": null,
+"Centre d'Action LaïqueCampus de la Plaine ULB, accès 2|1050": null,
+"Human Rights House FoundationSilversquare Europe|1000": null,
+"Silver BuildingA.Reyerslaan 70|1030": null,
+"Leuvensesteenweg 1188|1200": null,
+"Eurad c/o MovendiAvenue des Arts 7-8|1210": null,
+"SQ North Bd Roi Albert II 4|1000": null,
+"c/o MAIRue Washington 40|1050": null,
+"Rue de Treves 49-51|1040": [
+50.842856,
+4.375405
+],
+"Avenue des Nerviens, 85c/o European Aluminium, Mr Christian Leroy|1040": null,
+"ETP SMR c/o EuroGeoSurveysRue Joseph II, 36-38 box 7|1000": null,
+"LCC c/o ACTRue des Deux Eglises 26|1000": null,
+"Rue d’Arlon, 25|1050": [
+50.840137,
+4.372754
+],
+"CLGEHouse of the European Surveyor and GI|1000": null,
+"Rond Point Schuman - Box 5, 6|1040": null,
+"European Drinking Water c/o Teppfa|1000": null,
+"c/o UNI-Europarue Joseph II, 40|1000": null,
+"Rue d'Edinburgh|1050": null,
+"EFG Officec/o Service Géologique de Belgique|1000": null,
+"Clos Chapelle aux Champs 30, bte 1.30.30c/o BLSI|1200": null,
+"Rue du Trône 98c/o DLR e.V.|1050": null,
+"Agora Gallery Grasmarkt 105/39|1000": null,
+"c/o UNIPSOQuai du Commerce 48|1000": null,
+"Square de Meeus 40b.15|1000": null,
+"Bd Wahis 53|1030": null,
+"Rue de l`Industrie 10c/o Lifelong Learning Platform|1000": null,
+"Rue Breydel 34-36|1040": [
+50.841008,
+4.383819
+],
+"168 avenue de Tervuren, box 2|1150": null,
+"Avenue de Tervuren 188A|1150": null,
+"c/o Vlaamse Vereniging voor Kinder- en JeugdpsychiatrieAvenue de la Couronne 20|1050": null,
+"Louizalaan 146|1050": [
+50.829416,
+4.362263
+],
+"European Association of Poisons Centres and Clinical Toxicologists|1120": null,
+"Rue du Canon 23|1000": null,
+"Europlanet AISBLc/o BIRA|1180": null,
+"Avenue des Eperviers 71|1150": [
+50.825782,
+4.414205
+],
+"HERRMANN-DEBROUXLAAN 40|1160": [
+50.813113,
+4.430776
+],
+"Silver Building70, Bld A. Reyers|1030": null,
+"c/o Royal Academies of Belgium1 Rue Ducale - Hertogsstraat|1000": null,
+"Rond-Point Schuman 6c/o Bertelsmann SE  Co. KGaA|1040": null,
+"Mérite Européen Deutschland e.V.|1050": null,
+"Chaussée de Haecht 53|1210": null,
+"Rue Belliard 2A|1040": null
 }

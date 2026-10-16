@@ -171,7 +171,9 @@ def main():
         if (f.get("wd") or {}).get("cls") or any(p["id"] in CULTURE_IDS for p in ps): bits |= 1 << BIT_CULTURE
         if "prot" in f or (f.get("inv") or {}).get("listed"): bits |= 1 << BIT_PROTECTED
         if "inv" in f: bits |= 1 << BIT_INVENTORY
-        rows.append(dict(gid=g, power=pw, cat=cat, hm=min(255, int(round(h))), bits=bits, year=year, info=f,
+        bx = shapely.bounds(shapely.union_all([gg for _, gg in parts]))
+        rad = max(12, int(round(max(bx[2] - bx[0], bx[3] - bx[1]) / 2)))
+        rows.append(dict(gid=g, power=pw, cat=cat, hm=min(255, int(round(h))), bits=bits, year=year, info=f, r=rad,
                          parts=[(h, gg.simplify(SIMPLIFY)) for h, gg in parts], cx=c.x, cy=c.y))
 
     loc = to_local(np.array([[r["cx"], r["cy"]] for r in rows]))
@@ -204,12 +206,12 @@ def main():
     for p in power["places"]:
         x, y = TO_LB.transform(p["lng"], p["lat"])
         (p["x"], p["z"]), = to_local(np.array([[x, y]])).tolist()
-    bpos = {r["gid"]: [round(r["x"], 1), round(r["z"], 1), r["hm"]] for r in rows if r["gid"] in bldg_places}
+    bpos = {r["gid"]: [round(r["x"], 1), round(r["z"], 1), r["hm"], r["r"]] for r in rows if r["gid"] in bldg_places}
     culture = []
     for r in rows:
         w = (r["info"].get("wd") or {})
         if w.get("cls"):
-            culture.append({"gid": r["gid"], "n": w["name"], "k": w["cls"][0], "img": bool(w.get("photo")), "x": round(r["x"], 1), "z": round(r["z"], 1), "h": r["hm"]})
+            culture.append({"gid": r["gid"], "n": w["name"], "k": w["cls"][0], "img": bool(w.get("photo")), "x": round(r["x"], 1), "z": round(r["z"], 1), "h": r["hm"], "r": r["r"]})
     culture.sort(key=lambda c: (not c["img"], c["n"] or ""))
     years = [r["year"] for r in rows if r["year"]]
     hull = shapely.concave_hull(shapely.MultiPoint([(r["cx"], r["cy"]) for r in rows]), ratio=0.04).buffer(120).simplify(20)

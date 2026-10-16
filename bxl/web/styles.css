@@ -187,3 +187,56 @@ h1 { margin: 0; font-size: clamp(24px, 2.9vw, 46px); font-weight: 800; letter-sp
 .facts dt { color: var(--muted); }
 .facts dd { margin: 0; text-align: right; }
 .card .more { border-top: 1px solid var(--rule); padding-top: 8px; }
+
+/* Search */
+.search { width: 100%; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 8px; font: inherit; background: var(--sky); color: var(--ink); }
+.search:focus { outline: 2px solid var(--blue); outline-offset: 0; background: var(--paper); }
+#found:empty { display: none; }
+#found { margin-top: 6px; }
+#found .nm .n { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.back-link { border: 0; background: none; padding: 0 0 8px; cursor: pointer; color: var(--blue); font-weight: 600; }
+
+/* Photo tag, as on a museum label */
+.ph { position: relative; }
+.ph .tag { position: absolute; left: 12px; bottom: 10px; background: var(--ink); color: var(--paper); font-weight: 700; font-size: 12px; padding: 3px 8px; border-radius: 5px; }
+
+/* Card: clickable chips, occupants, meetings */
+.chip { border: 1px solid var(--rule); background: none; border-radius: 999px; padding: 3px 9px; font-size: 12px; cursor: pointer; text-align: left; }
+.chip:hover { border-color: var(--blue); color: var(--blue); }
+.card h4 .n, .week h4 .n { font-weight: 400; }
+.occupants { list-style: none; margin: 4px 0 0; padding: 0; }
+.occupants.folded li:nth-child(n + 9) { display: none; }
+.occupants button { width: 100%; display: grid; grid-template-columns: 12px 1fr auto; gap: 8px; align-items: center; border: 0; background: none;
+  padding: 4px 6px; margin: 0 -6px; border-radius: 6px; cursor: pointer; text-align: left; font-size: 13px; }
+.occupants button:hover { background: var(--sky); }
+.occupants li.on button { background: var(--sky); font-weight: 650; }
+.occupants .nm { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.occupants b { font-variant-numeric: tabular-nums; }
+.show-all { border: 0; background: none; color: var(--blue); cursor: pointer; padding: 4px 0; font-weight: 600; }
+.meets { list-style: none; margin: 4px 0 0; padding: 0; font-size: 13px; }
+.meets li { padding: 6px 0; border-top: 1px solid var(--rule); line-height: 1.4; }
+.meets .n { font-size: 12px; }
+
+/* Timeline filter and week details */
+.tl-label { display: flex; align-items: center; gap: 6px; }
+.tl-label select { font: inherit; font-size: 12px; border: 1px solid var(--rule); border-radius: 999px; padding: 2px 8px; background: var(--paper); color: var(--ink); max-width: 230px; }
+.week { position: fixed; z-index: 6; left: calc(var(--gutter) + 56px); bottom: calc(env(safe-area-inset-bottom, 0px) + 100px);
+  width: min(560px, calc(100vw - 2 * var(--gutter))); max-height: min(62vh, 620px); overflow-y: auto; background: var(--paper);
+  border-radius: 10px; padding: 14px 18px 16px; box-shadow: 0 10px 30px rgba(14, 26, 43, .18); }
+.week h3 { margin: 2px 0 4px; font-size: 22px; letter-spacing: -0.02em; }
+.week h4 { margin: 12px 0 4px; font-size: 12.5px; color: var(--muted); font-weight: 600; }
+.wcols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+.wbars { list-style: none; margin: 0; padding: 0; font-size: 12.5px; }
+.wbars li { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; padding: 3px 0; }
+.wbars .bar { grid-column: 1 / -1; height: 3px; background: var(--rule); border-radius: 2px; overflow: hidden; }
+.wbars .bar i { display: block; height: 100%; }
+.wlist { margin: 0; padding-left: 18px; font-size: 13px; columns: 2; column-gap: 18px; }
+.wlist li { break-inside: avoid; padding: 1px 0; }
+.wlist button { border: 0; background: none; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; text-align: left; font-size: 13px; }
+.wlist button:hover { text-decoration-color: var(--blue); }
+@media (max-width: 760px) {
+  .week { left: 8px; right: 8px; width: auto; bottom: calc(env(safe-area-inset-bottom, 0px) + 140px); }
+  .wcols { grid-template-columns: 1fr; }
+  .wlist { columns: 1; }
+  .tl-label { font-size: 0; } .tl-label select { font-size: 12px; }
+}

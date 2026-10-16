@@ -12,7 +12,8 @@ To try it locally: `python3 -m http.server 8642 --directory web`, then open http
 ```
 cd pipeline
 pip install lxml pandas openpyxl requests shapely pyproj numpy
-python build_power_data.py --refresh          # lobby register, Commission meetings, scores -> web/data/power.json
+python build_power_data.py --refresh          # lobby register, Commission meetings, scores -> web/data/power.json + meetings.json
+                                              # (add --retry-geocode to retry addresses that failed last time)
 python build_enrich.py --refresh              # heritage inventory, protected heritage, Wikidata + photo credits
 python build_city.py UrbISBuildings3D_04000.gpkg ../web/data/power.json   # buildings + enrichment -> web/data
 ```

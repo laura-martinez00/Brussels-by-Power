@@ -159,11 +159,12 @@ const VERT = /* glsl */`
     bool rise = false;
     if (uMode < 0.5) {
       if (power >= 0.0 && uCatOn[cat] > 0.5) { c = mix(uMaquette, uCat[cat], 0.3 + 0.7 * power / 100.0); rise = true; }
-      else if (culture && uCultureOn > 0.5) { c = mix(uMaquette, uCulture, 0.8); rise = true; }
     } else if (uMode < 1.5) {
       if (b.y > 0.0) { c = mix(vec3(0.80, 0.85, 0.93), uBlue, b.y / 100.0); rise = true; }
     } else if (uMode < 2.5) {
       c = heightRamp(a.z);
+    } else if (culture && uCultureOn > 0.5) {
+      c = mix(uMaquette, uCulture, 0.85); rise = true;
     } else if (year > 0.0) {
       for (int k = 0; k < ${PERIODS.length}; k++) {
         if (year < uPeriodTo[k]) {
@@ -318,13 +319,29 @@ controls.addEventListener('start', () => { flight = null; });
 // ---------- Live attributes: policy-area scores and timeline growth ----------
 const sectorKeys = Object.keys(P.sectors);
 let sector = sectorKeys[0];
+let office = null, officeList = null;
 function applySector() {
+  const officeScore = {};
+  if (office && officeList) {
+    const max = officeList[0]?.[1] || 1;
+    for (const [pid, n] of officeList) { const g = byId[pid]?.gid; if (g != null) officeScore[g] = Math.max(officeScore[g] || 0, 100 * Math.sqrt(n / max)); }
+  }
   for (const gid of placedGids) {
     let s = 0;
-    for (const p of placesIn(gid)) s = Math.max(s, p.sec?.[sector] || 0);
+    if (office) s = officeScore[gid] || 0;
+    else for (const p of placesIn(gid)) s = Math.max(s, p.sec?.[sector] || 0);
     setAttr(gid, 5, s);
   }
   flushAttr();
+}
+// Lazily loaded meeting details: recent meetings, who each office meets, card details
+let meetPromise = null, meetData = null;
+const getMeet = () => meetPromise ||= fetch('data/meetings.json').then(r => r.json()).then(d => (meetData = d));
+async function showOffice(name) {
+  const d = await getMeet();
+  office = name; officeList = d.offices[name] || [];
+  pinCard(-1);
+  setMode(1);
 }
 // Cumulative meetings per building, week by week, for the lobbies inside it
 const growth = new Map();
@@ -361,13 +378,25 @@ function renderPanel() {
   if (mode === 0) {
     const counts = {}; for (const p of places) counts[p.c] = (counts[p.c] || 0) + 1;
     panelBody.innerHTML = `
-      <h2>Who has power</h2>
-      <p class="hint">Coloured buildings hold an EU institution, a member state's mission or one of the ${fmtNum(P.orgs.length)} most influential registered lobbies. The stronger the colour, the higher the power score.</p>
+      <input class="search" id="find" type="search" placeholder="Find an organisation or institution" aria-label="Find an organisation or institution" value="${esc(findQuery)}">
+      <ol class="rank" id="found"></ol>
+      <h2 style="margin-top:12px">Who has power</h2>
+      <p class="hint">Coloured buildings hold an EU institution, a member state's mission or one of ${fmtNum(P.orgCount)} registered lobbies with a Brussels office. The stronger the colour, the higher the power score; a building takes the colour of its most powerful occupant.</p>
       <ul class="legend">${CAT_KEYS.map((k, i) => counts[k] ? `<li><button data-cat="${i}" aria-pressed="${!!catOn[i]}">
         <span class="sw" style="background:${CATS[k].color}"></span><span>${esc(CATS[k].label)}</span><span class="n">${counts[k]}</span></button></li>` : '').join('')}
-        <li><button data-culture aria-pressed="${!!uniforms.uCultureOn.value}"><span class="sw" style="background:${CULTURE}"></span><span>Culture &amp; heritage <span class="n">(no power score)</span></span><span class="n">${city.culture.length}</span></button></li></ul>
+</ul>
       <h2 class="section">Most powerful</h2>
       ${rankHtml(ranked(), p => p.power)}`;
+  } else if (mode === 1 && office) {
+    const list = (officeList || []).slice(0, 40);
+    const max = list[0]?.[1] || 1;
+    panelBody.innerHTML = `
+      <button class="back-link" data-office-clear>All policy areas</button>
+      <h2>Who meets ${esc(office)}</h2>
+      <p class="hint">Mapped organisations by number of meetings with ${esc(office)} since ${fmtDate(t0)}. Darker blue, more meetings.</p>
+      <ol class="rank">${list.map(([pid, n], i) => { const p = byId[pid]; return p ? `<li><button data-place="${esc(pid)}">
+        <span class="pos">${i + 1}</span><span class="nm"><b title="${esc(p.n)}">${esc(p.n)}</b><span class="bar"><i style="width:${100 * n / max}%;background:${BLUE}"></i></span></span>
+        <span class="val">${n}</span></button></li>` : ''; }).join('')}</ol>`;
   } else if (mode === 1) {
     const s = P.sectors[sector];
     const list = places.filter(p => p.sec?.[sector]).sort((a, b) => b.sec[sector] - a.sec[sector]).slice(0, 30);
@@ -380,7 +409,7 @@ function renderPanel() {
     panelBody.innerHTML = `
       <h2>When it was built</h2>
       <p class="hint">${fmtNum(city.dated)} buildings have a construction date in the Brussels heritage inventory or Wikidata. Darker shades are protected heritage.</p>
-      <ul class="legend">${PERIODS.map((p, i) => `<li><button data-period="${i}" aria-pressed="${!!uniforms.uPeriodOn.value[i]}">
+      <ul class="legend"><li><button data-culture aria-pressed="${!!uniforms.uCultureOn.value}"><span class="sw" style="background:${CULTURE}"></span><span>Culture <span class="n">museums, theatres, churches…</span></span><span class="n">${city.culture.length}</span></button></li>${PERIODS.map((p, i) => `<li><button data-period="${i}" aria-pressed="${!!uniforms.uPeriodOn.value[i]}">
         <span class="sw" style="background:${p.color}"></span><span>${p.label} <span class="n">${esc(p.note)}</span></span><span class="n">${periodCounts ? fmtNum(periodCounts[i]) : ''}</span></button></li>`).join('')}</ul>
       <h2 class="section">Culture</h2>
       <p class="hint">Museums, theatres, churches, palaces and other cultural places from Wikidata, shown in pink in Power mode.</p>
@@ -404,10 +433,22 @@ panelBody.addEventListener('click', e => {
   if (pr) { const i = +pr.dataset.period; uniforms.uPeriodOn.value[i] = uniforms.uPeriodOn.value[i] ? 0 : 1; uniforms.uLayerAt.value = now(); renderPanel(); return; }
   const gb = e.target.closest('[data-gid]');
   if (gb) { focusGid(+gb.dataset.gid); return; }
+  if (e.target.closest('[data-office-clear]')) { office = null; applySector(); uniforms.uLayerAt.value = now(); renderPanel(); return; }
   const s = e.target.closest('[data-sector]');
-  if (s) { sector = s.dataset.sector; applySector(); uniforms.uLayerAt.value = now(); renderPanel(); return; }
+  if (s) { office = null; sector = s.dataset.sector; applySector(); uniforms.uLayerAt.value = now(); renderPanel(); return; }
   const p = e.target.closest('[data-place]');
   if (p) focusPlace(p.dataset.place);
+});
+let findQuery = '';
+panelBody.addEventListener('input', e => {
+  if (e.target.id !== 'find') return;
+  findQuery = e.target.value;
+  const q = findQuery.trim().toLowerCase();
+  const hits = q.length < 2 ? [] : places.filter(p => (p.n + ' ' + (p.a || '')).toLowerCase().includes(q))
+    .sort((a, b) => (b.power ?? -1) - (a.power ?? -1)).slice(0, 12);
+  $('#found').innerHTML = hits.map(p => `<li><button data-place="${esc(p.id)}"><span class="pos"><span class="sw" style="display:inline-block;background:${CATS[p.c].color}"></span></span>
+    <span class="nm"><b title="${esc(p.n)}">${esc(p.n)}</b><span class="n">${esc(p.a || '')}</span></span><span class="val">${p.power != null ? Math.round(p.power) : ''}</span></button></li>`).join('')
+    || (q.length >= 2 ? '<li class="n" style="padding:4px 0">No match</li>' : '');
 });
 panelBody.addEventListener('pointerover', e => {
   const p = e.target.closest('[data-place]');
@@ -459,11 +500,23 @@ function scoreHtml(p) {
   if (p.basis === 'council') sub += `<br>${p.rep.share}% of the EU population`;
   return `<div class="score"><b>${Math.round(p.power)}</b><span>Power score<br>${sub}</span></div>`;
 }
-function photoOf(f) {
+function posOf(gid) {
+  const b = city.buildingPos[gid]; if (b) return { x: b[0], z: b[1], h: b[2], r: b[3] || 25 };
+  const c = city.culture.find(q => q.gid === gid); return c ? { x: c.x, z: c.z, h: c.h, r: c.r || 25 } : null;
+}
+// Aerial photo of the building from the Brussels Region's orthophoto service (UrbIS, paradigm.brussels)
+function aerialUrl(gid) {
+  const p = posOf(gid); if (!p) return null;
+  const X = city.origin[0] + p.x, Y = city.origin[1] - p.z, hy = Math.max(30, p.r * 1.5), hx = hy * 4 / 3;
+  return `https://geoservices-urbis.irisnet.be/geoserver/urbisgrid/ows?service=WMS&version=1.3.0&request=GetMap&layers=Ortho&styles=&crs=EPSG:31370&bbox=${(X - hx).toFixed(1)},${(Y - hy).toFixed(1)},${(X + hx).toFixed(1)},${(Y + hy).toFixed(1)}&width=640&height=480&format=image/jpeg`;
+}
+const latLngOf = (gid, p) => p?.lat ? [p.lat, p.lng] : (q => q ? [50.8427 - q.z / 111320, 4.3808 + q.x / (111320 * Math.cos(50.8427 * Math.PI / 180))] : null)(posOf(gid));
+function photoOf(f, gid) {
   const w = f?.wd?.photo, inv = f?.inv;
-  if (w?.thumb) return { src: w.thumb, credit: `Photo: ${w.credit || 'Wikimedia Commons'}`, link: w.page };
-  if (inv?.img) return { src: inv.img, credit: 'Photo: urban.brussels, heritage inventory', link: inv.url };
-  return null;
+  if (w?.thumb) return { src: w.thumb, credit: `Photo: ${w.credit || 'Wikimedia Commons'}`, link: w.page, tag: 'Street' };
+  if (inv?.img) return { src: inv.img, credit: 'Photo: urban.brussels, heritage inventory', link: inv.url, tag: 'Street' };
+  const a = aerialUrl(gid);
+  return a ? { src: a, credit: 'Aerial photo: UrbIS, paradigm.brussels', link: null, tag: 'From above' } : null;
 }
 const cap = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
 function cardHtml(gid, pinned, placeId) {
@@ -474,9 +527,10 @@ function cardHtml(gid, pinned, placeId) {
   const year = inv?.year || wd?.year;
   const title = p?.n || wd?.name || inv?.name || inv?.addr || `A ${Math.round(h || 0)} m building`;
   const addr = p?.a || inv?.addr || '';
-  const photo = photoOf(f);
+  const photo = photoOf(f, gid);
+  const detail = p ? meetData?.detail?.[p.id] : null;
   let html = pinned ? '<button class="card-close" aria-label="Close">×</button>' : '';
-  if (photo) html += `<figure class="photo"><img src="${esc(photo.src)}" alt="" loading="lazy"><figcaption>${photo.link && pinned ? `<a href="${esc(photo.link)}" target="_blank" rel="noopener">${esc(photo.credit)}</a>` : esc(photo.credit)}</figcaption></figure>`;
+  if (photo) html += `<figure class="photo"><div class="ph"><img src="${esc(photo.src)}" alt="" loading="lazy"><span class="tag">${photo.tag}</span></div><figcaption>${photo.link && pinned ? `<a href="${esc(photo.link)}" target="_blank" rel="noopener">${esc(photo.credit)}</a>` : esc(photo.credit)}</figcaption></figure>`;
   html += `<div class="body"><h3>${esc(title)}</h3>${addr ? `<div class="addr">${esc(addr)}</div>` : ''}`;
   if (year) {
     const pi = periodOf(year);
@@ -485,7 +539,7 @@ function cardHtml(gid, pinned, placeId) {
   if (p) html += scoreHtml(p);
   const layers = [];
   if (p) layers.push([CATS[p.c].color, CATS[p.c].label, p.power != null ? `power ${Math.round(p.power)}` : '']);
-  for (const q of others.slice(0, 2)) layers.push([CATS[q.c].color, q.n, q.power != null ? `power ${Math.round(q.power)}` : '']);
+  if (others.length) layers.push(['#c3cad4', `${others.length} more organisation${others.length > 1 ? 's' : ''}`, 'in this building']);
   if (wd?.cls?.length) layers.push([CULTURE, 'Culture', wd.cls.join(', ')]);
   if (prot) layers.push(['#3b2a20', 'Protected heritage', [prot.as, prot.date?.slice(0, 4)].filter(Boolean).join(', ')]);
   else if (inv?.listed) layers.push(['#3b2a20', 'Protected heritage', '']);
@@ -499,7 +553,7 @@ function cardHtml(gid, pinned, placeId) {
   if (inv?.type && pinned) facts.push(['Type', cap(inv.type)]);
   if (inv?.unesco) facts.push(['UNESCO', 'World Heritage']);
   if (facts.length) html += `<dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`;
-  if (!pinned) return html + `<p class="more">${others.length ? `${others.length + 1} organisations in this building. ` : ''}Click to keep this card open</p></div>`;
+  if (!pinned) return html + `<p class="more">${others.length ? `${others.length + 1} organisations in this building. ` : ''}Click to see details</p></div>`;
 
   if (p?.d) html += `<p>${esc(p.d)}</p>`;
   else if (wd?.desc) html += `<p>${esc(cap(wd.desc))}.</p>`;
@@ -508,22 +562,32 @@ function cardHtml(gid, pinned, placeId) {
     const o = p.org;
     const row = (label, raw, part) => `<li><span>${label}</span><b>${raw}</b><span class="bar"><i style="width:${part ?? 0}%"></i></span></li>`;
     html += `<h4>Influence index ${o.inf} of 100, built from</h4><ul class="metrics">
-      ${row('Meetings with Commissioners and cabinets', fmtNum(o.top), o.parts.top)}
-      ${row('Meetings with senior Commission staff', fmtNum(o.dg), o.parts.dg)}
-      ${row('Declared lobbying costs', fmtSpend(o.spend) || (o.budget ? 'Budget ' + fmtSpend([o.budget, o.budget]) : 'Not declared'), o.parts.spend)}
-      ${row('Lobbyists, full-time', o.fte, o.parts.fte)}
-      ${row('Parliament badges', o.ep, o.parts.ep)}</ul>`;
-    if (o.who?.length) html += `<h4>Most met</h4><p style="margin:0">${o.who.map(([w, n]) => `${esc(w)} (${n})`).join(', ')}</p>`;
+      ${row('Meetings with Commissioners and cabinets', fmtNum(o.top), detail?.parts?.top)}
+      ${row('Meetings with senior Commission staff', fmtNum(o.dg), detail?.parts?.dg)}
+      ${row('Declared lobbying costs', fmtSpend(o.spend) || (detail?.budget ? 'Budget ' + fmtSpend([detail.budget, detail.budget]) : 'Not declared'), detail?.parts?.spend)}
+      ${row('Lobbyists, full-time', o.fte, detail?.parts?.fte)}
+      ${row('Parliament badges', o.ep, detail?.parts?.ep)}</ul>`;
+    if (detail?.who?.length) html += `<h4>Most met <span class="n">tap to see who else meets them</span></h4><div class="chips">${detail.who.map(([w, n]) => `<button class="chip" data-office="${esc(w)}">${esc(w)} ${n}</button>`).join('')}</div>`;
+    const rec = meetData?.recent?.[p.id];
+    if (rec?.length) html += `<h4>Latest meetings</h4><ul class="meets">${rec.slice(0, 5).map(([d, w, t]) => `<li><span class="n">${fmtDate(new Date(d + 'T00:00:00'))}, ${esc(w)}</span>${t ? `<br>${esc(t)}` : ''}</li>`).join('')}</ul>`;
+    else if (!meetData) html += `<p class="n">Loading meetings…</p>`;
     const secs = Object.entries(o.secN || {}).sort((a, b) => b[1] - a[1]);
     if (secs.length) html += `<h4>Meetings by policy area</h4><div class="chips">${secs.map(([k, n]) => `<span>${esc(P.sectors[k].label)} ${n}</span>`).join('')}</div>`;
   }
-  if (others.length) html += `<div class="others">Also in this building: ${others.map(q => `<button data-other="${esc(q.id)}">${esc(q.n)}</button>`).join(', ')}</div>`;
+  if (others.length) {
+    const all = [p, ...others].sort((a, b) => (b.power ?? -1) - (a.power ?? -1));
+    html += `<h4>${all.length} organisations in this building</h4><ol class="occupants${all.length > 8 ? ' folded' : ''}">${all.map(q => `<li class="${q === p ? 'on' : ''}"><button data-other="${esc(q.id)}">
+      <span class="sw" style="background:${CATS[q.c].color}"></span><span class="nm">${esc(q.n)}</span><b>${q.power != null ? Math.round(q.power) : ''}</b></button></li>`).join('')}</ol>
+      ${all.length > 8 ? `<button class="show-all">Show all ${all.length}</button>` : ''}`;
+  }
   html += `<div id="wiki"></div>`;
   const links = [];
   if (inv?.url) links.push(`<a href="${esc(inv.url)}" target="_blank" rel="noopener">Heritage record</a>`);
   if (p?.org) links.push(`<a href="https://transparency-register.europa.eu/searchregister-or-update/organisation-detail_en?id=${encodeURIComponent(p.org.id)}" target="_blank" rel="noopener">Transparency Register</a>`);
   if (p?.org?.web) links.push(`<a href="${esc(/^https?:/.test(p.org.web) ? p.org.web : 'https://' + p.org.web)}" target="_blank" rel="noopener">Website</a>`);
   if (wd?.wiki) links.push(`<a href="https://en.wikipedia.org/wiki/${esc(wd.wiki)}" target="_blank" rel="noopener">Wikipedia</a>`);
+  const ll = latLngOf(gid, p);
+  if (ll) links.push(`<a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${ll[0].toFixed(6)},${ll[1].toFixed(6)}" target="_blank" rel="noopener">Street View</a>`);
   if (wd?.qid) links.push(`<a href="https://www.wikidata.org/wiki/${esc(wd.qid)}" target="_blank" rel="noopener">Wikidata</a>`);
   return html + `<div class="links">${links.join('')}</div></div>`;
 }
@@ -575,12 +639,15 @@ function pinCard(gid, x, y, placeId) {
     if (wiki) loadWiki(decodeURIComponent(wiki));
     card.querySelector('.card-close').onclick = () => pinCard(-1);
     card.querySelectorAll('[data-other]').forEach(b => b.onclick = () => pinCard(gid, x, y, b.dataset.other));
+    card.querySelectorAll('[data-office]').forEach(b => b.onclick = () => showOffice(b.dataset.office));
+    card.querySelector('.show-all')?.addEventListener('click', ev => { card.querySelector('.occupants').classList.remove('folded'); ev.target.remove(); });
     card.querySelector('img')?.addEventListener('load', () => placeCard(x, y));
     placeCard(x, y);
   };
   draw();
   card.scrollTop = 0;
   if (!infoNow(gid)) infoFor(gid).then(draw);
+  if (!meetData && placesIn(gid).some(q => q.org)) getMeet().then(draw);
   if (phone.matches) setCollapsed(true);
 }
 addEventListener('keydown', e => { if (e.key === 'Escape') { pinCard(-1); } });
@@ -626,15 +693,24 @@ let playing = false, playT0 = 0, playFrom = 0;
 const PLAY_MS = 24000;
 $('#axis-from').textContent = fmtDate(t0);
 $('#axis-to').textContent = fmtDate(new Date(P.meetingsTo + 'T00:00:00'));
+// Filter: all meetings, one type of lobby, or one policy area
+const TYPE_KEYS = ['corp', 'assoc', 'consult', 'union', 'ngo', 'think', 'public'];
+const tlSel = $('#tl-filter');
+tlSel.innerHTML = `<option value="all">all</option><optgroup label="By type of lobby">${TYPE_KEYS.map(k => `<option value="t:${k}">${esc(CATS[k].label)}</option>`).join('')}</optgroup>
+  <optgroup label="By policy area">${Object.entries(P.sectors).map(([k, v]) => `<option value="s:${k}">${esc(v.label)}</option>`).join('')}</optgroup>`;
+let tlFilter = 'all';
+const seriesAt = i => tlFilter === 'all' ? P.weekly[i] : (P.weeks[i]?.[tlFilter[0]]?.[tlFilter.slice(2)] || 0);
+const filterColor = () => tlFilter.startsWith('t:') ? CATS[tlFilter.slice(2)].color : BLUE;
+tlSel.addEventListener('change', () => { tlFilter = tlSel.value; drawHist(); if (!$('#week').hidden) openWeek(week); });
 function drawHist() {
   const dpr = Math.min(devicePixelRatio, 2), w = hist.clientWidth, h = hist.clientHeight;
   if (hist.width !== w * dpr) { hist.width = w * dpr; hist.height = h * dpr; }
   hctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   hctx.clearRect(0, 0, w, h);
-  const max = Math.max(...P.weekly), bw = w / N_WEEKS;
+  const vals = Array.from({ length: N_WEEKS }, (_, i) => seriesAt(i)), max = Math.max(1, ...vals), bw = w / N_WEEKS, col = filterColor();
   for (let i = 0; i < N_WEEKS; i++) {
-    const bh = Math.max(1, (h - 8) * P.weekly[i] / max);
-    hctx.fillStyle = i <= week ? BLUE : '#c3cad4';
+    const bh = Math.max(1, (h - 8) * vals[i] / max);
+    hctx.fillStyle = i === openWeekIdx ? IRIS : i <= week ? col : '#c3cad4';
     hctx.fillRect(i * bw + 0.5, h - bh, Math.max(1, bw - 1), bh);
   }
   const x = (week + 0.5) * bw;
@@ -642,11 +718,44 @@ function drawHist() {
   hctx.fillRect(x - 1, 0, 2, h);
   hctx.beginPath(); hctx.arc(x, 4, 4, 0, Math.PI * 2); hctx.fill();
 }
-let scrubbing = false;
+let scrubbing = false, downX = 0, moved = false, openWeekIdx = -1;
 const weekAt = x => Math.max(0, Math.min(N_WEEKS - 1, Math.floor(x / hist.clientWidth * N_WEEKS)));
-hist.addEventListener('pointerdown', e => { scrubbing = true; stopPlay(); hist.setPointerCapture(e.pointerId); week = weekAt(e.offsetX); applyWeek(); });
-hist.addEventListener('pointermove', e => { if (scrubbing) { week = weekAt(e.offsetX); applyWeek(); } });
-hist.addEventListener('pointerup', () => { scrubbing = false; });
+hist.addEventListener('pointerdown', e => { scrubbing = true; moved = false; downX = e.offsetX; stopPlay(); hist.setPointerCapture(e.pointerId); week = weekAt(e.offsetX); applyWeek(); });
+hist.addEventListener('pointermove', e => {
+  if (scrubbing) { if (Math.abs(e.offsetX - downX) > 4) moved = true; week = weekAt(e.offsetX); applyWeek(); }
+  else hist.title = (i => `Week of ${fmtDate(weekDate(i))}: ${seriesAt(i)} meetings. Click for details.`)(weekAt(e.offsetX));
+});
+hist.addEventListener('pointerup', () => { scrubbing = false; if (!moved) openWeek(week); });
+
+// Week details: what happened in the selected week
+const weekEl = $('#week');
+function bars(obj, label, color) {
+  const rows = Object.entries(obj || {}).sort((a, b) => b[1] - a[1]).slice(0, 6);
+  if (!rows.length) return '';
+  const max = rows[0][1];
+  return `<h4>${label}</h4><ul class="wbars">${rows.map(([k, n]) => `<li><span>${esc(label.includes('type') ? CATS[k]?.label || k : P.sectors[k]?.label || k)}</span><b>${n}</b>
+    <span class="bar"><i style="width:${100 * n / max}%;background:${label.includes('type') ? CATS[k]?.color || BLUE : BLUE}"></i></span></li>`).join('')}</ul>`;
+}
+function openWeek(i) {
+  const W = P.weeks[i]; if (!W) return;
+  openWeekIdx = i; drawHist();
+  const from = weekDate(i), to = new Date(from.getTime() + 6 * 864e5);
+  const filt = tlFilter === 'all' ? '' : ` <span class="n">(${seriesAt(i)} ${esc(tlSel.selectedOptions[0].text.toLowerCase())})</span>`;
+  weekEl.innerHTML = `<button class="card-close" aria-label="Close">×</button>
+    <div class="n">${fmtDate(from)} to ${fmtDate(to)}</div>
+    <h3>${fmtNum(P.weekly[i])} lobby meetings${filt}</h3>
+    <div class="wcols"><div>${bars(W.t, 'By type of lobby')}</div><div>${bars(W.s, 'By policy area')}</div></div>
+    <h4>Most active organisations</h4><ol class="wlist">${W.o.map(([n, c, pid]) => `<li>${pid && byId[pid]?.gid != null ? `<button data-place="${esc(pid)}">${esc(prettyName(n))}</button>` : esc(prettyName(n))} <span class="n">${c}</span></li>`).join('')}</ol>
+    <h4>Commission offices <span class="n">tap to see who meets them</span></h4><div class="chips">${W.c.map(([n, c]) => `<button class="chip" data-office="${esc(n)}">${esc(n)} ${c}</button>`).join('')}</div>
+    ${W.x.length ? `<h4>On the agenda</h4><ul class="meets">${W.x.map(([d, org, who, t]) => `<li><span class="n">${fmtDate(new Date(d + 'T00:00:00'))}, ${esc(prettyName(org || ''))} with ${esc(who)}</span><br>${esc(t)}</li>`).join('')}</ul>` : ''}`;
+  weekEl.hidden = false;
+  weekEl.scrollTop = 0;
+}
+weekEl.addEventListener('click', e => {
+  if (e.target.closest('.card-close')) { weekEl.hidden = true; openWeekIdx = -1; drawHist(); return; }
+  const o = e.target.closest('[data-office]'); if (o) { weekEl.hidden = true; openWeekIdx = -1; drawHist(); showOffice(o.dataset.office); return; }
+  const p = e.target.closest('[data-place]'); if (p) { weekEl.hidden = true; openWeekIdx = -1; drawHist(); focusPlace(p.dataset.place); }
+});
 $('#play').addEventListener('click', () => playing ? stopPlay() : startPlay());
 function startPlay() {
   playing = true; playFrom = week >= N_WEEKS - 1 ? 0 : week; playT0 = performance.now();
@@ -711,7 +820,7 @@ function renderAbout() {
     <p>Each permanent representation scores 55 for its seat in COREPER and its veto on unanimity files, plus up to 30 in proportion to its share of the EU population, its weight under qualified majority voting. Eurostat, ${esc(P.popYear)}.</p>
     <table><tbody>${reps.slice(0, 4).map(r => `<tr><td>${esc(r.n.replace('Permanent Representation of ', ''))}</td><td>${r.share}%</td><td>${r.power}</td></tr>`).join('')}</tbody></table>
     <h3>Outside interests: measured influence</h3>
-    <p>All ${fmtNum(P.registrants)} organisations in the EU Transparency Register with a Brussels office get an influence index from: meetings with Commissioners and cabinets since ${fmtDate(t0)} (${Math.round(W.top * 100)}%), meetings with senior Commission staff (${Math.round(W.dg * 100)}%), declared lobbying costs (${Math.round(W.spend * 100)}%), full-time lobbyists (${Math.round(W.fte * 100)}%) and Parliament badges (${Math.round(W.ep * 100)}%). Each is compared with the most active organisation on a square-root scale. NGOs report a budget rather than lobbying costs and are scored on the other four. The index is scaled so the strongest outside interest reaches ${P.lobbyCeiling}: a lobby cannot adopt a law. The ${fmtNum(P.orgs.length)} highest are mapped.</p>
+    <p>All ${fmtNum(P.registrants)} organisations in the EU Transparency Register with a Brussels office get an influence index from: meetings with Commissioners and cabinets since ${fmtDate(t0)} (${Math.round(W.top * 100)}%), meetings with senior Commission staff (${Math.round(W.dg * 100)}%), declared lobbying costs (${Math.round(W.spend * 100)}%), full-time lobbyists (${Math.round(W.fte * 100)}%) and Parliament badges (${Math.round(W.ep * 100)}%). Each is compared with the most active organisation on a square-root scale. NGOs report a budget rather than lobbying costs and are scored on the other four. The index is scaled so the strongest outside interest reaches ${P.lobbyCeiling}: a lobby cannot adopt a law. All ${fmtNum(P.orgCount)} whose address could be located are mapped; where several share a building, it takes the colour of the most powerful.</p>
     <h3>Heritage and culture</h3>
     <p>Construction dates come from the heritage inventory where it records one, otherwise from Wikidata. The inventory focuses on buildings of heritage interest, so recent and ordinary buildings are mostly undated. Cultural places (museums, theatres, churches, palaces and the like) are shown for context and carry no power score.</p>
     <h3>The timeline</h3>
