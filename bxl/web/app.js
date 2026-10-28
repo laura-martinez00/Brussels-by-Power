@@ -387,6 +387,8 @@ function renderPanel() {
 </ul>
       <h2 class="section">Most powerful</h2>
       ${rankHtml(ranked(), p => p.power)}`;
+  } else if (mode === 4) {
+    panelBody.innerHTML = agendaHtml();
   } else if (mode === 1 && office) {
     const list = (officeList || []).slice(0, 40);
     const max = list[0]?.[1] || 1;
@@ -433,6 +435,10 @@ panelBody.addEventListener('click', e => {
   if (pr) { const i = +pr.dataset.period; uniforms.uPeriodOn.value[i] = uniforms.uPeriodOn.value[i] ? 0 : 1; uniforms.uLayerAt.value = now(); renderPanel(); return; }
   const gb = e.target.closest('[data-gid]');
   if (gb) { focusGid(+gb.dataset.gid); return; }
+  const ag = e.target.closest('[data-ag]');
+  if (ag) { const [k, v] = ag.dataset.ag.split('='); agf[k] = v; applyAgenda(); renderPanel(); return; }
+  const ev = e.target.closest('[data-event]');
+  if (ev) { const x = agenda.events[+ev.dataset.event]; if (byId[x.place]?.gid != null) focusPlace(x.place); return; }
   if (e.target.closest('[data-office-clear]')) { office = null; applySector(); uniforms.uLayerAt.value = now(); renderPanel(); return; }
   const s = e.target.closest('[data-sector]');
   if (s) { office = null; sector = s.dataset.sector; applySector(); uniforms.uLayerAt.value = now(); renderPanel(); return; }
@@ -440,6 +446,9 @@ panelBody.addEventListener('click', e => {
   if (p) focusPlace(p.dataset.place);
 });
 let findQuery = '';
+panelBody.addEventListener('change', e => {
+  if (e.target.id === 'ag-topic') { agf.topic = e.target.value; applyAgenda(); renderPanel(); }
+});
 panelBody.addEventListener('input', e => {
   if (e.target.id !== 'find') return;
   findQuery = e.target.value;
@@ -453,6 +462,8 @@ panelBody.addEventListener('input', e => {
 panelBody.addEventListener('pointerover', e => {
   const p = e.target.closest('[data-place]');
   if (p && pinnedGid < 0) uniforms.uHover.value = byId[p.dataset.place]?.gid ?? -1;
+  const evh = e.target.closest('[data-event]');
+  if (evh && pinnedGid < 0) uniforms.uHover.value = byId[agenda?.events[+evh.dataset.event]?.place]?.gid ?? -1;
   const g = e.target.closest('[data-gid]');
   if (g && pinnedGid < 0) uniforms.uHover.value = +g.dataset.gid;
 });
@@ -467,11 +478,77 @@ function setCollapsed(c) {
 document.querySelectorAll('.modes [data-mode]').forEach(b => b.addEventListener('click', () => setMode(+b.dataset.mode)));
 function setMode(m) {
   mode = m;
-  uniforms.uMode.value = m;
+  uniforms.uMode.value = m === 4 ? 1 : m;
+  $('#panel').classList.toggle('wide', m === 4);
+  if (m === 4) { getAgenda().then(() => { applyAgenda(); renderPanel(); }); }
   uniforms.uLayerAt.value = now();
   document.querySelectorAll('.modes [data-mode]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.mode === m)));
   if (m === 1) applySector();
+  if (m === 4 && agenda) applyAgenda();
   renderPanel();
+}
+
+// ---------- Agenda: upcoming Brussels policy events, read from the organisers' own websites ----------
+let agenda = null, agendaPromise = null;
+const getAgenda = () => agendaPromise ||= fetch('data/agenda.json').then(r => r.ok ? r.json() : { events: [] }).then(d => (agenda = d)).catch(() => (agenda = { events: [] }));
+const agf = { day: 'today', format: 'all', topic: 'all', dur: 'all' };
+const bxlNow = () => {
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Brussels', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+    .formatToParts(new Date()).map(x => [x.type, x.value]));
+  return { date: `${p.year}-${p.month}-${p.day}`, time: `${p.hour}:${p.minute}` };
+};
+const addDays = (iso, n) => new Date(Date.parse(iso + 'T12:00:00Z') + n * 864e5).toISOString().slice(0, 10);
+const mins = t => t ? +t.slice(0, 2) * 60 + +t.slice(3, 5) : null;
+function agendaList() {
+  if (!agenda) return [];
+  const now = bxlNow(), t = now.date;
+  const range = { today: [t, t], tomorrow: [addDays(t, 1), addDays(t, 1)], week: [t, addDays(t, 6)], all: [t, '9999'] }[agf.day];
+  return agenda.events.map((e, i) => ({ ...e, i })).filter(e => {
+    const last = e.endDate || e.date;
+    if (last < range[0] || e.date > range[1]) return false;
+    if (agf.format !== 'all' && e.format !== agf.format) return false;
+    if (agf.topic !== 'all' && e.topic !== agf.topic) return false;
+    const d = e.start && e.end ? mins(e.end) - mins(e.start) : null;
+    if (agf.dur === 'short' && !(d != null && d <= 120)) return false;
+    if (agf.dur === 'long' && !(e.endDate || (d != null && d > 120))) return false;
+    return true;
+  });
+}
+function liveNow(e) {
+  const n = bxlNow();
+  if (e.date > n.date || (e.endDate || e.date) < n.date) return false;
+  if (e.endDate && e.date < n.date) return true;
+  return e.start && e.end && mins(n.time) >= mins(e.start) && mins(n.time) < mins(e.end);
+}
+function applyAgenda() {
+  const hosts = {};
+  for (const e of agendaList()) { const g = byId[e.place]?.gid; if (g != null) hosts[g] = 100; }
+  for (const gid of placedGids) setAttr(gid, 5, hosts[gid] || 0);
+  flushAttr();
+}
+function agendaHtml() {
+  if (!agenda) return '<p class="hint">Loading the agenda…</p>';
+  const list = agendaList(), now = bxlNow();
+  const title = { today: `Today, ${fmtDate(new Date(now.date + 'T12:00:00'))}`, tomorrow: `Tomorrow, ${fmtDate(new Date(addDays(now.date, 1) + 'T12:00:00'))}`,
+    week: 'The next 7 days', all: `Until ${fmtDate(new Date(agenda.to + 'T12:00:00'))}` }[agf.day];
+  const chip = (k, v, label) => `<button class="chip${agf[k] === v ? ' on' : ''}" data-ag="${k}=${v}">${label}</button>`;
+  let lastDay = null;
+  const items = list.map(e => {
+    const head = agf.day !== 'today' && agf.day !== 'tomorrow' && e.date !== lastDay ? `<li class="ag-day">${fmtDate(new Date(e.date + 'T12:00:00'))}</li>` : '';
+    lastDay = e.date;
+    const mapped = byId[e.place]?.gid != null;
+    const time = e.start ? `${e.start}${e.end ? '–' + e.end : ''}` : (e.endDate ? `until ${fmtDate(new Date(e.endDate + 'T12:00:00'))}` : 'Time on the event page');
+    return head + `<li class="ag-item"><div class="ag-org">${mapped ? `<button data-event="${e.i}" title="Show on the map">${esc(e.org)}</button>` : esc(e.org)}${liveNow(e) ? '<span class="live">Live now</span>' : ''}</div>
+      <a class="ag-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a>
+      <div class="ag-meta"><span>${esc(time)}</span><span>${esc(e.topic)}</span><span class="fmt fmt-${e.format.replace(' ', '').toLowerCase()}">${esc(e.format)}</span></div></li>`;
+  }).join('');
+  return `<h2>${esc(title)}</h2><p class="hint">${list.length} event${list.length === 1 ? '' : 's'}. Organisers with a building on the map are lit up; tap a name to fly there.</p>
+    <div class="sectors">${chip('day', 'today', 'Today')}${chip('day', 'tomorrow', 'Tomorrow')}${chip('day', 'week', '7 days')}${chip('day', 'all', 'All upcoming')}</div>
+    <div class="sectors">${chip('format', 'all', 'All')}${chip('format', 'In person', 'In person')}${chip('format', 'Online', 'Online')}${chip('format', 'Hybrid', 'Hybrid')}</div>
+    <div class="ag-row"><select id="ag-topic" aria-label="Topic"><option value="all">All topics</option>${(agenda.topics || []).map(t => `<option ${agf.topic === t ? 'selected' : ''}>${esc(t)}</option>`).join('')}</select>
+      ${chip('dur', 'all', 'Any length')}${chip('dur', 'short', 'Up to 2 h')}${chip('dur', 'long', 'Longer')}</div>
+    <ol class="ag-list">${items || '<li class="hint">No events match these filters.</li>'}</ol>
+    <p class="hint" style="margin-top:10px">Collected daily from ${agenda.sources?.filter(s => s.events).length || 0} organisers' own websites and the European Parliament's calendar. Times are Brussels time; check the event page before you go.</p>`;
 }
 
 // ---------- Cards ----------
@@ -568,6 +645,8 @@ function cardHtml(gid, pinned, placeId) {
       ${row('Lobbyists, full-time', o.fte, detail?.parts?.fte)}
       ${row('Parliament badges', o.ep, detail?.parts?.ep)}</ul>`;
     if (detail?.who?.length) html += `<h4>Most met <span class="n">tap to see who else meets them</span></h4><div class="chips">${detail.who.map(([w, n]) => `<button class="chip" data-office="${esc(w)}">${esc(w)} ${n}</button>`).join('')}</div>`;
+    const up = agenda?.events.filter(e => e.place === p.id).slice(0, 4) || [];
+    if (up.length) html += `<h4>Upcoming events</h4><ul class="meets">${up.map(e => `<li><span class="n">${fmtDate(new Date(e.date + 'T12:00:00'))}${e.start ? ', ' + e.start : ''}, ${esc(e.format.toLowerCase())}</span><br><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></li>`).join('')}</ul>`;
     const rec = meetData?.recent?.[p.id];
     if (rec?.length) html += `<h4>Latest meetings</h4><ul class="meets">${rec.slice(0, 5).map(([d, w, t]) => `<li><span class="n">${fmtDate(new Date(d + 'T00:00:00'))}, ${esc(w)}</span>${t ? `<br>${esc(t)}` : ''}</li>`).join('')}</ul>`;
     else if (!meetData) html += `<p class="n">Loading meetings…</p>`;
@@ -648,6 +727,7 @@ function pinCard(gid, x, y, placeId) {
   card.scrollTop = 0;
   if (!infoNow(gid)) infoFor(gid).then(draw);
   if (!meetData && placesIn(gid).some(q => q.org)) getMeet().then(draw);
+  if (!agenda) getAgenda().then(draw);
   if (phone.matches) setCollapsed(true);
 }
 addEventListener('keydown', e => { if (e.key === 'Escape') { pinCard(-1); } });

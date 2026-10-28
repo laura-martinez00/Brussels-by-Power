@@ -1,0 +1,237 @@
+[
+ {
+  "name": "Bruegel",
+  "site": "https://www.bruegel.org",
+  "events": "https://www.bruegel.org/events"
+ },
+ {
+  "name": "European Policy Centre",
+  "site": "https://www.epc.eu",
+  "events": "https://www.epc.eu/events"
+ },
+ {
+  "name": "Egmont Institute",
+  "site": "https://www.egmontinstitute.be",
+  "events": "https://www.egmontinstitute.be/events/"
+ },
+ {
+  "name": "CEPS",
+  "site": "https://www.ceps.eu"
+ },
+ {
+  "name": "Friends of Europe",
+  "site": "https://www.friendsofeurope.org",
+  "events": "https://www.friendsofeurope.org/events/"
+ },
+ {
+  "name": "Carnegie Europe",
+  "site": "https://carnegieendowment.org",
+  "events": "https://carnegieendowment.org/europe/events"
+ },
+ {
+  "name": "ECFR",
+  "site": "https://ecfr.eu",
+  "events": "https://www.ecfr.eu/events/"
+ },
+ {
+  "name": "German Marshall Fund",
+  "site": "https://www.gmfus.org",
+  "events": "https://www.gmfus.org/events"
+ },
+ {
+  "name": "IIEA",
+  "site": "https://www.iiea.com",
+  "events": "https://www.iiea.com/events"
+ },
+ {
+  "name": "Wilfried Martens Centre",
+  "site": "https://www.martenscentre.eu",
+  "events": "https://www.martenscentre.eu/events/"
+ },
+ {
+  "name": "FEPS",
+  "site": "https://feps-europe.eu"
+ },
+ {
+  "name": "European Movement International",
+  "site": "https://europeanmovement.eu",
+  "events": "https://europeanmovement.eu/events/"
+ },
+ {
+  "name": "Forum for the Future of Agriculture",
+  "site": "https://www.forumforagriculture.com"
+ },
+ {
+  "name": "EUREC",
+  "site": "https://eurec.be"
+ },
+ {
+  "name": "European Digital SME Alliance",
+  "site": "https://www.digitalsme.eu"
+ },
+ {
+  "name": "Energy Cities",
+  "site": "https://energy-cities.eu"
+ },
+ {
+  "name": "Eurogas",
+  "site": "https://www.eurogas.org",
+  "events": "https://www.eurogas.org/events/"
+ },
+ {
+  "name": "BusinessEurope",
+  "site": "https://www.businesseurope.eu"
+ },
+ {
+  "name": "European Microfinance Network",
+  "site": "https://www.european-microfinance.org"
+ },
+ {
+  "name": "European Economic and Social Committee",
+  "site": "https://www.eesc.europa.eu",
+  "events": "https://www.eesc.europa.eu/en/agenda/our-events"
+ },
+ {
+  "name": "European Committee of the Regions",
+  "site": "https://cor.europa.eu",
+  "events": "https://cor.europa.eu/en/events"
+ },
+ {
+  "name": "AmCham EU",
+  "site": "https://www.amchameu.eu",
+  "events": "https://www.amchameu.eu/events"
+ },
+ {
+  "name": "Hydrogen Europe",
+  "site": "https://hydrogeneurope.eu",
+  "events": "https://hydrogeneurope.eu/events/"
+ },
+ {
+  "name": "SolarPower Europe",
+  "site": "https://www.solarpowereurope.org",
+  "events": "https://www.solarpowereurope.org/events"
+ },
+ {
+  "name": "WindEurope",
+  "site": "https://windeurope.org",
+  "events": "https://windeurope.org/events/"
+ },
+ {
+  "name": "Eurocities",
+  "site": "https://eurocities.eu",
+  "events": "https://eurocities.eu/events/"
+ },
+ {
+  "name": "Heinrich Böll Foundation EU",
+  "site": "https://eu.boell.org"
+ },
+ {
+  "name": "Science|Business",
+  "site": "https://sciencebusiness.net",
+  "events": "https://sciencebusiness.net/events"
+ },
+ {
+  "name": "European Liberal Forum",
+  "site": "https://liberalforum.eu",
+  "events": "https://liberalforum.eu/events/"
+ },
+ {
+  "name": "Brussels School of Governance",
+  "site": "https://brussels-school.be",
+  "events": "https://brussels-school.be/events"
+ },
+ {
+  "name": "Institute for European Studies, ULB",
+  "site": "https://www.iee-ulb.eu"
+ },
+ {
+  "name": "The Good Lobby",
+  "site": "https://www.thegoodlobby.eu"
+ },
+ {
+  "name": "Transparency International EU",
+  "site": "https://transparency.eu"
+ },
+ {
+  "name": "Corporate Europe Observatory",
+  "site": "https://corporateeurope.org"
+ },
+ {
+  "name": "ETUC",
+  "site": "https://www.etuc.org",
+  "events": "https://www.etuc.org/en/events"
+ },
+ {
+  "name": "BEUC",
+  "site": "https://www.beuc.eu",
+  "events": "https://www.beuc.eu/events"
+ },
+ {
+  "name": "European Environmental Bureau",
+  "site": "https://eeb.org",
+  "events": "https://eeb.org/events/"
+ },
+ {
+  "name": "Transport & Environment",
+  "site": "https://www.transportenvironment.org"
+ },
+ {
+  "name": "CAN Europe",
+  "site": "https://caneurope.org",
+  "events": "https://caneurope.org/events/"
+ },
+ {
+  "name": "Eurelectric",
+  "site": "https://www.eurelectric.org",
+  "events": "https://www.eurelectric.org/events/"
+ },
+ {
+  "name": "DIGITALEUROPE",
+  "site": "https://www.digitaleurope.org",
+  "events": "https://www.digitaleurope.org/events/"
+ },
+ {
+  "name": "CCIA Europe",
+  "site": "https://ccianet.org"
+ },
+ {
+  "name": "Cefic",
+  "site": "https://cefic.org",
+  "events": "https://cefic.org/events/"
+ },
+ {
+  "name": "EFPIA",
+  "site": "https://www.efpia.eu",
+  "events": "https://www.efpia.eu/news-events/events/"
+ },
+ {
+  "name": "Copa-Cogeca",
+  "site": "https://copa-cogeca.eu"
+ },
+ {
+  "name": "FoodDrinkEurope",
+  "site": "https://www.fooddrinkeurope.eu"
+ },
+ {
+  "name": "European Youth Forum",
+  "site": "https://www.youthforum.org"
+ },
+ {
+  "name": "Clingendael Brussels",
+  "site": "https://www.clingendael.org"
+ },
+ {
+  "name": "Centre for European Reform",
+  "site": "https://www.cer.eu",
+  "events": "https://www.cer.eu/events"
+ },
+ {
+  "name": "EUISS",
+  "site": "https://www.iss.europa.eu",
+  "events": "https://www.iss.europa.eu/events"
+ },
+ {
+  "name": "Institute of International and European Affairs",
+  "site": "https://www.iiea.com"
+ }
+]

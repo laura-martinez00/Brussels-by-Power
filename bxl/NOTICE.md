@@ -24,3 +24,4 @@ That project was itself inspired by Sasha Bogachev's *Paris, building by buildin
 - Water, parks, woods: © OpenStreetMap contributors, ODbL.
 - Lobbying: EU Transparency Register and European Commission meetings with interest representatives (open data).
 - Population: Eurostat. Addresses: UrbIS geocoder. Summaries loaded live from Wikipedia (CC BY-SA).
+- Agenda: event titles, dates and links from each organiser's own public website, linked back to the source; European Parliament open data.
