@@ -551,6 +551,32 @@ function agendaHtml() {
     <p class="hint" style="margin-top:10px">Collected daily from ${agenda.sources?.filter(s => s.events).length || 0} organisers' own websites and the European Parliament's calendar. Times are Brussels time; check the event page before you go.</p>`;
 }
 
+// ---------- Lobby meetings: consistent, ordered presentation ----------
+const MON = new Intl.DateTimeFormat('en-GB', { month: 'short' });
+const WD = new Intl.DateTimeFormat('en-GB', { weekday: 'short' });
+const levelOf = who => /^DG |^SG$|^Secretariat/.test(who) ? 'Senior staff' : 'Commissioner or cabinet';
+// Newest first, one row per meeting: date block, who they met (and at what level), what about
+function meetingRows(rec, { limit = 4, showOrg = false } = {}) {
+  const rows = rec.map(([d, who, subj, org], k) => {
+    const dt = new Date(d + 'T12:00:00');
+    return `<li class="mt${k >= limit ? ' extra' : ''}"><div class="mt-date"><b>${dt.getDate()}</b><span>${MON.format(dt)}<br>${WD.format(dt)}</span></div>
+      <div class="mt-body">${showOrg ? `<div class="mt-org">${esc(prettyName(org || ''))}</div>` : ''}
+        <button class="mt-who" data-office="${esc(who)}" title="See who else meets ${esc(who)}">${esc(who)}</button>
+        <span class="mt-level">${levelOf(who)}</span>
+        ${subj ? `<p class="mt-subj">${esc(subj)}</p>` : '<p class="mt-subj n">No subject published</p>'}</div></li>`;
+  }).join('');
+  return `<ol class="mtl${rec.length > limit ? ' folded' : ''}">${rows}</ol>${rec.length > limit ? `<button class="show-all" data-unfold>Show all ${rec.length}</button>` : ''}`;
+}
+// Ranked rows with a bar, largest first; optional data attribute makes each row a button
+function rankRows(pairs, { attr = null, color = BLUE, label = x => x } = {}) {
+  if (!pairs.length) return '';
+  const max = pairs[0][1];
+  return `<ol class="rk">${pairs.map(([k, n]) => {
+    const inner = `<span class="rk-n">${esc(label(k))}</span><b>${fmtNum(n)}</b><span class="bar"><i style="width:${100 * n / max}%;background:${typeof color === 'function' ? color(k) : color}"></i></span>`;
+    return `<li>${attr ? `<button ${attr}="${esc(k)}">${inner}</button>` : `<div>${inner}</div>`}</li>`;
+  }).join('')}</ol>`;
+}
+
 // ---------- Cards ----------
 const card = $('#card');
 let pinnedGid = -1, hoverGid = -1, cardPlace = null;
@@ -629,7 +655,9 @@ function cardHtml(gid, pinned, placeId) {
   if (arch && pinned) facts.push(['Architects', arch.replace(/\s*\(\d{4}(-\d{4})?\)/g, '')]);
   if (inv?.type && pinned) facts.push(['Type', cap(inv.type)]);
   if (inv?.unesco) facts.push(['UNESCO', 'World Heritage']);
-  if (facts.length) html += `<dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>`;
+  const factsHtml = facts.length ? `<dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : '';
+  const deferFacts = pinned && !!p?.org;          // for organisations, meetings come before building facts
+  if (!deferFacts) html += factsHtml;
   if (!pinned) return html + `<p class="more">${others.length ? `${others.length + 1} organisations in this building. ` : ''}Click to see details</p></div>`;
 
   if (p?.d) html += `<p>${esc(p.d)}</p>`;
@@ -637,22 +665,33 @@ function cardHtml(gid, pinned, placeId) {
   if (p?.why) html += `<p class="why">${esc(p.why)}</p>`;
   if (p?.org) {
     const o = p.org;
+    const rec = meetData?.recent?.[p.id] || [];
+    // 1. Commission meetings first: what lobbyists look for
+    html += `<section class="meet-sec"><h4 class="sec-h">Commission meetings this term</h4>`;
+    if (o.top + o.dg) {
+      html += `<div class="meet-sum"><div><b>${fmtNum(o.top + o.dg)}</b><span>meetings in total</span></div><div><b>${fmtNum(o.top)}</b><span>with Commissioners or cabinets</span></div>
+        <div><b>${fmtNum(o.dg)}</b><span>with senior staff</span></div></div>`;
+      if (o.last) html += `<p class="n" style="margin:6px 0 0">Latest published meeting: ${fmtDate(new Date(o.last + 'T12:00:00'))}</p>`;
+      if (rec.length) html += `<h4>Latest meetings <span class="n">newest first</span></h4>${meetingRows(rec)}`;
+      else if (!meetData) html += `<p class="n">Loading meetings…</p>`;
+      if (detail?.who?.length) html += `<h4>Who they meet most <span class="n">tap to see who else meets them</span></h4>${rankRows(detail.who, { attr: 'data-office' })}`;
+      const secs = Object.entries(o.secN || {}).sort((a, b) => b[1] - a[1]);
+      if (secs.length) html += `<h4>By policy area</h4>${rankRows(secs, { label: k => P.sectors[k].label })}`;
+    } else html += `<p class="n">No published meetings with the Commission's top level since ${fmtDate(t0)}.</p>`;
+    html += `</section>`;
+    // 2. Upcoming events from the agenda
+    const up = agenda?.events.filter(e => e.place === p.id).slice(0, 4) || [];
+    if (up.length) html += `<h4 class="sec-h">Upcoming events</h4><ul class="meets">${up.map(e => `<li><span class="n">${fmtDate(new Date(e.date + 'T12:00:00'))}${e.start ? ', ' + e.start : ''}, ${esc(e.format.toLowerCase())}</span><br><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></li>`).join('')}</ul>`;
+    // 3. How the influence score is built
     const row = (label, raw, part) => `<li><span>${label}</span><b>${raw}</b><span class="bar"><i style="width:${part ?? 0}%"></i></span></li>`;
-    html += `<h4>Influence index ${o.inf} of 100, built from</h4><ul class="metrics">
+    html += `<h4 class="sec-h">Influence index ${o.inf} of 100, built from</h4><ul class="metrics">
       ${row('Meetings with Commissioners and cabinets', fmtNum(o.top), detail?.parts?.top)}
       ${row('Meetings with senior Commission staff', fmtNum(o.dg), detail?.parts?.dg)}
       ${row('Declared lobbying costs', fmtSpend(o.spend) || (detail?.budget ? 'Budget ' + fmtSpend([detail.budget, detail.budget]) : 'Not declared'), detail?.parts?.spend)}
       ${row('Lobbyists, full-time', o.fte, detail?.parts?.fte)}
       ${row('Parliament badges', o.ep, detail?.parts?.ep)}</ul>`;
-    if (detail?.who?.length) html += `<h4>Most met <span class="n">tap to see who else meets them</span></h4><div class="chips">${detail.who.map(([w, n]) => `<button class="chip" data-office="${esc(w)}">${esc(w)} ${n}</button>`).join('')}</div>`;
-    const up = agenda?.events.filter(e => e.place === p.id).slice(0, 4) || [];
-    if (up.length) html += `<h4>Upcoming events</h4><ul class="meets">${up.map(e => `<li><span class="n">${fmtDate(new Date(e.date + 'T12:00:00'))}${e.start ? ', ' + e.start : ''}, ${esc(e.format.toLowerCase())}</span><br><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></li>`).join('')}</ul>`;
-    const rec = meetData?.recent?.[p.id];
-    if (rec?.length) html += `<h4>Latest meetings</h4><ul class="meets">${rec.slice(0, 5).map(([d, w, t]) => `<li><span class="n">${fmtDate(new Date(d + 'T00:00:00'))}, ${esc(w)}</span>${t ? `<br>${esc(t)}` : ''}</li>`).join('')}</ul>`;
-    else if (!meetData) html += `<p class="n">Loading meetings…</p>`;
-    const secs = Object.entries(o.secN || {}).sort((a, b) => b[1] - a[1]);
-    if (secs.length) html += `<h4>Meetings by policy area</h4><div class="chips">${secs.map(([k, n]) => `<span>${esc(P.sectors[k].label)} ${n}</span>`).join('')}</div>`;
   }
+  if (deferFacts && factsHtml) html += `<h4 class="sec-h">The building</h4>${factsHtml}`;
   if (others.length) {
     const all = [p, ...others].sort((a, b) => (b.power ?? -1) - (a.power ?? -1));
     html += `<h4>${all.length} organisations in this building</h4><ol class="occupants${all.length > 8 ? ' folded' : ''}">${all.map(q => `<li class="${q === p ? 'on' : ''}"><button data-other="${esc(q.id)}">
@@ -719,7 +758,7 @@ function pinCard(gid, x, y, placeId) {
     card.querySelector('.card-close').onclick = () => pinCard(-1);
     card.querySelectorAll('[data-other]').forEach(b => b.onclick = () => pinCard(gid, x, y, b.dataset.other));
     card.querySelectorAll('[data-office]').forEach(b => b.onclick = () => showOffice(b.dataset.office));
-    card.querySelector('.show-all')?.addEventListener('click', ev => { card.querySelector('.occupants').classList.remove('folded'); ev.target.remove(); });
+    card.querySelectorAll('.show-all').forEach(btn => btn.addEventListener('click', ev => { ev.target.previousElementSibling?.classList.remove('folded'); ev.target.remove(); }));
     card.querySelector('img')?.addEventListener('load', () => placeCard(x, y));
     placeCard(x, y);
   };
@@ -821,20 +860,29 @@ function openWeek(i) {
   openWeekIdx = i; drawHist();
   const from = weekDate(i), to = new Date(from.getTime() + 6 * 864e5);
   const filt = tlFilter === 'all' ? '' : ` <span class="n">(${seriesAt(i)} ${esc(tlSel.selectedOptions[0].text.toLowerCase())})</span>`;
+  const busiest = W.o[0];
+  const agendaByDay = new Map();
+  for (const x of [...W.x].sort((p, q) => p[0].localeCompare(q[0]))) { if (!agendaByDay.has(x[0])) agendaByDay.set(x[0], []); agendaByDay.get(x[0]).push(x); }
   weekEl.innerHTML = `<button class="card-close" aria-label="Close">×</button>
-    <div class="n">${fmtDate(from)} to ${fmtDate(to)}</div>
+    <div class="n">Week of ${fmtDate(from)} to ${fmtDate(to)}</div>
     <h3>${fmtNum(P.weekly[i])} lobby meetings${filt}</h3>
-    <div class="wcols"><div>${bars(W.t, 'By type of lobby')}</div><div>${bars(W.s, 'By policy area')}</div></div>
-    <h4>Most active organisations</h4><ol class="wlist">${W.o.map(([n, c, pid]) => `<li>${pid && byId[pid]?.gid != null ? `<button data-place="${esc(pid)}">${esc(prettyName(n))}</button>` : esc(prettyName(n))} <span class="n">${c}</span></li>`).join('')}</ol>
-    <h4>Commission offices <span class="n">tap to see who meets them</span></h4><div class="chips">${W.c.map(([n, c]) => `<button class="chip" data-office="${esc(n)}">${esc(n)} ${c}</button>`).join('')}</div>
-    ${W.x.length ? `<h4>On the agenda</h4><ul class="meets">${W.x.map(([d, org, who, t]) => `<li><span class="n">${fmtDate(new Date(d + 'T00:00:00'))}, ${esc(prettyName(org || ''))} with ${esc(who)}</span><br>${esc(t)}</li>`).join('')}</ul>` : ''}`;
+    <p class="wsum">${busiest ? `Most active: <b>${esc(prettyName(busiest[0]))}</b> (${busiest[1]}). ` : ''}${W.c[0] ? `Busiest office: <b>${esc(W.c[0][0])}</b> (${W.c[0][1]}).` : ''}</p>
+    <div class="wcols">
+      <div><h4>Most active organisations</h4>${rankRows(W.o.map(([n, c, pid]) => [pid && byId[pid]?.gid != null ? pid : '~' + n, c]), { attr: 'data-place', label: k => k.startsWith('~') ? prettyName(k.slice(1)) : byId[k].n })}</div>
+      <div><h4>Commission offices <span class="n">tap one</span></h4>${rankRows(W.c, { attr: 'data-office' })}</div>
+    </div>
+    <div class="wcols">
+      <div><h4>By type of lobby</h4>${rankRows(Object.entries(W.t).sort((a, b) => b[1] - a[1]).slice(0, 6), { label: k => CATS[k]?.label || k, color: k => CATS[k]?.color || BLUE })}</div>
+      <div><h4>By policy area</h4>${rankRows(Object.entries(W.s).sort((a, b) => b[1] - a[1]).slice(0, 6), { label: k => P.sectors[k]?.label || k })}</div>
+    </div>
+    ${agendaByDay.size ? `<h4>On the agenda <span class="n">a sample of the week's meetings, by day</span></h4>${[...agendaByDay].map(([d, xs]) => `<div class="wday">${fmtDate(new Date(d + 'T12:00:00'))}</div>${meetingRows(xs.map(([dd, org, who, t]) => [dd, who, t, org]), { limit: 99, showOrg: true })}`).join('')}` : ''}`;
   weekEl.hidden = false;
   weekEl.scrollTop = 0;
 }
 weekEl.addEventListener('click', e => {
   if (e.target.closest('.card-close')) { weekEl.hidden = true; openWeekIdx = -1; drawHist(); return; }
   const o = e.target.closest('[data-office]'); if (o) { weekEl.hidden = true; openWeekIdx = -1; drawHist(); showOffice(o.dataset.office); return; }
-  const p = e.target.closest('[data-place]'); if (p) { weekEl.hidden = true; openWeekIdx = -1; drawHist(); focusPlace(p.dataset.place); }
+  const p = e.target.closest('[data-place]'); if (p && !p.dataset.place.startsWith('~')) { weekEl.hidden = true; openWeekIdx = -1; drawHist(); focusPlace(p.dataset.place); }
 });
 $('#play').addEventListener('click', () => playing ? stopPlay() : startPlay());
 function startPlay() {

@@ -259,3 +259,41 @@ h1 { margin: 0; font-size: clamp(24px, 2.9vw, 46px); font-weight: 800; letter-sp
 .fmt::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 5px; vertical-align: 1px; border: 1.5px solid currentColor; }
 .fmt-inperson::before { background: currentColor; }
 .fmt-hybrid::before { background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
+
+/* Agenda link in the mode switch */
+.modes .modes-link { padding: 7px 15px; border-radius: 999px; font-weight: 600; text-decoration: none; color: var(--blue); white-space: nowrap; }
+.modes .modes-link:hover { background: var(--sky); }
+
+/* Lobby meetings: summary, ordered timeline, ranked lists */
+.sec-h { margin: 18px 0 6px !important; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 13.5px !important; color: var(--ink) !important; font-weight: 700 !important; }
+.meet-sec h4:not(.sec-h) { margin: 14px 0 4px; }
+.meet-sum { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.meet-sum div { background: var(--sky); border-radius: 8px; padding: 8px 10px; }
+.meet-sum b { display: block; font-size: 22px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.meet-sum span { color: var(--muted); font-size: 11.5px; line-height: 1.25; display: block; }
+.mtl { list-style: none; margin: 4px 0 0; padding: 0; }
+.mtl.folded .extra { display: none; }
+.mt { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 10px; padding: 9px 0; border-top: 1px solid var(--rule); }
+.mt:first-child { border-top: 0; }
+.mt-date { text-align: center; background: var(--sky); border-radius: 8px; padding: 5px 0 6px; align-self: start; font-variant-numeric: tabular-nums; }
+.mt-date b { display: block; font-size: 19px; font-weight: 800; line-height: 1; }
+.mt-date span { display: block; color: var(--muted); font-size: 10.5px; line-height: 1.25; margin-top: 2px; }
+.mt-body { min-width: 0; }
+.mt-org { font-weight: 700; font-size: 13px; }
+.mt-who { border: 0; background: none; padding: 0; font: inherit; font-weight: 650; font-size: 13px; color: var(--ink); text-align: left; cursor: pointer; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+.mt-who:hover { text-decoration-color: var(--blue); color: var(--blue); }
+.mt-level { display: inline-block; margin-left: 6px; font-size: 11px; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: 0 6px; vertical-align: 1px; }
+.mt-subj { margin: 3px 0 0 !important; font-size: 13px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.mt-subj:hover { -webkit-line-clamp: unset; }
+.rk { list-style: none; margin: 0; padding: 0; }
+.rk li > button, .rk li > div { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 10px; border: 0; background: none; padding: 5px 6px; margin: 0 -6px; border-radius: 6px; text-align: left; font-size: 13px; }
+.rk li > button { cursor: pointer; }
+.rk li > button:hover { background: var(--sky); }
+.rk .rk-n { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rk b { font-variant-numeric: tabular-nums; }
+.rk .bar { grid-column: 1 / -1; height: 3px; border-radius: 2px; background: var(--rule); overflow: hidden; }
+.rk .bar i { display: block; height: 100%; }
+.wsum { margin: 4px 0 6px; color: var(--muted); font-size: 13.5px; }
+.wsum b { color: var(--ink); }
+.wday { margin: 12px 0 2px; font-weight: 700; font-size: 12.5px; color: var(--muted); }
+.week { width: min(640px, calc(100vw - 2 * var(--gutter))); }
