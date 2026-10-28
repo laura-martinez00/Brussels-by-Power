@@ -1,0 +1,42 @@
+# Copy this file to .github/workflows/refresh.yml at the top of your repository
+# (on github.com: Add file > Create new file, name it .github/workflows/refresh.yml, paste, commit).
+# Every morning it rebuilds the agenda; every Monday it also refreshes the lobby data, heritage and the city.
+name: Refresh data
+on:
+  schedule:
+    - cron: "0 4 * * *"        # daily, 04:00 UTC: agenda
+    - cron: "0 3 * * 1"        # Mondays, 03:00 UTC: everything
+  workflow_dispatch:           # adds a "Run workflow" button on the Actions tab
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: bxl/pipeline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests lxml pandas openpyxl shapely pyproj numpy
+      - name: "Weekly: lobby register, meetings, heritage and buildings"
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 3 * * 1'
+        run: |
+          python build_power_data.py --refresh
+          python build_enrich.py --refresh
+          curl -sSL -o b3d.zip "$(curl -sS https://urbisdownload.datastore.brussels/atomfeed/e9ec2aa4-cffd-11ee-bccc-00090ffe0001-en.xml | grep -oE 'https://[^"]*GPKG_04000_[0-9]+\.zip' | sort | tail -1)"
+          unzip -o -q b3d.zip && python build_city.py gpkg/UrbISBuildings3D_04000.gpkg ../web/data/power.json
+          rm -rf b3d.zip gpkg
+      - name: "Daily: agenda"
+        run: python build_agenda.py --top 260
+      - name: Commit changes
+        working-directory: .
+        run: |
+          git config user.name "data-refresh-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add bxl/web/data
+          git diff --cached --quiet || git commit -m "Refresh data $(date -u +%F)"
+          git push
