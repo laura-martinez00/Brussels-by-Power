@@ -206,6 +206,13 @@ URL:https://www.lexxion.eu/en/events/effl-conference/
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
+UID:5c56ee58f32ac7c1@brussels-events
+DTSTART:20261029
+SUMMARY:Energy efficiency – How can it shape Europe’s post-2030 energy and climate framework? (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/energy-efficiency-how-can-it-shape-europes-post-2030-energy-and-climate-framework
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
 UID:d8c445b846824505@brussels-events
 DTSTART:20261029T0100
 SUMMARY:The Institute of International & European Affairs (IIEA (Institute of International & European Affairs))
@@ -622,6 +629,20 @@ URL:https://www.ebaa.org/events/ebaa-town-hall
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
+UID:5527108139eeae11@brussels-events
+DTSTART:20261103
+SUMMARY:Media Partnership: Who Foots the Bill? Health Taxes and the EU's Search for Revenue (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/media-partnership-who-foots-the-bill-health-taxes-and-the-eus-search-for-revenue
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+UID:97f96b384cc35db5@brussels-events
+DTSTART:20261103
+SUMMARY:Media Partnership - Global Europe Instrument: Role of European Development Banks in Delivering EU External Action (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/global-europe-instrument-role-of-european-development-banks-in-delivering-eu-external-action
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
 UID:c68ec21bf316fe32@brussels-events
 DTSTART:20261103T000000
 DTEND:20261104T235959
@@ -846,6 +867,13 @@ UID:227d47ab1134f29c@brussels-events
 DTSTART:20261104
 SUMMARY:Anti-Fraud Game: Fighting Irregularities in EU Funds (Lexxion)
 URL:https://www.lexxion.eu/en/events/anti-fraud-and-corruption-game/ 
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+UID:32e6ba6de011f0ae@brussels-events
+DTSTART:20261104
+SUMMARY:Media Partnership: U15 Social Media Forum. Beyond Prohibition: Would a Social Media Ban Save Our Children? (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/u15-social-media-forum-beyond-prohibition-would-a-social-media-ban-save-our-children
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
@@ -1405,6 +1433,13 @@ URL:https://www.lse.ac.uk/events/blockers
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
+UID:3819f5b0568dd4a9@brussels-events
+DTSTART:20261109
+SUMMARY:From heatwaves to fire risk - What Europe's refrigerant choices mean on the ground (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/from-heatwaves-to-fire-risk-what-europes-refrigerant-choices-mean-on-the-ground
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
 UID:3ebb76ba529396b9@brussels-events
 DTSTART:20261109T080000
 DTEND:20261119T163000
@@ -1573,6 +1608,13 @@ UID:deb8b9fd5ce87128@brussels-events
 DTSTART:20261110
 SUMMARY:Innovation Policy Lab 2026 (European Liberal Forum)
 URL:https://liberalforum.eu/event/innovation-policy-lab-2026-6-0/
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+UID:a70426c9f48310e9@brussels-events
+DTSTART:20261110
+SUMMARY:From Deployment to Scale - Building Europe’s CO2 Transportation Infrastructure and Markets (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/from-deployment-to-scale-building-europes-co2-transportation-infrastructure-and-markets
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
@@ -2323,6 +2365,20 @@ URL:https://www.eurogas.org/event/argus-road-fuels-conference-2026/
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
+UID:7d2f383cd86450b9@brussels-events
+DTSTART:20261117
+SUMMARY:Europe's Life Sciences Competitiveness Agenda - Innovation\, investment and global leadership in a changing world (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/europes-life-sciences-competitiveness-agenda-innovation-investment-and-global-leadership-in-a-changing-world
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+UID:c3bae29d6bfd10af@brussels-events
+DTSTART:20261117
+SUMMARY:Ecosystems - Brussels buzzword or Europe’s best bet to scale? (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/ecosystems-brussels-buzzword-or-europes-best-bet-to-scale
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
 UID:c8c8d9c05a0a8fa0@brussels-events
 DTSTART:20261117T0100
 SUMMARY:Techno-Politics Forum 2026 I Europe’s Race to Space (European Liberal Forum)
@@ -2557,6 +2613,13 @@ UID:cb839585bdb4db33@brussels-events
 DTSTART:20261118
 SUMMARY:EBAA Week 2026 (EBAA (Business Aviation))
 URL:https://www.ebaa.org/events/ebaa-week-2026
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+UID:dd3e01fded00940e@brussels-events
+DTSTART:20261118
+SUMMARY:From ambition to action - Is the Critical Raw Materials Act delivering for nickel? (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/from-ambition-to-action-is-the-critical-raw-materials-act-delivering-for-nickel
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
@@ -3404,6 +3467,13 @@ URL:https://www.lexxion.eu/en/events/fsr-forum/
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
+UID:3fcf3502e84b78c4@brussels-events
+DTSTART:20261130
+SUMMARY:FIREPOWER: Europe’s Defence Investment Race (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/firepower-europes-defence-investment-race
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
 UID:b81cc62ed55adcc6@brussels-events
 DTSTART:20261130T0830
 DTEND:20261130T1630
@@ -3556,6 +3626,13 @@ URL:https://www.eba.europa.eu/publications-and-media/events/first-two-years-dora
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
+UID:eb3fc485a1bf36bc@brussels-events
+DTSTART:20261202
+SUMMARY:Europe’s refining and fuel manufacturing sector – Competitiveness\, decarbonisation and strategic resilience (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/europes-refining-and-fuel-manufacturing-sector-competitiveness-decarbonisation-and-strategic-resilience
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
 UID:c41f138656a7a343@brussels-events
 DTSTART:20261202T0700
 SUMMARY:Aviation Carbon 2026 (EBAA (Business Aviation))
@@ -3701,6 +3778,13 @@ URL:https://iabeurope.eu/events/b2b-online-europe-2026/
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
+UID:276db05fd8931dc0@brussels-events
+DTSTART:20261203
+SUMMARY:Energy & Environment Policy Conference 2026 (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/energy-environment-policy-conference-2026
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
 UID:964da0ee025e22a5@brussels-events
 DTSTART:20261203T0830
 DTEND:20261203T1800
@@ -3843,6 +3927,13 @@ URL:https://www.eba.europa.eu/publications-and-media/events/board-supervisors-me
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
+UID:bfa59ecbbb8b8049@brussels-events
+DTSTART:20261208
+SUMMARY:How can the revised EU Standardisation Regulation strengthen Europe’s future competitiveness? (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/how-can-the-revised-eu-standardisation-regulation-strengthen-europes-future-competitiveness
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
 UID:cffd0dcca6abbc88@brussels-events
 DTSTART:20261208T080000
 DTEND:20261209T151500
@@ -3897,6 +3988,13 @@ UID:d3d260f82c728fb3@brussels-events
 DTSTART:20261209
 SUMMARY:European Ideas Forum 2026 (Wilfried Martens Centre (EPP foundation))
 URL:https://www.martenscentre.eu/event/european-ideas-forum-2026/
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+UID:20418bc608286e40@brussels-events
+DTSTART:20261209
+SUMMARY:Media Partnership: Sovereignty Through Partnership: Trusted Technology in an Interconnected World (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/media-partnership-sovereignty-through-partnership-trusted-technology-in-an-interconnected-world
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT
@@ -3965,6 +4063,27 @@ UID:ab101072c0b295ef@brussels-events
 DTSTART:20261210
 SUMMARY:Masterclass (European Biogas Association)
 URL:https://www.europeanbiogas.eu/event/masterclass-optimising-financial-performance-and-developing-biogas-purchase-agreements/
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+UID:00be8b6ef34f358e@brussels-events
+DTSTART:20261210
+SUMMARY:Delivering clean ammonia - Making EU climate and energy policy fit-for-purpose (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/delivering-clean-ammonia-making-eu-climate-and-energy-policy-fit-for-purpose
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+UID:bfc2da92cb777cb8@brussels-events
+DTSTART:20261210
+SUMMARY:EU-China relations - Rebalancing trade while keeping Europe competitive (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/eu-china-relations-rebalancing-trade-while-keeping-europe-competitive
+LOCATION:
+END:VEVENT
+BEGIN:VEVENT
+UID:111965829b547060@brussels-events
+DTSTART:20261210
+SUMMARY:Food additives under the microscope - Lessons from the EU ‘sweetener re-evaluations’ (Euractiv / Rapporteur)
+URL:https://events.rapporteur.com/event/info/food-additives-under-the-microscope-lessons-from-the-eu-sweetener-re-evaluations
 LOCATION:
 END:VEVENT
 BEGIN:VEVENT

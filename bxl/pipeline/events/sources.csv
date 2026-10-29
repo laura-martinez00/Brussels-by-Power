@@ -411,7 +411,7 @@ Brussels Times (events listing),"Media, event organisers & forums",Media,https:/
 Concurrences,"Media, event organisers & forums",Event organiser (law),https://www.concurrences.com/en/events/,html,Yes,yes,bot-protected – opens normally in a browser
 EPFSF (European Parliamentary Financial Services Forum),"Media, event organisers & forums",Parliamentary forum,https://epfsf.org/events/,html,Yes,yes,verified
 EUobserver,"Media, event organisers & forums",Media/events,https://euobserver.com/topic/agenda/,html,,yes,verified (discovered from site navigation)
-Euractiv,"Media, event organisers & forums",Media/events,https://events.euractiv.com/,html,Yes,yes,verified – Euractiv events now redirect to Rapporteur’s event platform
+Euractiv / Rapporteur,"Media, event organisers & forums",Media/events,https://events.rapporteur.com/,html_js,Yes,yes,"Euractiv relaunched as Rapporteur (Sep 2026); own events site, checked 29 Oct 2026 (renders with scripts)"
 Euronews,"Media, event organisers & forums",Media/events,https://events.euronews.com/events,html,Yes,yes,verified (discovered from site navigation)
 European Business Summits,"Media, event organisers & forums",Event organiser,https://ebsummits.eu/,html,Yes,yes,verified (event organiser site)
 European Defence & Security Conference,"Media, event organisers & forums",Event organiser,https://defencesecurityconference.eu/,html,Yes,yes,added from Agence Europe Calendar Extra – verified

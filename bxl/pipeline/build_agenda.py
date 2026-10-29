@@ -179,6 +179,31 @@ def from_ical(url):
     return out
 
 
+def listing_rows(page_url, text, host):
+    """Events read straight from a listing page whose rows hold the event link and its date (table rows, list items, cards)."""
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(text, "html.parser")
+    out, seen = [], set()
+    for a in soup.find_all("a", href=True):
+        u = urljoin(page_url, a["href"]); p = urlparse(u)
+        if p.netloc.removeprefix("www.") != host or u in seen: continue
+        if not re.search(r"/(events?|agenda|evenements?|veranstaltung\w*)/", p.path, re.I) or re.search(r"/(page|category|tag|past|archive)/", p.path): continue
+        title = clean(a.get_text(" "))
+        if len(title) < 12 or re.search(r"jobsite|newsletter|subscribe|sign up|cookie", title, re.I): continue
+        row = a.find_parent(["tr", "li", "article"]) or a.parent
+        d, hhmm = parse_dt(clean(row.get_text(" ")) if row else "")
+        if not d:
+            m = re.search(r"\b(\d{1,2})-(\d{1,2})-(\d{4})\b", clean(row.get_text(" ")) if row else "")
+            if m:
+                try: d = dt.date(int(m[3]), int(m[2]), int(m[1]))
+                except ValueError: d = None
+        if not d: continue
+        seen.add(u)
+        out.append({"title": title, "start": f"{d.isoformat()}T{hhmm or '00:00'}", "end": None, "url": u,
+                    "where": clean(row.get_text(" "))[:300] if row else "", "mode": ""})
+    return out
+
+
 def from_pages(page_url, text, host, org_name=""):
     """Generic: follow links that look like individual events, read each page's title, date, time and place."""
     links = []
@@ -188,6 +213,8 @@ def from_pages(page_url, text, host, org_name=""):
         if p.netloc.removeprefix("www.") != host or u.rstrip("/") == page_url.rstrip("/"): continue
         if re.search(r"/(events?|agenda|evenements?|veranstaltung\w*)/[^/?]{6,}", p.path, re.I) and not re.search(r"/(page|category|tag|past|archive)/", p.path):
             if u not in links: links.append(u)
+    out = listing_rows(page_url, text, host)          # listing tables: each event link sits next to its date
+    if len(out) >= 2: return out
     out = []
     for u in links[:20]:
         r = get(u)

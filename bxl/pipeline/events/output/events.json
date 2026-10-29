@@ -1,6 +1,6 @@
 {
  "generated_at": "2026-10-29T09:02:09Z",
- "count": 571,
+ "count": 588,
  "events": [
   {
    "id": "4c8402e2cdbc6b42",
@@ -406,6 +406,21 @@
    "source_url": "https://www.lexxion.eu/en/events/",
    "source_method": "html",
    "scraped_at": "2026-10-29T09:01:55Z"
+  },
+  {
+   "id": "5c56ee58f32ac7c1",
+   "title": "Energy efficiency – How can it shape Europe’s post-2030 energy and climate framework?",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-10-29",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/energy-efficiency-how-can-it-shape-europes-post-2030-energy-and-climate-framework",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
   },
   {
    "id": "d8c445b846824505",
@@ -1248,6 +1263,36 @@
    "scraped_at": "2026-10-29T09:01:28Z"
   },
   {
+   "id": "5527108139eeae11",
+   "title": "Media Partnership: Who Foots the Bill? Health Taxes and the EU's Search for Revenue",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-11-03",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/media-partnership-who-foots-the-bill-health-taxes-and-the-eus-search-for-revenue",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
+   "id": "97f96b384cc35db5",
+   "title": "Media Partnership - Global Europe Instrument: Role of European Development Banks in Delivering EU External Action",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-11-03",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/global-europe-instrument-role-of-european-development-banks-in-delivering-eu-external-action",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
    "id": "c68ec21bf316fe32",
    "title": "Euroheat & Power Summit 2026",
    "organiser": "Solar Heat Europe",
@@ -1711,6 +1756,21 @@
    "source_url": "https://www.lexxion.eu/en/events/",
    "source_method": "html",
    "scraped_at": "2026-10-29T09:01:55Z"
+  },
+  {
+   "id": "32e6ba6de011f0ae",
+   "title": "Media Partnership: U15 Social Media Forum. Beyond Prohibition: Would a Social Media Ban Save Our Children?",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-11-04",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/u15-social-media-forum-beyond-prohibition-would-a-social-media-ban-save-our-children",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
   },
   {
    "id": "3ac557252bd45aac",
@@ -2823,6 +2883,21 @@
    "scraped_at": "2026-10-29T09:00:21Z"
   },
   {
+   "id": "3819f5b0568dd4a9",
+   "title": "From heatwaves to fire risk - What Europe's refrigerant choices mean on the ground",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-11-09",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/from-heatwaves-to-fire-risk-what-europes-refrigerant-choices-mean-on-the-ground",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
    "id": "3ebb76ba529396b9",
    "title": "Energy events at COP31",
    "organiser": "European Commission (events)",
@@ -3166,6 +3241,21 @@
    "source_url": "https://liberalforum.eu/events/",
    "source_method": "html",
    "scraped_at": "2026-10-29T09:01:25Z"
+  },
+  {
+   "id": "a70426c9f48310e9",
+   "title": "From Deployment to Scale - Building Europe’s CO2 Transportation Infrastructure and Markets",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-11-10",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/from-deployment-to-scale-building-europes-co2-transportation-infrastructure-and-markets",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
   },
   {
    "id": "0d5759bd97b57e87",
@@ -4668,6 +4758,36 @@
    "scraped_at": "2026-10-29T09:01:47Z"
   },
   {
+   "id": "7d2f383cd86450b9",
+   "title": "Europe's Life Sciences Competitiveness Agenda - Innovation, investment and global leadership in a changing world",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-11-17",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/europes-life-sciences-competitiveness-agenda-innovation-investment-and-global-leadership-in-a-changing-world",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
+   "id": "c3bae29d6bfd10af",
+   "title": "Ecosystems - Brussels buzzword or Europe’s best bet to scale?",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-11-17",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/ecosystems-brussels-buzzword-or-europes-best-bet-to-scale",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
    "id": "c8c8d9c05a0a8fa0",
    "title": "Techno-Politics Forum 2026 I Europe’s Race to Space",
    "organiser": "European Liberal Forum",
@@ -5131,6 +5251,21 @@
    "source_url": "https://www.ebaa.org/events",
    "source_method": "html",
    "scraped_at": "2026-10-29T09:01:28Z"
+  },
+  {
+   "id": "dd3e01fded00940e",
+   "title": "From ambition to action - Is the Critical Raw Materials Act delivering for nickel?",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-11-18",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/from-ambition-to-action-is-the-critical-raw-materials-act-delivering-for-nickel",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
   },
   {
    "id": "3668cefb1897d4d5",
@@ -6813,6 +6948,21 @@
    "scraped_at": "2026-10-29T09:01:55Z"
   },
   {
+   "id": "3fcf3502e84b78c4",
+   "title": "FIREPOWER: Europe’s Defence Investment Race",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-11-30",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/firepower-europes-defence-investment-race",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
    "id": "b81cc62ed55adcc6",
    "title": "Aviation 4 Girls 2026",
    "organiser": "Eurocontrol",
@@ -7113,6 +7263,21 @@
    "scraped_at": "2026-10-29T09:01:38Z"
   },
   {
+   "id": "eb3fc485a1bf36bc",
+   "title": "Europe’s refining and fuel manufacturing sector – Competitiveness, decarbonisation and strategic resilience",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-12-02",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/europes-refining-and-fuel-manufacturing-sector-competitiveness-decarbonisation-and-strategic-resilience",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
    "id": "c41f138656a7a343",
    "title": "Aviation Carbon 2026",
    "organiser": "EBAA (Business Aviation)",
@@ -7396,6 +7561,21 @@
    "source_url": "https://iabeurope.eu/events/",
    "source_method": "html",
    "scraped_at": "2026-10-29T09:00:40Z"
+  },
+  {
+   "id": "276db05fd8931dc0",
+   "title": "Energy & Environment Policy Conference 2026",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-12-03",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/energy-environment-policy-conference-2026",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
   },
   {
    "id": "964da0ee025e22a5",
@@ -7683,6 +7863,21 @@
    "scraped_at": "2026-10-29T09:01:38Z"
   },
   {
+   "id": "bfa59ecbbb8b8049",
+   "title": "How can the revised EU Standardisation Regulation strengthen Europe’s future competitiveness?",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-12-08",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/how-can-the-revised-eu-standardisation-regulation-strengthen-europes-future-competitiveness",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
    "id": "cffd0dcca6abbc88",
    "title": "EU Agri-Food Days",
    "organiser": "European Commission (events)",
@@ -7801,6 +7996,21 @@
    "source_url": "https://www.martenscentre.eu/events/",
    "source_method": "html",
    "scraped_at": "2026-10-29T09:00:17Z"
+  },
+  {
+   "id": "20418bc608286e40",
+   "title": "Media Partnership: Sovereignty Through Partnership: Trusted Technology in an Interconnected World",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-12-09",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/media-partnership-sovereignty-through-partnership-trusted-technology-in-an-interconnected-world",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
   },
   {
    "id": "bb47981f1baea32f",
@@ -7936,6 +8146,51 @@
    "source_url": "https://www.europeanbiogas.eu/events/",
    "source_method": "html",
    "scraped_at": "2026-10-29T08:59:51Z"
+  },
+  {
+   "id": "00be8b6ef34f358e",
+   "title": "Delivering clean ammonia - Making EU climate and energy policy fit-for-purpose",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-12-10",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/delivering-clean-ammonia-making-eu-climate-and-energy-policy-fit-for-purpose",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
+   "id": "bfc2da92cb777cb8",
+   "title": "EU-China relations - Rebalancing trade while keeping Europe competitive",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-12-10",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/eu-china-relations-rebalancing-trade-while-keeping-europe-competitive",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
+  },
+  {
+   "id": "111965829b547060",
+   "title": "Food additives under the microscope - Lessons from the EU ‘sweetener re-evaluations’",
+   "organiser": "Euractiv / Rapporteur",
+   "group": "Media, event organisers & forums",
+   "start": "2026-12-10",
+   "end": null,
+   "location": null,
+   "online": null,
+   "url": "https://events.rapporteur.com/event/info/food-additives-under-the-microscope-lessons-from-the-eu-sweetener-re-evaluations",
+   "description": null,
+   "source_url": "https://events.rapporteur.com/",
+   "source_method": "html_js",
+   "scraped_at": "2026-10-29T09:33:53Z"
   },
   {
    "id": "ff16f95dff8627c6",

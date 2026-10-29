@@ -1,0 +1,44 @@
+name,events_url,alternative checked (29 Oct 2026),status,recommendation
+CAN Europe,https://caneurope.org/events/,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+Carbon Market Watch,https://carbonmarketwatch.org/events/,"Own RSS feed exists but carries news, not events",Not available,Ask the organiser to expose its events feed (WordPress sites can allow /wp-json/tribe/)
+CEPR,https://cepr.org/events,"Own RSS feed exists but carries news, not events",Not available,Suggest disabling: mostly events outside Brussels
+DG CONNECT / Shaping Europe's Digital Future,https://digital-strategy.ec.europa.eu/en/events,Europa site protected; not in the Commission events portal iCal you already read,Not available,"Ask the DG/agency web team for an iCal export, or leave out"
+ECDPM,https://ecdpm.org/events,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+European Chemicals Agency,https://echa.europa.eu/news-and-events/events,Europa site protected; not in the Commission events portal iCal you already read,Not available,"Ask the DG/agency web team for an iCal export, or leave out"
+DG EMPL (Employment & Social),https://employment-social-affairs.ec.europa.eu/events_en,Europa site protected; not in the Commission events portal iCal you already read,Not available,"Ask the DG/agency web team for an iCal export, or leave out"
+Covenant of Mayors,https://eu-mayors.ec.europa.eu/en/events,Europa site protected; not in the Commission events portal iCal you already read,Not available,"Ask the DG/agency web team for an iCal export, or leave out"
+Euractiv,https://events.euractiv.com/,"events.rapporteur.com (Euractiv relaunched as Rapporteur, Sep 2026)",Fixed: 18 events read,Done: sources.csv updated
+Financial Times Live,https://events.ft.com/events-list,No open feed found,Not available,Suggest disabling: mostly events outside Brussels
+ICLEI Europe,https://iclei-europe.org/events/,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+Rural Pact / European Rural Mobility Network,https://ruralpact.rural-vision.europa.eu/events_en,Europa site protected; not in the Commission events portal iCal you already read,Not available,"Ask the DG/agency web team for an iCal export, or leave out"
+Science|Business,https://sciencebusiness.net/events,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+Seas At Risk,https://seas-at-risk.org/events/,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+Chatham House,https://www.chathamhouse.org/events,No open feed found,Not available,Suggest disabling: mostly events outside Brussels
+Clingendael,https://www.clingendael.org/events,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+COGEN Europe,https://www.cogeneurope.eu/events,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+College of Europe,https://www.coleurope.eu/events,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+Global Competition Law Centre (College of Europe),https://www.coleurope.eu/research/global-competition-law-centre-gclc,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+Concurrences,https://www.concurrences.com/en/events/,No open feed found,Not available,Suggest disabling: mostly events outside Brussels
+Confcommercio Brussels,https://www.confcommercio.it/,Homepage only in sources.csv; no events page found,Not available,"Suggest disabling, or find a real events page"
+Council of the EU / European Council – meeting calendar,https://www.consilium.europa.eu/en/meetings/calendar/,Whole consilium.europa.eu domain behind a browser check; presidency site disallows robots,Not available,"Leave out, or ask the Council press office; Parliament plenary already included"
+International Crisis Group,https://www.crisisgroup.org/how-we-work/events,"Own RSS feed exists but carries news, not events",Not available,Suggest disabling: mostly events outside Brussels
+European External Action Service,https://www.eeas.europa.eu/eeas/events_en,Europa site protected; not in the Commission events portal iCal you already read,Not available,"Ask the DG/agency web team for an iCal export, or leave out"
+EPSU,https://www.epsu.org/events,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+ESMA,https://www.esma.europa.eu/press-news/esma-events,Europa site protected; not in the Commission events portal iCal you already read,Not available,"Ask the DG/agency web team for an iCal export, or leave out"
+Erasmus Student Network,https://www.esn.org/,Homepage only in sources.csv; no events page found,Not available,"Suggest disabling, or find a real events page"
+ETUC,https://www.etuc.org/en/events,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+ETUI,https://www.etui.org/events,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+Eurodad,https://www.eurodad.org/,Homepage only in sources.csv; no events page found,Not available,"Suggest disabling, or find a real events page"
+Farm Europe,https://www.farm-europe.eu/events/,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+IFRI Brussels,https://www.ifri.org/en/events,No open feed found,Not available,Suggest disabling: mostly events outside Brussels
+IISS,https://www.iiss.org/events/,No open feed found,Not available,Suggest disabling: mostly events outside Brussels
+Permanent Representation of Ireland,https://www.ireland.ie/en/eu/brussels/,Homepage only in sources.csv; no events page found,Not available,"Suggest disabling, or find a real events page"
+Medef / Business France Brussels,https://www.medef.com/,Homepage only in sources.csv; no events page found,Not available,"Suggest disabling, or find a real events page"
+ONE Campaign Europe,https://www.one.org/,"Own RSS feed exists but carries news, not events",Not available,"Suggest disabling, or find a real events page"
+IFOAM Organics Europe,https://www.organicseurope.bio/events/,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+POLITICO Europe,https://www.politico.eu/politico-events/,None open: politico.eu/live-events also blocked; events.politico.eu does not exist,Not available,"Ask POLITICO Live for a calendar feed, or leave out"
+Elcano Royal Institute,https://www.realinstitutoelcano.org/en/events/,No open feed found,Not available,Suggest disabling: mostly events outside Brussels
+Résidence Palace (International Press Centre) – press breakfasts,https://www.residencepalace.be/,Homepage only in sources.csv; no events page found,Not available,"Suggest disabling, or find a real events page"
+Save the Children EU,https://www.savethechildren.net/,Homepage only in sources.csv; no events page found,Not available,"Suggest disabling, or find a real events page"
+Transport & Environment,https://www.transportenvironment.org/events,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
+WWF European Policy Office,https://www.wwf.eu/wwf_news/events/,No open feed or official listing found,Not available,"Ask the organiser for an events feed (iCal/RSS), or leave out"
