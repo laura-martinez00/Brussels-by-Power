@@ -1,6 +1,8 @@
 # Copy this file to .github/workflows/refresh.yml at the top of your repository
 # (on github.com: Add file > Create new file, name it .github/workflows/refresh.yml, paste, commit).
-# Every morning it rebuilds the agenda; every Monday it also refreshes the lobby data, heritage and the city.
+# Every morning it scrapes the 473 event sources and rebuilds the agenda; every Monday it also refreshes the lobby
+# data, heritage and the city. Optional: add an ANTHROPIC_API_KEY repository secret to read the hardest event pages
+# with an LLM (Settings > Secrets and variables > Actions); without it a free reader is used.
 name: Refresh data
 on:
   schedule:
@@ -12,7 +14,11 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 150
+    env:
+      SCRAPER_UA: "BrusselsByPowerEvents/1.0 (+https://brussels-by-power.vercel.app)"
+      SCRAPER_WORKERS: "24"
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     defaults:
       run:
         working-directory: bxl/pipeline
@@ -21,7 +27,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install requests lxml pandas openpyxl shapely pyproj numpy
+      - run: pip install requests lxml pandas openpyxl shapely pyproj numpy beautifulsoup4 playwright && python -m playwright install --with-deps chromium
       - name: "Weekly: lobby register, meetings, heritage and buildings"
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 3 * * 1'
         run: |
@@ -30,6 +36,9 @@ jobs:
           curl -sSL -o b3d.zip "$(curl -sS https://urbisdownload.datastore.brussels/atomfeed/e9ec2aa4-cffd-11ee-bccc-00090ffe0001-en.xml | grep -oE 'https://[^"]*GPKG_04000_[0-9]+\.zip' | sort | tail -1)"
           unzip -o -q b3d.zip && python build_city.py gpkg/UrbISBuildings3D_04000.gpkg ../web/data/power.json
           rm -rf b3d.zip gpkg
+      - name: "Daily: scrape the event sources"
+        working-directory: bxl/pipeline/events
+        run: python scraper.py
       - name: "Daily: agenda"
         run: python build_agenda.py --top 260
       - name: Commit changes
@@ -37,6 +46,6 @@ jobs:
         run: |
           git config user.name "data-refresh-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add bxl/web/data
+          git add bxl/web/data bxl/pipeline/events/output/events.json bxl/pipeline/events/output/events.ics bxl/pipeline/events/output/run_log.csv
           git diff --cached --quiet || git commit -m "Refresh data $(date -u +%F)"
           git push

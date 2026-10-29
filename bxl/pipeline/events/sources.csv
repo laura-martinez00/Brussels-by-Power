@@ -1,0 +1,474 @@
+name,group,type,events_url,method,on_the_bubble,enabled,notes
+ACER (Energy Regulators),EU institutions & bodies,EU agency,https://extranet.acer.europa.eu/Events,html,,yes,verified (discovered from site navigation)
+BEREC,EU institutions & bodies,EU agency,https://www.berec.europa.eu/en/events,html,Yes,yes,verified
+Cedefop,EU institutions & bodies,EU agency,https://www.cedefop.europa.eu/en/events,html,Yes,yes,verified
+CEPOL,EU institutions & bodies,EU agency,https://www.cepol.europa.eu/education-training/what-we-teach/residential-activities,html,Yes,yes,verified
+Clean Hydrogen Partnership,EU institutions & bodies,EU agency,https://www.clean-hydrogen.europa.eu/media/events_en,html,,yes,verified
+Council of the EU / European Council – meeting calendar,EU institutions & bodies,EU institution,https://www.consilium.europa.eu/en/meetings/calendar/,html,,yes,bot-protected – opens normally in a browser
+"Council Presidency (Ireland, H2 2026)",EU institutions & bodies,EU institution,https://irish-presidency.consilium.europa.eu/en/events/,html,,yes,verified (discovered from site navigation)
+Covenant of Mayors,EU institutions & bodies,EU institution,https://eu-mayors.ec.europa.eu/en/events,html,,yes,bot-protected – opens normally in a browser
+DG Agriculture,EU institutions & bodies,EU institution,https://agriculture.ec.europa.eu/events_en,html,,yes,verified
+DG CLIMA,EU institutions & bodies,EU institution,https://climate.ec.europa.eu/news-your-voice/events_en,html,,yes,verified
+DG COMP (Competition),EU institutions & bodies,EU institution,https://competition-policy.ec.europa.eu/about/reaching-out_en,html,,yes,verified
+DG CONNECT / Shaping Europe's Digital Future,EU institutions & bodies,EU institution,https://digital-strategy.ec.europa.eu/en/events,html,,yes,bot-protected – opens normally in a browser
+DG DEFIS (Defence Industry & Space),EU institutions & bodies,EU institution,https://defence-industry-space.ec.europa.eu/newsroom/events_en,html,,yes,verified (discovered from site navigation)
+DG EAC (Education & Culture),EU institutions & bodies,EU institution,https://education.ec.europa.eu/events,html,,yes,verified
+DG ECFIN (Economy & Finance),EU institutions & bodies,EU institution,https://economy-finance.ec.europa.eu/events_en,html_js,,yes,verified
+DG EMPL (Employment & Social),EU institutions & bodies,EU institution,https://employment-social-affairs.ec.europa.eu/events_en,html,,yes,bot-protected – opens normally in a browser
+DG Energy,EU institutions & bodies,EU institution,https://energy.ec.europa.eu/events_en,html,,yes,verified
+DG Environment,EU institutions & bodies,EU institution,https://environment.ec.europa.eu/events_en,html,,yes,verified
+DG FISMA (Finance),EU institutions & bodies,EU institution,https://finance.ec.europa.eu/events_en,html,,yes,verified
+DG Food Safety,EU institutions & bodies,EU institution,https://food.ec.europa.eu/events_en,html,,yes,verified
+DG GROW (Single Market),EU institutions & bodies,EU institution,https://single-market-economy.ec.europa.eu/events_en,html,,yes,verified
+DG HOME (Migration & Home Affairs),EU institutions & bodies,EU institution,https://home-affairs.ec.europa.eu/events_en,html,,yes,verified
+DG INTPA (International Partnerships),EU institutions & bodies,EU institution,https://international-partnerships.ec.europa.eu/news-and-events/events_en,html,,yes,verified
+DG JUST (Justice & Consumers),EU institutions & bodies,EU institution,https://commission.europa.eu/get-involved/events_en,ical,,no,"same page as ""European Commission (events)"" – filter that feed by DG instead"
+DG MARE (Oceans & Fisheries),EU institutions & bodies,EU institution,https://oceans-and-fisheries.ec.europa.eu/events_en,html,,yes,verified
+DG MOVE (Transport),EU institutions & bodies,EU institution,https://transport.ec.europa.eu/news-events/events_en,html,,yes,verified
+DG REGIO (Regional policy),EU institutions & bodies,EU institution,https://commission.europa.eu/get-involved/events_en,ical,,no,"same page as ""European Commission (events)"" – filter that feed by DG instead"
+DG Research & Innovation,EU institutions & bodies,EU institution,https://research-and-innovation.ec.europa.eu/events_en,html,,yes,verified
+DG SANTE (Public Health),EU institutions & bodies,EU institution,https://health.ec.europa.eu/events_en,html,,yes,verified
+DG TAXUD,EU institutions & bodies,EU institution,https://taxation-customs.ec.europa.eu/events_en,html,,yes,verified
+DG Trade (policy.trade.ec.europa.eu),EU institutions & bodies,EU institution,https://policy.trade.ec.europa.eu/events_en,html,,yes,verified
+EIOPA,EU institutions & bodies,EU agency,https://www.eiopa.europa.eu/media/events_en,html,,yes,verified
+EIT Food,EU institutions & bodies,EU agency,https://www.eitfood.eu/events,html,,yes,added from Agence Europe Calendar Extra – verified
+ENISA,EU institutions & bodies,EU agency,https://www.enisa.europa.eu/events,html,Yes,yes,verified
+ESMA,EU institutions & bodies,EU agency,https://www.esma.europa.eu/press-news/esma-events,html,,yes,bot-protected – opens normally in a browser
+EU Agency for Fundamental Rights,EU institutions & bodies,EU agency,https://fra.europa.eu/en/events,html,,yes,verified
+EU Institute for Security Studies,EU institutions & bodies,EU agency,https://www.iss.europa.eu/activities/events,html,,yes,verified (discovered from site navigation)
+EU Publications Office,EU institutions & bodies,EU institution,https://op.europa.eu/en/web/about-us/events,html,Yes,yes,verified
+"EU Research & Innovation community platform (EURAXESS, R&I Days)",EU institutions & bodies,EU institution,https://research-innovation-community.ec.europa.eu/events,html,,yes,added from Agence Europe Calendar Extra – verified (page loads)
+Eurofound,EU institutions & bodies,EU agency,https://www.eurofound.europa.eu/en/events,html,,yes,bot-protected – opens normally in a browser
+European Banking Authority,EU institutions & bodies,EU agency,https://www.eba.europa.eu/publications-and-media/events,html,,yes,verified
+European Central Bank,EU institutions & bodies,EU institution,https://www.ecb.europa.eu/press/conferences/html/index.en.html,html,,yes,verified
+European Chemicals Agency,EU institutions & bodies,EU agency,https://echa.europa.eu/news-and-events/events,html,,yes,bot-protected – opens normally in a browser
+European Commission (events),EU institutions & bodies,EU institution,https://commission.europa.eu/get-involved/events_en,ical,Yes,yes,verified (discovered from site navigation)
+European Commission Representation in Belgium,EU institutions & bodies,EU institution,https://belgium.representation.ec.europa.eu/news-and-events/events_fr,html,,yes,verified
+European Committee of the Regions,EU institutions & bodies,EU institution,https://cor.europa.eu/en/events,html,Yes,yes,verified
+European Court of Auditors,EU institutions & bodies,EU institution,https://www.eca.europa.eu/en/events,html,,yes,verified
+European Data Protection Supervisor,EU institutions & bodies,EU institution,https://www.edps.europa.eu/press-publications/events_en,html_js,,yes,verified
+European Defence Agency,EU institutions & bodies,EU agency,https://eda.europa.eu/news-and-events/events,html,,yes,verified
+European Economic and Social Committee,EU institutions & bodies,EU institution,https://www.eesc.europa.eu/en/agenda,html,Yes,yes,verified (discovered from site navigation)
+European Environment Agency,EU institutions & bodies,EU agency,https://www.eea.europa.eu/en/newsroom/events,jsonld,,yes,verified
+European External Action Service,EU institutions & bodies,EU institution,https://www.eeas.europa.eu/eeas/events_en,html,,yes,bot-protected – opens normally in a browser
+European Food Safety Authority,EU institutions & bodies,EU agency,https://www.efsa.europa.eu/en/events,html,,yes,verified
+European Innovation Council / EISMEA,EU institutions & bodies,EU agency,https://eic.ec.europa.eu/events_en,html,,yes,verified
+European Investment Bank,EU institutions & bodies,EU institution,https://www.eib.org/en/events/index,html,,yes,verified
+European Labour Authority,EU institutions & bodies,EU agency,https://www.ela.europa.eu/en/events,html,,yes,verified
+European Medicines Agency,EU institutions & bodies,EU agency,https://www.ema.europa.eu/en/news-events,html,,yes,verified
+European Ombudsman,EU institutions & bodies,EU institution,https://www.ombudsman.europa.eu/en/events,html_js,,yes,verified
+European Parliament (events),EU institutions & bodies,EU institution,https://www.europarl.europa.eu/news/en/agenda,html,Yes,yes,verified
+European Parliament Liaison Office Belgium,EU institutions & bodies,EU institution,https://www.europarl.europa.eu/belgium/fr/actualites-activites,html,,yes,verified
+European Parliament – Think Tank (EPRS) events,EU institutions & bodies,EU institution,https://www.europarl.europa.eu/thinktank/en/events,html,Yes,yes,verified
+Europol,EU institutions & bodies,EU agency,https://www.europol.europa.eu/events,html_js,Yes,yes,verified
+Eurostat,EU institutions & bodies,EU institution,https://commission.europa.eu/get-involved/events_en,ical,,no,"same page as ""European Commission (events)"" – filter that feed by DG instead"
+House of European History,EU institutions & bodies,EU institution,https://historia.europa.eu/en/exhibitions-events/events,html,,yes,verified (discovered from site navigation)
+Joint Research Centre,EU institutions & bodies,EU institution,https://joint-research-centre.ec.europa.eu/events_en,html,,yes,verified
+Rural Pact / European Rural Mobility Network,EU institutions & bodies,EU institution,https://ruralpact.rural-vision.europa.eu/events_en,html,,yes,added from Agence Europe Calendar Extra – bot-protected (opens in browser)
+SESAR Joint Undertaking,EU institutions & bodies,EU agency,https://www.sesarju.eu/events,html,Yes,yes,verified
+ALDE Party,"Political groups, parties & foundations",European party,https://www.aldeparty.eu/events,html,Yes,yes,verified
+Coppieters Foundation,"Political groups, parties & foundations",Political foundation,https://coppietersfoundation.eu/activities/event/,html,,yes,verified (discovered from site navigation)
+ECR Group,"Political groups, parties & foundations",EP political group,https://ecrgroup.eu/events,html,Yes,yes,verified
+EPP Group,"Political groups, parties & foundations",EP political group,https://www.eppgroup.eu/newsroom/events,html,,yes,verified
+Europe of Sovereign Nations Group,"Political groups, parties & foundations",EP political group,https://esn-group.eu/,tribe,,yes,verified
+European Democratic Party,"Political groups, parties & foundations",European party,https://democrats.eu/events/,html,,yes,verified (discovered from site navigation)
+European Green Party,"Political groups, parties & foundations",European party,https://europeangreens.eu/events/,html,,yes,verified
+European Liberal Forum,"Political groups, parties & foundations",Political foundation,https://liberalforum.eu/events/,html,Yes,yes,verified
+European People's Party (EPP),"Political groups, parties & foundations",European party,https://www.epp.eu/events,html,,yes,reachable (homepage / no separate events page found)
+FEPS (S&D foundation),"Political groups, parties & foundations",Political foundation,https://feps-europe.eu/upcoming-events/,html,Yes,yes,verified (discovered from site navigation)
+Fondation Jean-Jaurès,"Political groups, parties & foundations",Political foundation,https://www.jean-jaures.org/evenements/,html,,yes,verified
+Friedrich Ebert Stiftung – Brussels,"Political groups, parties & foundations",Political foundation,https://brussels.fes.de/events,html,Yes,yes,verified
+Friedrich Naumann Foundation – Brussels,"Political groups, parties & foundations",Political foundation,https://www.freiheit.org/european-union,html,,yes,verified
+Green European Foundation,"Political groups, parties & foundations",Political foundation,https://gef.eu/events/,tribe,,yes,verified
+Greens/EFA Group,"Political groups, parties & foundations",EP political group,https://www.greens-efa.eu/en/get-involved/our-events,html,,yes,verified (discovered from site navigation)
+Hanns Seidel Stiftung – Brussels,"Political groups, parties & foundations",Political foundation,https://www.hss.de/en/,html,,yes,reachable (homepage / no separate events page found)
+Heinrich Böll Stiftung – Brussels,"Political groups, parties & foundations",Political foundation,https://eu.boell.org/en/events,html,,yes,verified
+Institute of European Democrats,"Political groups, parties & foundations",Political foundation,https://www.iedonline.eu/events,html,,yes,verified
+Konrad Adenauer Stiftung – Brussels,"Political groups, parties & foundations",Political foundation,https://www.kas.de/en/web/europa,html,,yes,bot-protected – opens normally in a browser
+New Direction (ECR foundation),"Political groups, parties & foundations",Political foundation,https://newdirection.online/events,html,,yes,verified
+Partito Democratico Europeo,"Political groups, parties & foundations",European party,https://democrats.eu/events/,html,Yes,yes,verified
+Party of European Socialists (PES),"Political groups, parties & foundations",European party,https://pes.eu/events/,html,,yes,bot-protected – opens normally in a browser
+Patriots for Europe Group,"Political groups, parties & foundations",EP political group,https://patriotsforeurope.eu/,html,,yes,reachable (homepage / no separate events page found)
+Renew Europe Group,"Political groups, parties & foundations",EP political group,https://www.reneweuropegroup.eu/events,html,Yes,yes,verified
+Rosa Luxemburg Stiftung – Brussels,"Political groups, parties & foundations",Political foundation,https://www.rosalux.eu/en/events,html,,yes,verified
+S&D Group,"Political groups, parties & foundations",EP political group,https://www.socialistsanddemocrats.eu/latest/type/event,html,Yes,yes,corrected via web search (site section / homepage)
+The Left Group,"Political groups, parties & foundations",EP political group,https://left.eu/events/,html,Yes,yes,verified
+Transform! Europe,"Political groups, parties & foundations",Political foundation,https://transform-network.net/event/,html,,yes,verified (discovered from site navigation)
+Volt Europa / Volt Belgium,"Political groups, parties & foundations",European party,https://voltbelgium.org/events,ical,,yes,verified
+Wilfried Martens Centre (EPP foundation),"Political groups, parties & foundations",Political foundation,https://www.martenscentre.eu/events/,html,Yes,yes,verified
+Agora Energiewende,Think tanks & research,Think tank,https://www.agora-energiewende.org/events,html,,yes,verified
+Atlantic Council Europe Center,Think tanks & research,Think tank,https://www.atlanticcouncil.org/events/,html,,yes,verified
+Bertelsmann Stiftung – Brussels,Think tanks & research,Think tank,https://www.bertelsmann-stiftung.de/en/our-projects/brussels-office,html,Yes,yes,reachable (homepage / no separate events page found)
+BPIE,Think tanks & research,Think tank,https://www.bpie.eu/events/,html,Yes,yes,verified
+Bruegel,Think tanks & research,Think tank,https://www.bruegel.org/events,html,Yes,yes,verified
+Brussels Institute for Geopolitics (BIG),Think tanks & research,Think tank,https://big-europe.eu/events,html,Yes,yes,verified
+Brussels School of Governance (VUB),Think tanks & research,Academia,https://brussels-school.be/events,html,Yes,yes,verified
+Carnegie Europe,Think tanks & research,Think tank,https://carnegieendowment.org/europe/events,html_js,Yes,yes,verified
+Centre for European Policy Studies – CEP (cep Centrum für Europäische Politik),Think tanks & research,Think tank,https://www.cep.eu/en/events.html,html,,yes,verified
+Centre for European Reform (CER),Think tanks & research,Think tank,https://www.cer.eu/events,html,Yes,yes,verified
+CEPR,Think tanks & research,Think tank,https://cepr.org/events,html,Yes,yes,bot-protected – opens normally in a browser
+CEPS,Think tanks & research,Think tank,https://www.ceps.eu/ceps-events/?filter_state=upcoming,html,Yes,yes,verified
+CERRE,Think tanks & research,Think tank,https://cerre.eu/events/,html,Yes,yes,verified
+Chatham House,Think tanks & research,Think tank,https://www.chathamhouse.org/events,html,Yes,yes,verified (discovered from site navigation)
+Clean Air Task Force,Think tanks & research,Think tank,https://www.catf.us/events/,html,Yes,yes,verified
+Clingendael,Think tanks & research,Think tank,https://www.clingendael.org/events,html,,yes,bot-protected – opens normally in a browser
+College of Europe,Think tanks & research,Academia,https://www.coleurope.eu/events,html,Yes,yes,bot-protected – opens normally in a browser
+Confrontations Europe,Think tanks & research,Think tank,https://confrontations.org/agenda/,html,Yes,yes,verified (discovered from site navigation)
+CSIS (Europe programme),Think tanks & research,Think tank,https://www.csis.org/events,html,,yes,verified
+E3G,Think tanks & research,Think tank,https://www.e3g.org/events/,html,Yes,yes,reachable (homepage / no separate events page found)
+ECDPM,Think tanks & research,Think tank,https://ecdpm.org/events,html,,yes,bot-protected – opens normally in a browser
+ECFR,Think tanks & research,Think tank,https://ecfr.eu/events/,html,Yes,yes,verified
+ECIPE,Think tanks & research,Think tank,https://ecipe.org/events/,html,Yes,yes,verified
+EERA,Think tanks & research,Research network,https://www.eera-set.eu/events.html,html,Yes,yes,verified
+Egmont Institute,Think tanks & research,Think tank,https://www.egmontinstitute.be/events/,html,Yes,yes,verified
+EIAS (European Institute for Asian Studies),Think tanks & research,Think tank,https://eias.org/events/,html,Yes,yes,verified
+Elcano Royal Institute,Think tanks & research,Think tank,https://www.realinstitutoelcano.org/en/events/,html,,yes,verified
+Ember,Think tanks & research,Think tank,https://ember-energy.org/events/,html,,yes,verified
+Epicenter,Think tanks & research,Think tank,https://www.epicenternetwork.eu/events/,html,Yes,yes,verified
+ERA (Academy of European Law),Think tanks & research,Academia (law),https://www.era.int/events/,html,Yes,yes,verified (discovered from site navigation)
+EU-Asia Centre,Think tanks & research,Think tank,https://www.eu-asiacentre.eu/,html,,no,domain not reachable from the test environment – check manually
+EUI – Florence School of Regulation / STG Brussels,Think tanks & research,Academia,https://fsr.eui.eu/events/,html,,yes,verified
+EuroGOOS,Think tanks & research,Research,https://eurogoos.eu/events/,html,Yes,yes,verified
+European Forest Institute,Think tanks & research,Research,https://efi.int/events,html,Yes,yes,verified
+European Marine Board,Think tanks & research,Research,https://www.marineboard.eu/events,html,Yes,yes,verified
+European Policy Centre (EPC),Think tanks & research,Think tank,https://www.epc.eu/en/events,html,Yes,yes,verified
+European Policy Innovation Council,Think tanks & research,Think tank,https://epicouncil.eu/,html,,no,domain not reachable from the test environment – check manually
+Europeum,Think tanks & research,Think tank,https://www.europeum.org/en/events,ical,,yes,verified
+Farm Europe,Think tanks & research,Think tank,https://www.farm-europe.eu/events/,html,Yes,yes,bot-protected – opens normally in a browser
+Fondation Robert Schuman,Think tanks & research,Think tank,https://www.robert-schuman.eu/en/agenda,html,,yes,verified
+Foreign Policy Centre,Think tanks & research,Think tank,https://fpc.org.uk/events/,html,Yes,yes,verified
+Friends of Europe,Think tanks & research,Think tank,https://www.friendsofeurope.org/events/,html,Yes,yes,verified
+Future of Privacy Forum,Think tanks & research,Think tank,https://fpf.org/fpf-events/upcoming/,html,Yes,yes,verified
+German Marshall Fund (GMF),Think tanks & research,Think tank,https://www.gmfus.org/events,html,Yes,yes,verified
+Global Competition Law Centre (College of Europe),Think tanks & research,Academia (law),https://www.coleurope.eu/research/global-competition-law-centre-gclc,html,,yes,bot-protected – opens normally in a browser
+Global Governance Programme / EUI STG,Think tanks & research,Academia,https://www.eui.eu/events,html,,yes,verified
+IAI (Istituto Affari Internazionali),Think tanks & research,Think tank,https://www.iai.it/en/eventi,html,,yes,verified
+ICDS (International Centre for Defence and Security),Think tanks & research,Think tank,https://icds.ee/en/,html,,yes,corrected via web search (site section / homepage)
+IFRI Brussels,Think tanks & research,Think tank,https://www.ifri.org/en/events,html,,yes,bot-protected – opens normally in a browser
+IIEA (Institute of International & European Affairs),Think tanks & research,Think tank,https://www.iiea.com/events,html,Yes,yes,verified
+IISS,Think tanks & research,Think tank,https://www.iiss.org/events/,html,Yes,yes,bot-protected – opens normally in a browser
+Institut d'études européennes (ULB),Think tanks & research,Academia,https://iee.ulb.be/fr/agenda,html,,yes,verified (discovered from site navigation)
+Institute for Competitiveness (I-Com),Think tanks & research,Think tank,https://www.i-com.it/en/events/,html,,yes,verified
+Institute for European Environmental Policy (IEEP),Think tanks & research,Think tank,https://ieep.eu/events/,html,,yes,verified
+International Center for Law & Economics,Think tanks & research,Think tank,https://laweconcenter.org/events/,html,Yes,yes,verified
+International Crisis Group,Think tanks & research,Think tank,https://www.crisisgroup.org/how-we-work/events,html,,yes,verified (discovered from site navigation)
+Jacques Delors Centre / Institute,Think tanks & research,Think tank,https://institutdelors.eu/evenements/,html,,yes,verified (discovered from site navigation)
+KU Leuven – Leuven Centre for Global Governance Studies,Think tanks & research,Academia,https://ghum.kuleuven.be/ggs/events,html,,no,domain not reachable from the test environment – check manually
+Lisbon Council,Think tanks & research,Think tank,https://lisboncouncil.net/,html,,yes,corrected via web search (site section / homepage)
+LSE Brussels / LSE Events,Think tanks & research,Academia,https://www.lse.ac.uk/events,html,,yes,verified
+MCC Brussels,Think tanks & research,Think tank,https://brussels.mcc.hu/events,html,Yes,yes,verified
+Open Society Foundations – Europe,Think tanks & research,Think tank,https://www.opensocietyfoundations.org/events,html,,yes,verified
+RAP (Regulatory Assistance Project),Think tanks & research,Think tank,https://www.raponline.org/events/,html,Yes,yes,verified
+Robert Bosch Stiftung,Think tanks & research,Think tank,https://www.bosch-stiftung.de/en/events,html,,yes,verified
+Sitra,Think tanks & research,Think tank,https://www.sitra.fi/en/events/,html,Yes,yes,verified
+Solvay Brussels School,Think tanks & research,Academia,https://sbs-em.ulb.be/en/events,html,,no,domain not reachable from the test environment – check manually
+Strategic Perspectives,Think tanks & research,Think tank,https://strategicperspectives.eu/,html,Yes,yes,reachable (homepage / no separate events page found)
+SWP Brussels,Think tanks & research,Think tank,https://www.swp-berlin.org/en/swp/about-us/organization/swp-brussels/events-in-brussels,html,,yes,corrected via web search (site section / homepage)
+Villa Vigoni (German-Italian centre),Think tanks & research,Think tank,https://www.villavigoni.eu/,html,,yes,added from Agence Europe Calendar Extra – verified (homepage)
+Vlerick Business School – Brussels,Think tanks & research,Academia,https://www.vlerick.com/en/events/,html_js,,yes,verified
+ACEA (Automobile Manufacturers),"Business, trade & professional associations",Business association,https://www.acea.auto/nav?content=events,html,,yes,verified
+ACI Europe,"Business, trade & professional associations",Business association,https://www.aci-europe.org/events.html,html,,yes,verified
+AESGP (Consumer Healthcare),"Business, trade & professional associations",Business association,https://aesgp.eu/events,html,Yes,yes,verified
+AFME,"Business, trade & professional associations",Business association,https://www.afme.eu/events,html,,yes,verified
+AIJN (European Fruit Juice Association),"Business, trade & professional associations",Business association,https://www.juicesummit.org/,html,Yes,yes,verified (event site)
+Airlines for Europe (A4E),"Business, trade & professional associations",Business association,https://a4e.eu/events/,html,,yes,verified
+Allied for Startups,"Business, trade & professional associations",Business association,https://alliedforstartups.org/events/,html,,yes,verified
+AmCham EU,"Business, trade & professional associations",Business association,https://www.amchameu.eu/events,html,,yes,verified
+American Chamber of Commerce in Belgium,"Business, trade & professional associations",Chamber of commerce,https://www.amcham.be/events,html,Yes,yes,verified
+AnimalhealthEurope,"Business, trade & professional associations",Business association,https://animalhealtheurope.eu/events/,html,Yes,yes,verified
+APPLiA,"Business, trade & professional associations",Business association,https://www.applia-europe.eu/news/event-reports,html,,yes,verified (event reports)
+Association for Competitive Technology (ACT | The App Association),"Business, trade & professional associations",Business association,https://actonline.org/events/,html,Yes,yes,verified
+BDI Brussels,"Business, trade & professional associations",Business association,https://bdi.eu/de/veranstaltungen,html,,yes,verified (discovered from site navigation)
+Belgian-Portuguese Chamber of Commerce,"Business, trade & professional associations",Chamber of commerce,https://www.ccb-portugal.be/newsevents,html,Yes,yes,verified
+Belgo-Italian Chamber of Commerce,"Business, trade & professional associations",Chamber of commerce,https://www.ccitabel.com/en/event,html,Yes,yes,verified (discovered from site navigation)
+Bioenergy Europe,"Business, trade & professional associations",Business association,https://bioenergyeurope.org/,ical,Yes,yes,corrected via web search (site section / homepage)
+British Chamber of Commerce EU & Belgium,"Business, trade & professional associations",Chamber of commerce,https://www.britcham.eu/events,html,Yes,yes,verified
+BusinessEurope,"Business, trade & professional associations",Business association,https://www.businesseurope.eu/events,html,Yes,yes,verified
+Canada-Europe Economic Chamber,"Business, trade & professional associations",Chamber of commerce,https://www.canadaeurope.eu/events/,html,Yes,yes,verified (discovered from site navigation)
+Carbon Management Europe,"Business, trade & professional associations",Business association,https://carbonmanagementeurope.org/events/,html,Yes,yes,verified (discovered from site navigation)
+CCIA Europe,"Business, trade & professional associations",Business association,https://ccianet.org/events/,tribe,,yes,bot-protected – opens normally in a browser
+CECIMO,"Business, trade & professional associations",Business association,https://www.cecimo.eu/events/,html,Yes,yes,verified
+Cefic,"Business, trade & professional associations",Business association,https://cefic.org/events/,html,Yes,yes,verified
+CEJA (Young Farmers),"Business, trade & professional associations",Business association,https://www.ceja.eu/,html_js,,yes,verified
+Cement Europe (CEMBUREAU),"Business, trade & professional associations",Business association,https://www.cementeurope.eu/events,html,Yes,yes,verified
+CEN-CENELEC,"Business, trade & professional associations",Standards body,https://www.cencenelec.eu/news-events/events/,html,,yes,verified
+CEPI (Paper industry),"Business, trade & professional associations",Business association,https://www.cepi.org/events/,html,,yes,verified
+CER (Community of European Railways),"Business, trade & professional associations",Business association,https://www.cer.be/events,html,Yes,yes,verified
+CLEPA,"Business, trade & professional associations",Business association,https://clepa.eu/events/,ical,,yes,verified
+COGEN Europe,"Business, trade & professional associations",Business association,https://www.cogeneurope.eu/events,html,Yes,yes,bot-protected – opens normally in a browser
+Confcommercio Brussels,"Business, trade & professional associations",Business association,https://www.confcommercio.it/,html,,yes,bot-protected – opens normally in a browser
+Confindustria Brussels,"Business, trade & professional associations",Business association,https://www.confindustria.it/eventi,html,,yes,verified
+Connect Europe (ex-ETNO),"Business, trade & professional associations",Business association,https://connecteurope.org/events,html,,yes,verified
+Cooperatives Europe,"Business, trade & professional associations",Business association,https://coopseurope.coop/events/,html,Yes,yes,verified
+Copa-Cogeca,"Business, trade & professional associations",Business association,https://copa-cogeca.eu/events,html,Yes,yes,verified
+CSR Europe,"Business, trade & professional associations",Business network,https://www.csreurope.org/events,html,Yes,yes,verified
+Cyber Security Coalition (BE),"Business, trade & professional associations",Business association,https://www.cybersecuritycoalition.be/events/,jsonld,Yes,yes,verified
+Digital SME Alliance,"Business, trade & professional associations",Business association,https://www.digitalsme.eu/events/,html,Yes,yes,verified
+DIGITALEUROPE,"Business, trade & professional associations",Business association,https://www.digitaleurope.org/events/,html,Yes,yes,verified
+DOT Europe,"Business, trade & professional associations",Business association,https://doteurope.eu/,html,,yes,verified
+EBAA (Business Aviation),"Business, trade & professional associations",Business association,https://www.ebaa.org/events,html,Yes,yes,verified
+ECSA (Shipowners),"Business, trade & professional associations",Business association,https://ecsa.eu/ecsa-events/,html,Yes,yes,verified
+EDFA (Digital Finance Association),"Business, trade & professional associations",Business association,https://www.digitalfinancesummit.com/,html,Yes,yes,from The Bubble listing (EDFA = European Digital Finance Association)
+EFAMA,"Business, trade & professional associations",Business association,https://www.efama.org/events,html,Yes,yes,verified
+EFPIA,"Business, trade & professional associations",Business association,https://www.efpia.eu/news-events/events/,html,Yes,yes,verified
+EGEC (Geothermal),"Business, trade & professional associations",Business association,https://www.egec.org/events/,html,Yes,yes,verified
+Energy Storage Europe (EASE),"Business, trade & professional associations",Business association,https://ease-storage.eu/events/,tribe,Yes,yes,verified
+EPACA,"Business, trade & professional associations",Professional association,https://www.epaca.org/,html,,yes,reachable (homepage / no separate events page found)
+EPIF (Payment institutions),"Business, trade & professional associations",Business association,https://paymentinstitutions.eu/all-events/,tribe,Yes,yes,verified
+EREF (Renewable Energies Federation),"Business, trade & professional associations",Business association,https://eref-europe.org/events/category/events/,tribe,Yes,yes,verified (discovered from site navigation)
+ESBG / WSBI – Savings & Retail Banks,"Business, trade & professional associations",Business association,https://www.wsbi-esbg.org/events,html,,yes,added from Agence Europe Calendar Extra – verified
+ETAF – European Tax Adviser Federation,"Business, trade & professional associations",Professional association,https://etaf.tax/conferences/,html,,yes,added from Agence Europe Calendar Extra – verified
+ETSI,"Business, trade & professional associations",Standards body,https://www.etsi.org/events,html,,yes,verified
+EU-Japan Centre for Industrial Cooperation,"Business, trade & professional associations",Chamber/bilateral,https://www.eu-japan.eu/events,html,,yes,verified
+EU-Japan Institute (EUJI),"Business, trade & professional associations",Chamber/bilateral,https://www.linkedin.com/company/euji/,html,,yes,reachable (homepage / no separate events page found)
+EU-Latin Business Forum,"Business, trade & professional associations",Chamber/bilateral,https://www.eulatinbusinessforum.eu/events,html,,yes,added from Agence Europe Calendar Extra – verified
+Euratex,"Business, trade & professional associations",Business association,https://euratex.eu/events/,html,Yes,yes,verified
+EurEau,"Business, trade & professional associations",Business association,https://www.eureau.org/,html,,yes,corrected via web search (site section / homepage)
+EUREC,"Business, trade & professional associations",Business association,https://www.eurec.be/events/,tribe,Yes,yes,verified
+Eurelectric,"Business, trade & professional associations",Business association,https://www.eurelectric.org/events/,html,Yes,yes,verified
+Eurochambres,"Business, trade & professional associations",Business association,https://www.eurochambres.eu/events/,html,Yes,yes,verified
+EuroCommerce,"Business, trade & professional associations",Business association,https://www.eurocommerce.eu/events/,html,Yes,yes,verified
+Eurofer,"Business, trade & professional associations",Business association,https://www.eurofer.eu/events/,html,,yes,verified
+Eurogas,"Business, trade & professional associations",Business association,https://www.eurogas.org/events/,html,Yes,yes,verified
+Euroheat & Power,"Business, trade & professional associations",Business association,https://www.euroheat.org/events,ical,Yes,yes,verified
+Eurometaux,"Business, trade & professional associations",Business association,https://eurometaux.eu/events/,html,,yes,verified
+Euromines,"Business, trade & professional associations",Business association,https://euromines.org/events,html,Yes,yes,verified
+EuropaBio,"Business, trade & professional associations",Business association,https://www.europabio.org/events/,tribe,,yes,verified
+European Aluminium,"Business, trade & professional associations",Business association,https://european-aluminium.eu/resource-hub/news-events/,html,Yes,yes,verified
+European Association of Urology,"Business, trade & professional associations",Professional association,https://uroweb.org/education-events/events,html,Yes,yes,verified (discovered from site navigation)
+European Banking Federation,"Business, trade & professional associations",Business association,https://www.ebf.eu/events/,html,Yes,no,domain not reachable from the test environment – check manually
+European Biogas Association,"Business, trade & professional associations",Business association,https://www.europeanbiogas.eu/events/,html,Yes,yes,verified
+European Entrepreneurs (CEA-PME),"Business, trade & professional associations",Business association,https://www.european-entrepreneurs.org/events,html,Yes,yes,verified
+European Justice Forum,"Business, trade & professional associations",Business association,https://europeanjusticeforum.org/events/,html,Yes,yes,verified (discovered from site navigation)
+European Landowners' Organization,"Business, trade & professional associations",Business association,https://europeanlandowners.org/events,html,,yes,verified
+European Round Table for Industry (ERT),"Business, trade & professional associations",Business association,https://ert.eu/,html,,yes,reachable (homepage / no separate events page found)
+EUSTAFOR,"Business, trade & professional associations",Business association,https://eustafor.eu/,html,Yes,yes,verified
+Fair Standards Alliance,"Business, trade & professional associations",Business association,https://fair-standards.org/,html,Yes,yes,reachable (homepage / no separate events page found)
+FEAD (Waste management),"Business, trade & professional associations",Business association,https://fead.be/events/,html,Yes,yes,verified
+FEBEA – Ethical & Alternative Banks,"Business, trade & professional associations",Business association,https://febea.org/,html,,yes,added from Agence Europe Calendar Extra – verified (homepage)
+FEFAC,"Business, trade & professional associations",Business association,https://fefac.eu/newsroom/events/,html,Yes,yes,verified
+Fertilizers Europe,"Business, trade & professional associations",Business association,https://www.fertilizerseurope.com/events/,html_js,Yes,yes,verified
+FESE (Stock exchanges),"Business, trade & professional associations",Business association,https://www.fese.eu/events/,html,Yes,yes,verified
+FIA Region 1,"Business, trade & professional associations",Business association,https://www.fiaregion1.com/events/,html,Yes,yes,verified
+FIGIEFA,"Business, trade & professional associations",Business association,https://www.figiefa.eu/en/events.html,html,Yes,yes,verified
+FoodDrinkEurope,"Business, trade & professional associations",Business association,https://www.fooddrinkeurope.eu/events/,html,,yes,verified
+FuelsEurope,"Business, trade & professional associations",Business association,https://www.fuelseurope.eu/events,html,,yes,verified
+GBBC (Global Blockchain Business Council),"Business, trade & professional associations",Business association,https://gbbc.io/events,jsonld,Yes,yes,verified (discovered from site navigation)
+GDV (German Insurance Association),"Business, trade & professional associations",Business association,https://www.gdv.de/gdv-en,html,Yes,yes,verified
+GEODE,"Business, trade & professional associations",Business association,https://www.geode-eu.org/events/,html,Yes,yes,verified
+GlobalPlatform,"Business, trade & professional associations",Business association,https://globalplatform.org/events/,tribe,Yes,yes,verified
+GSMA Europe,"Business, trade & professional associations",Business association,https://www.gsma.com/events/,html,,yes,verified (discovered from site navigation)
+Hydrogen Europe,"Business, trade & professional associations",Business association,https://hydrogeneurope.eu/events/,html,Yes,yes,verified
+IAB Europe,"Business, trade & professional associations",Business association,https://iabeurope.eu/events/,html,Yes,yes,verified
+IATA,"Business, trade & professional associations",Business association,https://www.iata.org/en/events/,html,Yes,yes,verified
+IFIEC Europe,"Business, trade & professional associations",Business association,https://www.ifieceurope.org/,html,,no,domain not reachable from the test environment – check manually
+Independent Retail Europe,"Business, trade & professional associations",Business association,https://www.independentretaileurope.eu/,html,,yes,reachable (homepage / no separate events page found)
+Insurance Europe,"Business, trade & professional associations",Business association,https://www.insuranceeurope.eu/events,html,Yes,yes,verified
+IOGP Europe,"Business, trade & professional associations",Business association,https://iogpeurope.org/events/,html,,yes,verified
+IP Europe,"Business, trade & professional associations",Business association,https://ipeurope.org/events/,html,Yes,yes,verified (discovered from site navigation)
+IRU,"Business, trade & professional associations",Business association,https://www.iru.org/events,html,,yes,verified
+Lombardy Green Chemistry Association,"Business, trade & professional associations",Business association,https://www.chimicaverdelombardia.it/,html,Yes,yes,reachable (homepage / no separate events page found)
+Medef / Business France Brussels,"Business, trade & professional associations",Business association,https://www.medef.com/,html,,yes,bot-protected – opens normally in a browser
+Medicines for Europe,"Business, trade & professional associations",Business association,https://www.medicinesforeurope.com/events/,html,,yes,verified
+MedTech Europe,"Business, trade & professional associations",Business association,https://www.medtecheurope.org/news-and-events/events/,html,,yes,verified (discovered from site navigation)
+NBN (Belgian standardisation),"Business, trade & professional associations",Standards body,https://www.nbn.be/nieuws/kalender,html,Yes,yes,verified
+Orgalim,"Business, trade & professional associations",Business association,https://orgalim.eu/events,html,Yes,yes,verified
+PensionsEurope,"Business, trade & professional associations",Business association,https://www.pensionseurope.eu/events,tribe,Yes,yes,verified
+Plastics Europe,"Business, trade & professional associations",Business association,https://plasticseurope.org/events/,html,Yes,yes,verified
+Public Affairs Council (PAC Europe),"Business, trade & professional associations",Professional association,https://pac.org/events,html,,yes,verified
+Renewable Hydrogen Coalition,"Business, trade & professional associations",Business association,https://renewableh2.eu/,html,Yes,yes,reachable (homepage / no separate events page found)
+SEA-LNG,"Business, trade & professional associations",Business association,https://sea-lng.org/,html,Yes,yes,corrected via web search (site section / homepage)
+SEAP (Society of European Affairs Professionals),"Business, trade & professional associations",Professional association,https://seap.be/events/,html,,yes,verified (discovered from site navigation)
+smartEn,"Business, trade & professional associations",Business association,https://smarten.eu/events/,html,Yes,yes,verified
+SME Connect,"Business, trade & professional associations",Business association,https://www.smeconnect.eu/events,html,Yes,no,domain not reachable from the test environment – check manually
+SME Europe,"Business, trade & professional associations",Political/business,https://www.smeeurope.eu/events/,html,Yes,no,domain not reachable from the test environment – check manually
+SMEunited,"Business, trade & professional associations",Business association,https://www.smeunited.eu/events,html_js,Yes,yes,verified
+Solar Heat Europe,"Business, trade & professional associations",Business association,https://solarheateurope.eu/events/,tribe,Yes,yes,verified
+SolarPower Europe,"Business, trade & professional associations",Business association,https://www.solarpowereurope.org/events,html,Yes,yes,verified
+Startup & scaleup community – Norrsken,"Business, trade & professional associations",Business association,https://www.norrsken.org/,html,Yes,yes,corrected via web search (site section / homepage)
+UNIFE,"Business, trade & professional associations",Business association,https://www.unife.org/events/,html,,yes,verified
+Vaccines Europe,"Business, trade & professional associations",Business association,https://www.vaccineseurope.eu/media-hub/events/,html,,yes,verified (discovered from site navigation)
+Water Europe,"Business, trade & professional associations",Business association,https://watereurope.eu/events/,html,Yes,yes,verified
+WindEurope,"Business, trade & professional associations",Business association,https://windeurope.org/events/,html,,yes,verified
+Access Now,"NGOs, civil society & trade unions",Civil society,https://www.accessnow.org/events/,tribe,,yes,verified
+AGE Platform Europe,"NGOs, civil society & trade unions",Civil society,https://www.age-platform.eu/events/,html,,yes,verified
+All.Can,"NGOs, civil society & trade unions",Civil society,https://www.all-can.org/news/,html,Yes,yes,verified (events posted as news)
+Amnesty International EU Office,"NGOs, civil society & trade unions",Civil society,https://www.amnesty.eu/,html,,yes,reachable (homepage / no separate events page found)
+ANEC (Consumer voice in standardisation),"NGOs, civil society & trade unions",Civil society,https://anec.eu/news-events/,html,Yes,yes,verified
+Bellona Europa,"NGOs, civil society & trade unions",Civil society,https://eu.bellona.org/events/,html,Yes,yes,verified
+BETTER FINANCE,"NGOs, civil society & trade unions",Civil society,https://betterfinance.eu/events/,html,,yes,added from Agence Europe Calendar Extra – verified
+BEUC,"NGOs, civil society & trade unions",Civil society,https://www.beuc.eu/events,html,Yes,yes,verified
+BirdLife Europe,"NGOs, civil society & trade unions",Civil society,https://www.birdlife.org/europe-and-central-asia/,html,,yes,verified
+CAN Europe,"NGOs, civil society & trade unions",Civil society,https://caneurope.org/events/,html,,yes,bot-protected – opens normally in a browser
+Carbon Gap,"NGOs, civil society & trade unions",Civil society,https://carbongap.org/,html,Yes,yes,verified
+Carbon Market Watch,"NGOs, civil society & trade unions",Civil society,https://carbonmarketwatch.org/events/,html,Yes,yes,bot-protected – opens normally in a browser
+Civil Society Europe,"NGOs, civil society & trade unions",Civil society,https://civilsocietyeurope.eu/events/,html,Yes,yes,verified
+Clean Air Fund,"NGOs, civil society & trade unions",Civil society,https://www.cleanairfund.org/events/,html,Yes,yes,verified (discovered from site navigation)
+ClientEarth,"NGOs, civil society & trade unions",Civil society,https://www.clientearth.org/latest/events/,html,,yes,verified (discovered from site navigation)
+CONCORD,"NGOs, civil society & trade unions",Civil society,https://concordeurope.org/events/,html,,yes,verified
+Cool Heating Coalition,"NGOs, civil society & trade unions",Coalition,https://coolheatingcoalition.eu/event,tribe,Yes,yes,verified (discovered from site navigation)
+Corporate Europe Observatory,"NGOs, civil society & trade unions",Civil society,https://corporateeurope.org/en/events,html,,yes,verified
+EAPN,"NGOs, civil society & trade unions",Civil society,https://www.eapn.eu/events/,tribe,,yes,verified
+ECOS (Environmental Coalition on Standards),"NGOs, civil society & trade unions",Civil society,https://ecostandard.org/news_events/,html,Yes,yes,corrected via web search (site section / homepage)
+ECRE,"NGOs, civil society & trade unions",Civil society,https://ecre.org/events/,html,,yes,reachable (homepage / no separate events page found)
+EDRi,"NGOs, civil society & trade unions",Civil society,https://edri.org/take-action/events/,html,Yes,yes,verified
+ENAR,"NGOs, civil society & trade unions",Civil society,https://www.enar-eu.org/events/,html,,yes,bot-protected – opens normally in a browser
+EPSU,"NGOs, civil society & trade unions",Trade union,https://www.epsu.org/events,html,,yes,bot-protected – opens normally in a browser
+Erasmus Student Network,"NGOs, civil society & trade unions",Civil society,https://www.esn.org/,html,,yes,bot-protected – opens normally in a browser
+ETUC,"NGOs, civil society & trade unions",Trade union,https://www.etuc.org/en/events,html,,yes,bot-protected – opens normally in a browser
+ETUI,"NGOs, civil society & trade unions",Trade union research,https://www.etui.org/events,html,Yes,yes,bot-protected – opens normally in a browser
+Eurochild,"NGOs, civil society & trade unions",Civil society,https://eurochild.org/events/,html,,yes,verified
+Euroconsumers,"NGOs, civil society & trade unions",Civil society,https://www.euroconsumers.org/events,html,Yes,yes,verified
+Eurodad,"NGOs, civil society & trade unions",Civil society,https://www.eurodad.org/,html,,yes,bot-protected – opens normally in a browser
+Eurogroup for Animals,"NGOs, civil society & trade unions",Civil society,https://www.eurogroupforanimals.org/events,html,,yes,verified
+EuroHealthNet,"NGOs, civil society & trade unions",Civil society,https://eurohealthnet.eu/events/,html,Yes,yes,verified
+European Cancer Forum,"NGOs, civil society & trade unions",Civil society,https://europeancancerforum.eu/,html,Yes,yes,verified
+European Cancer Organisation,"NGOs, civil society & trade unions",Civil society,https://www.europeancancer.org/events,html,Yes,yes,verified
+European Cyclists' Federation,"NGOs, civil society & trade unions",Civil society,https://ecf.com/events,html_js,,yes,verified
+European Disability Forum,"NGOs, civil society & trade unions",Civil society,https://www.edf-feph.org/events/,html,Yes,yes,verified
+European Environmental Bureau (EEB),"NGOs, civil society & trade unions",Civil society,https://eeb.org/events/,html,Yes,yes,verified
+European Microfinance Network,"NGOs, civil society & trade unions",Civil society,https://www.european-microfinance.org/events,jsonld,Yes,yes,verified
+European Movement International,"NGOs, civil society & trade unions",Civil society,https://europeanmovement.eu/events/,html,,yes,verified
+European Patients' Forum,"NGOs, civil society & trade unions",Civil society,https://www.eu-patient.eu/events/,html,,yes,verified
+European Public Health Alliance (EPHA),"NGOs, civil society & trade unions",Civil society,https://epha.org/events/,html,,yes,verified
+European Women's Lobby,"NGOs, civil society & trade unions",Civil society,https://womenlobby.org/events-news/,html,,yes,verified
+European Youth Forum,"NGOs, civil society & trade unions",Civil society,https://www.youthforum.org/events,html,,yes,verified
+European Youth Parliament,"NGOs, civil society & trade unions",Civil society,https://eyp.org/,html,Yes,yes,reachable (homepage / no separate events page found)
+EURORDIS,"NGOs, civil society & trade unions",Civil society,https://www.eurordis.org/category/events/,html,,yes,verified (discovered from site navigation)
+FEBA (Food Banks),"NGOs, civil society & trade unions",Civil society,https://www.eurofoodbank.org/events/,html,Yes,yes,verified
+FIDE (Foundation for International Development of Democracy),"NGOs, civil society & trade unions",Civil society,https://fidemocracy.org/,html,Yes,yes,verified
+Finance Watch,"NGOs, civil society & trade unions",Civil society,https://www.finance-watch.org/events/,html,,yes,verified
+Finnova,"NGOs, civil society & trade unions",Foundation,https://finnova.eu/,html,Yes,yes,verified
+Friends of the Earth Europe,"NGOs, civil society & trade unions",Civil society,https://friendsoftheearth.eu/,html,,yes,reachable (homepage / no separate events page found)
+Global Rights Compliance,"NGOs, civil society & trade unions",Civil society,https://globalrightscompliance.org/events/,html,Yes,yes,verified (discovered from site navigation)
+Greenpeace EU,"NGOs, civil society & trade unions",Civil society,https://www.greenpeace.org/eu-unit/,html,,yes,verified
+GSTC,"NGOs, civil society & trade unions",Civil society,https://www.gstc.org/events/upcoming-events/,html,Yes,yes,verified (discovered from site navigation)
+Housing Europe,"NGOs, civil society & trade unions",Civil society,https://www.housingeurope.eu/events,html,Yes,yes,verified
+Human Rights Watch,"NGOs, civil society & trade unions",Civil society,https://www.hrw.org/events,html,,yes,verified
+IFOAM Organics Europe,"NGOs, civil society & trade unions",Civil society,https://www.organicseurope.bio/events/,html,,yes,bot-protected – opens normally in a browser
+ILGA-Europe,"NGOs, civil society & trade unions",Civil society,https://www.ilga-europe.org/annual-conference-2026/,html,,yes,verified (annual conference page)
+industriAll Europe,"NGOs, civil society & trade unions",Trade union,https://agenda.industriall-europe.eu/calendar,html_js,,yes,verified
+Liberties (Civil Liberties Union for Europe),"NGOs, civil society & trade unions",Civil society,https://www.liberties.eu/en,html,,yes,reachable (homepage / no separate events page found)
+Network of European Foundations (NEF),"NGOs, civil society & trade unions",Foundation network,https://www.nef-europe.org/,html,Yes,yes,from The Bubble listing
+ONE Campaign Europe,"NGOs, civil society & trade unions",Civil society,https://www.one.org/,html,,yes,bot-protected – opens normally in a browser
+Oxfam EU,"NGOs, civil society & trade unions",Civil society,https://www.oxfam.org/en/europe,html,,yes,reachable (homepage / no separate events page found)
+PICUM (Undocumented Migrants),"NGOs, civil society & trade unions",Civil society,https://picum.org/events/,html,,yes,reachable (homepage / no separate events page found)
+RESCOOP.eu,"NGOs, civil society & trade unions",Civil society,https://www.rescoop.eu/news-and-events/events,html,Yes,yes,corrected via web search (site section / homepage)
+Save the Children EU,"NGOs, civil society & trade unions",Civil society,https://www.savethechildren.net/,html,,yes,bot-protected – opens normally in a browser
+Seas At Risk,"NGOs, civil society & trade unions",Civil society,https://seas-at-risk.org/events/,html,Yes,yes,bot-protected – opens normally in a browser
+Slow Food Europe,"NGOs, civil society & trade unions",Civil society,https://www.slowfood.com/events/,html,,yes,verified (discovered from site navigation)
+Social Platform,"NGOs, civil society & trade unions",Civil society,https://www.socialplatform.org/events/,html,,yes,verified
+The Good Lobby,"NGOs, civil society & trade unions",Civil society,https://thegoodlobby.eu/category/events/,html,,yes,verified (discovered from site navigation)
+Transparency International EU,"NGOs, civil society & trade unions",Civil society,https://transparency.eu/events/,html,,yes,reachable (homepage / no separate events page found)
+Transport & Environment,"NGOs, civil society & trade unions",Civil society,https://www.transportenvironment.org/events,html,Yes,yes,bot-protected – opens normally in a browser
+UNI Europa,"NGOs, civil society & trade unions",Trade union,https://www.uni-europa.org/meetings/,html,,yes,verified
+Union of European Federalists,"NGOs, civil society & trade unions",Civil society,https://federalists.eu/events/,html,,yes,verified (discovered from site navigation)
+WWF European Policy Office,"NGOs, civil society & trade unions",Civil society,https://www.wwf.eu/wwf_news/events/,html,,yes,verified (discovered from site navigation)
+Young European Federalists (JEF),"NGOs, civil society & trade unions",Civil society,https://jef.eu/events/,tribe,,yes,verified
+Zero Waste Europe,"NGOs, civil society & trade unions",Civil society,https://zerowasteeurope.eu/events/,html,Yes,yes,verified
+Bavarian Representation to the EU,"City/regional networks, regional offices & national reps",Regional office,https://www.bayern.de/staatskanzlei/bayerns-vertretung-bei-der-eu/,html,,yes,reachable (homepage / no separate events page found)
+CEMR (Council of European Municipalities & Regions),"City/regional networks, regional offices & national reps",Network,https://ccre-cemr.org/calendar,jsonld,,yes,verified
+Climate Alliance,"City/regional networks, regional offices & national reps",Network,https://www.climatealliance.org/news-events/,html,,yes,verified
+CPMR,"City/regional networks, regional offices & national reps",Network,https://cpmr.org/events/,html_js,,yes,verified
+Delegation of Catalonia to the EU,"City/regional networks, regional offices & national reps",Regional office,https://exteriors.gencat.cat/en/ambits-dactuacio/afers-exteriors/delegacions-govern/ue/,html,,yes,reachable (homepage / no separate events page found)
+ENDR – European Network of Defence-related Regions,"City/regional networks, regional offices & national reps",Network,https://endr.eu/,html,,yes,added from Agence Europe Calendar Extra – site error during check
+Energy Cities,"City/regional networks, regional offices & national reps",Network,https://energy-cities.eu/events/,html,Yes,yes,verified
+EURASHE,"City/regional networks, regional offices & national reps",Network,https://www.eurashe.eu/events/,html,Yes,yes,verified
+Eurocities,"City/regional networks, regional offices & national reps",Network,https://eurocities.eu/events/,html,,yes,verified
+European Social Network (ESN),"City/regional networks, regional offices & national reps",Network,https://www.esn-eu.org/events,html,Yes,yes,from The Bubble listing
+Flanders – Representation to the EU,"City/regional networks, regional offices & national reps",Regional office,https://www.vlaanderen.be/en/authorities/flanders-and-the-eu,html,,yes,verified
+Hesse Representation to the EU,"City/regional networks, regional offices & national reps",Regional office,https://staatskanzlei.hessen.de/,html,,yes,corrected via web search (site section / homepage) · events announced via veranstaltungen@lv-bruessel.hessen.de (per Agence Europe)
+ICLEI Europe,"City/regional networks, regional offices & national reps",Network,https://iclei-europe.org/events/,html,Yes,yes,bot-protected – opens normally in a browser
+Permanent Representation of France,"City/regional networks, regional offices & national reps",Permanent representation,https://ue.delegfrance.org/,html,,yes,reachable (homepage / no separate events page found)
+Permanent Representation of Germany,"City/regional networks, regional offices & national reps",Permanent representation,https://bruessel-eu.diplo.de/,html,,yes,verified
+Permanent Representation of Ireland,"City/regional networks, regional offices & national reps",Permanent representation,https://www.ireland.ie/en/eu/brussels/,html,,yes,verified
+Permanent Representation of Italy,"City/regional networks, regional offices & national reps",Permanent representation,https://italiaue.esteri.it/,html,,yes,reachable (homepage / no separate events page found)
+Permanent Representation of Poland to the EU,"City/regional networks, regional offices & national reps",Permanent representation,https://www.gov.pl/web/eu,html,Yes,yes,verified
+Permanent Representation of the Netherlands,"City/regional networks, regional offices & national reps",Permanent representation,https://www.netherlandsandyou.nl/web/pr-eu-brussels,html,,yes,verified
+Region Skåne / Swedish regions (South Sweden),"City/regional networks, regional offices & national reps",Regional office,https://www.southsweden.eu/,html,,no,domain not reachable from the test environment – check manually
+Representation of Baden-Württemberg to the EU,"City/regional networks, regional offices & national reps",Regional office,https://stm.baden-wuerttemberg.de/de/ministerium/landesvertretung-bruessel/,html,,yes,reachable (homepage / no separate events page found)
+Representation of North Rhine-Westphalia to the EU,"City/regional networks, regional offices & national reps",Regional office,https://www.land.nrw/landesvertretung-bruessel,html,,no,domain not reachable from the test environment – check manually
+Scotland House Brussels,"City/regional networks, regional offices & national reps",Regional office,https://www.scotlandhouse.eu/,html,,no,domain not reachable from the test environment – check manually
+Social Economy Europe,"City/regional networks, regional offices & national reps",Network,https://www.socialeconomy.eu.org/events/,html_js,,yes,verified
+Booking.com,"Companies, consultancies & agencies",Company,https://www.booking.com/,html_js,Yes,yes,verified
+Carbon Trust,"Companies, consultancies & agencies",Consultancy,https://www.carbontrust.com/news-and-insights/events,html,Yes,yes,verified (discovered from site navigation)
+Edenred,"Companies, consultancies & agencies",Company,https://www.edenred.be/,html,Yes,yes,reachable (homepage / no separate events page found)
+Eunomia,"Companies, consultancies & agencies",Consultancy,https://eunomia.eco/events/,html,Yes,yes,verified (discovered from site navigation)
+Google (Brussels events / Atelier),"Companies, consultancies & agencies",Company,https://rsvp.withgoogle.com/,html_js,Yes,yes,reachable (homepage / no separate events page found)
+Heineken,"Companies, consultancies & agencies",Company,https://www.theheinekencompany.com/,html,Yes,no,corporate host – events usually via media partners (e.g. POLITICO)
+Incisive Health,"Companies, consultancies & agencies",Agency,https://www.incisivehealth.com/,html,Yes,yes,reachable (homepage / no separate events page found)
+Meta – Brussels,"Companies, consultancies & agencies",Company,https://about.fb.com/europe/,html,,yes,verified
+Microsoft – Brussels,"Companies, consultancies & agencies",Company,https://blogs.microsoft.com/eupolicy/microsoft-center-brussels/,html,Yes,yes,corrected via web search (site section / homepage)
+Moylan Communications,"Companies, consultancies & agencies",Agency,https://www.moylancommunications.com/,html,Yes,no,domain not reachable from the test environment – check manually
+Partisan,"Companies, consultancies & agencies",Agency,https://www.partisan.be/,html,Yes,no,domain not reachable from the test environment – check manually
+PepsiCo,"Companies, consultancies & agencies",Company,https://www.pepsico.com/,html,Yes,yes,reachable (homepage / no separate events page found)
+Pexapark,"Companies, consultancies & agencies",Company,https://pexapark.com/events/,html,Yes,yes,verified
+Publyon,"Companies, consultancies & agencies",Agency,https://www.publyon.com/,html,Yes,yes,reachable (homepage / no separate events page found)
+Agence Europe,"Media, event organisers & forums",Media,https://agenceurope.eu/en/calendar-extra.html,html,,yes,verified (free Calendar Extra)
+Brussels Climate Week,"Media, event organisers & forums",Event organiser,https://brusselsclimateweek.com/events/,tribe,Yes,yes,verified (discovered from site navigation)
+Brussels Press Club,"Media, event organisers & forums",Event organiser,https://www.pressclub.be/events/,html,Yes,yes,verified (discovered from site navigation)
+Brussels Times (events listing),"Media, event organisers & forums",Media,https://event.brusselstimes.com/events-listing/,html,,yes,verified
+Concurrences,"Media, event organisers & forums",Event organiser (law),https://www.concurrences.com/en/events/,html,Yes,yes,bot-protected – opens normally in a browser
+EPFSF (European Parliamentary Financial Services Forum),"Media, event organisers & forums",Parliamentary forum,https://epfsf.org/events/,html,Yes,yes,verified
+EUobserver,"Media, event organisers & forums",Media/events,https://euobserver.com/topic/agenda/,html,,yes,verified (discovered from site navigation)
+Euractiv,"Media, event organisers & forums",Media/events,https://events.euractiv.com/,html,Yes,yes,verified – Euractiv events now redirect to Rapporteur’s event platform
+Euronews,"Media, event organisers & forums",Media/events,https://events.euronews.com/events,html,Yes,yes,verified (discovered from site navigation)
+European Business Summits,"Media, event organisers & forums",Event organiser,https://ebsummits.eu/,html,Yes,yes,verified (event organiser site)
+European Defence & Security Conference,"Media, event organisers & forums",Event organiser,https://defencesecurityconference.eu/,html,Yes,yes,added from Agence Europe Calendar Extra – verified
+European Energy Forum,"Media, event organisers & forums",Parliamentary forum,https://www.europeanenergyforum.eu/,html,,yes,corrected via web search (site section / homepage)
+European Food Forum,"Media, event organisers & forums",Platform,https://www.europeanfoodforum.eu/event-list,html,Yes,yes,verified
+European Internet Forum,"Media, event organisers & forums",Parliamentary forum,https://www.internetforum.eu/events/events.html,html,Yes,yes,verified
+European Parliament Intergroups (official list),"Media, event organisers & forums",Parliamentary forum,https://www.europarl.europa.eu/meps/en/about/groupings,html,,yes,verified
+Financial Times Live,"Media, event organisers & forums",Media/events,https://events.ft.com/events-list,html,Yes,yes,verified
+Forum Europe,"Media, event organisers & forums",Event organiser,https://forum-europe.com/events,html,Yes,yes,verified (discovered from site navigation)
+Forum for the Future of Agriculture,"Media, event organisers & forums",Event organiser,https://forumforag.com/events,html,Yes,yes,verified (discovered from site navigation)
+Global Tourism Forum,"Media, event organisers & forums",Event organiser,https://buscardini.eu/events/,jsonld,Yes,yes,verified (discovered from site navigation)
+Healthcare Chain / Health Policy Platform,"Media, event organisers & forums",Platform,https://health.ec.europa.eu/eu-health-policy/interest-groups/eu-health-policy-platform_en,html,,yes,verified
+Kangaroo Group,"Media, event organisers & forums",Parliamentary forum,https://www.kangaroogroup.eu/,html,,no,domain not reachable from the test environment – check manually
+Lexxion,"Media, event organisers & forums",Event organiser (law),https://www.lexxion.eu/en/events/,html,Yes,yes,verified
+POLITICO Europe,"Media, event organisers & forums",Media/events,https://www.politico.eu/politico-events/,html,Yes,yes,bot-protected – opens normally in a browser
+PubAffairs Bruxelles,"Media, event organisers & forums",Event organiser,https://www.pubaffairsbruxelles.eu/event/,html,Yes,yes,verified (discovered from site navigation)
+Public Affairs Summit,"Media, event organisers & forums",Event organiser,https://www.public-affairs-summit.eu/,html,Yes,yes,reachable (homepage / no separate events page found)
+Résidence Palace (International Press Centre) – press breakfasts,"Media, event organisers & forums",Event organiser,https://www.residencepalace.be/,html,,yes,added from Agence Europe Calendar Extra – bot-protected (opens in browser)
+Science|Business,"Media, event organisers & forums",Media/events,https://sciencebusiness.net/events,html,Yes,yes,bot-protected – opens normally in a browser
+Sustainable IT Days,"Media, event organisers & forums",Event organiser,https://brussels.sustainableitdays.org/,html,Yes,yes,verified
+The Parliament Magazine,"Media, event organisers & forums",Media/events,https://events.theparliamentmagazine.eu/,html,Yes,yes,verified
+The Rapporteur,"Media, event organisers & forums",Event organiser,https://agenda.rapporteur.com/,html,Yes,yes,verified
+Brussels AGI Collective,Networking communities,Community,https://luma.com/discover,html,Yes,yes,"community events platform – search ""Brussels"""
+Brussels Financial Apéro,Networking communities,Community,https://luma.com/discover,html,,yes,"community events platform – search ""Brussels"""
+Brussels Sustainability Club,Networking communities,Community,https://brusselssustainabilityclub.eu/,html,Yes,no,domain not reachable from the test environment – check manually
+Empower-EU,Networking communities,Community,https://empower-eu.org/,html,Yes,yes,bot-protected – opens normally in a browser
+EU&U,Networking communities,Community,https://www.linkedin.com/company/eu-u/,html,Yes,yes,reachable (homepage / no separate events page found)
+UNYA Brussels,Networking communities,Community,https://www.unya.be/,html,Yes,no,domain not reachable from the test environment – check manually
+Women in International Security Brussels,Networking communities,Community,https://wiisbrussels.org/,html,,no,domain not reachable from the test environment – check manually
+YATA Belgium,Networking communities,Community,https://www.yatabelgium.org/,html,Yes,no,domain not reachable from the test environment – check manually
+Young European Leadership,Networking communities,Community,https://youngeuropeanleadership.eu/,html,,no,domain not reachable from the test environment – check manually
+Eurocontrol,International organisations,International org,https://www.eurocontrol.int/events,html,Yes,yes,verified
+European Observatory on Health Systems and Policies,International organisations,International org,https://eurohealthobservatory.who.int/about-us/events,html,Yes,yes,verified (discovered from site navigation)
+European Space Agency (ESA),International organisations,International org,https://www.esa.int/,html,,yes,added from Agence Europe Calendar Extra – verified (homepage)
+IMF Europe office,International organisations,International org,https://www.imf.org/en/News/SearchNews#sort=%40imfdate%20descending,html,,yes,bot-protected – opens normally in a browser
+IUCN European Regional Office,International organisations,International org,https://iucn.org/events,html,Yes,yes,verified
+NATO (public events),International organisations,International org,https://www.nato.int/en/news-and-events/events,html,,yes,verified (discovered from site navigation)
+OECD,International organisations,International org,https://www.oecd-events.org/en/events,html,,yes,verified (discovered from site navigation)
+UN House Brussels / UN in Brussels,International organisations,International org,https://unric.org/en/,html,,yes,bot-protected – opens normally in a browser
+UNESCO Liaison Office Brussels,International organisations,International org,https://www.unesco.org/en/fieldoffice/brussels,html,Yes,yes,verified
+WHO/Europe,International organisations,International org,https://www.who.int/europe/news-room/events,html,Yes,yes,verified
+World Bank Brussels,International organisations,International org,https://www.worldbank.org/en/events,html,,yes,verified
+Blue Adapt,EU-funded projects & programmes,EU project,https://blueadapt.eu/,html,Yes,yes,verified
+CARINA project,EU-funded projects & programmes,EU project,https://www.carina-project.eu/events,html,Yes,yes,verified (discovered from site navigation)
+Circular Invest,EU-funded projects & programmes,EU project,https://www.circularinvest.eu/,html,Yes,yes,reachable (homepage / no separate events page found)
+CODECS project,EU-funded projects & programmes,EU project,https://www.horizoncodecs.eu/events/,html,Yes,yes,verified (discovered from site navigation)
+Cultivate project,EU-funded projects & programmes,EU project,https://cultivate-project.eu/events/,html,Yes,yes,verified (discovered from site navigation)
+Digital4Sustainability,EU-funded projects & programmes,EU project,https://digital4sustainability.eu/news-events/,html,Yes,yes,verified
+FEASTS project (cultured meat & seafood),EU-funded projects & programmes,EU project,https://feasts-project.eu/,html,Yes,yes,from The Bubble listing
+GigaGreen,EU-funded projects & programmes,EU project,https://www.gigagreen-project.eu/,html,Yes,no,domain not reachable from the test environment – check manually
+IMPAC3T-IP,EU-funded projects & programmes,EU project,https://www.impac3tip.eu/events,html,Yes,yes,verified (discovered from site navigation)
+Interreg Italia-France Marittimo,EU-funded projects & programmes,EU programme,https://interreg-maritime.eu/,html,Yes,yes,from The Bubble listing
+JustReno,EU-funded projects & programmes,EU project,https://justreno.eu/,html,Yes,no,domain not reachable from the test environment – check manually
+LandSeaLot,EU-funded projects & programmes,EU project,https://landsealot.eu/upcoming-past-events/,html,Yes,yes,verified
+METEOR (EuroHealthNet),EU-funded projects & programmes,EU project,https://eurohealthnet.eu/events/,html,Yes,yes,verified (discovered from site navigation)
+NGI Commons,EU-funded projects & programmes,EU project,https://commons.ngi.eu/events/,tribe,Yes,yes,verified (discovered from site navigation)
+Ocean-ICE,EU-funded projects & programmes,EU project,https://ocean-ice.eu/events/,html,Yes,yes,verified (discovered from site navigation)
+PINK project,EU-funded projects & programmes,EU project,https://pink-project.eu/pink-meetings-events/pink-public-events/,html,Yes,yes,verified
+trans4num project,EU-funded projects & programmes,EU project,https://trans4num.eu/,html,,yes,added from Agence Europe Calendar Extra – verified (homepage)
+UrbanByNature,EU-funded projects & programmes,EU project,https://urbanbynature.eu/events,html,Yes,yes,verified (discovered from site navigation)

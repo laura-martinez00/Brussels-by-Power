@@ -16,7 +16,8 @@ python build_power_data.py --refresh          # lobby register, Commission meeti
                                               # (add --retry-geocode to retry addresses that failed last time)
 python build_enrich.py --refresh              # heritage inventory, protected heritage, Wikidata + photo credits
 python build_city.py UrbISBuildings3D_04000.gpkg ../web/data/power.json   # buildings + enrichment -> web/data
-python build_agenda.py --top 260               # upcoming events from organisers' own websites -> web/data/agenda.json
+python events/scraper.py                       # the 473 researched event sources -> events/output/events.json + .ics
+python build_agenda.py --top 260               # Brussels/online events, topics, map links -> web/data/agenda.json
 ```
 The lobby data changes daily; rerun the first step weekly or monthly. The buildings change slowly: rerun the
 second step a few times a year. Download the 3D buildings (GeoPackage, whole region, "04000", ~490 MB zipped) from
@@ -28,7 +29,13 @@ https://datastore.brussels/web/urbis-download (UrbIS - 3D Constructions). Always
 - Colours and type: `web/styles.css`; map colours: top of `web/app.js`.
 
 ## Agenda
-`pipeline/build_agenda.py` reads upcoming events from the organisers' own websites (event feeds, structured data or
+`pipeline/events/` holds the researched source list (`sources.csv`, 473 organisations, and the spreadsheet) and
+`scraper.py`, which reads each source with its method (tribe, ical, jsonld, html, html_js). HTML pages are read with an
+LLM if `ANTHROPIC_API_KEY` is set, otherwise with a free page reader. Long runs can be split: `--part 1/8` … `--part 8/8`,
+then `--merge`. `output/needs_attention.csv` lists sources that failed (moved pages, bot protection) and what to do.
+The site publishes the feed at `/data/events.ics` (calendar subscription) and `/data/events.json`.
+
+`pipeline/build_agenda.py` then reads upcoming events from the organisers' own websites (event feeds, structured data or
 event pages) and the European Parliament's open-data calendar. It respects robots.txt and never uses aggregators.
 Add or fix an organiser in `pipeline/organisers.json` (name, site, and optionally the exact events page).
 Each run lists in agenda.json which organisers returned events and how, so you can see which sites need attention.

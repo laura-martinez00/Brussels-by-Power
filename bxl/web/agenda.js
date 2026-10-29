@@ -17,7 +17,7 @@ function brusselsNow() {
 // Filters live in the URL so any view can be shared or bookmarked
 const params = new URLSearchParams(location.search);
 const f = { day: params.get('day') || 'today', format: params.get('format') || 'all', topic: params.get('topic') || 'all',
-  dur: params.get('dur') || 'all', q: params.get('q') || '' };
+  dur: params.get('dur') || 'all', q: params.get('q') || '', group: params.get('group') || 'all' };
 function syncUrl() {
   const p = new URLSearchParams();
   for (const [k, v] of Object.entries(f)) if (v && v !== 'all' && !(k === 'day' && v === 'today')) p.set(k, v);
@@ -37,6 +37,7 @@ function rangeOf(day) {
 function matches(e, skip = '') {
   if (skip !== 'format' && f.format !== 'all' && e.format !== f.format) return false;
   if (skip !== 'topic' && f.topic !== 'all' && e.topic !== f.topic) return false;
+  if (f.group !== 'all' && (e.group || 'Other organisers') !== f.group) return false;
   const d = e.start && e.end ? mins(e.end) - mins(e.start) : null;
   if (f.dur === 'short' && !(d != null && d <= 120)) return false;
   if (f.dur === 'long' && !(e.endDate || (d != null && d >= 180))) return false;
@@ -71,7 +72,8 @@ function ics(e) {
 function eventHtml(e) {
   const time = e.start ? `<b>${e.start}</b>${e.end ? `<span>until ${e.end}</span>` : ''}`
     : e.endDate ? `<b>All day</b><span>until ${shortFmt.format(asDate(e.endDate))}</span>` : `<b>Time</b><span>on event page</span>`;
-  const fmt = e.format.replace(' ', '').toLowerCase();
+  const fmt = e.format.replace(/ /g, '').toLowerCase();
+  const fmtLabel = e.format === 'Not stated' ? 'Format not stated' : e.format;
   return `<li class="ev${isPast(e) ? ' past' : ''}">
     <div class="time">${time}</div>
     <div class="body">
@@ -80,7 +82,7 @@ function eventHtml(e) {
         ${isLive(e) ? '<span class="live">Live now</span>' : ''}</div>
       <h3><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a></h3>
       <div class="meta"><button type="button" class="tag topic" data-topic="${esc(e.topic)}" aria-label="Show only ${esc(e.topic)}">${esc(e.topic)}</button>
-        <span class="tag fmt fmt-${fmt}">${esc(e.format)}</span></div>
+        <span class="tag fmt fmt-${fmt}">${esc(fmtLabel)}</span>${e.where ? `<span class="tag where">${esc(e.where.slice(0, 60))}</span>` : ''}</div>
     </div>
     <div class="actions"><a class="btn primary" href="${esc(e.url)}" target="_blank" rel="noopener">Event Page</a>
       <button type="button" class="btn" data-ics="${e.i}">Add to Calendar</button></div>
@@ -101,13 +103,15 @@ function render() {
   $('#count').textContent = `${list.length} event${list.length === 1 ? '' : 's'}${live ? `, ${live} live now` : ''}${list.length !== pool.length ? ` (of ${pool.length} before filters)` : ''}`;
   // Controls
   document.querySelectorAll('[data-k]').forEach(b => b.setAttribute('aria-pressed', String(f[b.dataset.k] === b.dataset.v)));
-  $('#topic').value = f.topic; $('#dur').value = f.dur;
+  $('#topic').value = f.topic; $('#dur').value = f.dur; $('#group').value = f.group;
   if (document.activeElement !== $('#q')) $('#q').value = f.q;
   // Events, grouped by day, in time order (all-day and untimed last within a day)
   const byDay = new Map();
-  for (const e of list.sort((a, b) => a.date.localeCompare(b.date) || (a.start || '99').localeCompare(b.start || '99') || a.org.localeCompare(b.org))) {
-    if (!byDay.has(e.date)) byDay.set(e.date, []);
-    byDay.get(e.date).push(e);
+  const shown = e => e.date < range[0] ? range[0] : e.date;     // ongoing multi-day events appear on the first day shown
+  for (const e of list.sort((a, b) => shown(a).localeCompare(shown(b)) || (a.start || '99').localeCompare(b.start || '99') || a.org.localeCompare(b.org))) {
+    const d = shown(e);
+    if (!byDay.has(d)) byDay.set(d, []);
+    byDay.get(d).push(e);
   }
   $('#events').innerHTML = byDay.size ? [...byDay].map(([d, evs]) => `<li class="day"><h2><b>${d === now.date ? 'Today' : d === addDays(now.date, 1) ? 'Tomorrow' : dayFmt.format(asDate(d))}</b>
       ${d === now.date || d === addDays(now.date, 1) ? dayFmt.format(asDate(d)) : ''}<span class="n">${evs.length} event${evs.length === 1 ? '' : 's'}</span></h2>
@@ -124,7 +128,7 @@ function render() {
   for (const e of list) ocount[e.org] = (ocount[e.org] || 0) + 1;
   $('#orgs').innerHTML = Object.entries(ocount).sort((a, b) => b[1] - a[1]).slice(0, 8).map(([o, n]) => `<li><span translate="no">${esc(o)}</span><span class="n">${n}</span></li>`).join('') || '<li class="n">None yet.</li>';
   const nsrc = data.sources?.filter(s => s.events).length || 0;
-  if (nsrc) $('#sources').innerHTML = `Read every morning from ${nsrc} organisers’ own websites and the European Parliament’s calendar. Times are Brussels time; always check the event page before you go.`;
+  if (nsrc || data.scraperSources) $('#sources').innerHTML = `Read every morning from ${data.scraperSources || nsrc} organisers’ own websites and the European Parliament’s calendar. Times are Brussels time; always check the event page before you go.`;
   syncUrl();
 }
 
@@ -139,6 +143,9 @@ document.addEventListener('click', e => {
 });
 $('#topic').innerHTML = '<option value="all">All Topics</option>' + (data.topics || []).map(t => `<option>${esc(t)}</option>`).join('');
 $('#topic').addEventListener('change', e => { f.topic = e.target.value; render(); });
+const groups = [...new Set(data.events.map(e => e.group || 'Other organisers'))].sort();
+$('#group').innerHTML = '<option value="all">All Organisers</option>' + groups.map(g => `<option>${esc(g)}</option>`).join('');
+$('#group').addEventListener('change', e => { f.group = e.target.value; render(); });
 $('#dur').addEventListener('change', e => { f.dur = e.target.value; render(); });
 let qTimer;
 $('#q').addEventListener('input', e => { clearTimeout(qTimer); qTimer = setTimeout(() => { f.q = e.target.value.trim(); render(); }, 150); });

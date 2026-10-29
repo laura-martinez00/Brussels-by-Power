@@ -133,3 +133,6 @@ select { padding-right: 10px; cursor: pointer; }
   .row { gap: 6px; }
   .search { flex-basis: 100%; }
 }
+.fmt-notstated { color: var(--muted); }
+.fmt-notstated::before { border-style: dotted; }
+.tag.where { background: none; border: 1px solid var(--soft); color: var(--muted); }

@@ -23,7 +23,7 @@ import requests
 HERE = Path(__file__).resolve().parent
 WEB = HERE.parent / "web" / "data"
 CACHE = HERE / "cache" / "agenda"; CACHE.mkdir(parents=True, exist_ok=True)
-UA = {"User-Agent": "Mozilla/5.0 (compatible; BrusselsByPowerAgenda/1.0; +https://brussels-by-power.vercel.app)"}
+UA = {"User-Agent": __import__("os").environ.get("SCRAPER_UA", "BrusselsByPowerAgenda/1.0 (+https://brussels-by-power.vercel.app)")}
 DAYS = 60
 EVENT_PATHS = ["/events", "/events/", "/en/events", "/en/events/", "/event", "/agenda", "/en/agenda", "/news-events/events",
                "/news-and-events/events", "/events/upcoming", "/upcoming-events", "/en/news-events/events", "/evenements"]
@@ -79,8 +79,18 @@ def allowed(url):
     return _robots[host].can_fetch(UA["User-Agent"], url)
 
 
+import threading
+_host_lock, _host_last = collections.defaultdict(threading.Lock), {}
+DELAY = float(__import__("os").environ.get("SCRAPER_DELAY", "2"))   # seconds between requests to the same site
+
+
 def get(url, **kw):
     if not allowed(url): return None
+    host = urlparse(url).netloc
+    with _host_lock[host]:
+        wait = DELAY - (time.time() - _host_last.get(host, 0))
+        if wait > 0: time.sleep(wait)
+        _host_last[host] = time.time()
     try:
         r = requests.get(url, headers=UA, timeout=kw.pop("timeout", 12), **kw)
         return r if r.ok else None
@@ -270,17 +280,54 @@ def parliament(t0, t1):
     return out
 
 
-def organisers(top):
+def from_scraper(t0, t1, host_place):
+    """Events collected by events/scraper.py from the 473 researched sources (events/sources.csv)."""
+    path = HERE / "events" / "output" / "events.json"
+    if not path.exists():
+        print("  no events/output/events.json: run events/scraper.py first"); return [], set()
+    data = json.loads(path.read_text())
+    places = json.loads((WEB / "power.json").read_text())["places"]
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", (x or "").lower())
+    by_name = {norm(p["n"]): p["id"] for p in places}
+    out, hosts = [], set()
+    rep = collections.Counter((e["organiser"], e["title"].lower()) for e in data["events"])
+    for e in data["events"]:
+        t = e["title"].strip()
+        if rep[(e["organiser"], t.lower())] > 2 or norm(t) in norm(e["organiser"]) or norm(e["organiser"]) == norm(t) or \
+           re.fullmatch(r"(upcoming |all |our |past )?(events?|agenda|calendar)\b.*", t, re.I) or len(t) < 8:
+            continue                                               # site headings, not events
+        d, hhmm = parse_dt(e["start"]); d2, hh2 = parse_dt(e.get("end") or "")
+        if not d or (d2 or d) < t0 or d > t1: continue
+        if d2 and (d2 - d).days > 7: continue                       # campaigns and exhibitions, not events
+        loc = e.get("location") or ""
+        txt = f'{e["title"]} {loc}'.lower()
+        online = e.get("online") is True or bool(re.search(ONLINE, f'{loc} {e["title"]}', re.I))
+        inbxl = bool(re.search(BRUSSELS, loc, re.I))
+        if loc and not (online or inbxl): continue                 # elsewhere in Europe: not a Brussels event
+        fmt = "Hybrid" if online and inbxl or re.search(HYBRID, txt) else "Online" if online else "In person" if inbxl else "Not stated"
+        host = urlparse(e["source_url"]).netloc.removeprefix("www.")
+        hosts.add(host)
+        ok = lambda h: h if h and "07:00" <= h <= "22:30" else None          # times outside office hours are parse noise
+        out.append({"date": d.isoformat(), "start": ok(hhmm),
+                    "end": ok(hh2) if d2 == d and ok(hhmm) else None, "endDate": d2.isoformat() if d2 and d2 > d else None,
+                    "title": e["title"][:220], "url": e["url"], "org": e["organiser"], "group": e.get("group"),
+                    "place": host_place.get(host) or by_name.get(norm(e["organiser"])),
+                    "format": fmt, "topic": pick_topic(e["title"], txt + " " + (e.get("description") or "")), "where": loc or None})
+    return out, hosts
+
+
+def organisers(top, skip_hosts=()):
     """Organisers to follow: organisers.json (hand-curated, optional) + the most active think tanks, associations, NGOs and unions on the map."""
     power = json.loads((WEB / "power.json").read_text())
     detail = json.loads((WEB / "meetings.json").read_text())["detail"]
-    orgs, seen = [], set()
+    orgs, seen = [], set(skip_hosts)
     cur = HERE / "organisers.json"
     host_place = {}
     for pid, d in detail.items():
         if d.get("web"): host_place.setdefault(urlparse(d["web"] if d["web"].startswith("http") else "https://" + d["web"]).netloc.removeprefix("www."), pid)
     for o in (json.loads(cur.read_text()) if cur.exists() else []):
         h = urlparse(o["site"]).netloc.removeprefix("www.")
+        if h in seen: continue
         orgs.append({**o, "place": o.get("place") or host_place.get(h), "brussels_default": True}); seen.add(h)
     cands = [p for p in power["places"] if p.get("org") and p["c"] in ("think", "assoc", "ngo", "union", "public")]
     cands.sort(key=lambda p: -p["org"]["inf"])
@@ -299,19 +346,36 @@ def organisers(top):
 def main():
     top = int(sys.argv[sys.argv.index("--top") + 1]) if "--top" in sys.argv else 120
     t0 = today(); t1 = t0 + dt.timedelta(days=DAYS)
-    orgs = organisers(top)
-    print(f"Agenda for {t0} to {t1}: {len(orgs)} organisers")
+    detail = json.loads((WEB / "meetings.json").read_text())["detail"]
+    host_place = {}
+    for pid, d in detail.items():
+        if d.get("web"): host_place.setdefault(urlparse(d["web"] if d["web"].startswith("http") else "https://" + d["web"]).netloc.removeprefix("www."), pid)
+    scraped, scraped_hosts = from_scraper(t0, t1, host_place)
+    srcs_csv = HERE / "events" / "sources.csv"
+    if srcs_csv.exists():
+        import csv
+        scraped_hosts |= {urlparse(r["events_url"]).netloc.removeprefix("www.") for r in csv.DictReader(open(srcs_csv, encoding="utf-8"))}
+    print(f"  {len(scraped)} Brussels or online events from events/scraper.py")
+    orgs = organisers(top, scraped_hosts) if "--no-map-orgs" not in sys.argv else []
+    print(f"Agenda for {t0} to {t1}: {len(orgs)} further map organisers not in sources.csv")
     events, report = [], []
     with ThreadPoolExecutor(48) as ex:
         for name, how, page, evs in ex.map(lambda o: collect(o, t0, t1), orgs):
             events += evs; report.append({"org": name, "method": how, "page": page, "events": len(evs)})
-    events += parliament(t0, t1)
+    events += scraped + parliament(t0, t1)
     seen, uniq = set(), []
     for e in sorted(events, key=lambda e: (e["date"], e["start"] or "99", e["org"])):
         k = (e["date"], re.sub(r"\W+", "", e["title"].lower())[:60])
         if k not in seen: seen.add(k); uniq.append(e)
-    agenda = {"built": t0.isoformat(), "to": t1.isoformat(), "events": uniq,
+    import csv
+    log = HERE / "events" / "output" / "run_log.csv"
+    nsrc = sum(1 for r in csv.DictReader(open(log)) if int(r["events"] or 0) > 0) if log.exists() else 0
+    agenda = {"built": t0.isoformat(), "to": t1.isoformat(), "events": uniq, "scraperSources": nsrc + sum(1 for r in report if r["events"]),
               "sources": sorted(report, key=lambda r: -r["events"]), "topics": list(TOPICS)}
+    import shutil                                               # publish the scraper's feed with the site
+    for f in ("events.json", "events.ics"):
+        src = HERE / "events" / "output" / f
+        if src.exists(): shutil.copy(src, WEB / f)
     (WEB / "agenda.json").write_text(json.dumps(agenda, ensure_ascii=False, separators=(",", ":")))
     ok = sum(1 for r in report if r["events"])
     print(f"Done: {len(uniq)} events from {ok} of {len(orgs)} organisers + Parliament.")

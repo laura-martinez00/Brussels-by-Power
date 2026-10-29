@@ -1,0 +1,72 @@
+name,method,events_url,problem,what to do
+EERA,html,https://www.eera-set.eu/events.html,'NoneType' object has no attribute 'replace',check manually
+Renew Europe Group,html,https://www.reneweuropegroup.eu/events,'NoneType' object has no attribute 'replace',check manually
+CAN Europe,html,https://caneurope.org/events/,403 Client Error: Forbidden for url: https://caneurope.org/events/,bot-protected: leave out or ask the organiser for a feed
+Carbon Market Watch,html,https://carbonmarketwatch.org/events/,403 Client Error: Forbidden for url: https://carbonmarketwatch.org/events/,bot-protected: leave out or ask the organiser for a feed
+CEPR,html,https://cepr.org/events,403 Client Error: Forbidden for url: https://cepr.org/events,bot-protected: leave out or ask the organiser for a feed
+DG CONNECT / Shaping Europe's Digital Future,html,https://digital-strategy.ec.europa.eu/en/events,403 Client Error: Forbidden for url: https://digital-strategy.ec.europa.eu/en/events,bot-protected: leave out or ask the organiser for a feed
+ECDPM,html,https://ecdpm.org/events,403 Client Error: Forbidden for url: https://ecdpm.org/events,bot-protected: leave out or ask the organiser for a feed
+European Chemicals Agency,html,https://echa.europa.eu/news-and-events/events,403 Client Error: Forbidden for url: https://echa.europa.eu/news-and-events/events,bot-protected: leave out or ask the organiser for a feed
+DG EMPL (Employment & Social),html,https://employment-social-affairs.ec.europa.eu/events_en,403 Client Error: Forbidden for url: https://employment-social-affairs.ec.europa.eu/events_en,bot-protected: leave out or ask the organiser for a feed
+Covenant of Mayors,html,https://eu-mayors.ec.europa.eu/en/events,403 Client Error: Forbidden for url: https://eu-mayors.ec.europa.eu/en/events,bot-protected: leave out or ask the organiser for a feed
+Euractiv,html,https://events.euractiv.com/,403 Client Error: Forbidden for url: https://events.euractiv.com/,bot-protected: leave out or ask the organiser for a feed
+Financial Times Live,html,https://events.ft.com/events-list,403 Client Error: Forbidden for url: https://events.ft.com/events-list,bot-protected: leave out or ask the organiser for a feed
+ICLEI Europe,html,https://iclei-europe.org/events/,403 Client Error: Forbidden for url: https://iclei-europe.org/events/,bot-protected: leave out or ask the organiser for a feed
+Rural Pact / European Rural Mobility Network,html,https://ruralpact.rural-vision.europa.eu/events_en,403 Client Error: Forbidden for url: https://ruralpact.rural-vision.europa.eu/events_en,bot-protected: leave out or ask the organiser for a feed
+Science|Business,html,https://sciencebusiness.net/events,403 Client Error: Forbidden for url: https://sciencebusiness.net/events,bot-protected: leave out or ask the organiser for a feed
+Seas At Risk,html,https://seas-at-risk.org/events/,403 Client Error: Forbidden for url: https://seas-at-risk.org/events/,bot-protected: leave out or ask the organiser for a feed
+Chatham House,html,https://www.chathamhouse.org/events,403 Client Error: Forbidden for url: https://www.chathamhouse.org/events,bot-protected: leave out or ask the organiser for a feed
+Clingendael,html,https://www.clingendael.org/events,403 Client Error: Forbidden for url: https://www.clingendael.org/events,bot-protected: leave out or ask the organiser for a feed
+COGEN Europe,html,https://www.cogeneurope.eu/events,403 Client Error: Forbidden for url: https://www.cogeneurope.eu/events,bot-protected: leave out or ask the organiser for a feed
+College of Europe,html,https://www.coleurope.eu/events,403 Client Error: Forbidden for url: https://www.coleurope.eu/events,bot-protected: leave out or ask the organiser for a feed
+Global Competition Law Centre (College of Europe),html,https://www.coleurope.eu/research/global-competition-law-centre-gclc,403 Client Error: Forbidden for url: https://www.coleurope.eu/research/global-competition-law-centre-gclc,bot-protected: leave out or ask the organiser for a feed
+Concurrences,html,https://www.concurrences.com/en/events/,403 Client Error: Forbidden for url: https://www.concurrences.com/en/events/,bot-protected: leave out or ask the organiser for a feed
+Confcommercio Brussels,html,https://www.confcommercio.it/,403 Client Error: Forbidden for url: https://www.confcommercio.it/,bot-protected: leave out or ask the organiser for a feed
+Council of the EU / European Council – meeting calendar,html,https://www.consilium.europa.eu/en/meetings/calendar/,403 Client Error: Forbidden for url: https://www.consilium.europa.eu/en/meetings/calendar/,bot-protected: leave out or ask the organiser for a feed
+International Crisis Group,html,https://www.crisisgroup.org/how-we-work/events,403 Client Error: Forbidden for url: https://www.crisisgroup.org/how-we-work/events,bot-protected: leave out or ask the organiser for a feed
+European External Action Service,html,https://www.eeas.europa.eu/eeas/events_en,403 Client Error: Forbidden for url: https://www.eeas.europa.eu/eeas/events_en,bot-protected: leave out or ask the organiser for a feed
+EPSU,html,https://www.epsu.org/events,403 Client Error: Forbidden for url: https://www.epsu.org/events,bot-protected: leave out or ask the organiser for a feed
+ESMA,html,https://www.esma.europa.eu/press-news/esma-events,403 Client Error: Forbidden for url: https://www.esma.europa.eu/press-news/esma-events,bot-protected: leave out or ask the organiser for a feed
+Erasmus Student Network,html,https://www.esn.org/,403 Client Error: Forbidden for url: https://www.esn.org/,bot-protected: leave out or ask the organiser for a feed
+ETUC,html,https://www.etuc.org/en/events,403 Client Error: Forbidden for url: https://www.etuc.org/en/events,bot-protected: leave out or ask the organiser for a feed
+ETUI,html,https://www.etui.org/events,403 Client Error: Forbidden for url: https://www.etui.org/events,bot-protected: leave out or ask the organiser for a feed
+Eurodad,html,https://www.eurodad.org/,403 Client Error: Forbidden for url: https://www.eurodad.org/,bot-protected: leave out or ask the organiser for a feed
+Farm Europe,html,https://www.farm-europe.eu/events/,403 Client Error: Forbidden for url: https://www.farm-europe.eu/events/,bot-protected: leave out or ask the organiser for a feed
+IFRI Brussels,html,https://www.ifri.org/en/events,403 Client Error: Forbidden for url: https://www.ifri.org/en/events,bot-protected: leave out or ask the organiser for a feed
+IISS,html,https://www.iiss.org/events/,403 Client Error: Forbidden for url: https://www.iiss.org/events/,bot-protected: leave out or ask the organiser for a feed
+Permanent Representation of Ireland,html,https://www.ireland.ie/en/eu/brussels/,403 Client Error: Forbidden for url: https://www.ireland.ie/en/eu/brussels/,bot-protected: leave out or ask the organiser for a feed
+Medef / Business France Brussels,html,https://www.medef.com/,403 Client Error: Forbidden for url: https://www.medef.com/,bot-protected: leave out or ask the organiser for a feed
+ONE Campaign Europe,html,https://www.one.org/,403 Client Error: Forbidden for url: https://www.one.org/,bot-protected: leave out or ask the organiser for a feed
+IFOAM Organics Europe,html,https://www.organicseurope.bio/events/,403 Client Error: Forbidden for url: https://www.organicseurope.bio/events/,bot-protected: leave out or ask the organiser for a feed
+POLITICO Europe,html,https://www.politico.eu/politico-events/,403 Client Error: Forbidden for url: https://www.politico.eu/politico-events/,bot-protected: leave out or ask the organiser for a feed
+Elcano Royal Institute,html,https://www.realinstitutoelcano.org/en/events/,403 Client Error: Forbidden for url: https://www.realinstitutoelcano.org/en/events/,bot-protected: leave out or ask the organiser for a feed
+Résidence Palace (International Press Centre) – press breakfasts,html,https://www.residencepalace.be/,403 Client Error: Forbidden for url: https://www.residencepalace.be/,bot-protected: leave out or ask the organiser for a feed
+Save the Children EU,html,https://www.savethechildren.net/,403 Client Error: Forbidden for url: https://www.savethechildren.net/,bot-protected: leave out or ask the organiser for a feed
+Transport & Environment,html,https://www.transportenvironment.org/events,403 Client Error: Forbidden for url: https://www.transportenvironment.org/events,bot-protected: leave out or ask the organiser for a feed
+WWF European Policy Office,html,https://www.wwf.eu/wwf_news/events/,403 Client Error: Forbidden for url: https://www.wwf.eu/wwf_news/events/,bot-protected: leave out or ask the organiser for a feed
+ECRE,html,https://ecre.org/events/,404 Client Error: Not Found for url: https://ecre.org/events/,page moved: find the new events page and update sources.csv
+PICUM (Undocumented Migrants),html,https://picum.org/events/,404 Client Error: Not Found for url: https://picum.org/events/,page moved: find the new events page and update sources.csv
+"EU Research & Innovation community platform (EURAXESS, R&I Days)",html,https://research-innovation-community.ec.europa.eu/events,404 Client Error: Not Found for url: https://research-innovation-community.ec.europa.eu/events,page moved: find the new events page and update sources.csv
+Representation of Baden-Württemberg to the EU,html,https://stm.baden-wuerttemberg.de/de/ministerium/landesvertretung-bruessel/,404 Client Error: Not Found for url: https://stm.baden-wuerttemberg.de/de/ministerium/landesvertretung-bruessel/,page moved: find the new events page and update sources.csv
+Transparency International EU,html,https://transparency.eu/events/,404 Client Error: Not Found for url: https://transparency.eu/events/,page moved: find the new events page and update sources.csv
+Bavarian Representation to the EU,html,https://www.bayern.de/staatskanzlei/bayerns-vertretung-bei-der-eu/,404 Client Error: Not Found for url: https://www.bayern.de/staatskanzlei/bayerns-vertretung-bei-der-eu/,page moved: find the new events page and update sources.csv
+Bertelsmann Stiftung – Brussels,html,https://www.bertelsmann-stiftung.de/en/our-projects/brussels-office,404 Client Error: Not Found for url: https://www.bertelsmann-stiftung.de/en/our-projects/brussels-office,page moved: find the new events page and update sources.csv
+E3G,html,https://www.e3g.org/events/,404 Client Error: Not Found for url: https://www.e3g.org/events/,page moved: find the new events page and update sources.csv
+European People's Party (EPP),html,https://www.epp.eu/events,404 Client Error: Not Found for url: https://www.epp.eu/events,page moved: find the new events page and update sources.csv
+IMF Europe office,html,https://www.imf.org/en/News/SearchNews#sort=%40imfdate%20descending,404 Client Error: Not Found for url: https://www.imf.org/en/News/SearchNews#sort=%40imfdate%20descending,page moved: find the new events page and update sources.csv
+Konrad Adenauer Stiftung – Brussels,html,https://www.kas.de/en/web/europa,404 Client Error: Not Found for url: https://www.kas.de/en/web/europa,page moved: find the new events page and update sources.csv
+Oxfam EU,html,https://www.oxfam.org/en/europe,404 Client Error: Not Found for url: https://www.oxfam.org/en/europe,page moved: find the new events page and update sources.csv
+SWP Brussels,html,https://www.swp-berlin.org/en/swp/about-us/organization/swp-brussels/events-in-brussels,404 Client Error: Not Found for url: https://www.swp-berlin.org/en/swp/about-us/organization/swp-brussels/events-in-brus,page moved: find the new events page and update sources.csv
+S&D Group,html,https://www.socialistsanddemocrats.eu/latest/type/event,410 Client Error: Gone for url: https://www.socialistsanddemocrats.eu/latest/type/event,page moved: find the new events page and update sources.csv
+Eurofound,html,https://www.eurofound.europa.eu/en/events,429 Client Error: Too Many Requests for url: https://www.eurofound.europa.eu/en/events,check manually
+European Cancer Organisation,html,https://www.europeancancer.org/events,500 Server Error: Internal Server Error for url: https://www.europeancancer.org/events,check manually
+ENDR – European Network of Defence-related Regions,html,https://endr.eu/,503 Server Error: Service Unavailable for url: https://endr.eu/,bot-protected: leave out or ask the organiser for a feed
+ACER (Energy Regulators),html,https://extranet.acer.europa.eu/Events,503 Server Error: Service Unavailable for url: https://extranet.acer.europa.eu/Events,bot-protected: leave out or ask the organiser for a feed
+ENAR,html,https://www.enar-eu.org/events/,503 Server Error: Service Unavailable for url: https://www.enar-eu.org/events/,bot-protected: leave out or ask the organiser for a feed
+FoodDrinkEurope,html,https://www.fooddrinkeurope.eu/events/,503 Server Error: Service Unavailable for url: https://www.fooddrinkeurope.eu/events/,bot-protected: leave out or ask the organiser for a feed
+FEASTS project (cultured meat & seafood),html,https://feasts-project.eu/,"HTTPSConnectionPool(host='feasts-project.eu', port=443): Max retries exceeded with url: / (Caused by NameResolutionError",check manually
+Open Society Foundations – Europe,html,https://www.opensocietyfoundations.org/events,"HTTPSConnectionPool(host='www.opensocietyfoundations.org', port=443): Read timed out. (read timeout=30)",check manually
+EU&U,html,https://www.linkedin.com/company/eu-u/,disallowed by robots.txt,robots.txt disallows: leave out
+EU-Japan Institute (EUJI),html,https://www.linkedin.com/company/euji/,disallowed by robots.txt,robots.txt disallows: leave out
+"Council Presidency (Ireland, H2 2026)",html,https://irish-presidency.consilium.europa.eu/en/events/,disallowed by robots.txt,robots.txt disallows: leave out
+Delegation of Catalonia to the EU,html,https://exteriors.gencat.cat/en/ambits-dactuacio/afers-exteriors/delegacions-govern/ue/,disallowed by robots.txt,robots.txt disallows: leave out
