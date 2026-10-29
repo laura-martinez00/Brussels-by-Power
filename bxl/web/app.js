@@ -369,10 +369,10 @@ const panelBody = $('#panel-body');
 const ranked = () => places.filter(p => p.power != null && catOn[CAT_KEYS.indexOf(p.c)])
   .sort((a, b) => b.power - a.power).slice(0, 40);
 function rankHtml(list, val, color) {
-  return `<ol class="rank">${list.map((p, i) => `<li><button data-place="${esc(p.id)}">
-    <span class="pos">${i + 1}</span>
-    <span class="nm"><b title="${esc(p.n)}">${esc(p.n)}</b><span class="bar"><i style="width:${val(p)}%;background:${color || CATS[p.c].color}"></i></span></span>
-    <span class="val">${Math.round(val(p))}</span></button></li>`).join('')}</ol>`;
+  return `<ol class="prl">${list.map((p, i) => `<li><button class="pr" data-place="${esc(p.id)}" style="--tc:${color || CATS[p.c].color}">
+    <span class="pr-rank">${i + 1}</span>
+    <span class="pr-nm"><b title="${esc(p.n)}">${esc(p.n)}</b><span>${esc(CATS[p.c].label)}</span></span>
+    <span class="pr-score">${Math.round(val(p))}</span></button></li>`).join('')}</ol>`;
 }
 function renderPanel() {
   if (mode === 0) {
@@ -382,9 +382,10 @@ function renderPanel() {
       <ol class="rank" id="found"></ol>
       <h2 style="margin-top:12px">Who has power</h2>
       <p class="hint">Coloured buildings hold an EU institution, a member state's mission or one of ${fmtNum(P.orgCount)} registered lobbies with a Brussels office. The stronger the colour, the higher the power score; a building takes the colour of its most powerful occupant.</p>
-      <ul class="legend">${CAT_KEYS.map((k, i) => counts[k] ? `<li><button data-cat="${i}" aria-pressed="${!!catOn[i]}">
-        <span class="sw" style="background:${CATS[k].color}"></span><span>${esc(CATS[k].label)}</span><span class="n">${counts[k]}</span></button></li>` : '').join('')}
-</ul>
+      <div class="ptiles"><div class="ptile"><b>${fmtNum(places.filter(p => !p.org).length)}</b><span>institutions &amp; missions</span></div>
+        <div class="ptile"><b>${fmtNum(places.filter(p => p.org).length)}</b><span>registered lobbies</span></div></div>
+      <h2 class="section">Show on the map <span class="n">tap to switch off</span></h2>
+      <div class="lchips">${CAT_KEYS.map((k, i) => counts[k] ? `<button data-cat="${i}" aria-pressed="${!!catOn[i]}" style="--tc:${CATS[k].color}">${esc(CATS[k].label)}<span class="n">${fmtNum(counts[k])}</span></button>` : '').join('')}</div>
       <h2 class="section">Most powerful</h2>
       ${rankHtml(ranked(), p => p.power)}`;
   } else if (mode === 4) {
@@ -570,11 +571,15 @@ function meetingRows(rec, { limit = 4, showOrg = false } = {}) {
 // Ranked rows with a bar, largest first; optional data attribute makes each row a button
 function rankRows(pairs, { attr = null, color = BLUE, label = x => x } = {}) {
   if (!pairs.length) return '';
-  const max = pairs[0][1];
-  return `<ol class="rk">${pairs.map(([k, n]) => {
-    const inner = `<span class="rk-n">${esc(label(k))}</span><b>${fmtNum(n)}</b><span class="bar"><i style="width:${100 * n / max}%;background:${typeof color === 'function' ? color(k) : color}"></i></span>`;
-    return `<li>${attr ? `<button ${attr}="${esc(k)}">${inner}</button>` : `<div>${inner}</div>`}</li>`;
+  return `<ol class="rkl">${pairs.map(([k, n], i) => {
+    const c = typeof color === 'function' ? color(k) : color;
+    const inner = `<span class="rk-i">${i + 1}</span><span class="rk-n" title="${esc(label(k))}">${esc(label(k))}</span><span class="rk-c">${fmtNum(n)}</span>`;
+    return `<li style="--tc:${c}">${attr && !String(k).startsWith('~') ? `<button class="rkr" ${attr}="${esc(k)}">${inner}</button>` : `<div class="rkr">${inner}</div>`}</li>`;
   }).join('')}</ol>`;
+}
+// Counts as tinted chips (types of lobby, policy areas)
+function countChips(pairs, { color = () => BLUE, label = x => x } = {}) {
+  return `<div class="cchips">${pairs.map(([k, n]) => `<span style="--tc:${color(k)}">${esc(label(k))}<b>${fmtNum(n)}</b></span>`).join('')}</div>`;
 }
 
 // ---------- Cards ----------
@@ -863,19 +868,26 @@ function openWeek(i) {
   const busiest = W.o[0];
   const agendaByDay = new Map();
   for (const x of [...W.x].sort((p, q) => p[0].localeCompare(q[0]))) { if (!agendaByDay.has(x[0])) agendaByDay.set(x[0], []); agendaByDay.get(x[0]).push(x); }
-  weekEl.innerHTML = `<button class="card-close" aria-label="Close">×</button>
-    <div class="n">Week of ${fmtDate(from)} to ${fmtDate(to)}</div>
-    <h3>${fmtNum(P.weekly[i])} lobby meetings${filt}</h3>
-    <p class="wsum">${busiest ? `Most active: <b>${esc(prettyName(busiest[0]))}</b> (${busiest[1]}). ` : ''}${W.c[0] ? `Busiest office: <b>${esc(W.c[0][0])}</b> (${W.c[0][1]}).` : ''}</p>
-    <div class="wcols">
-      <div><h4>Most active organisations</h4>${rankRows(W.o.map(([n, c, pid]) => [pid && byId[pid]?.gid != null ? pid : '~' + n, c]), { attr: 'data-place', label: k => k.startsWith('~') ? prettyName(k.slice(1)) : byId[k].n })}</div>
-      <div><h4>Commission offices <span class="n">tap one</span></h4>${rankRows(W.c, { attr: 'data-office' })}</div>
-    </div>
-    <div class="wcols">
-      <div><h4>By type of lobby</h4>${rankRows(Object.entries(W.t).sort((a, b) => b[1] - a[1]).slice(0, 6), { label: k => CATS[k]?.label || k, color: k => CATS[k]?.color || BLUE })}</div>
-      <div><h4>By policy area</h4>${rankRows(Object.entries(W.s).sort((a, b) => b[1] - a[1]).slice(0, 6), { label: k => P.sectors[k]?.label || k })}</div>
-    </div>
-    ${agendaByDay.size ? `<h4>On the agenda <span class="n">a sample of the week's meetings, by day</span></h4>${[...agendaByDay].map(([d, xs]) => `<div class="wday">${fmtDate(new Date(d + 'T12:00:00'))}</div>${meetingRows(xs.map(([dd, org, who, t]) => [dd, who, t, org]), { limit: 99, showOrg: true })}`).join('')}` : ''}`;
+  const types = Object.entries(W.t).sort((a, b) => b[1] - a[1]);
+  weekEl.innerHTML = `<button class="card-close on-dark" aria-label="Close">×</button>
+    <header class="wk-head">
+      <p class="wk-eyebrow">Week of ${fmtDate(from)} to ${fmtDate(to)}</p>
+      <h3>${fmtNum(P.weekly[i])} lobby meetings${filt}</h3>
+      <div class="wk-tiles">
+        ${busiest ? `<div><span>Most active</span><b>${esc(prettyName(busiest[0]))}</b><em>${busiest[1]} meetings</em></div>` : ''}
+        ${W.c[0] ? `<div><span>Busiest office</span><b>${esc(W.c[0][0])}</b><em>${W.c[0][1]} meetings</em></div>` : ''}
+        ${types[0] ? `<div><span>Most common lobby</span><b>${esc(CATS[types[0][0]]?.label || types[0][0])}</b><em>${types[0][1]} meetings</em></div>` : ''}
+      </div>
+    </header>
+    <div class="wk-body">
+      <div class="wcols">
+        <section><h4>Most active organisations</h4>${rankRows(W.o.map(([n, c, pid]) => [pid && byId[pid]?.gid != null ? pid : '~' + n, c]), { attr: 'data-place', label: k => k.startsWith('~') ? prettyName(k.slice(1)) : byId[k].n })}</section>
+        <section><h4>Commission offices <span class="n">tap one to see who meets it</span></h4>${rankRows(W.c, { attr: 'data-office', color: '#c2255c' })}</section>
+      </div>
+      <h4>By type of lobby</h4>${countChips(types.slice(0, 7), { label: k => CATS[k]?.label || k, color: k => CATS[k]?.color || BLUE })}
+      <h4>By policy area</h4>${countChips(Object.entries(W.s).sort((a, b) => b[1] - a[1]).slice(0, 8), { label: k => P.sectors[k]?.label || k })}
+      ${agendaByDay.size ? `<h4>On the agenda <span class="n">a sample of the week's meetings</span></h4>${[...agendaByDay].map(([d, xs]) => `<div class="wday">${fmtDate(new Date(d + 'T12:00:00'))}</div>${meetingRows(xs.map(([dd, org, who, t]) => [dd, who, t, org]), { limit: 99, showOrg: true })}`).join('')}` : ''}
+    </div>`;
   weekEl.hidden = false;
   weekEl.scrollTop = 0;
 }
