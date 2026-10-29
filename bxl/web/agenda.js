@@ -14,6 +14,13 @@ function brusselsNow() {
   return { date: `${p.year}-${p.month}-${p.day}`, time: `${p.hour}:${p.minute}` };
 }
 
+// One colour per topic, used on cards, chips and the up-next list
+const TOPIC_COLORS = { 'EU Institutions': '#1c3f94', 'Energy & Climate': '#e07a1f', 'Digital & Tech': '#6d4ae0', 'Economy & Finance': '#0f8a6a',
+  'Defence & Security': '#b23a3a', 'Health & Science': '#d6336c', 'Agriculture & Food': '#6f8f12', 'Transport': '#0e7fb8',
+  'Environment': '#2f9e44', 'Social & Rights': '#b07d10' };
+const tc = t => TOPIC_COLORS[t] || '#1c3f94';
+const wdFmt = new Intl.DateTimeFormat('en-GB', { weekday: 'short', timeZone: 'UTC' });
+
 // Filters live in the URL so any view can be shared or bookmarked
 const params = new URLSearchParams(location.search);
 const f = { day: params.get('day') || 'today', format: params.get('format') || 'all', topic: params.get('topic') || 'all',
@@ -32,7 +39,8 @@ data.events.forEach((e, i) => (e.i = i));
 function inRange(e, range) { const last = e.endDate || e.date; return !(last < range[0] || e.date > range[1]); }
 function rangeOf(day) {
   const t = brusselsNow().date;
-  return { today: [t, t], tomorrow: [addDays(t, 1), addDays(t, 1)], week: [t, addDays(t, 6)], all: [t, '9999-12-31'] }[day];
+  if (/^\d{4}-\d{2}-\d{2}$/.test(day)) return [day, day];
+  return { today: [t, t], tomorrow: [addDays(t, 1), addDays(t, 1)], week: [t, addDays(t, 6)], all: [t, '9999-12-31'] }[day] || [t, t];
 }
 function matches(e, skip = '') {
   if (skip !== 'format' && f.format !== 'all' && e.format !== f.format) return false;
@@ -74,7 +82,7 @@ function eventHtml(e) {
     : e.endDate ? `<b>All day</b><span>until ${shortFmt.format(asDate(e.endDate))}</span>` : `<b>Time</b><span>on event page</span>`;
   const fmt = e.format.replace(/ /g, '').toLowerCase();
   const fmtLabel = e.format === 'Not stated' ? 'Format not stated' : e.format;
-  return `<li class="ev${isPast(e) ? ' past' : ''}">
+  return `<li class="ev${isPast(e) ? ' past' : ''}" style="--tc:${tc(e.topic)}">
     <div class="time">${time}</div>
     <div class="body">
       <div class="org"><span translate="no">${esc(e.org)}</span>
@@ -89,13 +97,16 @@ function eventHtml(e) {
   </li>`;
 }
 
+const k0 = (d, today) => d === today ? 'Today' : d === addDays(today, 1) ? 'Tmrw' : wdFmt.format(asDate(d));
 function render() {
   const range = rangeOf(f.day), now = brusselsNow();
   const pool = data.events.filter(e => inRange(e, range));
   const list = pool.filter(e => matches(e));
   // Headline
-  $('#eyebrow').textContent = { today: 'Today', tomorrow: 'Tomorrow', week: 'This week', all: 'All upcoming' }[f.day];
-  $('#title').textContent = f.day === 'today' ? longFmt.format(asDate(now.date))
+  const isDate = /^\d{4}-/.test(f.day);
+  $('#eyebrow').textContent = isDate ? (f.day === now.date ? 'Today' : f.day === addDays(now.date, 1) ? 'Tomorrow' : 'Agenda')
+    : { today: 'Today', tomorrow: 'Tomorrow', week: 'This week', all: 'All upcoming' }[f.day];
+  $('#title').textContent = isDate ? longFmt.format(asDate(f.day)) : f.day === 'today' ? longFmt.format(asDate(now.date))
     : f.day === 'tomorrow' ? longFmt.format(asDate(addDays(now.date, 1)))
     : f.day === 'week' ? `${shortFmt.format(asDate(range[0]))} to ${shortFmt.format(asDate(range[1]))}`
     : `Until ${longFmt.format(asDate(data.to || range[0]))}`;
@@ -118,17 +129,32 @@ function render() {
       <ol class="events">${evs.map(eventHtml).join('')}</ol></li>`).join('')
     : `<li class="empty"><b>No events match.</b>${pool.length ? 'Try a different topic, format or length.' : 'Nothing is listed for this period yet.'}
       ${f.day !== 'all' ? '<br><button type="button" class="btn" data-k="day" data-v="all">See All Upcoming Events</button>' : ''}</li>`;
-  // Sidebar: topics within the day range (ignoring the topic filter) and most active organisers
+  // Day strip: the next 7 days with their event counts (other filters applied), then all upcoming
+  const sel = f.day === 'today' ? now.date : f.day === 'tomorrow' ? addDays(now.date, 1) : f.day;
+  $('#strip').innerHTML = Array.from({ length: 7 }, (_, k) => addDays(now.date, k)).map(d => {
+    const n = data.events.filter(e => inRange(e, [d, d]) && matches(e)).length;
+    return `<button type="button" data-k="day" data-v="${d}" aria-pressed="${sel === d}"><span class="wd">${k0(d, now.date)}</span><span class="dn">${asDate(d).getUTCDate()}</span><span class="ct">${n} event${n === 1 ? '' : 's'}</span></button>`;
+  }).join('') + `<button type="button" class="all" data-k="day" data-v="all" aria-pressed="${f.day === 'all'}"><span class="wd">Next 60 days</span><span class="dn">All</span><span class="ct">${data.events.filter(e => inRange(e, rangeOf('all')) && matches(e)).length} events</span></button>`;
+  // At a glance
+  const count = fn => list.filter(fn).length;
+  $('#stats').innerHTML = `<div class="stat blue"><b>${list.length}</b><span>events</span></div><div class="stat hot"><b>${live}</b><span>live now</span></div>
+    <div class="stat"><b>${count(e => e.format === 'In person' || e.format === 'Hybrid')}</b><span>in person</span></div><div class="stat"><b>${count(e => e.format === 'Online' || e.format === 'Hybrid')}</b><span>online</span></div>`;
+  // Up next: the next three events that haven't started yet
+  const nowMin = mins(now.time);
+  const upcoming = data.events.filter(e => matches(e) && (e.date > now.date || (e.date === now.date && e.start && mins(e.start) > nowMin)))
+    .sort((a, b) => a.date.localeCompare(b.date) || (a.start || '99').localeCompare(b.start || '99')).slice(0, 3);
+  $('#next').innerHTML = upcoming.map(e => {
+    let when;
+    if (e.date === now.date) { const m = mins(e.start) - nowMin; when = m < 60 ? `In ${m} min` : `Today at ${e.start}`; }
+    else when = `${e.date === addDays(now.date, 1) ? 'Tomorrow' : dayFmt.format(asDate(e.date))}${e.start ? ' at ' + e.start : ''}`;
+    return `<li style="--tc:${tc(e.topic)}"><span class="when">${esc(when)}</span><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a><span class="who" translate="no">${esc(e.org)}</span></li>`;
+  }).join('') || '<li class="n">Nothing else coming up.</li>';
+  // Topic chips for the selected day range (ignoring the topic filter)
   const tcount = {};
   for (const e of pool.filter(e => matches(e, 'topic'))) tcount[e.topic] = (tcount[e.topic] || 0) + 1;
-  const tmax = Math.max(1, ...Object.values(tcount));
-  $('#topics').innerHTML = Object.entries(tcount).sort((a, b) => b[1] - a[1]).map(([t, n]) => `<li><button type="button" data-topic="${esc(t)}" aria-pressed="${f.topic === t}">
-      <span>${esc(t)}</span><span class="n">${n}</span><span class="bar"><i style="width:${100 * n / tmax}%"></i></span></button></li>`).join('') || '<li class="n">Nothing in this period.</li>';
-  const ocount = {};
-  for (const e of list) ocount[e.org] = (ocount[e.org] || 0) + 1;
-  $('#orgs').innerHTML = Object.entries(ocount).sort((a, b) => b[1] - a[1]).slice(0, 8).map(([o, n]) => `<li><span translate="no">${esc(o)}</span><span class="n">${n}</span></li>`).join('') || '<li class="n">None yet.</li>';
-  const nsrc = data.sources?.filter(s => s.events).length || 0;
-  if (nsrc || data.scraperSources) $('#sources').innerHTML = `Read every morning from ${data.scraperSources || nsrc} organisers’ own websites and the European Parliament’s calendar. Times are Brussels time; always check the event page before you go.`;
+  $('#topics').innerHTML = Object.entries(tcount).sort((a, b) => b[1] - a[1]).map(([t, n]) => `<button type="button" data-topic="${esc(t)}" aria-pressed="${f.topic === t}" style="--tc:${tc(t)}">${esc(t)}<span class="n">${n}</span></button>`).join('') || '<span class="n">Nothing in this period.</span>';
+  const nsrc = data.scraperSources || data.sources?.filter(s => s.events).length || 0;
+  if (nsrc) $('#sources').textContent = `Read every morning from ${nsrc} organisers’ own websites and the European Parliament’s calendar. Times are Brussels time; check the event page before you go.`;
   syncUrl();
 }
 

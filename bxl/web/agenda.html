@@ -21,13 +21,15 @@
   </nav>
 </header>
 
-<main class="wrap">
-  <section class="hero" aria-live="polite">
+<section class="hero" aria-live="polite">
+  <div class="hero-in">
     <p class="eyebrow" id="eyebrow">Agenda</p>
     <h1 id="title">Loading the agenda…</h1>
     <p class="count" id="count"></p>
-  </section>
-
+    <nav class="strip" id="strip" aria-label="Pick a day"></nav>
+  </div>
+</section>
+<main class="wrap">
   <div class="layout">
     <div class="main">
       <form class="filters" id="filters" role="search" onsubmit="return false">
@@ -59,20 +61,22 @@
     </div>
 
     <aside class="side" aria-label="Overview">
-      <section class="box">
-        <h2>By Topic</h2>
-        <ul class="topics" id="topics"></ul>
+      <section class="box glance">
+        <h2>At a Glance</h2>
+        <div class="stats" id="stats"></div>
       </section>
       <section class="box">
-        <h2>Most Active Organisers</h2>
-        <ol class="orgs" id="orgs"></ol>
+        <h2>Up Next</h2>
+        <ol class="next" id="next"></ol>
       </section>
-      <section class="box note">
-        <h2>Where This Comes From</h2>
-        <p id="sources">Events are read every morning from the organisers’ own websites and the European Parliament’s calendar.
-          Times are Brussels time; always check the event page before you go.</p>
-        <p><a href="data/events.ics">Subscribe to all events</a> in Outlook, Google or Apple Calendar (copy the link), or use the <a href="data/events.json">JSON feed</a>.</p>
-        <p>An organiser marked <b>On the map</b> has a building in the 3D map, with its power score and Commission meetings.</p>
+      <section class="box">
+        <h2>Topics</h2>
+        <div class="tchips" id="topics"></div>
+      </section>
+      <section class="box sub">
+        <h2>Never Miss an Event</h2>
+        <p><a href="data/events.ics">Subscribe to the calendar</a> in Outlook, Google or Apple Calendar, or use the <a href="data/events.json">JSON feed</a>.</p>
+        <p class="fine" id="sources">Read every morning from the organisers’ own websites and the European Parliament’s calendar. Times are Brussels time; check the event page before you go.</p>
       </section>
     </aside>
   </div>
